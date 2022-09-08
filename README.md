@@ -30,6 +30,6 @@ git push
 
 -------------
 
-CHECKER THE GIT
+GIT CHECKER
 
 git status
