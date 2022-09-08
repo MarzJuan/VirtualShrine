@@ -1,0 +1,18 @@
+Task Completed
+- Login for Main and Assistant Admin
+- Admin panel
+- Admin List
+	* Edit Assistant Admin
+	* Archive Assistant Admin
+- Add New Admin acc
+- Booking
+	* View List of Pending Bookings
+- Category
+	* Addmin of Category (70%)
+- Archive
+	* View Archived User
+		-Recover archived accounts
+- Logout
+
+Task to be completed
+- 
