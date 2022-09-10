@@ -22,17 +22,17 @@ include('includes/header.php');
                     <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="">Name</label>
-                                <input type="text" name="name" class="form-control">
+                                <input type="text" name="name" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Slug (URL)</label>
-                                <input type="text" name="slug" class="form-control">
+                                <input type="text" name="slug" required class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">
                                 <label for="">Description</label>
-                                <textarea name="description" class="form-control" rows="4"></textarea>
+                                <textarea name="description" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-12 mb-3">
@@ -42,12 +42,12 @@ include('includes/header.php');
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Meta Description</label>
-                                <textarea name="meta_description" class="form-control" rows="4"></textarea>
+                                <textarea name="meta_description" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Meta Keyword</label>
-                                <textarea name="meta_keyword" class="form-control" rows="4"></textarea>
+                                <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
@@ -56,7 +56,7 @@ include('includes/header.php');
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Status</label>
+                                <label for="">Status</label> <br/>
                                 <input type="checkbox" name="status" width="70px" height="70px">
                             </div>
 
