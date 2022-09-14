@@ -24,7 +24,6 @@ include('includes/header.php');
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Category</th>
                                     <th>Image</th>
                                     <th>Status</th>
                                     <th>Edit</th>
@@ -33,7 +32,7 @@ include('includes/header.php');
                             </thead>
                             <tbody>
                                 <?php
-                                    $posts = "SELECT * FROM posts WHERE STATUS!='2' ";
+                                    $posts = "SELECT * FROM posts WHERE STATUS!='1' ";
                                     //$posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id ";
                                     $posts_run = mysqli_query($con, $posts);
 
@@ -45,7 +44,6 @@ include('includes/header.php');
                                             <tr>
                                                 <td><?= $posts['id']?></td>
                                                 <td><?= $posts['name']?></td>
-                                                <td><?= $posts['cname']?></td>
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
                                                 <td>
                                                     
@@ -55,7 +53,9 @@ include('includes/header.php');
                                                     <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
                                                 </td>
                                                 <td>
+                                                    <form action="code.php" method = "POST">
                                                     <button type="submit" name="post_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             <?php

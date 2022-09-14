@@ -3,6 +3,7 @@ session_start();
 
 include('config/dbcon.php');
 
+//ADD POST
 if(isset($_POST['post_add']))
 {
     $category_id = $_POST['category_id'];
@@ -44,7 +45,7 @@ if(isset($_POST['post_add']))
 
 
 
-
+//CATEGORY ARCHIVE RECOVER
 if(isset($_POST['archive_recover']))
 {
     $category_id = $_POST['archive_recover'];
@@ -67,7 +68,7 @@ if(isset($_POST['archive_recover']))
 
 }
 
-
+//ARCHIVE CATEGORY
 if(isset($_POST['category_archive']))
 {
     $category_id = $_POST['category_archive'];
@@ -91,7 +92,7 @@ if(isset($_POST['category_archive']))
 
 
 
-
+//EDIT CATEGORY
 if(isset($_POST['edit_category']))
 {
     $category_id = $_POST['category_id'];
@@ -131,7 +132,7 @@ if(isset($_POST['edit_category']))
 
 
 
-
+// ADD CATEGORY
 if(isset($_POST['add_category']))
 {
     $name = $_POST['name'];
@@ -167,6 +168,7 @@ if(isset($_POST['add_category']))
 }
 
 
+// RECOVERING ASSISTANT ADMIN DATA
 if(isset($_POST['assistant-admin-recover']))
 {
     $user_id = $_POST['assistant-admin-recover'];
@@ -197,6 +199,7 @@ if(isset($_POST['assistant-admin-recover']))
 }
 
 
+// ARCHIVING ASSISTANT ADMIN DATA
 if(isset($_POST['assistant-admin-archive']))
 {
     $user_id = $_POST['assistant-admin-archive'];
@@ -226,7 +229,7 @@ if(isset($_POST['assistant-admin-archive']))
 
 }
 
-//Add Admin
+// ADD ASSISTANT ADMIN
 if(isset($_POST['add_admin']))
 {
 
@@ -280,7 +283,7 @@ if(isset($_POST['add_admin']))
 }
 
 
-
+// UPDATE ASISTANT ADMIN INFORMATION
 if(isset($_POST['update_information']))
 {
 
