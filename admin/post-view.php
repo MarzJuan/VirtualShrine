@@ -9,7 +9,7 @@ include('includes/header.php');
 
     <div class="row mt-4">
         <div class="col-md-12">
-
+        <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
                     <h4>View Post
@@ -24,6 +24,7 @@ include('includes/header.php');
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
+                                    <th>Category</th>
                                     <th>Image</th>
                                     <th>Status</th>
                                     <th>Edit</th>
@@ -32,8 +33,8 @@ include('includes/header.php');
                             </thead>
                             <tbody>
                                 <?php
-                                    $posts = "SELECT * FROM posts WHERE STATUS!='1' ";
-                                    //$posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id ";
+                                    //$posts = "SELECT * FROM posts WHERE STATUS!='1' ";
+                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id ";
                                     $posts_run = mysqli_query($con, $posts);
 
                                     if(mysqli_num_rows($posts_run) > 0)
@@ -44,6 +45,7 @@ include('includes/header.php');
                                             <tr>
                                                 <td><?= $posts['id']?></td>
                                                 <td><?= $posts['name']?></td>
+                                                <td><?= $posts['cname']?></td>
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
                                                 <td>
                                                     
@@ -54,7 +56,7 @@ include('includes/header.php');
                                                 </td>
                                                 <td>
                                                     <form action="code.php" method = "POST">
-                                                    <button type="submit" name="post_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>
+                                                    <button type="submit" name="post_archive" value="<?=$posts['id'] ?>" class="btn btn-danger">Archive</a>
                                                     </form>
                                                 </td>
                                             </tr>

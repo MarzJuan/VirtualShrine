@@ -3,6 +3,52 @@ session_start();
 
 include('config/dbcon.php');
 
+// RECOVER ARCHIVED POST
+
+if(isset($_POST['post_recover']))
+{
+    $posts_id = $_POST['post_recover'];
+    // 0 = Visible
+    $query = "UPDATE posts SET status='0' WHERE id='$posts_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Post Recovered Successfully";
+        header('Location: post-archive.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: post-archive.php');
+        exit(0);
+    }
+
+}
+
+// ARCHIVE POST
+if(isset($_POST['post_archive']))
+{
+    $posts_id = $_POST['post_archive'];
+    // 1 = Archived
+    $query = "UPDATE posts SET status='1' WHERE id='$posts_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Post Archived Successfully";
+        header('Location: post-view.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: post-view.php');
+        exit(0);
+    }
+}
+
 //ADD POST
 if(isset($_POST['post_add']))
 {
@@ -21,10 +67,10 @@ if(isset($_POST['post_add']))
     $image_extension = pathinfo($image, PATHINFO_EXTENSION);
     $filename = time().'.'.$image_extension;
 
-    $status = $_POST['status'] == true ? '1':'0';
+    $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(name, slug, description, image, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, name, slug, description, image, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)

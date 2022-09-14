@@ -49,7 +49,7 @@ include('includes/header.php');
                             else
                             {
                                 ?>
-                                <h5>No Catgeory Available</h5>
+                                <h6>No Catgeory Available</h6>
                                 <?php
                             }
 

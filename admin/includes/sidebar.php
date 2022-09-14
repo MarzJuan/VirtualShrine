@@ -148,8 +148,15 @@
                                         Archived Category
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        
                                     </div>
+
+                                    <a class="nav-link" href="post-archive.php">
+                                    <div class="sb-nav-link-icon"></div>
+                                        Archived Posts
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    </div>
+
                                 </nav>
                             </div>
 

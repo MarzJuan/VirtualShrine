@@ -9,6 +9,7 @@ include('includes/header.php');
 
     <div class="row mt-4">
         <div class="col-md-12">
+        <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
                     <h4>Add Category
