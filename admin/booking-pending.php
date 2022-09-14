@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config/dbcon.php');
 include('includes/header.php');
 ?>
@@ -12,7 +13,7 @@ include('includes/header.php');
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                    <h4>Admin List</h4>
+                    <h4>Pending Booking</h4>
                 </div>
                 <div class="card-body">
 
@@ -20,7 +21,8 @@ include('includes/header.php');
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
                             <th>Date of Visit</th>
                             <th>No. of Visitors</th>
                             <th>Action</th>
@@ -40,11 +42,12 @@ include('includes/header.php');
                                     ?>
                                     <tr>
                                         <td><?= $row['booking_id']; ?></td>
-                                        <td><?= $row['name']; ?></td>
-                                        <td><?= $row['date_of_visit']; ?></td>
-                                        <td><?= $row['no_of_visitors']; ?></td>
+                                        <td><?= $row['fname']; ?></td>
+                                        <td><?= $row['lname']; ?></td>
+                                        <td><?= $row['date_visit']; ?></td>
+                                        <td><?= $row['no_visitors']; ?></td>
                                         <td><a href= "booking-approve.php" class="btn btn-success">Approve</a>
-                                        <a href= "booking-reject.php" class="btn btn-success">Reject</td>
+                                        <a href= "booking-reject.php" class="btn btn-danger">Reject</td>
                                         <td><a href="booking-details.php">View Details</a></td>
                                 
                                     </tr>

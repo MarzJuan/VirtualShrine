@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -7,8 +11,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <?php include('message.php')?>;
+    
         <img src="image/VirtualShrineLogo.png">
+        <?php include('message.php')?>;
         <div class="center">
             <h1>Login</h1>
             <hr>

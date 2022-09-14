@@ -50,14 +50,14 @@
 
                             <div class="collapse" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="pending-booking.php">
+                                    <a class="nav-link" href="booking-pending.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Pending Bookings
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link" href="assistant-admin-add.php">
+                                    <a class="nav-link" href="booking-approved.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Approved Bookings
                                     </a>
@@ -78,14 +78,14 @@
 
                             <div class="collapse" id="collapsePosts" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="pending-booking.php">
+                                    <a class="nav-link" href="post-add.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Add Post
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link" href="assistant-admin-add.php">
+                                    <a class="nav-link" href="post-view.php">
                                     <div class="sb-nav-link-icon"></div>
                                         View Post
                                     </a>
@@ -103,7 +103,7 @@
 
                             <div class="collapse" id="collapseCategory" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="add-category.php">
+                                    <a class="nav-link" href="category-add.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Add Category
                                     </a>

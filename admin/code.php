@@ -1,5 +1,49 @@
 <?php
+session_start();
+
 include('config/dbcon.php');
+
+if(isset($_POST['post_add']))
+{
+    $category_id = $_POST['category_id'];
+    
+    $name = $_POST['name'];
+    $slug = $_POST['slug'];
+    $description = $_POST['description'];
+    
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $image = $_FILES['image']['name'];
+    //rename this image
+    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = time().'.'.$image_extension;
+
+    $status = $_POST['status'] == true ? '1':'0';
+
+    $query = "INSERT INTO posts(name, slug, description, image, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$filename);
+        $_SESSION['message'] = "Post Created Successfully";
+        header('Location: post-add.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: post-add.php');
+        exit(0);
+    }
+
+}
+
+
+
 
 if(isset($_POST['archive_recover']))
 {
@@ -22,6 +66,7 @@ if(isset($_POST['archive_recover']))
     }
 
 }
+
 
 if(isset($_POST['category_archive']))
 {
@@ -132,9 +177,12 @@ if(isset($_POST['assistant-admin-recover']))
     $query = " DELETE FROM user_archive WHERE id='$user_id'";
     $query_run = mysqli_query($con, $query);
 
+    $query = " UPDATE user_archive SET status=0 WHERE id='$user_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
     if($query_run)
     {
-        $_SESSION['message'] = "Admin Archived Successfully";
+        $_SESSION['message'] = "Admin Recovered Successfully";
         header('Location: archive-user.php');
         exit(0);
     }
@@ -153,10 +201,13 @@ if(isset($_POST['assistant-admin-archive']))
 {
     $user_id = $_POST['assistant-admin-archive'];
 
-    $query = " INSERT INTO user_archive SELECT *FROM users WHERE id='$user_id'";
+    $query = " INSERT INTO user_archive SELECT * FROM users WHERE id='$user_id'";
     $query_run = mysqli_query($con, $query);
 
     $query = " DELETE FROM users WHERE id='$user_id'";
+    $query_run = mysqli_query($con, $query);
+
+    $query = " UPDATE user_archive SET status=1 WHERE id='$user_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
 
@@ -175,31 +226,59 @@ if(isset($_POST['assistant-admin-archive']))
 
 }
 
+//Add Admin
 if(isset($_POST['add_admin']))
 {
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $username = $_POST['username'];
+
+    $fname = mysqli_real_escape_string($con, $_POST['fname']);
+    $lname = mysqli_real_escape_string($con, $_POST['lname']);
+    $username = mysqli_real_escape_string($con, $_POST['username']);
     $role_as = $_POST['role_as'];
-    $password = $_POST['password'];
-    $status = $_POST['status'] == true ? '1':'0';
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $confirm_password = mysqli_real_escape_string($con, $_POST['cpassword']);
 
-    $query = "INSERT INTO users (fname, lname, username, role_as, password, status) VALUES ('$fname', '$lname', '$username', '$role_as', '$password', '$status')";
-    $query_run = mysqli_query($con, $query);
-
-    if($query_run)
+    if($password == $confirm_password)
     {
-        $_SESSION['message'] = "Admin Added Successfully";
-        header('Location: assistant-admin-list.php');
-        exit(0);
+        //Check username
+        $checkusername = "SELECT username FROM users WHERE username='$username'";
+        $checkusername_run = mysqli_query($con, $checkusername);
+
+        if(mysqli_num_rows($checkusername_run) > 0)
+        {
+            //Username already exists
+            $_SESSION['message'] = "Username unavailable";
+            header("Location: assistant-admin-add.php");
+            exit(0);
+        }
+        else
+        {
+            $user_query = "INSERT INTO users (fname, lname, username, role_as, password) VALUES ('$fname', '$lname', '$username', '$role_as', '$password')";
+            $user_query_run = mysqli_query($con, $user_query);
+
+            if($user_query_run)
+            {
+                $_SESSION['message'] = "Added Succesfully";
+                header("Location: assistant-admin-add.php");
+                exit(0);
+            }
+            else
+            {
+                $_SESSION['message'] = "Something Went Wrong!";
+                header("Location: assistant-admin-add.php");
+                exit(0);
+            }
+        }
+         
     }
     else
     {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: assistant-admin-list.php');
+        $_SESSION['message'] = "Password does not match";
+        header("Location: assistant-admin-add.php");
         exit(0);
     }
+
 }
+
 
 
 if(isset($_POST['update_information']))
@@ -221,6 +300,12 @@ if(isset($_POST['update_information']))
         {
             $_SESSION['message'] = "Updated Successfuly";
             header('Location: assistant-admin-list.php');
+            exit(0);
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong!";
+            header("Location: assistant-admin-list.php");
             exit(0);
         }
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config/dbcon.php');
 include('includes/header.php');
 ?>
@@ -40,14 +41,13 @@ include('includes/header.php');
                                         <td><?= $row['fname']; ?></td>
                                         <td><?= $row['lname']; ?></td>
                                         <td><?= $row['username']; ?></td>
-                                        <td><?= $row['role_as']; ?></td>
                                         <td>
-                                            <?php
-                                            if($row['status'] == 1){
+                                        <?php
+                                            if($row['status'] == 0){
                                                 echo 'Active';
                                             }
-                                            elseif($row['status'] == 0){
-                                                    echo 'Inactive';
+                                            else if($row['status'] == 1){
+                                                echo 'Inactive';
                                             }
 
                                             ?>
