@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config/dbcon.php');
 include('includes/header.php');
 ?>
@@ -10,7 +11,7 @@ include('includes/header.php');
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                <h4>Archived Users</h4>
+                <h4>Archived Category</h4>
                 </div>
                 <div class="card-body">
 
