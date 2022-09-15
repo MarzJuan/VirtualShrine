@@ -18,6 +18,33 @@ include('includes/header.php');
                 </div>
                 <div class="card-body">
 
+                <form action="code.php" method="POST" enctype='multipart/form-data'>
+
+                    <?php
+                        $sql = "Select name from categories";
+                        $res = mysqli_query($con, $sql);
+                    ?>
+                           
+                                
+                           <div class="row">
+                        <div class="col-md-2 mb-3">
+                            <select id="categories" name="category_id" required class="form-control" onchange="selectName()">
+                            <option value="">-- Select Category --</option>
+
+                                <?php while($rows = mysqli_fetch_array($res)){
+                                ?>
+                                    <option value="<?php echo $rows['name'] ?>"><?php echo $rows ['name']; ?></option>
+                                    <?php
+                                }
+
+                                ?>
+
+                            </select>
+
+                            </div>
+                           
+                      
+
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
                             <thead>
@@ -39,6 +66,7 @@ include('includes/header.php');
 
                                     if(mysqli_num_rows($posts_run) > 0)
                                     {
+
                                         foreach($posts_run as $posts)
                                         {
                                             ?>
