@@ -18,33 +18,6 @@ include('includes/header.php');
                 </div>
                 <div class="card-body">
 
-                <form action="code.php" method="POST" enctype='multipart/form-data'>
-
-                    <?php
-                        $sql = "Select name from categories";
-                        $res = mysqli_query($con, $sql);
-                    ?>
-                           
-                                
-                           <div class="row">
-                        <div class="col-md-2 mb-3">
-                            <select id="categories" name="category_id" required class="form-control" onchange="selectName()">
-                            <option value="">-- Select Category --</option>
-
-                                <?php while($rows = mysqli_fetch_array($res)){
-                                ?>
-                                    <option value="<?php echo $rows['name'] ?>"><?php echo $rows ['name']; ?></option>
-                                    <?php
-                                }
-
-                                ?>
-
-                            </select>
-
-                            </div>
-                           
-                      
-
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
                             <thead>
@@ -60,13 +33,16 @@ include('includes/header.php');
                             </thead>
                             <tbody>
                                 <?php
-                                    //$posts = "SELECT * FROM posts WHERE STATUS!='1' ";
-                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id ";
+                                    
+                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id AND p.status!='1'";
                                     $posts_run = mysqli_query($con, $posts);
+
+                                    //$posts = "SELECT * FROM posts WHERE status!='1' ";
+                                   // $posts_run = mysqli_query($con, $posts);
+
 
                                     if(mysqli_num_rows($posts_run) > 0)
                                     {
-
                                         foreach($posts_run as $posts)
                                         {
                                             ?>
@@ -77,7 +53,7 @@ include('includes/header.php');
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
                                                 <td>
                                                     
-                                                    <?= $posts['status'] == '1' ? 'Hidden':'visible'?>
+                                                    <?= $posts['status'] == '1' ? 'Hidden':'Visible'?>
                                                 </td>
                                                 <td>
                                                     <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
