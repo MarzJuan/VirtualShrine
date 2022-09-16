@@ -75,8 +75,9 @@ include('includes/header.php');
                                         </td>
 
 
-                                        
-                                        <td><a href="booking-details.php">View Details</a></td>
+                                        <td>
+                                            <a href="booking-details.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
+                                        </td>
                                 
                                     </tr>
                                     <?php

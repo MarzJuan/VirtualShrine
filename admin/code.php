@@ -3,7 +3,8 @@ session_start();
 
 include('config/dbcon.php');
 
-// RECOVER ACCEPT BOOKING
+
+// REJECT BOOKING
 
 if(isset($_POST['reject_booking']))
 {
@@ -27,7 +28,7 @@ if(isset($_POST['reject_booking']))
 
 }
 
-// RECOVER ACCEPT BOOKING
+// ACCEPT BOOKING
 
 if(isset($_POST['approve_booking']))
 {
