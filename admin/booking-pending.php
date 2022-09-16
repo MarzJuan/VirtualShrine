@@ -56,11 +56,11 @@ include('includes/header.php');
                                                 }
                                                 if($bookings['status'] ==1)
                                                 {
-                                                    echo "Accepted";
+                                                    echo '<span style="color:GREEN;text-align:center;">Approved</span>';
                                                 }
                                                 if($bookings['status'] ==2)
                                                 {
-                                                    echo "Rejected";
+                                                    echo '<span style="color:RED;text-align:center;">Rejected</span>';
                                                 }
 
 
@@ -68,9 +68,9 @@ include('includes/header.php');
                                             
                                         <td>
                                             <form action="code.php" method="POST">
-                                                <button type="submit" name="approve_booking" class="btn btn-success">Approve</button>
+                                                <button type="submit" name="approve_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-success">Approve</button>
                                             
-                                                <button type="submit" name="reject_booking" class="btn btn-danger">Reject</button>
+                                                <button type="submit" name="reject_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-danger">Reject</button>
                                             </form>
                                         </td>
 

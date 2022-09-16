@@ -60,6 +60,8 @@ include('includes/header.php');
                                     </div>
                                 </div>
                             </div>
+
+                            
                                     
                                     <b>Booking ID:</b>&emsp;&emsp;&emsp;&emsp;<?= $row['booking_id']; ?><br>
                                     <b>Name:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<td><?= $row['fname'],' ', $row['lname'] ?></td><br>

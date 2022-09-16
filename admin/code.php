@@ -9,7 +9,7 @@ if(isset($_POST['reject_booking']))
 {
     $bookings_id = $_POST['reject_booking'];
     // 2 = Reject
-    $query = "UPDATE bookings SET status='2' LIMIT 1";
+    $query = "UPDATE bookings SET status='2' WHERE booking_id='$bookings_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -33,7 +33,7 @@ if(isset($_POST['approve_booking']))
 {
     $bookings_id = $_POST['approve_booking'];
     // 1 = Accept
-    $query = "UPDATE bookings SET status='1' LIMIT 1";
+    $query = "UPDATE bookings SET status='1' WHERE booking_id='$bookings_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
