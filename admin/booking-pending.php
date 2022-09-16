@@ -25,6 +25,7 @@ include('includes/header.php');
                             <th>Last Name</th>
                             <th>Date of Visit</th>
                             <th>No. of Visitors</th>
+                            <th>Status</th>
                             <th>Action</th>
                             <th></th>
                             
@@ -37,17 +38,44 @@ include('includes/header.php');
 
                             if(mysqli_num_rows($query_run) > 0)
                             {
-                                foreach($query_run as $row)
+                                foreach($query_run as $bookings)
                                 {
                                     ?>
                                     <tr>
-                                        <td><?= $row['booking_id']; ?></td>
-                                        <td><?= $row['fname']; ?></td>
-                                        <td><?= $row['lname']; ?></td>
-                                        <td><?= $row['date_visit']; ?></td>
-                                        <td><?= $row['no_visitors']; ?></td>
-                                        <td><a href= "booking-approve.php" class="btn btn-success">Approve</a>
-                                        <a href= "booking-reject.php" class="btn btn-danger">Reject</td>
+                                        <td><?= $bookings['booking_id']; ?></td>
+                                        <td><?= $bookings['fname']; ?></td>
+                                        <td><?= $bookings['lname']; ?></td>
+                                        <td><?= $bookings['date_visit']; ?></td>
+                                        <td><?= $bookings['no_visitors']; ?></td>
+                                        <td>
+                                            <?php
+
+                                                if($bookings['status'] ==0)
+                                                {
+                                                    echo "Pending";
+                                                }
+                                                if($bookings['status'] ==1)
+                                                {
+                                                    echo "Accepted";
+                                                }
+                                                if($bookings['status'] ==2)
+                                                {
+                                                    echo "Rejected";
+                                                }
+
+
+                                            ?>
+                                            
+                                        <td>
+                                            <form action="code.php" method="POST">
+                                                <button type="submit" name="approve_booking" class="btn btn-success">Approve</button>
+                                            
+                                                <button type="submit" name="reject_booking" class="btn btn-danger">Reject</button>
+                                            </form>
+                                        </td>
+
+
+                                        
                                         <td><a href="booking-details.php">View Details</a></td>
                                 
                                     </tr>

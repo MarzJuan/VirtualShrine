@@ -3,6 +3,54 @@ session_start();
 
 include('config/dbcon.php');
 
+// RECOVER ACCEPT BOOKING
+
+if(isset($_POST['reject_booking']))
+{
+    $bookings_id = $_POST['reject_booking'];
+    // 2 = Reject
+    $query = "UPDATE bookings SET status='2' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Booking has been Rejected";
+        header('Location: booking-pending.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: booking-pending.php');
+        exit(0);
+    }
+
+}
+
+// RECOVER ACCEPT BOOKING
+
+if(isset($_POST['approve_booking']))
+{
+    $bookings_id = $_POST['approve_booking'];
+    // 1 = Accept
+    $query = "UPDATE bookings SET status='1' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Booking has been Approved";
+        header('Location: booking-pending.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: booking-pending.php');
+        exit(0);
+    }
+
+}
+
 // RECOVER ARCHIVED POST
 
 if(isset($_POST['post_recover']))
