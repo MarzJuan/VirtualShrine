@@ -26,18 +26,17 @@ include('includes/header.php');
                     <table class="table table-bordered table-stripe">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th><center>ID</center></th>
+                                <th><center>Name</center></th>
+                                <th><center>Status</center></th>
+                                <th><center>Action</center></th>
                             </tr>
                         </thead>
 
                         <tbody>
 
                         <?php
-                            $category = "SELECT * FROM categories WHERE status!='1'";
+                            $category = "SELECT * FROM categories WHERE status!='2'";
                             $category_run = mysqli_query($con, $category);
 
                             if(mysqli_num_rows($category_run) > 0)
@@ -50,16 +49,36 @@ include('includes/header.php');
                                     <td><?=$item['name'] ?></td>
                                     <td>
 
-                                    <?= $item['status'] == '0' ? 'visible' : 'hidden'?>
-                
+                                    <?php
+
+                                                if($item['status'] ==0)
+                                                {
+                                                    echo "Visible";
+                                                }
+                                                if($item['status'] ==1)
+                                                {
+                                                    echo "Hidden";
+                                                }
+                                                if($item['status'] ==2)
+                                                {
+                                                    echo "Archived";
+                                                }
+
+
+                                    ?>
+
+                                    
                                     </td>
-                                    <td>
-                                        <a href="category-edit.php?id=<?= $item['id'] ?>" class="btn btn-info">Edit</a>
-                                    </td>
-                                    <td>
+                                    <td><center>
+                                    
                                         <form action="code.php" method = "POST">
+                                        <a href="category-edit.php?id=<?= $item['id'] ?>" class="btn btn-info">Edit</a>
+                                    
+                                        <?php if($_SESSION['auth_role'] == '0') : ?>
                                         <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>
                                         </form>
+                                        <?php endif; ?>
+                                        </center>
                                     </td>
                                 </tr>
                                 <?php
@@ -88,7 +107,7 @@ include('includes/header.php');
             </div>
         </div>
 
-    </div>
+        </div>
 
 <?php
 include('includes/footer.php');

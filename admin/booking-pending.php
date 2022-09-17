@@ -20,13 +20,13 @@ include('includes/header.php');
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Date of Visit</th>
-                            <th>No. of Visitors</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th><center>ID</center></th>
+                            <th><center>First Name</center></th>
+                            <th><center>Last Name</center></th>
+                            <th><center>Date of Visit</center></th>
+                            <th><center>No. of Visitors</center></th>
+                            <th><center>Status</center></th>
+                            <th><center>Action</center></th>
                             <th></th>
                             
                         </tr>

@@ -34,6 +34,8 @@ include('includes/header.php');
                         
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
+                <input type="hidden" name="post_id" value="<?= $post_row['id'] ?>">
+
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="">Category list</label>
@@ -62,57 +64,57 @@ include('includes/header.php');
                             else
                             {
                                 ?>
-                                <h5>No Catgeory Available</h5>
+                                <h5>No Category Available</h5>
                                 <?php
                             }
 
+
                             ?>
-
-
                             
                         </div>
                             <div class="col-md-6 mb-3">
                                 <label for="">Name</label>
-                                <input type="text" name="name" required class="form-control">
+                                <input type="text" name="name" value="<?= $post_row['name'] ?>" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Slug (URL)</label>
-                                <input type="text" name="slug" required class="form-control">
+                                <input type="text" name="slug" value="<?= $post_row['slug'] ?>" required class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">
                                 <label for="">Description</label>
-                                <textarea name="description" required class="form-control" rows="4"></textarea>
+                                <textarea name="description" id="summernote" required class="form-control" rows="4"><?= $post_row['description'] ?></textarea>
                             </div>
 
                             <div class="col-md-12 mb-3">
                                 <label for="">Meta Title</label>
-                                <input type="text" name="meta_title" max="200" class="form-control">
+                                <input type="text" name="meta_title" value="<?= $post_row['meta_title'] ?>" max="200" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Meta Description</label>
-                                <textarea name="meta_description" required class="form-control" rows="4"></textarea>
+                                <textarea name="meta_description" required class="form-control" rows="4"><?= $post_row['meta_description'] ?></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Meta Keyword</label>
-                                <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
+                                <textarea name="meta_keyword" required class="form-control" rows="4"><?= $post_row['meta_keyword'] ?></textarea>
                             </div>
                             
                             <div class="col-md-6 mb-3">
                                 <label for="">Image</label>
+                                <input type="hidden" name="old_image" value="<?= $post_row['image'] ?>" />
                                 <input type="file" name="image" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Status</label> <br/>
-                                <input type="checkbox" name="status" width="70px" height="70px" />
+                                <input type="checkbox" name="status" <?= $post_row['status'] == '1' ? 'checked':'' ?> width="70px" height="70px" />
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="post_add" class="btn btn-primary">Save Post</button>
+                                <button type="submit" name="post_update" class="btn btn-primary">Save Post</button>
                             </div>
 
 
@@ -129,6 +131,8 @@ include('includes/header.php');
                         }
                     }
                 ?>
+
+                
 
 
 

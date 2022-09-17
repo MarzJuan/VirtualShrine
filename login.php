@@ -2,25 +2,34 @@
 session_start();
 ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
 
-        <meta charset="utf-8">
-        <title>Assistant Admin-Login Form</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<link rel="stylesheet" href="style.css">
+        <div class="py5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+
+                
+                <div class="card">
+                    <div class="card-header">
     
         <img src="image/VirtualShrineLogo.png">
-        <?php include('message.php')?>;
+        
         <div class="center">
+            <div class="center-header">
             <h1>Login</h1>
+            </div>
+            
             <hr>
+
+            <div class="center-body">
+
+            <?php include('message.php')?>
+
             <form action="logincode.php" method="post">
                 <div class="txt_field">
-                    <input type="text" required name="username">
-                    <label>Assistant Admin Username</label>
+                    <input type="username" required name="username">
+                    <label>Username</label>
                 </div>
                 <div class="txt_field">
                     <input type="password" required name="password">
@@ -29,9 +38,16 @@ session_start();
                 </div>
                 <input type="submit" name="login_btn" class="btn btn-primary" value="Login"></input>
                 <div class="MainAdmin_link"></div>
-                login as <a href="head-admin-login.php">head administrator</a>
+
 
             </form>
         </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
     </body>
 </html>

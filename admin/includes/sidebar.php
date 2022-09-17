@@ -1,3 +1,6 @@
+
+
+
 <div id="layoutSidenav_nav">
     <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/")+1); ?>
     
@@ -14,11 +17,14 @@
                                 Dashboard 
                             </a>
 
-
+    
+                           
                             
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAssistantAdmin" aria-expanded="false" aria-controls="collapseAssistantAdmin">
-                                <div class="sb-nav-link-icon"><i class='bx bxs-user-detail'></i></div>
+                              
+                            <div class="sb-nav-link-icon"><i class='bx bxs-user-detail'></i></div>
                                 Admin
+                                
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
@@ -40,6 +46,10 @@
                                     </div>
                                 </nav>
                             </div>
+                            
+                            
+
+                            
 
                             
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
@@ -120,12 +130,12 @@
                             </div>
 
                             
-
+                            
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-report' ></i></div>
                                 Reports
                             </a>
-
+                            
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseArchive" aria-expanded="false" aria-controls="collapseArchive">
                                 <div class="sb-nav-link-icon"><i class="bx bx-archive-in"></i></div>
@@ -157,19 +167,17 @@
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
+                    
+
                                 </nav>
                             </div>
 
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="bx bx-archive-in"></i></div>
-                                Archive
-                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <hr>
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Admin
                     </div>
                 </nav>
             </div>

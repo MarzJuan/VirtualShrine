@@ -27,46 +27,52 @@ include('includes/header.php');
                     if(isset($_GET['booking_id']))
                     {
                         $booking_id = $_GET['booking_id'];
-                        $bookings = "SELECT * FROM bookings WHERE booking_id='$booking_id'";
+                        $bookings = "SELECT booking_id, fname, lname, phone_no, email, id_image, org_name, date_visit, time_visit, no_visitors, status FROM bookings WHERE booking_id='$booking_id'";
                         $booking_run = mysqli_query($con, $bookings);
 
                         if(mysqli_num_rows($booking_run) > 0)
                         {
-                            foreach($booking_run as $bookings)
+                            while($bookings = $booking_run->fetch_assoc()) 
+                        {
                             {
-                            ?>   
-                                    <b>Booking ID:</b>&emsp;&emsp;&emsp;&emsp;<?= $bookings['booking_id']; ?><br>
-                                    <b>Name:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<td><?= $bookings['fname'],' ', $bookings['lname'] ?></td><br>
-                                    <b>Phone Number:</b>&emsp;&ensp;&ensp;<?= $bookings['phone_no']; ?><br>
-                                    <b>Email:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<?= $bookings['email']; ?><br>
-                                    <b>Attached File:</b>&emsp;&emsp;&emsp;&nbsp;<?= $bookings['id_image']; ?><br>
-                                    <b>Organization:</b>&emsp;&emsp;&emsp;<?= $bookings['org_name']; ?><br>
-                                    <b>Date of Visit:</b>&emsp;&emsp;&emsp;&nbsp;<?= $bookings['date_visit']; ?><br>
-                                    <b>Time of Visit:</b><?= $bookings['time_visit']; ?><br>
-                                    <b>Number of Visitors:</b><?= $bookings['no_visitors']; ?><br>
+                                echo "<br><b>Booking ID:</b> " .'<span style="margin-right: 5.9em;"></span>'. $bookings["booking_id"]."<br>";
+                                echo "<b>Name:</b> " .'<span style="margin-right: 8.4em;"></span>'. $bookings["fname"]. " " . $bookings["lname"] ."<br>";
+                                echo "<b>Phone Number:</b> " .'<span style="margin-right: 4em;"></span>'. $bookings["phone_no"]."<br>";
+                                echo "<b>Email:</b> " .'<span style="margin-right: 8.6em;"></span>'. $bookings["email"]."<br>";
+                                echo "<b>Attached File:</b> " .'<span style="margin-right: 8.6em;"></span>'. $bookings["id_image"]."<br>";
+                                echo "<b>Name of Organization:</b> " .'<span style="margin-right: 0.70em;"></span>'. $bookings["org_name"]."<br>";
+                                echo "<b>Date of Visit</b> " .'<span style="margin-right: 5.6em;"></span>'. $bookings["date_visit"]."<br>";
+                                echo "<b>Time of Visit</b> " .'<span style="margin-right: 5.5em;"></span>'. $bookings["time_visit"]."<br>";
+                                echo "<b>Number of Visitors</b> " .'<span style="margin-right: 2.5em;"></span>'. $bookings["no_visitors"]."<br>"."<br>";
 
-                                    <br><br>
-                                    <td><a href= "booking-approve.php" class="btn btn-success">Approve</a>
-                                        <a href= "booking-reject.php" class="btn btn-danger">Reject</a></td>
-
-                            <?php
+                                if($bookings['status'] == 0)
+                                {
+                                    ?>
+                                    <form action="code.php" method="POST">
+                                        <button type="submit" name="approve_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-success">Approve</button>
+                                            
+                                        <button type="submit" name="reject_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-danger">Reject</button>
+                                    </form>
+                                    <?php
+                                }
+                                if($bookings['status'] ==1)
+                                {
+                                    echo '<span style="color:GREEN;text-align:center;">Approved</span>';
+                                }
+                                if($bookings['status'] ==2)
+                                {
+                                    echo '<span style="color:RED;text-align:center;">Rejected</span>';
+                                }
                             }
                         }
-                            else
-                            {
-                            ?>
-                                <tr>
-                                    <td colspan = "6">No Record Found</td>
-                                </tr>
-                            <?php
-                            }
+                        }
+                      else {
+                            echo "0 results";
+                        }
                     }
-                            ?>
-                    
-                       
 
-                
-    
+                    
+    ?>
 
 <?php
 include('includes/footer.php');

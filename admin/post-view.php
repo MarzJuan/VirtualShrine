@@ -52,8 +52,7 @@ include('includes/header.php');
                                                 <td><?= $posts['cname']?></td>
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
                                                 <td>
-                                                    
-                                                    <?= $posts['status'] == '1' ? 'Hidden':'Visible'?>
+                                                    <?= $posts['status'] == '1' ? 'Hidden':'Active'?>
                                                 </td>
                                                 <td>
                                                     <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
