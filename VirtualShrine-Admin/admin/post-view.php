@@ -34,7 +34,7 @@ include('includes/header.php');
                             <tbody>
                                 <?php
                                     
-                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id AND p.status!='1'";
+                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id AND p.status!='2'";
                                     $posts_run = mysqli_query($con, $posts);
 
                                     //$posts = "SELECT * FROM posts WHERE status!='1' ";
@@ -51,9 +51,28 @@ include('includes/header.php');
                                                 <td><?= $posts['name']?></td>
                                                 <td><?= $posts['cname']?></td>
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
+                                                
                                                 <td>
-                                                    <?= $posts['status'] == '1' ? 'Hidden':'Active'?>
-                                                </td>
+                                            <?php
+
+                                                if($posts['status'] ==0)
+                                                {
+                                                    echo '<span style="color:GREEN;text-align:center;">Active</span>';
+                                                }
+                                                if($posts['status'] ==1)
+                                                {
+                                                    echo '<span style="color:Blue;text-align:center;">Hidden</span>';
+                                                }
+                                                if($posts['status'] ==2)
+                                                {
+                                                    echo '<span style="color:RED;text-align:center;">Archived</span>';
+                                                }
+
+
+                                            ?>
+                                            
+                                            <td>
+
                                                 <td>
                                                     <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
                                                 </td>

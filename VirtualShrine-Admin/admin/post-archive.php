@@ -26,7 +26,7 @@ include('includes/header.php');
                     </thead>
                         <tbody>
                             <?php
-                            $query = "SELECT * FROM posts WHERE status!='0'";
+                            $query = "SELECT * FROM posts WHERE status='2'";
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)
@@ -39,8 +39,25 @@ include('includes/header.php');
                                     <td><?=$posts['name'] ?></td>
                                     <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
                                     <td>
-                                    <?= $posts['status'] == '0' ? 'visible' : 'hidden'?>
-                                        </td>
+
+                                    <?php
+
+                                                if($posts['status'] ==0)
+                                                {
+                                                    echo "Active";
+                                                }
+                                                if($posts['status'] ==1)
+                                                {
+                                                    echo "Hidden";
+                                                }
+                                                if($posts['status'] ==2)
+                                                {
+                                                    echo '<span style="color:RED;text-align:center;">Archived</span>';
+                                                }
+
+
+                                    ?>
+                                    </td>
                                         <td>
                                             <form action="code.php" method="POST">
                                                 <button type="submit" name="post_recover" value="<?=$posts['id'] ?>" class="btn btn-success">Recover</button>

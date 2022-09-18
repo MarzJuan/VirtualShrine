@@ -110,7 +110,7 @@ include('includes/header.php');
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Status</label> <br/>
-                                <input type="checkbox" name="status" <?= $post_row['status'] == '1' ? 'checked':'' ?> width="70px" height="70px" />
+                                <input type="checkbox" name="status" <?= $post_row['status'] == '0' ? 'checked':'' ?> width="70px" height="70px" />
                             </div>
 
                             <div class="com-md-6 mb-3">

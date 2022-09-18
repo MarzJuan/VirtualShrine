@@ -81,7 +81,7 @@ if(isset($_POST['post_archive']))
 {
     $posts_id = $_POST['post_archive'];
     // 2 = Archived
-    $query = "UPDATE posts SET status='1' WHERE id='$posts_id' LIMIT 1";
+    $query = "UPDATE posts SET status='2' WHERE id='$posts_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -98,10 +98,12 @@ if(isset($_POST['post_archive']))
     }
 }
 
+
+
 //EDIT POST
 if(isset($_POST['post_update']))
 {
-    $posts_id = $_POST['post_id'];
+    $post_id = $_POST['post_id'];
 
     $category_id = $_POST['category_id'];
     
@@ -112,6 +114,8 @@ if(isset($_POST['post_update']))
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
+
+   
 
     $old_filename = $_POST['old_image'];
     $image = $_FILES['image']['name'];
@@ -130,12 +134,14 @@ if(isset($_POST['post_update']))
         $update_filename = $old_filename;
     }
 
-    $status = $_POST['status'] == true ? '1':'0';
+    $status = $_POST['status'] == true ? '0':'1';
 
 
-    $query="UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', image='$update_filename',
+
+    $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', image='$update_filename',
                     meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
-                    status='$status' WHERE id='$posts_id'";
+                    status='$status' WHERE id='$post_id' ";
+    
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -144,24 +150,24 @@ if(isset($_POST['post_update']))
         {
             if(file_exists('../uploads/posts/'.$old_filename)){
                 unlink("../uploads/posts/'.$old_filename");
-            {
+            }
             move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$update_filename);
         }
         
             $_SESSION['message'] = "Post Updated Successfully";
-            header('Location: post-edit.php?id='.$posts_id);
+            header('Location: post-edit.php?id='.$post_id);
             exit(0);
-        }
-        else
-        {
-            $_SESSION['message'] = "Something Went Wrong";
-            header('Location: post-edit.php?id='.$posts_id);
-            exit(0);
-        }
-
-        }
     }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: post-edit.php?id='.$post_id);
+        exit(0);
+    }
+
 }
+    
+
 
 
 
@@ -183,8 +189,10 @@ if(isset($_POST['post_add']))
     $image_extension = pathinfo($image, PATHINFO_EXTENSION);
     $filename = time().'.'.$image_extension;
 
+    $status = $_POST['status'] == true ? '0':'1';
+
     $query = "INSERT INTO posts(category_id, name, slug, description, image, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword')";
+            ('$category_id','$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
