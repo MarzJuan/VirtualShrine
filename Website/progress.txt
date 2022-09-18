@@ -13,6 +13,7 @@ Task Completed
 	* View Archived User
 		-Recover archived accounts
 - Logout
+- View, Edit, Add, Archive Post
 
 Task to be completed
 - 
