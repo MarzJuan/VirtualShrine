@@ -26,13 +26,13 @@ include('includes/header.php');
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>username</th>
-                            <th>status</th>
-                            <th>Edit</th>
-                            <th>Archive</th>
+                            <th><center>ID</center></th>
+                            <th><center>Name</center></th>
+                            <th><center>username</center></th>
+                            <th><center>status</center></th>
+                            <?php if($_SESSION['auth_role'] == '0') : ?>
+                            <th><center>Action</center></th>
+                            <?php endif; ?>
                         </tr>
                     </thead>
                         <tbody>
@@ -47,9 +47,9 @@ include('includes/header.php');
                                     ?>
                                     <tr>
                                         <td><?= $row['id']; ?></td>
-                                        <td><?= $row['fname']; ?></td>
-                                        <td><?= $row['lname']; ?></td>
+                                        <td><?= $row['fname']. " " .$row['lname']; ?></td>
                                         <td><?= $row['username']; ?></td>
+
                                         <td>
                                             <?php
                                             if($row['status'] == 1){
@@ -61,12 +61,20 @@ include('includes/header.php');
 
                                             ?>
                                         </td>
-                                        <td><a href= "assistant-admin-edit.php?id=<?=$row['id'];?>" class="btn btn-success">Edit</td>
-                                        <td>
+                                        
+                                        <!-- Only the Head Admin will be able to see this card-->
+                                        <td><center>
+                                        <?php if($_SESSION['auth_role'] == '0') : ?>
+
                                             <form action="code.php" method="POST">
-                                                <button type="submit" name="assistant-admin-archive" value="<?=$row['id'];?>" class="btn btn-danger">Archive</button>
+                                            <a href= "assistant-admin-edit.php?id=<?=$row['id'];?>" class="btn btn-success">Edit</a>
+                                            
+                                            <button type="submit" name="assistant-admin-archive" value="<?=$row['id'];?>" class="btn btn-danger">Archive</button>
                                             </form>
-                                        </td>
+                                            
+                                            <?php endif; ?>
+                                        <!-- end -->
+                                        </center></td>
                                     </tr>
                                     <?php
                                 }

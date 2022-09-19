@@ -22,13 +22,13 @@ include('includes/header.php');
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Category</th>
-                                    <th>Image</th>
-                                    <th>Status</th>
-                                    <th>Edit</th>
-                                    <th>Archive</th>
+                                    <th><center>ID</center></th>
+                                    <th><center>Name</center></th>
+                                    <th><center>Category</center></th>
+                                    <th><center>Image</center></th>
+                                    <th><center>Status</center></th>
+                                    <th><center>Action</center></th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -70,18 +70,19 @@ include('includes/header.php');
 
 
                                             ?>
-                                            
-                                            <td>
 
-                                                <td>
-                                                    <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
-                                                </td>
-                                                <td>
+                                                <td><center>
                                                     <form action="code.php" method = "POST">
+                                                    <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
+                                                
+                                                    
                                                     <button type="submit" name="post_archive" value="<?=$posts['id'] ?>" class="btn btn-danger">Archive</a>
                                                     </form>
-                                                </td>
+                                                </center></td>
+                                            
                                             </tr>
+
+                                            
                                             <?php
                                         }
                                     }
