@@ -21,6 +21,7 @@
     <body class="sb-nav-fixed">
 
     <?php
+    //session_start();
     include('includes/navbar-top.php')
     ?>
 

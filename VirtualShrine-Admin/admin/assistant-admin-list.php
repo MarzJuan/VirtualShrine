@@ -15,9 +15,10 @@ include('includes/header.php');
 
         <div class="col-md-12">
             <?php include('message.php'); ?>
-            <div class="card">
-                <div class="card-header">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
                 <h6> Assistant Admin List
+                <a href="assistant-admin-add.php" class="btn btn-primary float-end">Add User</a>
                 </h6>
                     
                 </div>
@@ -30,7 +31,7 @@ include('includes/header.php');
                             <th><center>Name</center></th>
                             <th><center>username</center></th>
                             <th><center>status</center></th>
-                            <?php if($_SESSION['auth_role'] == '0') : ?>
+                            <?php if($_SESSION['auth_role'] == '0') : ?> <!-- Only the Head Admin will be able to see this-->
                             <th><center>Action</center></th>
                             <?php endif; ?>
                         </tr>
@@ -62,7 +63,7 @@ include('includes/header.php');
                                             ?>
                                         </td>
                                         
-                                        <!-- Only the Head Admin will be able to see this card-->
+                                        <!-- Only the Head Admin will be able to see this-->
                                         <td><center>
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
 

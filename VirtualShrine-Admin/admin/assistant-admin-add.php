@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config/dbcon.php');
 include('includes/header.php');
 ?>
@@ -14,7 +15,9 @@ include('includes/header.php');
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Add User</h4>
+                    <h4>Add User
+                    <a href="assistant-admin-list.php" class="btn btn-primary float-end">Back</a>
+                    </h4>
                 </div>
                 <div class="card-body">
 

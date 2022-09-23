@@ -4,6 +4,7 @@ include('config/dbcon.php');
 include('includes/header.php');
 ?>
 
+<?php include('message.php'); ?>
 <div class="container-fluid px-4">
     <h1 class="mt-4">Admin Dashboard</h1>
     <ol class="breadcrumb mb-4">
@@ -11,7 +12,7 @@ include('includes/header.php');
     </ol>
     
         <div class="row">
-            <?php include('message.php'); ?>
+
         <div class="col-xl-3 col-md-6">
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">No. of Admins
