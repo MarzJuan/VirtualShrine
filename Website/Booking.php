@@ -4,11 +4,12 @@
 <head>
         <title>Booking Page</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="default.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="retun-btn">
-   <a href="homePage.html"> Return to Home</a>
+    <a href="homePage.html"> Return to Home</a>
 </div>
 <div class="container">
 <div class="header bg-header">
@@ -49,25 +50,25 @@
 </div>
 <div class="input-box">
         <span class="Phone-text">
-          Phone Number
+            Phone Number
         </span>
         <div><input type="text" placeholder="Phone Number" class="phone-widht"></div>
     </div>
     <div class="input-box">
-            <span class="Email-text">
-             Email
-            </span>
-            <div><input type="text" placeholder="Email Address" class="email-width"></div>
+        <span class="Email-text">
+            Email
+        </span>
+        <div><input type="text" placeholder="Email Address" class="email-width"></div>
         </div>
         <div class="input-box">
-            <span class="file-text">
-             Please attach a Permit Letter for Visit and Valid ID :
-            </span>
+        <span class="file-text">
+            Please attach a Permit Letter for Visit and Valid ID :
+        </span>
             <div class="file-border"> <label for="file" class="file-btn"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M14,2L20,8V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H14M18,20V9H13V4H6V20H18M12,12L16,16H13.5V19H10.5V16H8L12,12Z" />
                 </svg> Choose file </label>
                 <input type="file" name="file" id="file" required>
-          </div>
+        </div>
         </div>
         <div class="input-box">
                 <span class="Email-text">
