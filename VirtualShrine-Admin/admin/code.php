@@ -470,15 +470,16 @@ if(isset($_POST['update_information']))
         if($query_run)
         {
             $_SESSION['message'] = "Updated Successfuly";
-            header('Location: assistant-admin-list.php');
+            header('Location: assistant-admin-edit.php?id='.$user_id);
             exit(0);
         }
         else
         {
             $_SESSION['message'] = "Something Went Wrong!";
-            header("Location: assistant-admin-list.php");
+            header('Location: assistant-admin-edit.php?id='.$user_id);
             exit(0);
         }
 }
+
 
 ?>

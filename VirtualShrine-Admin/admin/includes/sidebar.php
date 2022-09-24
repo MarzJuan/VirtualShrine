@@ -23,13 +23,13 @@
                             </a>
                             -->
                             
+                            <?php if($_SESSION['auth_role'] == '0') : ?>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAssistantAdmin" aria-expanded="false" aria-controls="collapseAssistantAdmin">
-                              
                             <div class="sb-nav-link-icon"><i class='bx bxs-user-detail'></i></div>
                                 Admin
-                                
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <?php endif; ?>
 
                             <div class="collapse" id="collapseAssistantAdmin" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
@@ -54,12 +54,13 @@
 
                             
 
-                            
+                            <?php if($_SESSION['auth_role'] == '1') : ?>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-book-content' ></i></div>
                                 Bookings
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <?php endif; ?>
 
                             <div class="collapse" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
@@ -133,11 +134,12 @@
                             </div>
 
                             
-                            
+                            <?php if($_SESSION['auth_role'] == '0') : ?>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-report' ></i></div>
                                 Reports
                             </a>
+                            <?php endif; ?>
                             
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseArchive" aria-expanded="false" aria-controls="collapseArchive">
@@ -151,21 +153,21 @@
 
                                     <a class="nav-link" href="archive-user.php">
                                     <div class="sb-nav-link-icon"></div>
-                                        Archived Users
+                                        Users
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
                                     <a class="nav-link" href="archive-category.php">
                                     <div class="sb-nav-link-icon"></div>
-                                        Archived Category
+                                        Category
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
                                     <a class="nav-link" href="post-archive.php">
                                     <div class="sb-nav-link-icon"></div>
-                                        Archived Posts
+                                        Posts
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
@@ -190,3 +192,5 @@
                     </div>
                 </nav>
             </div>
+
+            

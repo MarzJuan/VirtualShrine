@@ -8,7 +8,7 @@ if(isset($_POST['login_btn']))
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
-    $login_query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+    $login_query = "SELECT * FROM users WHERE BINARY username='$username' AND BINARY password='$password' LIMIT 1";
     $login_query_run = mysqli_query($con, $login_query);
 
     if(mysqli_num_rows($login_query_run)>0)
@@ -28,13 +28,13 @@ if(isset($_POST['login_btn']))
             'user_name' => $user_name,
         ];
 
-        if($_SESSION['auth_role'] == '0')
+        if($_SESSION['auth_role'] == '0') // Head Admin
         {
             $_SESSION['message'] = "Welcome to Head Admin dashboard";
             header("Location: admin/index.php");
             exit(0);
         }
-        elseif($_SESSION['auth_role'] == '1')
+        elseif($_SESSION['auth_role'] == '1') // Assistant Admin
         {
             $_SESSION['message'] = "Welcome to Assistant Admin dashboard";
             header("Location: admin/index.php");

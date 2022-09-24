@@ -4,6 +4,7 @@ include('config/dbcon.php');
 include('includes/header.php');
 ?>
 
+
 <?php include('message.php'); ?>
 <div class="container-fluid px-4">
     <h1 class="mt-4">Admin Dashboard</h1>
@@ -30,6 +31,7 @@ include('includes/header.php');
                     }
 
                 ?>
+                
                 </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="assistant-admin-list.php">View Details</a>
@@ -56,7 +58,7 @@ include('includes/header.php');
                 ?>
                 </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="booking-pending.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>

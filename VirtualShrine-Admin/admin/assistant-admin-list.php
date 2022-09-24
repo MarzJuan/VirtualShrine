@@ -1,6 +1,6 @@
 <?php
-session_start();
-include('config/dbcon.php');
+include('authentication.php');
+include('middleware/superadminAuth.php');
 include('includes/header.php');
 ?>
 
@@ -17,9 +17,9 @@ include('includes/header.php');
             <?php include('message.php'); ?>
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                <h6> Assistant Admin List
+                <h4> Assistant Admin List
                 <a href="assistant-admin-add.php" class="btn btn-primary float-end">Add User</a>
-                </h6>
+                </h4>
                     
                 </div>
                 <div class="card-body">

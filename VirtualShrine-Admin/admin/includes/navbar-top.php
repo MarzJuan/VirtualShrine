@@ -16,20 +16,43 @@
 
             
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user fa-fw"></i><?= $_SESSION['auth_user']['user_name']; ?> <!-- Display the username on top navbar-->
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" 
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </i><?= $_SESSION['auth_user']['user_name']; ?> <!-- Display the username on top navbar-->
+                        <img class="img-profile rounded-circle "
+                                src="../uploads/admin-image.png"
+                                width="30" 
+                                height="30"/>
                     </a>
                     
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                
+                                
+                                <form action="../allcode.php" method="POST">
+                                    <button type="submit" name="logout_btn" class="dropdown-item" href="#">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </button>
+                                
+                    </form>
+                            </div>
                         
-                        <form action="../allcode.php" method="POST">
-                            <button type="submit" name="logout_btn" class="dropdown-item">Logout</button>
-                        </form>
                     </ul>
                 </li>
             </ul>

@@ -1,5 +1,6 @@
 <?php
-include('config/dbcon.php');
+include('authentication.php');
+include('middleware/superadminAuth.php');
 include('includes/header.php');
 ?>
 
@@ -17,7 +18,9 @@ include('includes/header.php');
         
             <div class="card">
                 <div class="card-header">
-                    <h4>Edit Information</h4>
+                    <h4>Edit Information
+                    <a href="assistant-admin-list.php" class="btn btn-primary float-end">Back</a>
+                    </h4>
                 </div>
                 <div class="card-body">
 

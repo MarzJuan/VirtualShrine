@@ -10,6 +10,7 @@ include('includes/header.php');
     <div class="row mt-4">
         <div class="col-md-12">
         <?php include('message.php'); ?>
+        <div class="card shadow mb-4">
             <div class="card">
                 <div class="card-header">
                     <h4>View Post
@@ -19,7 +20,7 @@ include('includes/header.php');
                 <div class="card-body">
 
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th><center>ID</center></th>
@@ -75,9 +76,10 @@ include('includes/header.php');
                                                     <form action="code.php" method = "POST">
                                                     <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
                                                 
-                                                    
+                                                    <?php if($_SESSION['auth_role'] == '0') : ?>
                                                     <button type="submit" name="post_archive" value="<?=$posts['id'] ?>" class="btn btn-danger">Archive</a>
                                                     </form>
+                                                    <?php endif; ?>
                                                 </center></td>
                                             
                                             </tr>
