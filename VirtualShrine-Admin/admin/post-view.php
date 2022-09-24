@@ -73,7 +73,7 @@ include('includes/header.php');
                                             ?>
 
                                                 <td><center>
-                                                    <form action="code.php" method = "POST">
+                                                    <form action="code-superAdmin.php" method = "POST">
                                                     <a href="post-edit.php?id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>

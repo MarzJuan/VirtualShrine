@@ -1,6 +1,5 @@
 <?php
-session_start();
-include('config/dbcon.php');
+include('authentication.php');
 include('includes/header.php');
 ?>
 
@@ -71,7 +70,7 @@ include('includes/header.php');
                                     </td>
                                     <td><center>
                                     
-                                        <form action="code.php" method = "POST">
+                                        <form action="code-superAdmin.php" method = "POST">
                                         <a href="category-edit.php?id=<?= $item['id'] ?>" class="btn btn-info">Edit</a>
                                     
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
