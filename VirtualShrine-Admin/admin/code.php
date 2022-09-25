@@ -85,7 +85,12 @@ if(isset($_POST['post_update']))
     $category_id = $_POST['category_id'];
     
     $name = $_POST['name'];
-    $slug = $_POST['slug'];
+
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
     $description = $_POST['description'];
     
     $meta_title = $_POST['meta_title'];
@@ -154,7 +159,11 @@ if(isset($_POST['post_add']))
     $category_id = $_POST['category_id'];
     
     $name = $_POST['name'];
-    $slug = $_POST['slug'];
+   
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
     $description = $_POST['description'];
     
     $meta_title = $_POST['meta_title'];
@@ -222,7 +231,11 @@ if(isset($_POST['edit_category']))
 {
     $category_id = $_POST['category_id'];
     $name = $_POST['name'];
-    $slug = $_POST['slug'];
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
     $description = $_POST['description'];
     
     $meta_title = $_POST['meta_title'];
@@ -261,7 +274,11 @@ if(isset($_POST['edit_category']))
 if(isset($_POST['add_category']))
 {
     $name = $_POST['name'];
-    $slug = $_POST['slug'];
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+    
     $description = $_POST['description'];
     
     $meta_title = $_POST['meta_title'];

@@ -114,7 +114,7 @@ include('includes/header.php');
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="post_update" class="btn btn-primary">Save Post</button>
+                                <button type="submit" name="post_update" class="btn btn-primary">Update</button>
                             </div>
 
 

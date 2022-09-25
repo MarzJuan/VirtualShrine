@@ -1,7 +1,7 @@
-
-
-
 <div id="layoutSidenav_nav">
+    <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],"/")+1); ?>
+
+
     <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/")+1); ?>
     
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -11,7 +11,7 @@
 
                             <div class="sb-sidenav-menu-heading">Core</div>
 
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link <?= $page == 'index.php' ? 'active':'' ?>" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -24,23 +24,23 @@
                             -->
                             
                             <?php if($_SESSION['auth_role'] == '0') : ?>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAssistantAdmin" aria-expanded="false" aria-controls="collapseAssistantAdmin">
+                            <a class="nav-link collapsed <?= $page == 'assistant-admin-list.php' || $page == 'assistant-admin-add.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAssistantAdmin" aria-expanded="false" aria-controls="collapseAssistantAdmin">
                             <div class="sb-nav-link-icon"><i class='bx bxs-user-detail'></i></div>
                                 Admin
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <?php endif; ?>
 
-                            <div class="collapse" id="collapseAssistantAdmin" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse <?= $page == 'assistant-admin-list.php' || $page == 'assistant-admin-add.php' ? 'show':'' ?>" id="collapseAssistantAdmin" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="assistant-admin-list.php">
+                                    <a class="nav-link <?= $page == 'assistant-admin-list.php' ? 'active':'' ?>" href="assistant-admin-list.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Admin List
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link" href="assistant-admin-add.php">
+                                    <a class="nav-link <?= $page == 'assistant-admin-add.php' ? 'active':'' ?>" href="assistant-admin-add.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Add New Admin
                                     </a>
