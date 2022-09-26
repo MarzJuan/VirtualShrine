@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="retun-btn">
-   <a href="homePage.html"> Return to Home</a>
+    <a href="homePage.html"> Return to Home</a>
 </div>
 <div class="container">
 <div class="header bg-header">
