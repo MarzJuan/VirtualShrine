@@ -101,14 +101,14 @@ content:  '\1F50D';
 
 .Welcome{
     margin:30px 0 0 80px;
-    font-size: 60px;
+    font-size: 55px;
     color:#1D1E4E;
 }
 
 /*Book now button*/
 
 .book-btn{
-    margin: 80px 0 0 80px;
+    margin: 30px 0 0 30px;
     color:white;
     background-color:#517B79;
     text-decoration: underline;
@@ -246,8 +246,8 @@ box-shadow: 11px 6px 14px rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode:soft-light;
     padding:0;
-    height: 316px;
-    width: 727px;
+    height: 360px;
+    width: 640px;
     margin:0;
 }
 
@@ -270,8 +270,8 @@ box-shadow: 11px 6px 14px rgba(0, 0, 0, 0.3);
     background-color: rgba(145, 141, 141, 0.5);
     background-blend-mode:multiply;
     padding:0;
-    height: 316px;
-    width: 727px;
+    height: 360px;
+    width: 640px;
     margin:0;
 }
 
@@ -282,8 +282,8 @@ box-shadow: 11px 6px 14px rgba(0, 0, 0, 0.3);
     background-blend-mode:soft-light;
     object-fit:cover;
     padding:0;
-    height: 316px;
-    width: 727px;
+    height: 360px;
+    width: 640px;;
     margin:0;
 }
 
