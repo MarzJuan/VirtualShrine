@@ -92,16 +92,16 @@
 
                             <div class="collapse" id="collapsePosts" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="post-add.php">
+                                    <a class="nav-link" href="post-view.php">
                                     <div class="sb-nav-link-icon"></div>
-                                        Add Post
+                                        Gallery
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link" href="post-view.php">
+                                    <a class="nav-link" href="audio-view.php">
                                     <div class="sb-nav-link-icon"></div>
-                                        View Post
+                                        Audio Guide
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         
@@ -109,11 +109,13 @@
                                 </nav>
                             </div>
 
+                            <?php if($_SESSION['auth_role'] == '0') : ?>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-category-alt'></i></div>
                                 Category
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <?php endif; ?>
 
                             <div class="collapse" id="collapseCategory" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">

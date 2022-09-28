@@ -1,6 +1,40 @@
 <?php
 include('authentication.php');
 
+// ADD AUDIO
+
+if (isset($_POST['audio_add']) && isset($_FILES['my_audio'])) 
+{
+
+    $audio_name = $_FILES['my_audio']['name'];
+    $tmp_name = $_FILES['my_audio']['tmp_name'];
+    $error = $_FILES['my_audio']['error'];
+
+    if ($error === 0) {
+    	$audio_ex = pathinfo($audio_name, PATHINFO_EXTENSION);
+
+    	$audio_ex_lc = strtolower($audio_ex);
+
+    	$allowed_exs = array("mp4", 'webm', 'avi', 'flv');
+
+    	if (in_array($audio_ex_lc, $allowed_exs)) {
+    		
+    		$new_audio_name = uniqid("audio-", true). '.'.$audio_ex_lc;
+    		$audio_upload_path = 'uploads/'.$new_audio_name;
+    		move_uploaded_file($tmp_name, $audio_upload_path);
+
+    		// Now let's Insert the video path into database
+            $sql = "INSERT INTO audio(audio) 
+                   VALUES('$new_audio_name')";
+            mysqli_query($con, $sql);
+            header("Location: audio-add.php");
+    	}else {
+    		$em = "You can't upload files of this type";
+    		header("Location: index.php?error=$em");
+    	}
+    }
+}
+
 // REJECT BOOKING
 
 if(isset($_POST['reject_booking']))
@@ -175,15 +209,23 @@ if(isset($_POST['post_add']))
     $image_extension = pathinfo($image, PATHINFO_EXTENSION);
     $filename = time().'.'.$image_extension;
 
+    $audio = $_FILES['audio']['name'];
+    //rename this audio
+    $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
+    $file_name = time().'.'.$audio_extension;
+
+    
+
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, name, slug, description, image, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, name, slug, description, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$name', '$slug', '$description', '$filename', '$file_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
     {
         move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$filename);
+        move_uploaded_file($_FILES['audio']['name'], '../audio/posts/'.$file_name);
         $_SESSION['message'] = "Post Created Successfully";
         header('Location: post-add.php');
         exit(0);
