@@ -59,7 +59,7 @@ include('includes/header.php');
                                     ?>
                                     </td>
                                         <td>
-                                            <form action="code.php" method="POST">
+                                            <form action="code-superAdmin.php" method="POST">
                                                 <button type="submit" name="post_recover" value="<?=$posts['id'] ?>" class="btn btn-success">Recover</button>
                                             </form>
                                         </td>

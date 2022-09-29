@@ -20,7 +20,7 @@ include('includes/header.php');
                 <div class="card-body">
 
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table id="myDataTable" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th><center>Audio ID</center></th>
@@ -51,7 +51,7 @@ include('includes/header.php');
                                             <tr>
                                                 <td><?= $audio['audio_id']?></td>
                                                 <td><?= $audio['title']?></td>
-                                                <td><?= $posts['cname']?></td>
+                                                <td><?= $audio['cname']?></td>
                                                 <td><?= $audio['audio']?></td>
                                                 
                                                 <td>
@@ -70,7 +70,7 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="audio-edit.php?id=<?= $audio['id']?>" class="btn btn-success">Edit</a>
+                                                    <a href="audio-edit.php?id=<?= $audio['audio_id']?>" class="btn btn-success">Edit</a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
                                                     <button type="submit" name="audio_archive" value="<?=$audio['audio_id'] ?>" class="btn btn-danger">Archive</a>

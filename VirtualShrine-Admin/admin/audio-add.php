@@ -20,7 +20,10 @@ include('includes/header.php');
                 </div>
                 <div class="card-body">
 
-                
+                <?php if (isset($_GET['error'])) {  ?>
+                <p><?=$_GET['error']?></p>
+                <?php } ?>
+
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                     <div class="row">
@@ -60,14 +63,9 @@ include('includes/header.php');
                         </div>
                             <div class="col-md-12 mb-3">
                                 <label for="">Title</label>
-                                <input type="text" name="name" required class="form-control">
+                                <input type="text" name="title" required class="form-control">
                             </div>
 
-                            <?php if (isset($_GET['error'])) {  ?>
-	
-                                <p><?=$_GET['error']?></p>
-	                            <?php } ?>
-                            
                             
                             <div class="col-md-6 mb-3">
                             <label for="">Audio File</label>

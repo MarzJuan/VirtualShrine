@@ -17,7 +17,7 @@ include('includes/header.php');
                 </div>
                 <div class="card-body">
 
-                <table class="table table-bordered">
+                <table id="myDataTable" class="table table-bordered">
                     <thead>
                         <tr>
                             <th><center>ID</center></th>
@@ -33,7 +33,7 @@ include('includes/header.php');
                     </thead>
                         <tbody>
                             <?php
-                            $query = "SELECT * FROM bookings";
+                            $query = "SELECT * FROM bookings WHERE status='0'";
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)

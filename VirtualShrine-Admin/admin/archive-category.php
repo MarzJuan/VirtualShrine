@@ -42,7 +42,7 @@ include('includes/header.php');
                                     <?= $item['status'] == '0' ? 'visible' : 'hidden'?>
                                         </td>
                                         <td>
-                                            <form action="code.php" method="POST">
+                                            <form action="code-superAdmin.php" method="POST">
                                                 <button type="submit" name="archive_recover" value="<?=$item['id'] ?>" class="btn btn-success">Recover</button>
                                             </form>
                                         </td>
