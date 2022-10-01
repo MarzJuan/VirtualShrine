@@ -176,7 +176,7 @@
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
-                            <div class="collapse <?= $page == 'archive-user.php' || $page == 'archive-category.php' || $page == 'post-archive.php' ? 'show':'' ?>" id="collapseArchive" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse <?= $page == 'archive-user.php' || $page == 'archive-category.php' || $page == 'post-archive.php' || $page == 'audio-archive.php' ? 'show':'' ?>" id="collapseArchive" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
 
                                     <a class="nav-link <?= $page == 'archive-user.php' ? 'active':'' ?>" href="archive-user.php">
@@ -194,7 +194,7 @@
                                     </div>
 
                                     
-                                    <a class="nav-link <?= $page == 'post-archive.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePostArchive" aria-expanded="false" aria-controls="collapsePostArchive">
+                                    <a class="nav-link <?= $page == 'post-archive.php' || $page == 'audio-archive.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePostArchive" aria-expanded="false" aria-controls="collapsePostArchive">
                                     <div class="sb-nav-link-icon"></div>
                                         Posts
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -220,6 +220,7 @@
                                             <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                             </div>
                                              <!--END OF AUDIO ARCHIVE-->
+                                             
                                     </div>
                                     <!--END OF ARCHIVE-->
 

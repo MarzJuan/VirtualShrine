@@ -52,7 +52,21 @@ include('includes/header.php');
                                                 <td><?= $audio['audio_id']?></td>
                                                 <td><?= $audio['title']?></td>
                                                 <td><?= $audio['cname']?></td>
-                                                <td><?= $audio['audio']?></td>
+                                                <td>
+                                                    <?php
+                                                    $audio['audio']
+                                                        ?>
+                                                                
+                                                           <audio src="../uploads/audio/<?=$audio['audio']?>" 
+                                                                  controls>
+                                                               
+                                                            </audio>
+                                               
+                                                            <?php 
+                                                            
+                                                            
+                                                            ?>
+                                                </td>
                                                 
                                                 <td>
                                             <?php

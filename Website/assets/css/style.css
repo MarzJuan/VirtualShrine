@@ -1,0 +1,125 @@
+html,
+body,
+p,
+div,
+label{
+  font-family: Calibri, sans-serif!important;
+}
+
+body{
+  background-color: #F2ECEC;
+  padding: 20px
+}
+
+.card{
+  border-radius: 10px;
+}
+
+.start-btn{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nmp-logo{
+  width:150px;
+}
+
+.parsley-errors-list {
+    list-style-type: none;
+    padding: 0;
+    color: red;
+    font-size: 12px;
+}  
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1rem;    
+}
+
+input.form-control,
+select.form-control {
+    color: #000000;
+    font-size: 0.9rem;
+    border: 1px solid #808080;
+    height: 45px!important    
+}
+
+textarea.form-control {
+    color: #000000;
+    font-size: 0.9rem;
+    border: 1px solid #808080;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #949494;
+            opacity: 1; /* Firefox */
+            font-size: 0.9rem;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #949494;
+            font-size: 0.9rem;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+            color: #949494;
+            font-size: 0.9rem;
+ }
+
+ .card-header {
+    color: #000000;
+    font-size: 0.9rem;
+ }
+
+ .form-heading {
+  background: #E3AD3F;
+  text-align: center;
+ }
+
+  .form-heading h3 h2 {
+        color: #ffffff;
+  }
+
+  .form-heading div {
+        color: #fff;
+  }  
+
+  .form-heading small {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px
+  }  
+
+  .btn-info{
+    background-color: #E3AD3F!important;
+    border-color: #ffffff!important;
+    font-weight:700!important;
+    border-radius: 5px!important;
+    height: 45px!important
+  }
+
+        .ui-datepicker-prev span.ui-icon,
+        .ui-datepicker-next span.ui-icon {
+            background-image: url("https://cdn0.iconfinder.com/data/icons/flat-round-arrow-arrow-head/512/Red_Arrow_Right-512.png");
+            background-size: contain;
+            background-position: center;
+        }
+        
+        .ui-datepicker-prev span.ui-icon {
+            transform: rotate(180deg);
+        }
+        
+        .ui-datepicker-prev span.ui-icon:focus,
+        .ui-datepicker-next span.ui-icon:focus {
+            outline: none !important;
+        }
+
+        .ui-widget-header {
+          border: 1px solid #7b0002;
+          background: #7b0002!important;
+          color: #ffffff;
+          font-weight: bold;
+        }

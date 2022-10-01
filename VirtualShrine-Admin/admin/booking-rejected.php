@@ -8,18 +8,23 @@ include('includes/header.php');
 <div class="container-fluid px-4">
 
     <div class="row">
-
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
         <div class="col-md-12">
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
+                
                     <h4>Rejected Booking</h4>
                 </div>
                 <div class="card-body">
 
                 <table id="myDataTable" class="table table-bordered">
+                    
                     <thead>
                         <tr>
+                            
                             <th><center>ID</center></th>
                             <th><center>First Name</center></th>
                             <th><center>Last Name</center></th>
