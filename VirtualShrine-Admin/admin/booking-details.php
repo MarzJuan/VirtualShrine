@@ -22,8 +22,6 @@ include('includes/header.php');
 
                 
                 <?php
-                    if(isset($_GET['booking_id']))
-                    {
                         $booking_id = $_GET['booking_id'];
                         $bookings = "SELECT booking_id, fname, lname, phone_no, email, id_image, org_name, date_visit, time_visit, no_visitors, status FROM bookings WHERE booking_id='$booking_id'";
                         $booking_run = mysqli_query($con, $bookings);
@@ -36,8 +34,8 @@ include('includes/header.php');
                                 echo "<br><b>Booking ID:</b> " .'<span style="margin-right: 5.9em;"></span>'. $bookings["booking_id"]."<br>";
                                 echo "<b>Name:</b> " .'<span style="margin-right: 8.4em;"></span>'. $bookings["fname"]. " " . $bookings["lname"] ."<br>";
                                 echo "<b>Phone Number:</b> " .'<span style="margin-right: 4em;"></span>'. $bookings["phone_no"]."<br>";
-                                echo "<b>Email:</b> " .'<span style="margin-right: 8.6em;"></span>'. $bookings["email"]."<br>";
-                                echo "<b>Attached File:</b> " .'<span style="margin-right: 8.6em;"></span>'. $bookings["id_image"]."<br>";
+                                echo "<b>Email:</b> " .'<span style="margin-right: 8.6em;width="60px" height="60px"></span>'. $bookings["email"]."<br>";
+                                echo "<b>Attached File:</b> " .'<span style="margin-right: 8.6em;"></span>'.'<img src="Website/Images/visitor_attachment/<?=$bookings["id_image"]?>'."<br>";
                                 echo "<b>Name of Organization:</b> " .'<span style="margin-right: 0.70em;"></span>'. $bookings["org_name"]."<br>";
                                 echo "<b>Date of Visit</b> " .'<span style="margin-right: 5.6em;"></span>'. $bookings["date_visit"]."<br>";
                                 echo "<b>Time of Visit</b> " .'<span style="margin-right: 5.5em;"></span>'. $bookings["time_visit"]."<br>";
@@ -67,7 +65,6 @@ include('includes/header.php');
                       else {
                             echo "0 results";
                         }
-                    }
 
                     
     ?>

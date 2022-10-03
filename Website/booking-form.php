@@ -99,12 +99,7 @@ section {
       </div>      
       <div class="row">
         <div class="col-md-8 offset-md-2 mt-3 p-0">
-
-                <?php if (isset($_GET['error'])) {  ?>
-                  <p><?=$_GET['error']?></p>
-                <?php } ?>
-
-            <form action="booking-code.php" id="form1" name="form1" method="post" role="form" data-parsley-validate="" enctype="multipart/form-data">>     
+            <form action="booking-code.php" id="form1" name="form1" method="post" role="form" data-parsley-validate="" enctype="multipart/form-data">
               <div class="col-12 card p-4">
 
 
