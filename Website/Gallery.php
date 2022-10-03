@@ -50,7 +50,7 @@
 </div>
 </div>
 
-<img src="F:\Program Files\For xammp\htdocs\VirtualShrine\Website\Images/Img1.jpg" width="500" height="500">
+<img src="Images/gallery/Img1.jpg" width="500" height="500"> <!-- ginawan ko ng gallery folder para sa ilalagay niyo sa page na to, para di malito yung system-->
 
 </main>
 
