@@ -32,7 +32,7 @@
 
 <div class="right-content">
 <div class="Free-text">
-<div class="gen-text">Visiting Galleries</div>
+<div class="gen-text2">Visiting Galleries</div>
 <hr class="plan-line">
 
 <!--<svg class="inline-icon" style="width:53px;height:53px" viewBox="0 0 24 24">
