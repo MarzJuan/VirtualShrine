@@ -49,8 +49,53 @@
 </div>
 </div>
 </div>
+<!---------Card1--------->
+<div class="main">
+<div class="cards">
+        <div class="image">
+        <img src="Images/gallery/Img1.jpg">
+</div>
+<div class="title">
+        <h1>Title Name</h1>
+</div>
+<div class="des">
 
-<img src="Images/gallery/Img1.jpg" width="500" height="500"> <!-- ginawan ko ng gallery folder para sa ilalagay niyo sa page na to, para di malito yung system-->
+<p>Write Your Title Description Here...</p>
+
+<button>Read More...</button>
+</div>
+</div>
+<!---------Card2--------->
+<div class="cards">
+        <div class="image">
+        <img src="Images/gallery/Img2.jpg">
+</div>
+<div class="title">
+        <h1>Title Name</h1>
+</div>
+<div class="des">
+
+<p>Write Your Title Description Here...</p>
+
+<button>Read More...</button>
+</div>
+</div>
+<!---------Card3--------->
+<div class="cards">
+        <div class="image">
+        <img src="Images/gallery/Img3.jpg">
+</div>
+<div class="title">
+        <h1>Title Name</h1>
+</div>
+<div class="des">
+
+<p>Write Your Title Description Here...</p>
+
+<button>Read More...</button>
+</div>
+</div>
+</div>
 
 </main>
 
