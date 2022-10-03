@@ -50,7 +50,7 @@
 </div>
 </div>
 
-
+<img src="F:\Program Files\For xammp\htdocs\VirtualShrine\Website\Images/Img1.jpg" width="500" height="500">
 
 </main>
 
