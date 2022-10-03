@@ -26,24 +26,9 @@
 <div class="Admission-text">Our gallery sections provide a variety of interesting tools, <br>
         such as 360-degree virtual tours, object highlights, timelines,<br> and facts.</div>
 <div class="gen-sub-text">A list of galleries on the first and second levels is shown <br> below.</div>
-<div class="gen-text"> First Floor</div>
-<div class="Custom-dropDown"> 
-<select class="dropDown-content" name="" id="">
-<option>Choose a gallery</option>
-<option value="">Gallery #1</option>
-<option value="">Gallery #2</option>
-<option value="">Gallery #3</option>
-</select>
+
 </div>
-<div class="gen-text"> Second Floor</div>
-<div class="Custom-dropDown"> 
-        <select class="dropDown-content" name="" id="">
-        <option>Choose a gallery</option>
-        <option value="">Gallery #1</option>
-        <option value="">Gallery #2</option>
-        </select>
-        </div>
-</div>
+
 <div class="right-content">
 <div class="Free-text">
 <div class="gen-text">Visiting Galleries</div>
@@ -53,9 +38,10 @@
         <path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
 </svg>
 <div class="Opening">
-        penning Time
+        Openning Time
 </div>
 <div class="right-subtext">Tuesday - Sunday (8:00AM - 4:00PM)</div>
+<div class="right-subtext2">See full</div>
         <div><button class="right-btn">View Museum Map <svg class="right-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" />
                 </svg></button></div>
