@@ -27,9 +27,19 @@
                                 height="30"/>
                     </a>
                     
+                    <?php
+                    
+                            $query = "SELECT * FROM users";
+                            $query_run = mysqli_query($con, $query);
+                            
+                            if(mysqli_num_rows($query_run) > 0)
+                            {
+                                foreach($query_run as $user)
+                                {
+                                    ?>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="user-profile.php?id=<?=$user['id'];?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -49,6 +59,11 @@
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
                                     </button>
+                                    <?php
+                                }
+                            }
+                        
+                            ?>
                                 
                     </form>
                             </div>

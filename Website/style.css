@@ -1131,41 +1131,51 @@ input[type="file"] {
   flex-basis: 30%;
 }
 
-.gen-text {
-  font-size: 30px;
-  color: #1d1e4e;
-  margin-top: 50px;
-  margin-left: 25px;
+.gen-text{
+    font-size:30px;
+    color:#1D1E4E;
+    margin-top:50px;
+    margin-left:131px;
+}
+.gen-text2{
+    font-size:30px;
+    color:#1D1E4E;
+    margin-top:50px;
+    margin-left:25px;
 }
 
-.Admission-text {
-  margin-top: 25px;
-  margin-left: 25px;
-  font-size: 20px;
+.Admission-text{
+    margin-top:25px;
+    margin-left:131px;
+    font-size:20px;
 }
 
-.gen-sub-text {
-  margin: 25px;
-  font-size: 20px;
-  padding-right: 40%;
-  text-align: justify;
+.gen-sub-text{
+    margin: 25px;
+    font-size:20px;
+    padding-right:40%;
+    margin-left:131px;
+    text-align: justify;
 }
 
-.plan-line {
-  margin-top: 25px;
-  border-top: 1px solid gray;
-  width: 75%;
-  display: block;
-  margin-left: 25px;
+.plan-line{
+    margin-top:25px;
+    border-top: 1px solid gray;
+    width:64%;
+    display:block;
+    margin-left: 20px;
 }
+
 
 /* right side bar */
-.Opening {
-  text-align: center;
-  color: #1d1e4e;
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.Opening{
+    text-align:left;
+    color:#1D1E4E;
+    font-size:25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom:10px;
+    margin-left: 20px;
 }
 
 .right-title-text {
@@ -1176,15 +1186,77 @@ input[type="file"] {
   margin-bottom: 10px;
 }
 
-.inline-icon {
-  margin-top: 20px;
-  margin-left: 180px;
+.inline-icon{
+    margin-top: 20px;
+    margin-left: 19px;
 }
 
 .right-subtext {
   font-size: 16px;
   margin-left: 25px;
 }
+.right-subtext2{
+    font-size:16px;
+    margin-left: 25px;
+}
+body{
+    font-family: Arial;
+}
+
+
+.cards{
+    width: 25%;
+    display: inline-block;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    margin: 50px;
+    margin-left: 125px;
+    margin-right: -80px;
+    box-shadow: 2px 2px 10px #3b3c36;
+
+}
+.cards:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+.image img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.title{
+    text-align: left;
+    padding: 20px;
+    font-size: 19px;
+    margin-bottom: -20px;
+}
+
+.des{
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/**.button{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+    
+}
+**/
+
+
 
 .right-btn {
   position: relative;
