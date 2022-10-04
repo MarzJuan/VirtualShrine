@@ -2151,13 +2151,5 @@ button:hover{
   margin: 0 0 20px 20px;
 }
 
-/* Gallery Info */
-.GalleryInfo-header{
-    background-color: #E3AD3F;
-    width:800px;
-    height: 250px;
-    margin-inline: 250px;
-    color:white;
-    text-align: center;
-    border-radius: 1em;
-}
+
+
