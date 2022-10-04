@@ -449,6 +449,9 @@ button{
     cursor: pointer;
 }
 
+.nav-background{
+    background-color: #E3AD3F;
+}
  
 
 /*Footer*/
@@ -829,5 +832,180 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
     background-color: var(--clr-neutral-300);
 }
 
+/* Audio */
 
+.audio-guide-main{
+    margin: calc(32px + 1vw) 0 0;
+}
+
+.audio-guide-header {
+    margin-bottom: calc(48px + 1.5vw);
+    text-align: center;
+}
+
+.productive-component {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(85vw - (100vw - 100%),1600px);
+}
+
+.audio-guide-logo {
+    margin: 0 auto calc(8px + 0.25vw);
+    max-width: 250px;
+    width: 100%;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.audio-guide-description, .audio-guide-form-description {
+    margin: 0 auto;
+}
+
+.audio-guide-form-description {
+    font-size: calc(.875rem + (16 - 14) * ((100vw - 375px) / (1440 - 375)));
+    margin-bottom: calc(16px + 0.5vw);
+    text-align: center;
+}
+
+p {
+    font-family: inherit;
+    max-width: 50em;
+}
+
+span{
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+
+p {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+
+.audio-guide-search-section {
+    margin-bottom: calc(64px + 2vw);
+}
+section{
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+
+section {
+    display: block;
+}
+
+.audio-guide-form-description {
+    font-size: calc(.875rem + (16 - 14) * ((100vw - 375px) / (1440 - 375)));
+    margin-bottom: calc(16px + 0.5vw);
+    text-align: center;
+}
+
+.audio-guide-input-wrapper {
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+
+.marble-input-container {
+    display: inline-block;
+    position: relative;
+}
+
+.audio-guide-form-wrapper {
+    display: flex;
+    margin-inline: auto;
+}
+
+
+.screen-reader-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.audio-guide-input {
+    flex-grow: 1;
+    font-size: calc(1rem + (18 - 16) * ((100vw - 375px) / (1440 - 375)));
+    width: auto;
+}
+
+.marble-input {
+    background-color: #fff;
+    border: 2px solid #e3e3e3;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    height: 40px;
+    padding: 10px;
+    transition: all .3s;
+}
+
+.audio-guide-button {
+    margin-left: calc(8px + 0.25vw);
+    padding: 0 calc(8px + 0.25vw);
+}
+
+.primary-button-ghost-dark {
+    background: transparent;
+    border: 2px solid #333;
+    color: #333;
+}
+
+.primary-button {
+    border: 0;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-family: MetSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: calc(1.125rem + 2*(100vw - 375px)/1065);
+    font-weight: 500;
+    transition: background-position .3s,color .3s;
+    border: 2px solid black;
+}
+
+.button {
+    cursor: pointer;
+    font-family: MetSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+
+form {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+    width: 400px;
+    
+}
 
