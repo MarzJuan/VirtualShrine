@@ -56,13 +56,13 @@
         <img src="Images/gallery/Img1.jpg">
 </div>
 <div class="title">
-        <h1>Title Name</h1>
+        <h1>Gallery Name</h1>
 </div>
 <div class="des">
 
-<p>Write Your Title Description Here...</p>
+<p>Short Information about the gallery displays here</p>
 <br>
-<button>Read More...</button>
+<a href="">Read More</a>
 </div>
 </div>
 <!---------Card2--------->
@@ -71,13 +71,13 @@
         <img src="Images/gallery/Img2.jpg">
 </div>
 <div class="title">
-        <h1>Title Name</h1>
+        <h1>Gallery Name</h1>
 </div>
 <div class="des">
 
-<p>Write Your Title Description Here...</p>
+<p>Short Information about the gallery displays here</p>
 <br>
-<button>Read More...</button>
+<a href="">Read More</a>
 </div>
 </div>
 
@@ -87,13 +87,13 @@
         <img src="Images/gallery/Img3.jpg">
 </div>
 <div class="title">
-        <h1>Title Name</h1>
+        <h1>Gallery Name</h1>
 </div>
 <div class="des">
 
-<p>Write Your Title Description Here...</p>
+<p>Short Information about the gallery displays here</p>
 <br>
-<button>Read More...</button>
+<a href="">Read More</a>
 </div>
 </div>
 </div>
