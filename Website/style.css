@@ -125,10 +125,10 @@ picture {
 
 
 .main-header{
-    background-image: url("Images/CasaReal-bg.png");
+    background-image: url("Images/CasaReal.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 
 /*Home Page Images*/
@@ -814,7 +814,6 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
 }
 
 
-
 .book-button{
     background-color: #517B79;
     border: none;
@@ -829,8 +828,6 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
 .book-button:hover, .button:focus-within{
     background-color: var(--clr-neutral-300);
 }
-
-
 
 
 /* booking */
