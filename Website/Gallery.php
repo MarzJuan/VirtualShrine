@@ -2,7 +2,7 @@
 <html>
 <head>
         <title>Gallery Page</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallerystyle.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
