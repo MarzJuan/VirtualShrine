@@ -30,21 +30,26 @@ if (isset($_POST['audio_add']) && isset($_FILES['my_audio']))
         $query = "INSERT INTO audio(title, category_id, audio) VALUES ('$title', '$category_id', '$new_audio_name')";
         $query_run = mysqli_query($con, $query);
 
-    if($query_run)
-    {
-        $_SESSION['message'] = "Audio Created Successfully";
-        header('Location: audio-add.php');
-        exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: audio-add.php');
-        exit(0);
-    }
+        if($query_run)
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added an Audio Content')";
+            $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Audio Created Successfully";
+                header('Location: audio-add.php');
+                exit(0);
+            }
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: audio-add.php');
+            exit(0);
+        }
 
-}
     }
+}
 }
 
 

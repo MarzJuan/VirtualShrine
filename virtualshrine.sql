@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2022 at 06:05 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Oct 06, 2022 at 04:08 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,30 @@ CREATE TABLE `audio` (
 --
 
 INSERT INTO `audio` (`audio_id`, `category_id`, `title`, `audio`, `status`, `created_at`) VALUES
-(10, 1, 'Banga', 'audio-6334d2d4043af6.64775242.mp3', 0, '2022-09-28 23:07:15');
+(10, 1, 'Banga', 'audio-6334d2d4043af6.64775242.mp3', 0, '2022-09-28 23:07:15'),
+(11, 1, 'Audio Guide 2', 'audio-633ee0c633fe79.79346726.mp3', 0, '2022-10-06 14:05:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auditlog`
+--
+
+CREATE TABLE `auditlog` (
+  `id` int(10) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `action` text NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `auditlog`
+--
+
+INSERT INTO `auditlog` (`id`, `username`, `action`, `created_at`) VALUES
+(19, 'kristhayne', 'Updated an information', '2022-10-06 21:39:09'),
+(20, 'gelo', 'Updated a Gallery Content', '2022-10-06 21:51:23'),
+(21, 'takuto', 'Added an Audio Content', '2022-10-06 22:05:58');
 
 -- --------------------------------------------------------
 
@@ -126,7 +149,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `category_id`, `name`, `slug`, `description`, `image`, `meta_title`, `meta_description`, `meta_keyword`, `status`, `created_at`) VALUES
-(38, 1, 'Banga', 'Banga-vs-', '<p style=\"font-family: helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 15px; line-height: 24px; margin: 1em 0px; padding: 0px;\">Every successful product starts with a clear vision and a solid strategy. This week on the blog, discover how to bring your product ideas to life through thoughtful, user-centered&nbsp;<a href=\"https://email.n.dribbble.com/c/eJxNj81qxSAQhZ_G7LyMmmhcuCiU-xpl1Om9tjEJagp9-5o2i8Iszg_fwCEntB7VLCZhhuiilkbqITkxWSXG2XBvIPBxIuDeAvHpHWHyAQVYy0ZYb7Ek7_1Ct7Dl4ekUBmuNBotgIklQ0qPQSpO0aEcYh8U9W9srUy9M3vv957stVLejBKpd72WLR2g8Uk2PlddWsNHjm6n70fJbwLxjz5l6lSAlB8vlzKQ-u0wxHbk3lDEtV_j3uIdprSlS4ScGVs5DcZ8fK4a0rbgI0Wc9Tux3UXO-bBgD1la7udCu6IvWxi__A27zZyA\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=https://email.n.dribbble.com/c/eJxNj81qxSAQhZ_G7LyMmmhcuCiU-xpl1Om9tjEJagp9-5o2i8Iszg_fwCEntB7VLCZhhuiilkbqITkxWSXG2XBvIPBxIuDeAvHpHWHyAQVYy0ZYb7Ek7_1Ct7Dl4ekUBmuNBotgIklQ0qPQSpO0aEcYh8U9W9srUy9M3vv957stVLejBKpd72WLR2g8Uk2PlddWsNHjm6n70fJbwLxjz5l6lSAlB8vlzKQ-u0wxHbk3lDEtV_j3uIdprSlS4ScGVs5DcZ8fK4a0rbgI0Wc9Tux3UXO-bBgD1la7udCu6IvWxi__A27zZyA&amp;source=gmail&amp;ust=1664496654487000&amp;usg=AOvVaw104s5aY_Ax3EHv5KOzADsf\" style=\"color: rgb(234, 76, 137); font-family: helvetica, sans-serif; text-decoration: underline; margin: 0px; padding: 0px;\">product design strategy.</a>.</p><p style=\"font-family: helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 15px; line-height: 24px; margin: 1em 0px; padding: 0px;\">Whether you’re working on a brand new product, redesigning a feature, or building your portfolio, follow the steps in this guide to set your futu</p>', '1664413687.jpg', 'Banga', 'Every successful product starts with a clear vision and a solid strategy. This week on the blog, discover how to bring your product ideas to life through thoughtful, user-centered product design strategy..\r\n\r\nWhether you’re working on a brand new product, redesigning a feature, or building your portfolio, follow the steps in this guide to set your futu', 'Banga', 0, '2022-09-29 01:08:07');
+(38, 1, 'Banga', 'Banga-vs-', '<p style=\"font-family: helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 15px; line-height: 24px; margin: 1em 0px; padding: 0px;\">Every successful product starts with a clear vision and a solid strategy. This week on the blog, discover how to bring your product ideas to life through thoughtful, user-centered <a href=\"https://email.n.dribbble.com/c/eJxNj81qxSAQhZ_G7LyMmmhcuCiU-xpl1Om9tjEJagp9-5o2i8Iszg_fwCEntB7VLCZhhuiilkbqITkxWSXG2XBvIPBxIuDeAvHpHWHyAQVYy0ZYb7Ek7_1Ct7Dl4ekUBmuNBotgIklQ0qPQSpO0aEcYh8U9W9srUy9M3vv957stVLejBKpd72WLR2g8Uk2PlddWsNHjm6n70fJbwLxjz5l6lSAlB8vlzKQ-u0wxHbk3lDEtV_j3uIdprSlS4ScGVs5DcZ8fK4a0rbgI0Wc9Tux3UXO-bBgD1la7udCu6IvWxi__A27zZyA\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=https://email.n.dribbble.com/c/eJxNj81qxSAQhZ_G7LyMmmhcuCiU-xpl1Om9tjEJagp9-5o2i8Iszg_fwCEntB7VLCZhhuiilkbqITkxWSXG2XBvIPBxIuDeAvHpHWHyAQVYy0ZYb7Ek7_1Ct7Dl4ekUBmuNBotgIklQ0qPQSpO0aEcYh8U9W9srUy9M3vv957stVLejBKpd72WLR2g8Uk2PlddWsNHjm6n70fJbwLxjz5l6lSAlB8vlzKQ-u0wxHbk3lDEtV_j3uIdprSlS4ScGVs5DcZ8fK4a0rbgI0Wc9Tux3UXO-bBgD1la7udCu6IvWxi__A27zZyA&source=gmail&ust=1664496654487000&usg=AOvVaw104s5aY_Ax3EHv5KOzADsf\" style=\"color: rgb(234, 76, 137); font-family: helvetica, sans-serif; text-decoration: underline; margin: 0px; padding: 0px;\">product design strategy.</a>.</p><p style=\"font-family: helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 15px; line-height: 24px; margin: 1em 0px; padding: 0px;\">Whether you’re working on a brand new product, redesigning a feature, or building your portfolio, follow the steps in this guide to set your futu</p>', '1664413687.jpg', 'Banga', 'Every successful product starts with a clear vision and a solid strategy. This week on the blog, discover how to bring your product ideas to life through thoughtful, user-centered product design strategy..\r\n\r\nWhether you’re working on a brand new product, redesigning a feature, or building your portfolio, follow the steps in this guide to set your futu', 'Banga', 0, '2022-09-29 01:08:07');
 
 -- --------------------------------------------------------
 
@@ -139,6 +162,7 @@ CREATE TABLE `users` (
   `fname` varchar(200) NOT NULL,
   `lname` varchar(200) NOT NULL,
   `username` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
   `role_as` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0 = head admin\r\n1 = assistant admin',
   `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0 = active 1 = archived',
@@ -149,11 +173,12 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `fname`, `lname`, `username`, `password`, `role_as`, `status`, `created_at`) VALUES
-(1, 'Kristine Joy', 'Nacional', 'kristhayne', 'pass1', 0, 0, '2022-09-13 11:34:58'),
-(2, 'Angelo', 'Mauricio', 'Angelo', 'pass2', 1, 1, '2022-09-13 11:53:13'),
-(3, 'sample', 'Admin', 'samplead', 'passsample', 1, 1, '2022-09-13 12:24:18'),
-(4, 'Taku', 'Asami', 'takuto', 'password', 1, 0, '2022-09-14 16:36:29');
+INSERT INTO `users` (`id`, `fname`, `lname`, `username`, `email`, `password`, `role_as`, `status`, `created_at`) VALUES
+(1, 'Kristine Joy', 'Nacional', 'kristhayne', 'kjnacional11@gmail.com', 'pass1', 0, 0, '2022-09-13 11:34:58'),
+(2, 'Angelo', 'Mauricio', 'gelo', 'angelo@gmail.com', 'pass', 1, 1, '2022-09-13 11:53:13'),
+(3, 'sample', 'Admin', 'samplead', '', 'passsample', 1, 1, '2022-09-13 12:24:18'),
+(4, 'Taku', 'Asami', 'takuto', '', 'password', 1, 0, '2022-09-14 16:36:29'),
+(5, 'Rovi Keith', 'Navarro', 'rovi', 'rovi@gmail.com', 'pass3', 1, 1, '2022-10-04 08:44:51');
 
 -- --------------------------------------------------------
 
@@ -166,6 +191,7 @@ CREATE TABLE `user_archive` (
   `fname` varchar(200) NOT NULL,
   `lname` varchar(200) NOT NULL,
   `username` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
   `role_as` tinyint(4) NOT NULL DEFAULT 0,
   `status` tinyint(1) NOT NULL DEFAULT 0,
@@ -181,6 +207,12 @@ CREATE TABLE `user_archive` (
 --
 ALTER TABLE `audio`
   ADD PRIMARY KEY (`audio_id`);
+
+--
+-- Indexes for table `auditlog`
+--
+ALTER TABLE `auditlog`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `bookings`
@@ -214,7 +246,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `audio`
 --
 ALTER TABLE `audio`
-  MODIFY `audio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `audio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `auditlog`
+--
+ALTER TABLE `auditlog`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `bookings`
@@ -238,7 +276,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
