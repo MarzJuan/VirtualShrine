@@ -2,7 +2,7 @@
 <html>
 <head>
         <title>Gallery Info Page</title>
-<link rel="stylesheet" href="assets/css/galleryinfo.css">
+<link rel="stylesheet" href="assets/css/gallery/galleryinfo.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -19,7 +19,6 @@
                 </ul>
                 </nav>
             
-</header>
 <div class="GalleryInfo-text">Gallery Name</div>     
 <main class="main-content-plan">
 <div class="plan-flex">

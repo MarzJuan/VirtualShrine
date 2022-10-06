@@ -1,8 +1,8 @@
 <?php
 include('authentication.php');
 
-// ADD AUDIO
 
+// ADD AUDIO
 if (isset($_POST['audio_add']) && isset($_FILES['my_audio'])) 
 {
 
@@ -149,19 +149,23 @@ if(isset($_POST['post_update']))
     
     $query_run = mysqli_query($con, $query);
 
+    
     if($query_run)
-    {
-        if($image != NULL)
         {
-            if(file_exists('../uploads/posts/'.$old_filename)){
-                unlink("../uploads/posts/'.$old_filename");
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated a Gallery Content')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($image != NULL)
+            {
+                if(file_exists('../uploads/posts/'.$old_filename)){
+                    unlink("../uploads/posts/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$update_filename);
             }
-            move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$update_filename);
-        }
-        
-            $_SESSION['message'] = "Post Updated Successfully";
-            header('Location: post-edit.php?id='.$post_id);
-            exit(0);
+            
+                $_SESSION['message'] = "Post Updated Successfully";
+                header('Location: post-edit.php?id='.$post_id);
+                exit(0);
     }
     else
     {
@@ -205,11 +209,15 @@ if(isset($_POST['post_add']))
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
-    {
-        move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$filename);
-        $_SESSION['message'] = "Post Created Successfully";
-        header('Location: post-add.php');
-        exit(0);
+        {
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
+        $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$filename);
+                $_SESSION['message'] = "Post Created Successfully";
+                header('Location: post-add.php');
+                exit(0);
     }
     else
     {
@@ -218,6 +226,7 @@ if(isset($_POST['post_add']))
         exit(0);
     }
 
+}
 }
 
 
@@ -401,6 +410,7 @@ if(isset($_POST['add_admin']))
     $fname = mysqli_real_escape_string($con, $_POST['fname']);
     $lname = mysqli_real_escape_string($con, $_POST['lname']);
     $username = mysqli_real_escape_string($con, $_POST['username']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
     $role_as = $_POST['role_as'];
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $confirm_password = mysqli_real_escape_string($con, $_POST['cpassword']);
@@ -420,7 +430,7 @@ if(isset($_POST['add_admin']))
         }
         else
         {
-            $user_query = "INSERT INTO users (fname, lname, username, role_as, password) VALUES ('$fname', '$lname', '$username', '$role_as', '$password')";
+            $user_query = "INSERT INTO users (fname, lname, username, email, role_as, password) VALUES ('$fname', '$lname', '$username', '$email', '$role_as', '$password')";
             $user_query_run = mysqli_query($con, $user_query);
 
             if($user_query_run)
@@ -456,19 +466,25 @@ if(isset($_POST['update_information']))
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
         $status = $_POST['status'] == true ? '1':'0';
 
-        $query = "UPDATE users SET fname='$fname', lname='$lname', username='$username', password='$password', status='$status'
+        $query = "UPDATE users SET fname='$fname', lname='$lname', username='$username', email='$email', password='$password', status='$status'
                     WHERE role_as=1 AND ID='$user_id' ";
-        
+                
         $query_run = mysqli_query($con, $query);
 
         if($query_run)
         {
-            $_SESSION['message'] = "Updated Successfuly";
-            header('Location: assistant-admin-edit.php?id='.$user_id);
-            exit(0);
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
+            $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Updated Successfuly";
+                header('Location: assistant-admin-edit.php?id='.$user_id);
+                exit(0);
+            }
         }
         else
         {
@@ -477,6 +493,7 @@ if(isset($_POST['update_information']))
             exit(0);
         }
 }
+
 
 
 ?>

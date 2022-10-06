@@ -160,7 +160,7 @@
 
                             <!--START OF REPORTS-->
                             <?php if($_SESSION['auth_role'] == '0') : ?>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="report.php">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-report' ></i></div>
                                 Reports
                             </a>

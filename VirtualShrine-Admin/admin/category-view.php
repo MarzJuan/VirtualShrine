@@ -6,6 +6,13 @@ include('includes/header.php');
 <div class="container-fluid px-4">
     <h4 class="mt-4"></h4>
 
+    <div class="container-fluid px-4">
+    <h4 class="mt-4">Category</h4>
+    <ol class="breadcrumb mb-4">
+    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <li class="breadcrumb-item">Users</li>                                                                                           
+    </ol>
+
     <div class="row mt-4">
         <div class="col-md-12">
 
@@ -13,7 +20,7 @@ include('includes/header.php');
         
             <div class="card">
                 <div class="card-header">
-                    <h4>View Category
+                    <h4>Category List
                         <a href="category-add.php" class="btn btn-primary float-end">Add Category</a>
                     </h4>
                 </div>

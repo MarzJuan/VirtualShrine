@@ -7,13 +7,20 @@ include('includes/header.php');
 <div class="container-fluid px-4">
     <h4 class="mt-4"></h4>
 
+    <div class="container-fluid px-4">
+    <h4 class="mt-4">Gallery</h4>
+    <ol class="breadcrumb mb-4">
+        <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <li class="breadcrumb-item">Gallery Contents</li>                                                                                           
+    </ol>
+
     <div class="row mt-4">
         <div class="col-md-12">
         <?php include('message.php'); ?>
         <div class="card shadow mb-4">
             <div class="card">
                 <div class="card-header">
-                    <h4>View Post
+                    <h4>
                         <a href="post-add.php" class="btn btn-primary float-end">Add Post</a>
                     </h4>
                 </div>

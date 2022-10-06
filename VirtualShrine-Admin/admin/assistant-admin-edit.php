@@ -7,7 +7,7 @@ include('includes/header.php');
 <div class="container-fluid px-4">
     <h4 class="mt-4">Assistant Admin</h4>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Dashboard</li>
+    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
         <li class="breadcrumb-item">Users</li>
     </ol>
 
@@ -37,27 +37,30 @@ include('includes/header.php');
                             {
                             ?>
 
-                            
-
                     <form action="code.php" method="POST">
                         <input type="hidden" name="user_id" value="<?=$user['id']?>">
                         <div class="row">
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">First Name</label>
                                 <input type="text" name="fname" value="<?=$user['fname']?>" class="form-control">
                             </div>
 
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Last Name</label>
                                 <input type="text" name="lname" value="<?=$user['lname']?>" class="form-control">
                             </div>
 
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Username</label>
                                 <input type="text" name="username" value="<?=$user['username']?>" class="form-control">
                             </div>
 
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label for="">Email</label>
+                                <input type="text" name="email" value="<?=$user['email']?>" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
                                 <label for="">Password</label>
                                 <input type="text" name="password" value="<?=$user['password']?>" class="form-control">
                             </div>

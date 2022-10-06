@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('authentication.php');
 include('config/dbcon.php');
 include('includes/header.php');
 ?>
@@ -13,6 +13,7 @@ include('includes/header.php');
 
     <div class="row">
         <div class="col-md-12">
+        <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
                     <h4>Add User
@@ -35,9 +36,14 @@ include('includes/header.php');
                                 <input type="text" name="lname" class="form-control">
                             </div>
 
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Username</label>
                                 <input type="text" name="username" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="">Email</label>
+                                <input type="text" name="email" class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">
@@ -49,9 +55,14 @@ include('includes/header.php');
                                 </select>
                             </div>
 
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Password</label>
                                 <input type="text" name="password" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="">Check Password</label>
+                                <input type="text" name="cpassword" class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">

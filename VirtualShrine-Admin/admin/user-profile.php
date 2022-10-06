@@ -1,78 +1,86 @@
 <?php
-session_start();
 include('authentication.php');
 include('includes/header.php');
 ?>
 
-<div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-    <?php
-        if(isset($_GET['id']))
-        {
+
+
+<input type="hidden" name="user_id" value="<?=$user['id']?>">
+<?php
+    if(isset($_GET['id']))
+        {  
             $user_id = $_GET['id'];
-            $user = "SELECT * FROM users WHERE id='$user_id'";
-            $user_run = mysqli_query($con, $user);
+            $users = "SELECT * FROM users WHERE id='$user_id'";
+            $user_run = mysqli_query($con, $users);
 
 
             if(mysqli_num_rows($user_run) > 0)
             {
-                while($user = $user_run->fetch_assoc()) 
+                while($user = mysqli_fetch_assoc($user_run))
                 {
-                    ?>
-                                        
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-            <img class="rounded-circle mt-5" width="150px" 
-            src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-            <span class="font-weight-bold"><?= $user['fname']. " " .$user['lname']; ?></span>
-            <span class="text-black-50"><?= $user['username']; ?></span><span> </span></div>
-        </div>
-        <div class="col-md-8 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
+                ?>
+
+<section class="vh-100" style="background-color: #f4f5f7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-left align-items-center h-200">
+      <div class="col col-lg-12 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-black"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+              <h5>@<?= $user['username']; ?></h5>
+              <p><?php if($user['role_as'] == 0){echo "Head Admin";} 
+                    if($user['role_as'] == 1){echo "Assistant Admin";}
+                    ?></p>
+              <i class="far fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Information</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Full Name</h6>
+                    <p class="text-muted"><?= $user['fname']. " " .$user['lname']; ?></p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted"><?= $user['email']; ?></p>
+                  </div>
                 </div>
                 
-                                
-
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Created</h6>
+                    <p class="text-muted"><?= $user['created_at']; ?></p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Status</h6>
+                    <p class="text-muted">
+                        <?php if($user['status'] == 0){echo "Active";} 
+                        if($user['status'] == 1){echo "Inactive";}
+                    ?></p>
+                  </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><text type="text" class="form-control" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
-                </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-</div>
-</div>
+  </div>
+</section>
+
 <?php
-}
+                }
             }
         }
 
 ?>
-
-
-
-
-
-
-
 
 <?php
 include('includes/footer.php');
