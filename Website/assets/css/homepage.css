@@ -125,10 +125,11 @@ picture {
 
 
 .main-header{
-    background-image: url(C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/CasaReal.png);
+    
+    background-image: url("../../Images/CasaReal.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 60px;
+    padding-bottom: 130px;
 }
 
 /*Home Page Images*/
@@ -330,7 +331,7 @@ padding: 10px 0;
 }
 
  .section1-image1{
-     background-image: url("C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/carousel-image1.png");
+     background-image: url("../../Images/carousel-image1.png");
      background-repeat: no-repeat;
      background-color: rgba(255, 255, 255, 0.1);
      background-blend-mode:soft-light;
@@ -342,7 +343,7 @@ padding: 10px 0;
  
  
  .section1-image2{
-     background-image: url("C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/carousel-image2.png");
+     background-image: url("../../Images/carousel-image2.png");
      background-repeat: no-repeat;
      background-color: rgba(255, 255, 255, 0.1);
      background-blend-mode:soft-light;
@@ -351,7 +352,7 @@ padding: 10px 0;
  }
  
  .section1-image3{
-     background-image: url("C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/carousel-image3.png");
+     background-image: url("../../Images/carousel-image3.png");
      background-repeat: no-repeat;
      background-color: rgba(255, 255, 255, 0.1);
      background-blend-mode:soft-light;
@@ -386,7 +387,7 @@ padding: 10px 0;
 }
 
 .section2-image2{
-    background-image: url("C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/Section2Image2.png");
+    background-image: url("../../Images/Section2Image2.png");
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode:soft-light;
@@ -396,7 +397,7 @@ padding: 10px 0;
 }
 
 .section2-image3{
-    background-image: url("C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/Section2Image3.jpg");
+    background-image: url("../../Images/Section2Image3.jpg");
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode:soft-light;
@@ -405,7 +406,7 @@ padding: 10px 0;
     border-radius: 5px;
 }
 .section2-image4{
-    background-image: url("C:/Users/hp/Documents/GitHub/VirtualShrine/Website/Images/Section2Image4.jpg");
+    background-image: url("../../Images/Section2Image4.jpg");
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode:soft-light;
