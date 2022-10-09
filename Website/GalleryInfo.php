@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +23,7 @@
                 </ul>
                 </nav>
             
+</header>
 <div class="GalleryInfo-text">Gallery Name</div>     
 <main class="main-content-plan">
 <div class="plan-flex">
@@ -31,101 +36,42 @@
 </div>
 </div>
 </div>
+
+<?php
+                                    
+        $posts = "SELECT * FROM posts WHERE status='0' ";
+        $posts_run = mysqli_query($con, $posts);
+
+        if(mysqli_num_rows($posts_run) > 0)
+          {
+                foreach($posts_run as $posts)
+                {
+                ?>
+
 <!--Gallery Name-->
 <div class="main">
 <div class="cards">
         <div class="image">
-        <img src="Images/gallery/Artifact1.jpg">
+        <img src="../uploads/posts/<?= $posts['image']?>" width="100px" height="100px" />
 </div>
 <div class="title">
-        <h1>Display Name</h1>
+        <h1><?= $posts['name']?></h1>
 </div>
 <div class="des">
 
-<p>Year</p>
+<p><?= $posts['year']?></p>
 <br>
-<p>Artifact</p>
+<p><?= $posts['object_type']?></p>
 </div>
 </div>
 
-<div class="cards">
-        <div class="image">
-        <img src="Images/gallery/Artifact2.jpg">
-</div>
-<div class="title">
-        <h1>Display Name</h1>
-</div>
-<div class="des">
+<?php
 
-<p>Year</p>
-<br>
-<p>Artifact</p>
-</div>
-</div>
+                }
+        }
 
-<div class="cards">
-        <div class="image">
-        <img src="Images/gallery/Artifact3.jpg">
-</div>
-<div class="title">
-        <h1>Display Name</h1>
-</div>
-<div class="des">
+?>
 
-<p>Year</p>
-<br>
-<p>Artifact</p>
-</div>
-</div>
-</div>
-
-<div class="cards">
-        <div class="image">
-        <img src="Images/gallery/Artifact4.jpg">
-</div>
-<div class="title">
-        <h1>Display Name</h1>
-</div>
-<div class="des">
-
-<p>Year</p>
-<br>
-<p>Artifact</p>
-</div>
-</div>
-</div>
-
-<div class="cards">
-        <div class="image">
-        <img src="Images/gallery/Artifact5.jpg">
-</div>
-<div class="title">
-        <h1>Display Name</h1>
-</div>
-<div class="des">
-
-<p>Year</p>
-<br>
-<p>Artifact</p>
-</div>
-</div>
-</div>
-
-<div class="cards">
-        <div class="image">
-        <img src="Images/gallery/Artifact6.jpg">
-</div>
-<div class="title">
-        <h1>Display Name</h1>
-</div>
-<div class="des">
-
-<p>Year</p>
-<br>
-<p>Artifact</p>
-</div>
-</div>
-</div>
 
 </main>
 

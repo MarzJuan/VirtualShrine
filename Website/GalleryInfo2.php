@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,20 +20,21 @@
                       <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
                       <span class="visually-hidden">Menu</span>
                </button>
-               <nav class="primary-navigation fs-button"  id="primary-navigation">
-                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                             <li class="#">Home</li>
-                             <li><a href="#">Visit</a></li>
-                             <li><a href="#">Exhibitions and Events</a></li>
-                             <li><a href="#">Learn</a></li>
-                             <li><a href="#">About us</a></li>
-                      </ul>
-               </nav>
+               <div class="navigation">
+                <div class="navigation-items">
+                <nav class="primary-navigation fs-button"  id="primary-navigation">
+                     <ul araial-label="Primary" role="list" class="nav-list fs-button" >
+                    <a href="#">Home</a>
+                    <a href="#">Visit</a> <!--Plan your Visit, Book a visit, Audio Guide-->
+                    <a href="#">Explore</a> <!--All the Galleries-->
+                    <a href="#">About</a>
+                </div>
+            </div>
         </div>
         </div>
         
     </div>
-    <div class="container">
+    <div class="container mt-3">
             <div class="GalleryInfo-text-title fs-900 fw-semi-bold">Gallery Name</div>
             <span class="GalleryInfo-text-subtitle fs-500 fw-regular">
             <h6 class="fs-600 fw-regular">
@@ -38,47 +43,34 @@
         </div>
 </header>
 
+<?php
+                                    
+        $posts = "SELECT * FROM posts WHERE status='0' ";
+        $posts_run = mysqli_query($con, $posts);
+
+        if(mysqli_num_rows($posts_run) > 0)
+          {
+                foreach($posts_run as $posts)
+                {
+                ?>
+
 <section>
-    <div class="gallery-info-grid">
+    <div class="gallery-info-grid mt-3">
         <div class="grid-item">
             <img class="galleyInfo-image" src="Images/GalleryInfo-Item1.png">
-            <div class="fs-650 fw-semi-bold"> Display Name </div>
+            <div class="fs-650 fw-semi-bold"> <?= $posts['name']?> </div>
             <div class="fs-650 fw-regular"> Year: </div>
             <div class="fs-650 fw-regular"> Artifact: </div>
         </div>
-        <div class="grid-item">
-                <img class="galleyInfo-image"  src="Images/GalleryInfo-Item2.png">
-                <div class="fs-650 fw-semi-bold"> Display Name </div>
-            <div  class="fs-650 fw-regular"> Year: </div>
-            <div  class="fs-650 fw-regular"> Artifact: </div>
-        </div>
-        <div class="grid-item">
-                <img class="galleyInfo-image"  src="Images/GalleryInfo-Item3.png">
-                <div class="fs-650 fw-semi-bold"> Display Name </div>
-            <div  class="fs-650 fw-regular"> Year: </div>
-            <div  class="fs-650 fw-regular"> Artifact: </div>
-        </div>
-        <div class="grid-item">
-                <img class="galleyInfo-image"  src="Images/GalleryInfo-Item4.png">
-                <div class="fs-650 fw-semi-bold"> Display Name </div>
-            <div  class="fs-650 fw-regular"> Year: </div>
-            <div  class="fs-650 fw-regular"> Artifact: </div>
-        </div>
-        <div class="grid-item">
-                <img class="galleyInfo-image"  src="Images/GalleryInfo-Item5.png">
-                <div class="fs-650 fw-semi-bold"> Display Name </div>
-            <div  class="fs-650 fw-regular"> Year: </div>
-            <div  class="fs-650 fw-regular"> Artifact: </div>
-        </div>
-        <div class="grid-item">
-                <img class="galleyInfo-image"  src="Images/GalleryInfo-Item6.png">
-                <div class="fs-650 fw-semi-bold"> Display Name </div>
-            <div  class="fs-650 fw-regular"> Year: </div>
-            <div  class="fs-650 fw-regular"> Artifact: </div>
-        </div>
-    </div>
-</section>
+        
 
+</section>
+<?php
+
+                }
+        }
+
+?>
 
 <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color">
     <div class="container">

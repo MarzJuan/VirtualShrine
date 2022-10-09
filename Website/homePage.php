@@ -14,15 +14,16 @@
                      <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
                      <span class="visually-hidden">Menu</span>
               </button>
-              <nav class="primary-navigation fs-button"  id="primary-navigation">
+              <div class="navigation">
+                <div class="navigation-items">
+                <nav class="primary-navigation fs-button"  id="primary-navigation">
                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Visit</a></li>
-                            <li><a href="#">Exhibitions and Events</a></li>
-                            <li><a href="#">Learn</a></li>
-                            <li><a href="#">About us</a></li>
-                     </ul>
-              </nav>
+                    <a href="#">Home</a>
+                    <a href="#">Visit</a> <!--Plan your Visit, Book a visit, Audio Guide-->
+                    <a href="#">Explore</a> <!--All the Galleries-->
+                    <a href="#">About</a>
+                </div>
+            </div>
        </div>
        </div>
        <section class="padding-block-600">
@@ -30,10 +31,10 @@
                             <div class="even-columns">
                                    <div class="header-text flow">
                                           <h3 class="entry-text fs-600 fw-bold">Free Entry - Operation time : 8:00AM - 4:00PM</h3>
-                                          <h1 class="fs-primary-heading fw-semi-bold color-primary-400">WELCOME TO THE VIRTUAL SHRINE</h1>
-                                          <button class="book-button color-neutral-100"><u>Book Now</u></button>
+                                          <h1 class="fs-primary-heading fw-semi-bold color-primary-400">WELCOME TO THE<br> VIRTUAL SHRINE</h1>
+                                          <a href="consent-form.php"><button class="book-button color-neutral-100"><u>Book Now</u></button></a>
                                    </div>
-                                   <div class="header-image flow">
+                                   <!-- <div class="header-image flow">
                                           <div class="box1">
                                                         <image class="Home-Image1" src="Images/HomePage1.jpg"></image> 
                                                         <div class="title-text1">EXHIBITS</div>
@@ -51,9 +52,9 @@
                                                  <image class="Home-Image3" src="Images/HomePage3.jpg"></image>
                                                  <div class="title-text3">EVENTS</div>
                                                  <hr class="horizontal1">
-                                                 <div class="sub-text3">National Herritage Month</div> 
+                                                 <div class="sub-text3">National Herritage Month</div>  -->
                                    </div>
-                            </div>
+                                </div>
                      </div>
               </section>
   </header>
