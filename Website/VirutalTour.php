@@ -15,13 +15,16 @@
                       <span class="visually-hidden">Menu</span>
                </button>
                <nav class="primary-navigation fs-button"  id="primary-navigation">
-                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                             <li> <a href="#">Home</a></li>
-                             <li><a href="#">Visit</a></li>
-                             <li><a href="#">Exhibitions and Events</a></li>
-                             <li><a href="#">Learn</a></li>
-                             <li><a href="#">About us</a></li>
-                      </ul>
+               <div class="navigation">
+                <div class="navigation-items">
+                <nav class="primary-navigation fs-button"  id="primary-navigation">
+                     <ul araial-label="Primary" role="list" class="nav-list fs-button" >
+                    <a href="#">Home</a>
+                    <a href="#">Visit</a> <!--Plan your Visit, Book a visit, Audio Guide-->
+                    <a href="#">Explore</a> <!--All the Galleries-->
+                    <a href="#">About</a>
+                </div>
+            </div>
                </nav>
         </div>
         </div>
