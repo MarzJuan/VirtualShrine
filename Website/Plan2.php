@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <title>Home Page</title>
+       <title>Plan Page</title>
 <link rel="stylesheet" href="assets/css/homepage.css">
 </head>
 <body>
