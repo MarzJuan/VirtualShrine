@@ -30,7 +30,7 @@
         </div>
         <div class="container">
              <div class="Plan-text fs-primary-heading fw-semi-bold color-neutral-100 padding-block-900">Plan your visit</div>   
-        <button class="book-button-plan color-neutral-100"><u>Book Now</u></button> </div>
+             <a href="consent-form.php"><button class="book-button-plan color-neutral-100"><u>Book Now</u></button></a>
 </header>
 <section class="guideLine-section">
         <div class="guideline-flex container">
