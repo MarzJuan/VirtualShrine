@@ -7,7 +7,7 @@
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header class="primary-header main-heade gallery-header">
+    <header class="primary-header gallery-header">
         <div class="contrainer">
                <div class="nav-wrapper">
                <image  class="logo" src="Images/Logo.png" alt="manage"></image>
