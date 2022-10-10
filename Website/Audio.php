@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Audio Guide</title>
+
+<title>Audio Guide - VirtualShrine</title>
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+    <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
        <link rel="stylesheet" href="assets/css/homepage.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>

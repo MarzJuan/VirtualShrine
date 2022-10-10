@@ -18,7 +18,7 @@ include('includes/header.php');
                 <div class="card-body">
 
 
-                <form action="code.php" method="POST">
+                <form action="code.php" method="POST" enctype='multipart/form-data'>>
 
                     <div class="row">
                             <div class="col-md-6 mb-3">
@@ -49,6 +49,11 @@ include('includes/header.php');
                             <div class="col-md-6 mb-3">
                                 <label for="">Meta Keyword</label>
                                 <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="">Image</label>
+                                <input type="file" name="image" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">

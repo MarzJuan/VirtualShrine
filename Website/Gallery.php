@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-        <title>Gallery Page</title>
+       <title>Gallery - VirtualShrine</title>
+       <meta name="MobileOptimized" content="width">
+       <meta name="HandheldFriendly" content="true">
+       <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+       <head>
+       <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
         <link rel="stylesheet" href="assets/css/homepage.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -46,16 +50,15 @@
             </div>
        </div>
        </div>
-        <div class="container"> <div class="Gallery-text fw-semi-bold color-primary-400">Galleries</div>    </div>
+        <div class="container"> <div class="Gallery-text fw-semi-bold color-primary-400">Collections</div>    </div>
        
 </header>
 <div class="container">
 <div class="even-columns">
 <div class="main-text-gallery">
-<div class="gen-text fs-700 color-primary-400 fw-bold">Explore the 5 galleries at the Casa Real Shrine  Museum from home.</div>
-<div class="Admission-text fs-650 fw-semi-bold">Our gallery sections provide a variety of interesting tools,
-     such as 360-degree virtual tours, object highlights, timelines, and facts.</div>
-<div class="gen-sub-text fs-650 fw-semi-bold">A list of galleries on the first and second levels is shown below.</div>
+<div class="gen-text fs-700 color-primary-400 fw-bold">Explore the 5 galleries at the Casa Real Shrine  Museum.</div>
+<div class="Admission-text fs-650 fw-semi-bold">The VirtualShrine's collections represent our nation's shared political history.</div>
+<div class="gen-sub-text fs-650 fw-semi-bold">The scope of objects in VirtualShrine's collections is staggering - relics from the First Philippine Republic, memorabilia of Gen. Emilio Aguinaldo, relics from the wealthy families of Malolos, exhibits, a printing press of the Malolos Republic, and a display of the 21 Women of Malolos memorabilia. </div>
 </div>
 <div class="rightside-panel padding-block-700">
 

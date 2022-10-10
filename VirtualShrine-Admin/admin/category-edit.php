@@ -32,7 +32,7 @@ include('includes/header.php');
                         $row = mysqli_fetch_array($category_run);
                         ?>
 
-                <form action="code.php" method="POST">
+                <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                     <input type="hidden" name="category_id" value="<?= $row['id']?>">
                     <div class="row">
@@ -64,6 +64,12 @@ include('includes/header.php');
                             <div class="col-md-6 mb-3">
                                 <label for="">Meta Keyword</label>
                                 <textarea name="meta_keyword" class="form-control" rows="4"><?= $row['meta_keyword'] ?></textarea>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="">Image</label>
+                                <input type="hidden" name="old_image" value="<?= $row['image'] ?>" />
+                                <input type="file" name="image" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">

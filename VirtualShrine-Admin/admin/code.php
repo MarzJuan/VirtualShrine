@@ -279,20 +279,48 @@ if(isset($_POST['edit_category']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
+    $old_filename = $_POST['old_image'];
+    $image = $_FILES['image']['name'];
+
+    $update_filename = "";
+    if($image != NULL)
+    {
+    //rename this image
+        $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+        $filename = time().'.'.$image_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $old_filename;
+    }
+
     $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
     $status = $_POST['status'] == true ? '1':'0';
 
     $query = "UPDATE categories SET name='$name', slug='$slug', description='$description', meta_title='$meta_title',
-     meta_description='$meta_description', meta_keyword='$meta_keyword', navbar_status='$navbar_status', 
+     meta_description='$meta_description', meta_keyword='$meta_keyword', image='$update_filename', navbar_status='$navbar_status', 
      status='$status' WHERE id='$category_id' ";
 
      $query_run = mysqli_query($con, $query);
 
      if($query_run)
-    {
-        $_SESSION['message'] = "Category Updated Successfully";
-        header('Location: category-edit.php?id=' .$category_id);
-        exit(0);
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated a Category')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($image != NULL)
+            {
+                if(file_exists('../uploads/category/'.$old_filename)){
+                    unlink("../uploads/category/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/category/'.$update_filename);
+            }
+
+            $_SESSION['message'] = "Category Updated Successfully";
+            header('Location: category-edit.php?id=' .$category_id);
+            exit(0);
     }
     else
     {
@@ -322,28 +350,37 @@ if(isset($_POST['add_category']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
+    $image = $_FILES['image']['name'];
+    //rename this image
+    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = time().'.'.$image_extension;
+
     $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
     $status = $_POST['status'] == true ? '1':'0';
 
-    $query = "INSERT INTO categories(name, slug, description, meta_title, meta_description, meta_keyword, navbar_status, status) VALUES
-            ('$name', '$slug', '$description', '$meta_title', '$meta_description', '$meta_keyword', '$navbar_status', '$status')";
+    $query = "INSERT INTO categories(name, slug, description, meta_title, meta_description, meta_keyword, image, navbar_status, status) VALUES
+            ('$name', '$slug', '$description', '$meta_title', '$meta_description', '$meta_keyword', '$filename', '$navbar_status', '$status')";
 
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
-    {
-        $_SESSION['message'] = "Category Added Successfully";
-        header('Location: category-add.php');
-        exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: category-add.php');
-        exit(0);
-    }
-
-
+        {
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
+        $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/category/'.$filename);
+                $_SESSION['message'] = "Category Created Successfully";
+                header('Location: category-add.php');
+                exit(0);
+            }
+            else
+            {
+                $_SESSION['message'] = "Something Went Wrong";
+                header('Location: category-add.php');
+                exit(0);
+            }
+        }
 }
 
 

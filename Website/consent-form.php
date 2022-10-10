@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang = "en">
-  <title>Museo ng Kasaysayang Pampulitika ng Pilipinas Online Reservation</title>
+<title>Online Reservation - VirtualShrine</title>
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
