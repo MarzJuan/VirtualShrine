@@ -5,28 +5,47 @@
         <link rel="stylesheet" href="assets/css/homepage.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 </head>
 <body>
     <header class="primary-header gallery-header">
-        <div class="contrainer">
-               <div class="nav-wrapper">
-               <image  class="logo" src="Images/Logo.png" alt="manage"></image>
-               <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                      <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
-                      <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
-                      <span class="visually-hidden">Menu</span>
-               </button>
-               <nav class="primary-navigation fs-button"  id="primary-navigation">
-                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                             <li class="#">Home</li>
-                             <li><a href="#">Visit</a></li>
-                             <li><a href="#">Exhibitions and Events</a></li>
-                             <li><a href="#">Learn</a></li>
-                             <li><a href="#">About us</a></li>
-                      </ul>
-               </nav>
-        </div>
-        </div>
+    <div class="container">
+              <div class="nav-wrapper">
+              <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
+              <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                     <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
+                     <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
+                     <span class="visually-hidden">Menu</span>
+              </button>
+              <div class="navigation">
+                <div class="menu">
+                <nav class="primary-navigation fs-button"  id="primary-navigation">
+                     <ul araial-label="Primary" role="list" class="nav-list fs-button" >
+                     <li class="menu-item"><a href="homePage.php">Home</a></li>
+
+                     <li class="menu-item">
+                            <a class="sub-btn" href="#">Visit<i class="fas fa-angle-down"></i></a> <!--Plan your Visit, Book a visit, Audio Guide-->
+                            <ul class="sub-menu">
+                                   <li class="sub-item"><a href="Plan2.php">Plan Your Visit</a></li>
+                                   <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
+                            </ul>
+                     </li>
+
+                     <li class="menu-item">
+                            <a class="sub-btn" href="#">Explore<i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                   <li class="sub-item"><a href="Gallery2.php">Galleries</a></li>
+                                   <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
+                                   <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
+                            </ul>
+                     </li> <!--All the Galleries-->
+                     
+                     <li class="menu-item"><a href="#">About</a></li>
+                </div>
+            </div>
+       </div>
+       </div>
         <div class="container"> <div class="Gallery-text fw-semi-bold color-primary-400">Galleries</div>    </div>
        
 </header>
@@ -46,7 +65,7 @@
     <div><svg class="inline-icon" style="width:53px;height:53px" viewBox="0 0 24 24">
             <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
     </svg></div>
-    Openning Time
+    Opening Time
 </div>
 <div class="right-subtext fs-650 fw-regular">Tuesday - Sunday (8:00AM - 4:00PM)</div>
             <div><button class="right-btn">View Museum Map <svg class="right-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -62,7 +81,7 @@
                 <img src="Images/Img1.jpg">
         </div>
         <div class="title fs-650">
-                Gallery Name
+                <h1>Gallery Name</h1>
         </div>
         <div class="des">
         
@@ -151,6 +170,15 @@
                    </div>
             </div>
        </footer>
-<script src="main.js" defer></script>
+       <script type="text/javascript">
+       //jquery for dropdown menus
+       $(document).ready(function(){
+              //toggle sub-menus
+              $(".sub-btn").click(function(){
+                     $(this).next(".sub-menu").slideToggle();
+              })
+       })
+</script>
+<script src="assets/js/homepage.js" defer></script>
 </body>
 </html>

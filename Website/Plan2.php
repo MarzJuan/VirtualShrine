@@ -159,6 +159,15 @@
               </div>
        </div>
   </footer>
+  <script type="text/javascript">
+       //jquery for dropdown menus
+       $(document).ready(function(){
+              //toggle sub-menus
+              $(".sub-btn").click(function(){
+                     $(this).next(".sub-menu").slideToggle();
+              })
+       })
+</script>
 <script src="assets/js/homepage.js" defer></script>
 </body>
 </html>

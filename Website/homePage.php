@@ -116,7 +116,7 @@
                             <div class="section2-title  fs-secondary-heading fw-bold color-primary-400">VIRTUALSHRINE NEXT TO YOU</div>
                             <div class="section2-flex">
                             <div class="section2-image2">
-                                          <div><button class="section2-btn fw-bold fs-650 bg-neutral-100 color-accent-600">Audio</button></div>
+                                          <div><button class="section2-btn fw-bold fs-600 bg-neutral-100 color-accent-600">Audio</button></div>
                                           <div class="section2-text fw-semi-bold fs-700 color-neutral-100">Audio Guide</div>
                                    </div>
                             <div class="section2-image3">
