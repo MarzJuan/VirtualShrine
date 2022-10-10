@@ -1,6 +1,48 @@
 <?php
 include('authentication.php');
 
+//EDIT PROFILE
+if (isset($_POST['edit_profile']))
+{
+            $user_id = $_POST['user_id'];
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
+            $username = $_POST['username'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $profileImage = $_FILES['profileImage']['name'];
+                //rename this image
+                $image_extension = pathinfo($profileImage, PATHINFO_EXTENSION);
+                $filename = time().'.'.$image_extension;
+
+
+
+        $query = "UPDATE users SET fname='$fname', lname='$lname', username='$username', email='$email', password='$password', profileImage='$filename'
+                    WHERE ID='$user_id' ";
+                
+        $query_run = mysqli_query($con, $query);
+
+        if($query_run)
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated their Profile')";
+            $sql_run = mysqli_query($con, $sql);
+            
+            if($sql_run)
+            {
+                move_uploaded_file($_FILES['profileImage']['tmp_name'], '../uploads/user/'.$filename);
+                $_SESSION['message'] = "Updated Successfuly";
+                header("Location: user-profile.php?id=". $_SESSION['auth_user']['user_id']);
+                exit(0);
+            }
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong!";
+            header("Location: user-profile.php?id=". $_SESSION['auth_user']['user_id']);
+            exit(0);
+        }
+}
 
 // ADD AUDIO
 if (isset($_POST['audio_add']) && isset($_FILES['my_audio'])) 
@@ -63,10 +105,15 @@ if(isset($_POST['reject_booking']))
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
-    {
-        $_SESSION['message'] = "Booking has been Rejected";
-        header('Location: booking-pending.php');
-        exit(0);
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Rejected a Booking')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Booking has been Rejected";
+                header('Location: booking-pending.php');
+                exit(0);
     }
     else
     {
@@ -75,6 +122,7 @@ if(isset($_POST['reject_booking']))
         exit(0);
     }
 
+}
 }
 
 // ACCEPT BOOKING
@@ -87,10 +135,14 @@ if(isset($_POST['approve_booking']))
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
-    {
-        $_SESSION['message'] = "Booking has been Approved";
-        header('Location: booking-pending.php');
-        exit(0);
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Confirmed a Booking')";
+            $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Booking has been Approved";
+                header('Location: booking-pending.php');
+                exit(0);
     }
     else
     {
@@ -99,6 +151,7 @@ if(isset($_POST['approve_booking']))
         exit(0);
     }
 
+}
 }
 
 
@@ -171,13 +224,13 @@ if(isset($_POST['post_update']))
                 $_SESSION['message'] = "Post Updated Successfully";
                 header('Location: post-edit.php?id='.$post_id);
                 exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: post-edit.php?id='.$post_id);
-        exit(0);
-    }
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: post-edit.php?id='.$post_id);
+            exit(0);
+        }
 
 }
     
@@ -197,6 +250,8 @@ if(isset($_POST['post_add']))
     $slug = $final_string;
 
     $description = $_POST['description'];
+    $year = $_POST['year'];
+    $object_type = $_POST['object_type'];
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -209,13 +264,13 @@ if(isset($_POST['post_add']))
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, name, slug, description, image, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$description', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, name, slug, description, year, object_type, image, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$name', '$slug', '$description', '$year', '$object_type', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
         {
-        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a Gallery Content')";
         $sql_run = mysqli_query($con, $sql);
             if($sql_run)
             {
@@ -233,34 +288,6 @@ if(isset($_POST['post_add']))
 
 }
 }
-
-
-
-//CATEGORY ARCHIVE RECOVER
-if(isset($_POST['archive_recover']))
-{
-    $category_id = $_POST['archive_recover'];
-    // 0 = Visible
-    $query = "UPDATE categories SET status='0' WHERE id='$category_id' LIMIT 1";
-    $query_run = mysqli_query($con, $query);
-
-    if($query_run)
-    {
-        $_SESSION['message'] = "Category Recovered Successfully";
-        header('Location: archive-category.php');
-        exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: archive-category.php');
-        exit(0);
-    }
-
-}
-
-
-
 
 
 //EDIT CATEGORY
@@ -330,11 +357,6 @@ if(isset($_POST['edit_category']))
     }
 }
 
-
-
-
-
-
 // ADD CATEGORY
 if(isset($_POST['add_category']))
 {
@@ -365,6 +387,7 @@ if(isset($_POST['add_category']))
 
     if($query_run)
         {
+<<<<<<< Updated upstream
         $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
         $sql_run = mysqli_query($con, $sql);
             if($sql_run)
@@ -399,17 +422,22 @@ if(isset($_POST['assistant-admin-recover']))
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
-    {
-        $_SESSION['message'] = "Admin Recovered Successfully";
-        header('Location: archive-user.php');
-        exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: archive-user.php');
-        exit(0);
-    }
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Recovered a User Data')";
+            $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Admin Recovered Successfully";
+                header('Location: archive-user.php');
+                exit(0);
+            }
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: archive-user.php');
+            exit(0);
+        }
 
 
 }
@@ -431,10 +459,14 @@ if(isset($_POST['assistant-admin-archive']))
 
 
     if($query_run)
-    {
-        $_SESSION['message'] = "Admin Archived Successfully";
-        header('Location: assistant-admin-list.php');
-        exit(0);
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Archived a Admin Data')";
+            $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Admin Archived Successfully";
+                header('Location: assistant-admin-list.php');
+                exit(0);
     }
     else
     {
@@ -454,6 +486,7 @@ if(isset($_POST['add_admin']))
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $role_as = $_POST['role_as'];
+    $image = mysqli_real_escape_string($con, $_POST['image']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $confirm_password = mysqli_real_escape_string($con, $_POST['cpassword']);
 
@@ -475,28 +508,34 @@ if(isset($_POST['add_admin']))
             $user_query = "INSERT INTO users (fname, lname, username, email, role_as, password) VALUES ('$fname', '$lname', '$username', '$email', '$role_as', '$password')";
             $user_query_run = mysqli_query($con, $user_query);
 
-            if($user_query_run)
-            {
-                $_SESSION['message'] = "Added Succesfully";
-                header("Location: assistant-admin-add.php");
-                exit(0);
+                if($query_run)
+                {
+                    $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a New Admin')";
+                    $sql_run = mysqli_query($con, $sql);
+                    if($sql_run)
+                    {
+                        $_SESSION['message'] = "Added Succesfully";
+                        header("Location: assistant-admin-add.php");
+                        exit(0);
+                    }
+                    else
+                    {
+                        $_SESSION['message'] = "Something Went Wrong!";
+                        header("Location: assistant-admin-add.php");
+                        exit(0);
+                    }
+                }
             }
-            else
-            {
-                $_SESSION['message'] = "Something Went Wrong!";
-                header("Location: assistant-admin-add.php");
-                exit(0);
+                
+                }
+                else
+                {
+                    $_SESSION['message'] = "Password does not match";
+                    header("Location: assistant-admin-add.php");
+                    exit(0);
             }
-        }
-         
-    }
-    else
-    {
-        $_SESSION['message'] = "Password does not match";
-        header("Location: assistant-admin-add.php");
-        exit(0);
-    }
 
+}
 }
 
 
@@ -519,7 +558,7 @@ if(isset($_POST['update_information']))
 
         if($query_run)
         {
-            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an Admin Information')";
             $sql_run = mysqli_query($con, $sql);
             if($sql_run)
             {
