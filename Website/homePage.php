@@ -10,7 +10,7 @@
 <header class="primary-header main-header">
        <div class="container">
               <div class="nav-wrapper">
-              <image  class="logo" src="Images/Logo.png" alt="manage"></image>
+              <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
               <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                      <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
                      <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
@@ -20,22 +20,22 @@
                 <div class="menu">
                 <nav class="primary-navigation fs-button"  id="primary-navigation">
                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                     <li class="menu-item"><a href="#">Home</a></li>
+                     <li class="menu-item"><a href="homePage.php">Home</a></li>
 
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Visit<i class="fas fa-angle-down"></i></a> <!--Plan your Visit, Book a visit, Audio Guide-->
                             <ul class="sub-menu">
-                                   <li class="sub-item"><a href="#">Plan Your Visit</a></li>
-                                   <li class="sub-item"><a href="#">Book a Visit</a></li>
+                                   <li class="sub-item"><a href="Plan2.php">Plan Your Visit</a></li>
+                                   <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
                             </ul>
                      </li>
 
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Explore<i class="fas fa-angle-down"></i></a>
                             <ul class="sub-menu">
-                                   <li class="sub-item"><a href="#">Galleries</a></li>
-                                   <li class="sub-item"><a href="#">Audio Guide</a></li>
-                                   <li class="sub-item"><a href="#">Virtual Tour</a></li>
+                                   <li class="sub-item"><a href="Gallery2.php">Galleries</a></li>
+                                   <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
+                                   <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                             </ul>
                      </li> <!--All the Galleries-->
                      

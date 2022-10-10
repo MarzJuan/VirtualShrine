@@ -2,32 +2,48 @@
 <html>
 <head>
        <title>Virtual Tours</title>
-<link rel="stylesheet" href="assets/css/homepage.css">
+       <link rel="stylesheet" href="assets/css/homepage.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 </head>
 <body>
     <header class="primary-header Virtual-header">
-        <div class="contrainer">
-               <div class="nav-wrapper">
-               <image  class="logo" src="Images/Logo.png" alt="manage"></image>
-               <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                      <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
-                      <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
-                      <span class="visually-hidden">Menu</span>
-               </button>
-               <nav class="primary-navigation fs-button"  id="primary-navigation">
-               <div class="navigation">
-                <div class="navigation-items">
+    <div class="container">
+              <div class="nav-wrapper">
+              <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
+              <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                     <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
+                     <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
+                     <span class="visually-hidden">Menu</span>
+              </button>
+              <div class="navigation">
+                <div class="menu">
                 <nav class="primary-navigation fs-button"  id="primary-navigation">
                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                    <a href="#">Home</a>
-                    <a href="#">Visit</a> <!--Plan your Visit, Book a visit, Audio Guide-->
-                    <a href="#">Explore</a> <!--All the Galleries-->
-                    <a href="#">About</a>
+                     <li class="menu-item"><a href="homePage.php">Home</a></li>
+
+                     <li class="menu-item">
+                            <a class="sub-btn" href="#">Visit<i class="fas fa-angle-down"></i></a> <!--Plan your Visit, Book a visit, Audio Guide-->
+                            <ul class="sub-menu">
+                                   <li class="sub-item"><a href="Plan2.php">Plan Your Visit</a></li>
+                                   <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
+                            </ul>
+                     </li>
+
+                     <li class="menu-item">
+                            <a class="sub-btn" href="#">Explore<i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                   <li class="sub-item"><a href="Gallery2.php">Galleries</a></li>
+                                   <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
+                                   <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
+                            </ul>
+                     </li> <!--All the Galleries-->
+                     
+                     <li class="menu-item"><a href="#">About</a></li>
                 </div>
             </div>
-               </nav>
-        </div>
-        </div>
+       </div>
+       </div>
         <div class="container">
              <div class="virtual-text fs-primary-heading fw-semi-bold color-neutral-100">Virtual Tours</div>   
 </header>
@@ -107,6 +123,15 @@
               </div>
        </div>
   </footer>
+  <script type="text/javascript">
+       //jquery for dropdown menus
+       $(document).ready(function(){
+              //toggle sub-menus
+              $(".sub-btn").click(function(){
+                     $(this).next(".sub-menu").slideToggle();
+              })
+       })
+</script>
 <script src="assets/js/homepage.js" defer></script>
 </body>
 </html>
