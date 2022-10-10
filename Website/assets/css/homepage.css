@@ -1639,9 +1639,8 @@ form {
 .info-header{
     align-items: center;
     z-index: 999;
-    background-image: url("../../Images/CasaReal.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
     padding-bottom: 100px;
     justify-content: space-between;
     padding: 0px 100px;
@@ -1738,11 +1737,12 @@ form {
 }
 
 .GalleryInfo-text-title{
-    margin: 50px 0 0 50px;
+    margin: 50px 0 0 170px;
 }
 
 h6 {
-    margin-left: 50px;
+    margin-right: 145px;
+    margin-left: 177px;
     line-height: 1.5;
 }
 
