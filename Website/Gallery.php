@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
        <title>Gallery - VirtualShrine</title>
@@ -53,6 +57,9 @@
         <div class="container"> <div class="Gallery-text fw-semi-bold color-primary-400">Collections</div>    </div>
        
 </header>
+
+
+
 <div class="container">
 <div class="even-columns">
 <div class="main-text-gallery">
@@ -78,53 +85,45 @@
 </div>
 </div>
 
-<div class="container gallery-flex">
+<?php
+                                    
+              $posts = "SELECT * FROM categories WHERE status='0' ";
+              $posts_run = mysqli_query($con, $posts);
+              $check = mysqli_num_rows($posts_run) > 0;
+
+        if($check)
+          {
+                while($post = mysqli_fetch_assoc($posts_run))
+                {
+                ?>
+<!-- <div class="container gallery-flex"> -->
         <div class="cards">
                 <div class="image">
-                <img src="Images/Img1.jpg">
+                <img src="../VirtualShrine-Admin/uploads/category/<?= $post['image'];?>" width="300px" height="300px" alt="Collection Image"/>
         </div>
         <div class="title fs-650">
-                <h1>Gallery Name</h1>
+                <h4><?= $post['name']?></h4>
         </div>
         <div class="des">
-        
-        <p>Short Information about the gallery displays here</p>
+        <p>
+        <span style="
+              display:inline-block;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 35ch;">
+        <?= $post['description']?></p>
         <br>
-        <a href="">Read More</a>
+        <a href="GalleryInfo.php?id=<?= $post['id']?>">Read More</a>
         </div>
         </div>
-        <!---------Card2--------->
-        <div class="cards ">
-                <div class="image">
-                <img src="Images/Img2.jpg">
-        </div>
-        <div class="title  fs-650">
-                <h1>Gallery Name</h1>
-        </div>
-        <div class="des">
-        
-        <p>Short Information about the gallery displays here</p>
-        <br>
-        <a href="">Read More</a>
-        </div>
-        </div>
-        
-        <!---------Card3--------->
-        <div class="cards">
-                <div class="image">
-                <img src="Images/Img3.jpg">
-        </div>
-        <div class="title  fs-650">
-                <h1>Gallery Name</h1>
-        </div>
-        <div class="des">
-        
-        <p>Short Information about the gallery displays here</p>
-        <br>
-        <a href="">Read More</a>
-        </div>
-        </div>
-        </div>
+
+        <?php
+
+                }
+        }
+
+?>
 
 
         <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color">

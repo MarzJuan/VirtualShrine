@@ -72,14 +72,14 @@ include('includes/header.php');
                                 <input type="file" name="image" class="form-control">
                             </div>
 
-                            <div class="col-md-6 mb-3">
+                            <!-- <div class="col-md-6 mb-3">
                                 <label for="">Navbar Status</label>
                                 <input type="checkbox" name="navbar_status" <?= $row['navbar_status'] == '1' ? 'checked':'' ?> width="70px" height="70px">
-                            </div>
+                            </div> -->
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Status</label>
-                                <input type="checkbox" name="status" <?= $row['status'] == '1' ? 'checked':'' ?> width="70px" height="70px">
+                                <label for="">Status - <i>Check the box to set status as active</label><br>
+                                <input type="checkbox" name="status" <?= $row['status'] == '0' ? 'checked':'' ?> width="70px" height="70px">
                             </div>
 
                             <div class="com-md-6 mb-3">

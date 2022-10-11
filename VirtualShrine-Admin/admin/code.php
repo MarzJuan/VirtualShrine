@@ -324,11 +324,11 @@ if(isset($_POST['edit_category']))
     }
 
     $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
-    $status = $_POST['status'] == true ? '1':'0';
+    $status = $_POST['status'] == true ? '0':'1';
 
     $query = "UPDATE categories SET name='$name', slug='$slug', description='$description', meta_title='$meta_title',
-     meta_description='$meta_description', meta_keyword='$meta_keyword', image='$update_filename', navbar_status='$navbar_status', 
-     status='$status' WHERE id='$category_id' ";
+     meta_description='$meta_description', meta_keyword='$meta_keyword', image='$update_filename', status='$status' 
+     WHERE id='$category_id' ";
 
      $query_run = mysqli_query($con, $query);
 
@@ -377,17 +377,16 @@ if(isset($_POST['add_category']))
     $image_extension = pathinfo($image, PATHINFO_EXTENSION);
     $filename = time().'.'.$image_extension;
 
-    $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
-    $status = $_POST['status'] == true ? '1':'0';
+    // $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
+    $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO categories(name, slug, description, meta_title, meta_description, meta_keyword, image, navbar_status, status) VALUES
-            ('$name', '$slug', '$description', '$meta_title', '$meta_description', '$meta_keyword', '$filename', '$navbar_status', '$status')";
+    $query = "INSERT INTO categories(name, slug, description, meta_title, meta_description, meta_keyword, image, status) VALUES
+            ('$name', '$slug', '$description', '$meta_title', '$meta_description', '$meta_keyword', '$filename', '$status')";
 
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
         {
-<<<<<<< Updated upstream
         $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an information')";
         $sql_run = mysqli_query($con, $sql);
             if($sql_run)

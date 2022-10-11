@@ -1464,7 +1464,7 @@ form {
 }
 
 .Gallery-text{
-    margin:200px 0 0 70px;
+    margin:200px 0 0 30px;
     color:white;
     font-size: 5rem;
 }
@@ -1628,7 +1628,7 @@ form {
     .cards{
         display: grid;
         grid-auto-flow: row;
-        width: 75%;
+        width: 43%;
         justify-content: center;
     }
 }

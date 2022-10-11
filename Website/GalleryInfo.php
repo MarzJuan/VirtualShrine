@@ -4,9 +4,29 @@ include('config/dbcon.php');
 
 <!DOCTYPE html>
 <html>
-<head>
-        <title>Gallery Page</title>
-        <link rel="stylesheet" href="assets/css/homepage.css">
+<?php
+       if(isset($_GET['id']))
+       {              
+              $category_id = $_GET['id'];
+              $posts = "SELECT * FROM categories WHERE status='0' AND id='$category_id' ";
+              $posts_run = mysqli_query($con, $posts);
+              $check = mysqli_num_rows($posts_run) > 0;
+                      
+              if($check)
+              {
+                     while($post = mysqli_fetch_assoc($posts_run))
+                     {
+                     ?>
+
+<title><?php echo $post['name'] ?> - VirtualShrine</title>
+                     
+       <meta name="MobileOptimized" content="width">
+       <meta name="HandheldFriendly" content="true">
+       <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+       <head>
+
+       <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
+       <link rel="stylesheet" href="assets/css/homepage.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -51,36 +71,51 @@ include('config/dbcon.php');
        </div>
 
     <div class="container mt-3">
-            <div class="GalleryInfo-text-title fs-900 fw-semi-bold">Gallery Name</div>
+            <div class="GalleryInfo-text-title fs-900 fw-semi-bold"><?php echo $post['name'] ?></div>
             <span class="GalleryInfo-text-subtitle fs-500 fw-regular">
             <h6 class="fs-600 fw-regular">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <?php echo $post['description'] ?>
             </h6></span>
         </div>
 </header>
+<?php
+
+                     }
+              }
+       }
+
+?>
 
 <?php
                                     
-        $posts = "SELECT * FROM posts WHERE status='0' ";
+        $posts = "SELECT * FROM posts WHERE status='0' AND id='$category_id' ";
         $posts_run = mysqli_query($con, $posts);
 
         if(mysqli_num_rows($posts_run) > 0)
           {
-                foreach($posts_run as $posts)
+                foreach($posts_run as $post)
                 {
                 ?>
 
-<section>
-    <div class="gallery-info-grid mt-3">
-        <div class="grid-item">
-            <img class="galleyInfo-image" src="Images/GalleryInfo-Item1.png">
-            <div class="fs-650 fw-semi-bold"> <?= $posts['name']?> </div>
-            <div class="fs-650 fw-regular"> Year: </div>
-            <div class="fs-650 fw-regular"> Artifact: </div>
+<!-- <div class="container gallery-flex"> -->
+<div class="cards">
+                <div class="image">
+                <img src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>" width="300px" height="300px" alt="Collection Image"/>
         </div>
-        
-
-</section>
+        <div class="title fs-650">
+                <h4><?= $post['name']?></h4>
+        </div>
+        <div class="des">
+        <p>
+        <span style="
+              display:inline-block;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 35ch;">
+        <?= $post['description']?></p>
+        </div>
+        </div>
 <?php
 
                 }
