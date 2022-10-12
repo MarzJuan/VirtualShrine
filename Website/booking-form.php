@@ -141,7 +141,7 @@ section {
 
                   <div class="col-md-4 col-12">
                     <div class="form-group">
-                      <label>No. of Pax</label>
+                      <label>No. of Visitor</label>
                       <input class="form-control" name="no_visitors" data-parsley-required="" data-parsley-required-message="Please select number of pax">
                       </input>
                     </div>   

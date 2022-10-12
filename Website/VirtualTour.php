@@ -50,8 +50,8 @@
 <main class="main-content-visit container">
         <div class="Access-text fs-secondary-heading color-primary-400 padding-block-700 fw-bold">Access the tours</div>
         <div class="flex-visit-container">
-        <div class="flex-item flex-item-1">
-            <div class="item-text">Virtual Lobby</div></div>
+        <!-- <div class="flex-item flex-item-1">
+            <div class="item-text">Virtual Lobby</div></div> -->
         <div class="flex-item flex-item-2">
             <div class="item-text">Virtual 360</div></div>
         </div>

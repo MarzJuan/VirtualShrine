@@ -28,7 +28,7 @@ include('includes/header.php');
 
                     <div class="row">
                         <div class="col-md-12 mb-3">
-                            <label for="">Category list</label>
+                            <label for="">Gallery list</label>
                             <?php
                             $category = "SELECT * FROM categories WHERE status='0' ";
                             $category_run = mysqli_query($con, $category);
@@ -37,7 +37,7 @@ include('includes/header.php');
                             {
                             ?>
                                 <select name="category_id" required class="form-control">
-                                    <option value="">-- Select Category --</option>
+                                    <option value="">-- Select Gallery --</option>
                                     <?php
                                     foreach($category_run as $categoryitem)
                                         {

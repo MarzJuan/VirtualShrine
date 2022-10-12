@@ -56,13 +56,11 @@
 
                             
                             <!--START OF BOOKINGS-->
-                            <?php if($_SESSION['auth_role'] == '1') : ?> <!--ONLY ASSISTANT ADMIN CAN VIEW-->
                             <a class="nav-link collapsed <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-book-content' ></i></div>
                                 Bookings
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <?php endif; ?>
 
                             <div class="collapse <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' ? 'show':'' ?>" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
@@ -99,7 +97,7 @@
                             <!-- START OF POSTS-->
                             <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'audio-view.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts" aria-expanded="false" aria-controls="collapsePosts">
                                 <div class="sb-nav-link-icon"><i class='bx bx-windows'></i></div>
-                                Posts
+                                CMS
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
@@ -170,11 +168,13 @@
 
 
                             <!--START OF ARCHIVE-->
+                            <?php if($_SESSION['auth_role'] == '0') : ?>
                             <a class="nav-link collapsed <?= $page == 'archive-user.php' || $page == 'archive-category.php' || $page == 'post-archive.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseArchive" aria-expanded="false" aria-controls="collapseArchive">
                                 <div class="sb-nav-link-icon"><i class="bx bx-archive-in"></i></div>
                                 Archive
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <?php endif; ?>
 
                             <div class="collapse <?= $page == 'archive-user.php' || $page == 'archive-category.php' || $page == 'post-archive.php' || $page == 'audio-archive.php' ? 'show':'' ?>" id="collapseArchive" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
@@ -196,7 +196,7 @@
                                     
                                     <a class="nav-link <?= $page == 'post-archive.php' || $page == 'audio-archive.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePostArchive" aria-expanded="false" aria-controls="collapsePostArchive">
                                     <div class="sb-nav-link-icon"></div>
-                                        Posts
+                                        CMS
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
 
