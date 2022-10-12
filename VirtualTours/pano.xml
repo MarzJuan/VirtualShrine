@@ -1,191 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tour appversion="6.1.14" start="node5" apprev="18105">
-  <panorama id="node5">
-    <input leveltilesize="510" levelingpitch="0" levelingroll="0" height="968" overlap="1" levelbias="0.400" width="968" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbiashidpi="1.000">
-      <level height="968" predecode="0" width="968" preload="0"/>
-      <level height="484" predecode="1" width="484" preload="1"/>
+<tour appversion="6.1.14" apprev="18105" start="node5">
+  <panorama hideabout="1" id="node5">
+    <input leveltilesize="510" height="968" levelingroll="0" overlap="1" levelbiashidpi="1.000" width="968" levelbias="0.400" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+      <level height="968" preload="0" predecode="0" width="968"/>
+      <level height="484" preload="1" predecode="1" width="484"/>
       <preview strip="1" color="0x808080"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start projection="4" fov="70" tilt="0" pan="0"/>
-      <flyin projection="9" fov="170" tilt="-90" pan="0"/>
-      <min fovpixel="2" tilt="-64.5689" pan="-180"/>
-      <max fov="120" fovstereographic="270" tilt="64.5689" fovfisheye="360" pan="180"/>
+      <start fov="70" pan="0" tilt="0" projection="4"/>
+      <flyin fov="170" pan="0" tilt="-90" projection="9"/>
+      <min fovpixel="2" pan="-180" tilt="-64.5689"/>
+      <max fov="120" fovstereographic="270" fovfisheye="360" pan="180" tilt="64.5689"/>
     </view>
-    <userdata author="" comment="" nodeid="node5" title="" info="" tags="Pano2VR6" heading="0" datetime="7/7/2022 1:21 PM" source="" longitude="" latitude="" copyright="" customnodeid="" description=""/>
-    <hotspots height="20" width="180" wordwrap="1">
-      <label borderradius="2" textcolor="0x000000" background="0" textalpha="1" backgroundcolor="0xffffff" bordercolor="0x000000" borderalpha="1" height="20" border="1" enabled="1" width="180" backgroundalpha="1" wordwrap="1"/>
-      <polystyle backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0"/>
-      <hotspot title="Lobby" target="" fov="10" id="Point01" customimage="media/next.png" distance3D="251.461" skinid="ht_node" url="{node1}" customimagewidth="44" customimageheight="66" use3D="0" tilt="-14.4" pan="-0.570012" description=""/>
+    <userdata customnodeid="" nodeid="node5" author="" longitude="" heading="0" info="" copyright="" comment="" tags="Pano2VR6" title="" description="" datetime="7/7/2022 1:21 PM" source="" latitude=""/>
+    <hotspots wordwrap="1" height="20" width="180">
+      <label bordercolor="0x000000" backgroundalpha="1" enabled="1" border="1" wordwrap="1" height="20" borderradius="2" width="180" textalpha="1" textcolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" background="0"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot target="" customimagewidth="44" use3D="0" fov="10" distance3D="251.461" customimageheight="66" customimage="media/next.png" pan="-0.880012" tilt="-22.24" url="{node1}" title="Lobby" description="" id="Point01" skinid="ht_node"/>
     </hotspots>
     <media/>
-    <transition zoomfov="20" zoomin="0" blendcolor="0x000000" enabled="1" blendtime="1" zoomout="0" softedge="0" zoomafteroutfov="20" type="crossdissolve" zoomspeed="2" zoomafterinfov="90" zoomoutpause="1"/>
-    <flyintransition speed="1.00" enabled="1"/>
+    <transition enabled="1" zoomout="0" blendcolor="0x000000" zoomfov="20" zoomin="0" blendtime="1" zoomspeed="2" type="crossdissolve" zoomafteroutfov="20" zoomoutpause="1" softedge="0" zoomafterinfov="90"/>
+    <flyintransition enabled="1" speed="1.00"/>
     <animation useinautorotation="1" syncanimationwithvideo="0" animsequence="Animation01"/>
-    <control lockedmouse="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" contextprojections="0" sensitivity="8" lockedkeyboardzoom="0" lockedkeyboard="0" speedwheel="1" dblclickfullscreen="0" contextvr="1" invertwheel="0" hideabout="0" rubberband="0"/>
+    <control sensitivity="8" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" simulatemass="1" contextfullscreen="1" contextvr="1" invertcontrol="1" contextprojections="0" rubberband="0" hideabout="1" dblclickfullscreen="0" lockedwheel="0" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
-  <panorama id="node1">
-    <input leveltilesize="510" levelingpitch="0" levelingroll="0" height="9450" overlap="1" levelbias="0.400" width="9450" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbiashidpi="1.000">
-      <level height="9450" predecode="0" width="9450" preload="0"/>
-      <level height="4725" predecode="0" width="4725" preload="0"/>
-      <level height="2362" predecode="0" width="2362" preload="0"/>
-      <level height="1181" predecode="0" width="1181" preload="0"/>
-      <level height="590" predecode="0" width="590" preload="0"/>
-      <level height="295" predecode="1" width="295" preload="1"/>
+  <panorama hideabout="1" id="node1">
+    <input leveltilesize="510" height="9450" levelingroll="0" overlap="1" levelbiashidpi="1.000" width="9450" levelbias="0.400" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+      <level height="9450" preload="0" predecode="0" width="9450"/>
+      <level height="4725" preload="0" predecode="0" width="4725"/>
+      <level height="2362" preload="0" predecode="0" width="2362"/>
+      <level height="1181" preload="0" predecode="0" width="1181"/>
+      <level height="590" preload="0" predecode="0" width="590"/>
+      <level height="295" preload="1" predecode="1" width="295"/>
       <preview strip="1" color="0x808080"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start projection="4" fov="41.9247" tilt="0" pan="0"/>
-      <flyin projection="9" fov="170" tilt="-90" pan="0"/>
-      <min fovpixel="2" tilt="-33.3611" pan="-180"/>
-      <max fov="120" fovstereographic="270" tilt="33.3611" fovfisheye="360" pan="180"/>
+      <start fov="41.9247" pan="0" tilt="0" projection="4"/>
+      <flyin fov="170" pan="0" tilt="-90" projection="9"/>
+      <min fovpixel="2" pan="-180" tilt="-33.3611"/>
+      <max fov="120" fovstereographic="270" fovfisheye="360" pan="180" tilt="33.3611"/>
     </view>
-    <userdata author="" comment="" nodeid="node1" title="" info="" tags="Pano2VR6" heading="0" datetime="7/7/2022 1:26 PM" source="" longitude="" latitude="" copyright="" customnodeid="" description=""/>
-    <hotspots height="20" width="180" wordwrap="1">
-      <label borderradius="2" textcolor="0x000000" background="0" textalpha="1" backgroundcolor="0xffffff" bordercolor="0x000000" borderalpha="1" height="20" border="1" enabled="1" width="180" backgroundalpha="1" wordwrap="1"/>
-      <polystyle backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0"/>
-      <hotspot title="Ang Casa Real" target="_top" fov="10" id="Point01" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5113.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="0.42" pan="-343.87" description=""/>
-      <hotspot title="Pagbuo ng Isang Bansa" target="_top" fov="10" id="Point02" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5117.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="8.07" pan="-109.39" description=""/>
-      <hotspot title="Barter Hall" target="$fwd" fov="10" id="Point03" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node2}" customimagewidth="100" customimageheight="150" use3D="0" tilt="-3.64" pan="-76.8" description=""/>
-      <hotspot title="President Hall" target="$fwd" fov="10" id="Point04" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node3}" customimagewidth="100" customimageheight="150" use3D="0" tilt="0.39" pan="-286.52" description=""/>
-      <hotspot title="" target="$fwd" fov="10" id="Point05" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node5}" customimagewidth="100" customimageheight="150" use3D="0" tilt="-2.81" pan="-178.52" description=""/>
-      <hotspot title="Casa Real Facebook" target="_top" fov="10" id="Point06" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg" distance3D="697.233" skinid="ht_url" url="https://www.facebook.com/CasaRealMalolos" customimagewidth="122" customimageheight="70" use3D="0" tilt="5.25" pan="-41.4" description=""/>
-      <hotspot title="BOOK NOW!" target="_blank" fov="10" id="Point07" customimage="media/book.png" distance3D="502.922" skinid="ht_url" url="" customimagewidth="88" customimageheight="70" use3D="0" tilt="-2.07" pan="-252.01" description=""/>
+    <userdata customnodeid="" nodeid="node1" author="" longitude="" heading="0" info="" copyright="" comment="" tags="Pano2VR6" title="" description="" datetime="7/7/2022 1:26 PM" source="" latitude=""/>
+    <hotspots wordwrap="1" height="20" width="180">
+      <label bordercolor="0x000000" backgroundalpha="1" enabled="1" border="1" wordwrap="1" height="20" borderradius="2" width="180" textalpha="1" textcolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" background="0"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-343.87" tilt="0.42" url="images/DSC_5113.jpg" title="Ang Casa Real" description="" id="Point01" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-109.39" tilt="8.07" url="images/DSC_5117.jpg" title="Pagbuo ng Isang Bansa" description="" id="Point02" skinid="ht_image"/>
+      <hotspot target="$fwd" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-76.8" tilt="-3.64" url="{node2}" title="Barter Hall" description="" id="Point03" skinid="ht_node"/>
+      <hotspot target="$fwd" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-286.52" tilt="0.39" url="{node3}" title="President Hall" description="" id="Point04" skinid="ht_node"/>
+      <hotspot target="$fwd" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-178.52" tilt="-2.81" url="{node5}" title="" description="" id="Point05" skinid="ht_node"/>
+      <hotspot target="_blank" customimagewidth="122" use3D="0" fov="10" distance3D="697.233" customimageheight="70" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg" pan="-41.4" tilt="5.25" url="https://www.facebook.com/CasaRealMalolos" title="Casa Real Facebook" description="" id="Point06" skinid="ht_url"/>
+      <hotspot target="_blank" customimagewidth="88" use3D="0" fov="10" distance3D="502.922" customimageheight="70" customimage="media/book.png" pan="-252.01" tilt="-2.07" url="http://localhost/virtualshrine/website/consent-form.php" title="BOOK NOW!" description="" id="Point07" skinid="ht_url"/>
     </hotspots>
     <media/>
-    <transition zoomfov="20" zoomin="0" blendcolor="0x000000" enabled="1" blendtime="1" zoomout="0" softedge="0" zoomafteroutfov="20" type="crossdissolve" zoomspeed="2" zoomafterinfov="90" zoomoutpause="1"/>
-    <flyintransition speed="1.00" enabled="1"/>
+    <transition enabled="1" zoomout="0" blendcolor="0x000000" zoomfov="20" zoomin="0" blendtime="1" zoomspeed="2" type="crossdissolve" zoomafteroutfov="20" zoomoutpause="1" softedge="0" zoomafterinfov="90"/>
+    <flyintransition enabled="1" speed="1.00"/>
     <animation useinautorotation="1" syncanimationwithvideo="0" animsequence="Animation01"/>
-    <control lockedmouse="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" contextprojections="0" sensitivity="8" lockedkeyboardzoom="0" lockedkeyboard="0" speedwheel="1" dblclickfullscreen="0" contextvr="1" invertwheel="0" hideabout="0" rubberband="0"/>
+    <control sensitivity="8" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" simulatemass="1" contextfullscreen="1" contextvr="1" invertcontrol="1" contextprojections="0" rubberband="0" hideabout="1" dblclickfullscreen="0" lockedwheel="0" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
-  <panorama id="node2">
-    <input leveltilesize="510" levelingpitch="0" levelingroll="0" height="9403" overlap="1" levelbias="0.400" width="9403" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbiashidpi="1.000">
-      <level height="9403" predecode="0" width="9403" preload="0"/>
-      <level height="4701" predecode="0" width="4701" preload="0"/>
-      <level height="2350" predecode="0" width="2350" preload="0"/>
-      <level height="1175" predecode="0" width="1175" preload="0"/>
-      <level height="587" predecode="0" width="587" preload="0"/>
-      <level height="293" predecode="1" width="293" preload="1"/>
+  <panorama hideabout="1" id="node2">
+    <input leveltilesize="510" height="9403" levelingroll="0" overlap="1" levelbiashidpi="1.000" width="9403" levelbias="0.400" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+      <level height="9403" preload="0" predecode="0" width="9403"/>
+      <level height="4701" preload="0" predecode="0" width="4701"/>
+      <level height="2350" preload="0" predecode="0" width="2350"/>
+      <level height="1175" preload="0" predecode="0" width="1175"/>
+      <level height="587" preload="0" predecode="0" width="587"/>
+      <level height="293" preload="1" predecode="1" width="293"/>
       <preview strip="1" color="0x808080"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start projection="4" fov="41.9781" tilt="0" pan="0"/>
-      <flyin projection="9" fov="170" tilt="-90" pan="0"/>
-      <min fovpixel="2" tilt="-27.8502" pan="-180"/>
-      <max fov="120" fovstereographic="270" tilt="27.8502" fovfisheye="360" pan="180"/>
+      <start fov="41.9781" pan="0" tilt="0" projection="4"/>
+      <flyin fov="170" pan="0" tilt="-90" projection="9"/>
+      <min fovpixel="2" pan="-180" tilt="-27.8502"/>
+      <max fov="120" fovstereographic="270" fovfisheye="360" pan="180" tilt="27.8502"/>
     </view>
-    <userdata author="" comment="" nodeid="node2" title="" info="" tags="Pano2VR6" heading="0" datetime="8/4/2022 10:29 AM" source="" longitude="" latitude="" copyright="" customnodeid="" description=""/>
-    <hotspots height="20" width="180" wordwrap="1">
-      <label borderradius="2" textcolor="0x000000" background="0" textalpha="1" backgroundcolor="0xffffff" bordercolor="0x000000" borderalpha="1" height="20" border="1" enabled="1" width="180" backgroundalpha="1" wordwrap="1"/>
-      <polystyle backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0"/>
-      <hotspot title="Spanish Era Hall" target="" fov="10" id="Point01" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node4}" customimagewidth="100" customimageheight="150" use3D="0" tilt="1.88" pan="-64.4" description=""/>
-      <hotspot title="Paglalakbay ng Espanyol sa Asya" target="_top" fov="10" id="Point02" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5176.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="17.23" pan="-86.56" description=""/>
-      <hotspot title="Kalakalang Galyon" target="_top" fov="10" id="Point03" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5188.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="9.56" pan="-33.54" description=""/>
-      <hotspot title="Bajo la Campana" target="_top" fov="10" id="Point04" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5172.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="2.38" pan="-135.45" description=""/>
-      <hotspot title="Ekspedisyon ni Ferdinand Magellan" target="_top" fov="10" id="Point05" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5181.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="11.03" pan="-180.04" description=""/>
-      <hotspot title="Crown and Sword" target="_top" fov="10" id="Point06" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5185.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="10.96" pan="-198.91" description=""/>
-      <hotspot title="Pamahalaang Espanyol" target="_top" fov="10" id="Point07" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5187.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="7.8" pan="-214.34" description=""/>
-      <hotspot title="Lobby" target="" fov="10" id="Point08" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node1}" customimagewidth="100" customimageheight="150" use3D="0" tilt="0" pan="-241" description=""/>
-      <hotspot title="Ang Pag-aalsa" target="_top" fov="10" id="Point09" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5189.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="10.45" pan="-260.85" description=""/>
-      <hotspot title="Pagkabansa" target="" fov="10" id="Point10" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5190.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="10.09" pan="-285.16" description=""/>
-      <hotspot title="Casa Real Facebook" target="_top" fov="10" id="Point11" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg" distance3D="954.409" skinid="ht_url" url="https://www.facebook.com/CasaRealMalolos" customimagewidth="167" customimageheight="80" use3D="0" tilt="3.94" pan="-301.26" description=""/>
-      <hotspot title="Bagong Pueblo" target="_top" fov="10" id="Point12" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5191.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="9.88" pan="-318.55" description=""/>
-      <hotspot title="Mapa ng Pag-aalsa" target="_top" fov="10" id="Point13" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5193 Panorama.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="4.71" pan="-332.88" description=""/>
-      <hotspot title="Pamahalaang Kolonyal" target="_top" fov="10" id="Point14" customimage="media/info.png" distance3D="142.876" skinid="ht_image" url="images/DSC_5197 Panorama.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="6.3" pan="-340.81" description=""/>
+    <userdata customnodeid="" nodeid="node2" author="" longitude="" heading="0" info="" copyright="" comment="" tags="Pano2VR6" title="" description="" datetime="8/4/2022 10:29 AM" source="" latitude=""/>
+    <hotspots wordwrap="1" height="20" width="180">
+      <label bordercolor="0x000000" backgroundalpha="1" enabled="1" border="1" wordwrap="1" height="20" borderradius="2" width="180" textalpha="1" textcolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" background="0"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot target="" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-64.4" tilt="1.88" url="{node4}" title="Spanish Era Hall" description="" id="Point01" skinid="ht_node"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-86.56" tilt="17.23" url="images/DSC_5176.jpg" title="Paglalakbay ng Espanyol sa Asya" description="" id="Point02" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-33.54" tilt="9.56" url="images/DSC_5188.jpg" title="Kalakalang Galyon" description="" id="Point03" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-135.45" tilt="2.38" url="images/DSC_5172.jpg" title="Bajo la Campana" description="" id="Point04" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-180.04" tilt="11.03" url="images/DSC_5181.jpg" title="Ekspedisyon ni Ferdinand Magellan" description="" id="Point05" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-198.91" tilt="10.96" url="images/DSC_5185.jpg" title="Crown and Sword" description="" id="Point06" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-214.34" tilt="7.8" url="images/DSC_5187.jpg" title="Pamahalaang Espanyol" description="" id="Point07" skinid="ht_image"/>
+      <hotspot target="" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-241" tilt="0" url="{node1}" title="Lobby" description="" id="Point08" skinid="ht_node"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-260.85" tilt="10.45" url="images/DSC_5189.jpg" title="Ang Pag-aalsa" description="" id="Point09" skinid="ht_image"/>
+      <hotspot target="" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-285.16" tilt="10.09" url="images/DSC_5190.jpg" title="Pagkabansa" description="" id="Point10" skinid="ht_image"/>
+      <hotspot target="_blank" customimagewidth="167" use3D="0" fov="10" distance3D="954.409" customimageheight="80" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg" pan="-301.26" tilt="3.94" url="https://www.facebook.com/CasaRealMalolos" title="Casa Real Facebook" description="" id="Point11" skinid="ht_url"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-318.55" tilt="9.88" url="images/DSC_5191.jpg" title="Bagong Pueblo" description="" id="Point12" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-332.88" tilt="4.71" url="images/DSC_5193 Panorama.jpg" title="Mapa ng Pag-aalsa" description="" id="Point13" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/info.png" pan="-340.81" tilt="6.3" url="images/DSC_5197 Panorama.jpg" title="Pamahalaang Kolonyal" description="" id="Point14" skinid="ht_image"/>
     </hotspots>
     <media/>
-    <transition zoomfov="20" zoomin="0" blendcolor="0x000000" enabled="1" blendtime="1" zoomout="0" softedge="0" zoomafteroutfov="20" type="crossdissolve" zoomspeed="2" zoomafterinfov="90" zoomoutpause="1"/>
-    <flyintransition speed="1.00" enabled="1"/>
+    <transition enabled="1" zoomout="0" blendcolor="0x000000" zoomfov="20" zoomin="0" blendtime="1" zoomspeed="2" type="crossdissolve" zoomafteroutfov="20" zoomoutpause="1" softedge="0" zoomafterinfov="90"/>
+    <flyintransition enabled="1" speed="1.00"/>
     <animation useinautorotation="1" syncanimationwithvideo="0" animsequence="Animation01"/>
-    <control lockedmouse="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" contextprojections="0" sensitivity="8" lockedkeyboardzoom="0" lockedkeyboard="0" speedwheel="1" dblclickfullscreen="0" contextvr="1" invertwheel="0" hideabout="0" rubberband="0"/>
+    <control sensitivity="8" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" simulatemass="1" contextfullscreen="1" contextvr="1" invertcontrol="1" contextprojections="0" rubberband="0" hideabout="1" dblclickfullscreen="0" lockedwheel="0" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
-  <panorama id="node4">
-    <input leveltilesize="510" levelingpitch="0" levelingroll="0" height="4516" overlap="1" levelbias="0.400" width="4516" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbiashidpi="1.000">
-      <level height="4516" predecode="0" width="4516" preload="0"/>
-      <level height="2258" predecode="0" width="2258" preload="0"/>
-      <level height="1129" predecode="0" width="1129" preload="0"/>
-      <level height="564" predecode="0" width="564" preload="0"/>
-      <level height="282" predecode="1" width="282" preload="1"/>
+  <panorama hideabout="1" id="node4">
+    <input leveltilesize="510" height="4516" levelingroll="0" overlap="1" levelbiashidpi="1.000" width="4516" levelbias="0.400" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+      <level height="4516" preload="0" predecode="0" width="4516"/>
+      <level height="2258" preload="0" predecode="0" width="2258"/>
+      <level height="1129" preload="0" predecode="0" width="1129"/>
+      <level height="564" preload="0" predecode="0" width="564"/>
+      <level height="282" preload="1" predecode="1" width="282"/>
       <preview strip="1" color="0x808080"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start projection="4" fov="42.2425" tilt="0" pan="0"/>
-      <flyin projection="9" fov="170" tilt="-90" pan="0"/>
-      <min fovpixel="2" tilt="-44.2025" pan="-180"/>
-      <max fov="120" fovstereographic="270" tilt="44.2025" fovfisheye="360" pan="180"/>
+      <start fov="42.2425" pan="0" tilt="0" projection="4"/>
+      <flyin fov="170" pan="0" tilt="-90" projection="9"/>
+      <min fovpixel="2" pan="-180" tilt="-44.2025"/>
+      <max fov="120" fovstereographic="270" fovfisheye="360" pan="180" tilt="44.2025"/>
     </view>
-    <userdata author="" comment="" nodeid="node4" title="" info="" tags="Pano2VR6" heading="0" datetime="8/4/2022 11:04 AM" source="" longitude="" altitude="60.77" latitude="" copyright="" customnodeid="" description=""/>
-    <hotspots height="20" width="180" wordwrap="1">
-      <label borderradius="2" textcolor="0x000000" background="0" textalpha="1" backgroundcolor="0xffffff" bordercolor="0x000000" borderalpha="1" height="20" border="1" enabled="1" width="180" backgroundalpha="1" wordwrap="1"/>
-      <polystyle backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0"/>
-      <hotspot title="Barter Hall" target="" fov="10" id="Point01" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node2}" customimagewidth="100" customimageheight="150" use3D="0" tilt="-0.81" pan="-228.2" description=""/>
-      <hotspot title="Ilihan" target="_top" fov="10" id="Point02" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5269 Panorama.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="14.6" pan="-182.93" description=""/>
-      <hotspot title="Andres Bonifacio" target="_top" fov="10" id="Point03" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5274.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="11.42" pan="-102.41" description=""/>
-      <hotspot title="Himagsikan" target="" fov="10" id="Point04" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5276.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="11.58" pan="-75.07" description=""/>
-      <hotspot title="Kon Leche" target="_top" fov="10" id="Point05" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/DSC_5277.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="4.42" pan="-54.37" description=""/>
-      <hotspot title="President Hall" target="" fov="10" id="Point06" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node3}" customimagewidth="100" customimageheight="150" use3D="0" tilt="-2.43" pan="-299.78" description=""/>
+    <userdata customnodeid="" nodeid="node4" author="" longitude="" altitude="60.77" heading="0" info="" copyright="" comment="" tags="Pano2VR6" title="" description="" datetime="8/4/2022 11:04 AM" source="" latitude=""/>
+    <hotspots wordwrap="1" height="20" width="180">
+      <label bordercolor="0x000000" backgroundalpha="1" enabled="1" border="1" wordwrap="1" height="20" borderradius="2" width="180" textalpha="1" textcolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" background="0"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot target="" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-228.2" tilt="-0.81" url="{node2}" title="Barter Hall" description="" id="Point01" skinid="ht_node"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-182.93" tilt="14.6" url="images/DSC_5269 Panorama.jpg" title="Ilihan" description="" id="Point02" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-102.41" tilt="11.42" url="images/DSC_5274.jpg" title="Andres Bonifacio" description="" id="Point03" skinid="ht_image"/>
+      <hotspot target="" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-75.07" tilt="11.58" url="images/DSC_5276.jpg" title="Himagsikan" description="" id="Point04" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-54.37" tilt="4.42" url="images/DSC_5277.jpg" title="Kon Leche" description="" id="Point05" skinid="ht_image"/>
+      <hotspot target="" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-299.78" tilt="-2.43" url="{node3}" title="President Hall" description="" id="Point06" skinid="ht_node"/>
     </hotspots>
     <media/>
-    <transition zoomfov="20" zoomin="0" blendcolor="0x000000" enabled="1" blendtime="1" zoomout="0" softedge="0" zoomafteroutfov="20" type="crossdissolve" zoomspeed="2" zoomafterinfov="90" zoomoutpause="1"/>
-    <flyintransition speed="1.00" enabled="1"/>
+    <transition enabled="1" zoomout="0" blendcolor="0x000000" zoomfov="20" zoomin="0" blendtime="1" zoomspeed="2" type="crossdissolve" zoomafteroutfov="20" zoomoutpause="1" softedge="0" zoomafterinfov="90"/>
+    <flyintransition enabled="1" speed="1.00"/>
     <animation useinautorotation="1" syncanimationwithvideo="0" animsequence="Animation01"/>
-    <control lockedmouse="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" contextprojections="0" sensitivity="8" lockedkeyboardzoom="0" lockedkeyboard="0" speedwheel="1" dblclickfullscreen="0" contextvr="1" invertwheel="0" hideabout="0" rubberband="0"/>
+    <control sensitivity="8" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" simulatemass="1" contextfullscreen="1" contextvr="1" invertcontrol="1" contextprojections="0" rubberband="0" hideabout="1" dblclickfullscreen="0" lockedwheel="0" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
-  <panorama id="node3">
-    <input leveltilesize="510" levelingpitch="0" levelingroll="0" height="9365" overlap="1" levelbias="0.400" width="9365" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbiashidpi="1.000">
-      <level height="9365" predecode="0" width="9365" preload="0"/>
-      <level height="4682" predecode="0" width="4682" preload="0"/>
-      <level height="2341" predecode="0" width="2341" preload="0"/>
-      <level height="1170" predecode="0" width="1170" preload="0"/>
-      <level height="585" predecode="0" width="585" preload="0"/>
-      <level height="292" predecode="1" width="292" preload="1"/>
+  <panorama hideabout="1" id="node3">
+    <input leveltilesize="510" height="9365" levelingroll="0" overlap="1" levelbiashidpi="1.000" width="9365" levelbias="0.400" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+      <level height="9365" preload="0" predecode="0" width="9365"/>
+      <level height="4682" preload="0" predecode="0" width="4682"/>
+      <level height="2341" preload="0" predecode="0" width="2341"/>
+      <level height="1170" preload="0" predecode="0" width="1170"/>
+      <level height="585" preload="0" predecode="0" width="585"/>
+      <level height="292" preload="1" predecode="1" width="292"/>
       <preview strip="1" color="0x808080"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start projection="4" fov="41.8771" tilt="0" pan="0"/>
-      <flyin projection="9" fov="170" tilt="-90" pan="0"/>
-      <min fovpixel="2" tilt="-28.3502" pan="-180"/>
-      <max fov="120" fovstereographic="270" tilt="28.3502" fovfisheye="360" pan="180"/>
+      <start fov="41.8771" pan="0" tilt="0" projection="4"/>
+      <flyin fov="170" pan="0" tilt="-90" projection="9"/>
+      <min fovpixel="2" pan="-180" tilt="-28.3502"/>
+      <max fov="120" fovstereographic="270" fovfisheye="360" pan="180" tilt="28.3502"/>
     </view>
-    <userdata author="" comment="" nodeid="node3" title="" info="" tags="Pano2VR6" heading="0" datetime="8/4/2022 11:53 AM" source="" longitude="" latitude="" copyright="" customnodeid="" description=""/>
-    <hotspots height="20" width="180" wordwrap="1">
-      <label borderradius="2" textcolor="0x000000" background="0" textalpha="1" backgroundcolor="0xffffff" bordercolor="0x000000" borderalpha="1" height="20" border="1" enabled="1" width="180" backgroundalpha="1" wordwrap="1"/>
-      <polystyle backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundalpha="0.25098" mode="0"/>
-      <hotspot title="Spanish Hall" target="" fov="10" id="Point01" customimage="media/next.png" distance3D="571.503" skinid="ht_node" url="{node4}" customimagewidth="100" customimageheight="150" use3D="0" tilt="-2.43" pan="-204.78" description=""/>
-      <hotspot title="Casa Real Facebook" target="_top" fov="10" id="Point02" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg" distance3D="571.503" skinid="ht_url" url="https://www.facebook.com/CasaRealMalolos" customimagewidth="100" customimageheight="50" use3D="0" tilt="-1.18" pan="-157.78" description=""/>
-      <hotspot title="Manuel Quezon" target="_top" fov="10" id="Point03" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_131017.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-8.22" pan="-140.31" description=""/>
-      <hotspot title="Materyales Pangkampanya" target="_top" fov="10" id="Point04" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_120936.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-12.36" pan="-190.98" description=""/>
-      <hotspot title="Manuel Quezon" target="_top" fov="10" id="Point05" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_131212.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-6.73" pan="-134.04" description=""/>
-      <hotspot title="Komonwelt" target="_top" fov="10" id="Point06" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_121037.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-4.96" pan="-126.97" description=""/>
-      <hotspot title="Sergio Osmena" target="_top" fov="10" id="Point07" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_131122.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-7.99" pan="-118.9" description=""/>
-      <hotspot title="Saligang Batas" target="_top" fov="10" id="Point08" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_122841.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="1.7" pan="-105.99" description=""/>
-      <hotspot title="Sakdal" target="_top" fov="10" id="Point09" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_122209.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-2.03" pan="-64.82" description=""/>
-      <hotspot title="Kilusang Gerilya" target="_top" fov="10" id="Point10" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_122137.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-3.89" pan="-42.15" description=""/>
-      <hotspot title="Jose Laurel" target="_top" fov="10" id="Point11" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_130954.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-8.61" pan="-35.39" description=""/>
-      <hotspot title="Jose Laurel" target="_top" fov="10" id="Point12" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_130918.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-6.96" pan="-30.86" description=""/>
-      <hotspot title="Japanese-Sponsored Government" target="_top" fov="10" id="Point13" customimage="media/info.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_122332.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-4.66" pan="-25.2" description=""/>
-      <hotspot title="Diosdado Macapagal" target="_top" fov="10" id="Point14" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_124922.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-6.36" pan="-0.42" description=""/>
-      <hotspot title="Manuel Roxas" target="_top" fov="10" id="Point15" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_124754.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-5.83" pan="-16.75" description=""/>
-      <hotspot title=" Manuel Roxas" target="_top" fov="10" id="Point16" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_124809.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-7.17" pan="-12.78" description=""/>
-      <hotspot title="Diosdado Macapagal" target="_top" fov="10" id="Point17" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_124923.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-5.16" pan="-355.21" description=""/>
-      <hotspot title="Carlos Garcia" target="_top" fov="10" id="Point18" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_125123.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-5.07" pan="-351.13" description=""/>
-      <hotspot title="Carlos Garcia" target="_top" fov="10" id="Point19" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_124905.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-6.22" pan="-347.84" description=""/>
-      <hotspot title="Lobby" target="" fov="10" id="Point20" customimage="media/next.png" distance3D="142.876" skinid="ht_node" url="{node1}" customimagewidth="25" customimageheight="50" use3D="0" tilt="-0.17" pan="-330.92" description=""/>
-      <hotspot title="Ferdinand Marcos" target="_top" fov="10" id="Point22" customimage="media/image.png" distance3D="148.591" skinid="ht_image" url="images/IMG_20220804_130842.jpg" customimagewidth="26" customimageheight="25" use3D="0" tilt="-7.6" pan="-336.43" description=""/>
-      <hotspot title="Ferdinand Marcos" target="_top" fov="10" id="Point23" customimage="media/image.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_130812.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-5.84" pan="-333.43" description=""/>
-      <hotspot title="Martial Law" target="_top" fov="10" id="Point24" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_131429 Panorama.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-0.6" pan="-280.76" description=""/>
-      <hotspot title="Poster" target="_top" fov="10" id="Point25" customimage="media/image.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_13140021.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-0.23" pan="-237.73" description=""/>
-      <hotspot title="Simbolo" target="_top" fov="10" id="Point26" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_131303 Panorama.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-2.74" pan="-220.64" description=""/>
-      <hotspot title="Boses ng Moro" target="_top" fov="10" id="Point27" customimage="media/info.png" distance3D="285.751" skinid="ht_image" url="images/IMG_20220804_130723.jpg" customimagewidth="50" customimageheight="50" use3D="0" tilt="-0.03" pan="-254.77" description=""/>
-      <hotspot title="Batas Militar" target="_top" fov="10" id="Point28" customimage="media/info.png" distance3D="142.876" skinid="ht_image" url="images/IMG_20220804_130331.jpg" customimagewidth="25" customimageheight="25" use3D="0" tilt="-4.11" pan="-342.57" description=""/>
+    <userdata customnodeid="" nodeid="node3" author="" longitude="" heading="0" info="" copyright="" comment="" tags="Pano2VR6" title="" description="" datetime="8/4/2022 11:53 AM" source="" latitude=""/>
+    <hotspots wordwrap="1" height="20" width="180">
+      <label bordercolor="0x000000" backgroundalpha="1" enabled="1" border="1" wordwrap="1" height="20" borderradius="2" width="180" textalpha="1" textcolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" background="0"/>
+      <polystyle bordercolor="0x0000ff" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot target="" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="150" customimage="media/next.png" pan="-204.78" tilt="-2.43" url="{node4}" title="Spanish Hall" description="" id="Point01" skinid="ht_node"/>
+      <hotspot target="_blank" customimagewidth="100" use3D="0" fov="10" distance3D="571.503" customimageheight="50" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg" pan="-157.78" tilt="-1.18" url="https://www.facebook.com/CasaRealMalolos" title="Casa Real Facebook" description="" id="Point02" skinid="ht_url"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-140.31" tilt="-8.22" url="images/IMG_20220804_131017.jpg" title="Manuel Quezon" description="" id="Point03" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-190.98" tilt="-12.36" url="images/IMG_20220804_120936.jpg" title="Materyales Pangkampanya" description="" id="Point04" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-134.04" tilt="-6.73" url="images/IMG_20220804_131212.jpg" title="Manuel Quezon" description="" id="Point05" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-126.97" tilt="-4.96" url="images/IMG_20220804_121037.jpg" title="Komonwelt" description="" id="Point06" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-118.9" tilt="-7.99" url="images/IMG_20220804_131122.jpg" title="Sergio Osmena" description="" id="Point07" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-105.99" tilt="1.7" url="images/IMG_20220804_122841.jpg" title="Saligang Batas" description="" id="Point08" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-64.82" tilt="-2.03" url="images/IMG_20220804_122209.jpg" title="Sakdal" description="" id="Point09" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-42.15" tilt="-3.89" url="images/IMG_20220804_122137.jpg" title="Kilusang Gerilya" description="" id="Point10" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-35.39" tilt="-8.61" url="images/IMG_20220804_130954.jpg" title="Jose Laurel" description="" id="Point11" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-30.86" tilt="-6.96" url="images/IMG_20220804_130918.jpg" title="Jose Laurel" description="" id="Point12" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/info.png" pan="-25.2" tilt="-4.66" url="images/IMG_20220804_122332.jpg" title="Japanese-Sponsored Government" description="" id="Point13" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-0.42" tilt="-6.36" url="images/IMG_20220804_124922.jpg" title="Diosdado Macapagal" description="" id="Point14" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-16.75" tilt="-5.83" url="images/IMG_20220804_124754.jpg" title="Manuel Roxas" description="" id="Point15" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-12.78" tilt="-7.17" url="images/IMG_20220804_124809.jpg" title=" Manuel Roxas" description="" id="Point16" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-355.21" tilt="-5.16" url="images/IMG_20220804_124923.jpg" title="Diosdado Macapagal" description="" id="Point17" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-351.13" tilt="-5.07" url="images/IMG_20220804_125123.jpg" title="Carlos Garcia" description="" id="Point18" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-347.84" tilt="-6.22" url="images/IMG_20220804_124905.jpg" title="Carlos Garcia" description="" id="Point19" skinid="ht_image"/>
+      <hotspot target="" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="50" customimage="media/next.png" pan="-330.92" tilt="-0.17" url="{node1}" title="Lobby" description="" id="Point20" skinid="ht_node"/>
+      <hotspot target="_top" customimagewidth="26" use3D="0" fov="10" distance3D="148.591" customimageheight="25" customimage="media/image.png" pan="-336.43" tilt="-7.6" url="images/IMG_20220804_130842.jpg" title="Ferdinand Marcos" description="" id="Point22" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/image.png" pan="-333.43" tilt="-5.84" url="images/IMG_20220804_130812.jpg" title="Ferdinand Marcos" description="" id="Point23" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-280.76" tilt="-0.6" url="images/IMG_20220804_131429 Panorama.jpg" title="Martial Law" description="" id="Point24" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/image.png" pan="-237.73" tilt="-0.23" url="images/IMG_20220804_13140021.jpg" title="Poster" description="" id="Point25" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-220.64" tilt="-2.74" url="images/IMG_20220804_131303 Panorama.jpg" title="Simbolo" description="" id="Point26" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="50" use3D="0" fov="10" distance3D="285.751" customimageheight="50" customimage="media/info.png" pan="-254.77" tilt="-0.03" url="images/IMG_20220804_130723.jpg" title="Boses ng Moro" description="" id="Point27" skinid="ht_image"/>
+      <hotspot target="_top" customimagewidth="25" use3D="0" fov="10" distance3D="142.876" customimageheight="25" customimage="media/info.png" pan="-342.57" tilt="-4.11" url="images/IMG_20220804_130331.jpg" title="Batas Militar" description="" id="Point28" skinid="ht_image"/>
     </hotspots>
     <media/>
-    <transition zoomfov="20" zoomin="0" blendcolor="0x000000" enabled="1" blendtime="1" zoomout="0" softedge="0" zoomafteroutfov="20" type="crossdissolve" zoomspeed="2" zoomafterinfov="90" zoomoutpause="1"/>
-    <flyintransition speed="1.00" enabled="1"/>
+    <transition enabled="1" zoomout="0" blendcolor="0x000000" zoomfov="20" zoomin="0" blendtime="1" zoomspeed="2" type="crossdissolve" zoomafteroutfov="20" zoomoutpause="1" softedge="0" zoomafterinfov="90"/>
+    <flyintransition enabled="1" speed="1.00"/>
     <animation useinautorotation="1" syncanimationwithvideo="0" animsequence="Animation01"/>
-    <control lockedmouse="0" lockedwheel="0" contextfullscreen="1" simulatemass="1" invertcontrol="1" contextprojections="0" sensitivity="8" lockedkeyboardzoom="0" lockedkeyboard="0" speedwheel="1" dblclickfullscreen="0" contextvr="1" invertwheel="0" hideabout="0" rubberband="0"/>
+    <control sensitivity="8" speedwheel="1" lockedmouse="0" lockedkeyboardzoom="0" simulatemass="1" contextfullscreen="1" contextvr="1" invertcontrol="1" contextprojections="0" rubberband="0" hideabout="1" dblclickfullscreen="0" lockedwheel="0" lockedkeyboard="0" invertwheel="0"/>
   </panorama>
   <masternode>
-    <userdata author="" comment="" nodeid="master" title="" info="" tags="" heading="0" datetime="" source="" longitude="" latitude="" copyright="" customnodeid="" description=""/>
+    <userdata customnodeid="" nodeid="master" author="" longitude="" heading="0" info="" copyright="" comment="" tags="" title="" description="" datetime="" source="" latitude=""/>
   </masternode>
 </tour>
