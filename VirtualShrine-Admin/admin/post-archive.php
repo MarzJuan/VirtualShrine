@@ -11,7 +11,7 @@ include('includes/header.php');
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                <h4>Archived Posts</h4>
+                <h4>Archived Contents</h4>
                 </div>
                 <div class="card-body">
 

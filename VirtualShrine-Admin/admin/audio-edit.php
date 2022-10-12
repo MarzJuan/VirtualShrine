@@ -14,17 +14,17 @@ include('includes/header.php');
 
             <div class="card">
                 <div class="card-header">
-                    <h4>Edit Content
-                        <a href="post-view.php" class="btn btn-primary float-end">Back</a>
+                    <h4>Edit Audio
+                        <a href="audio-view.php" class="btn btn-primary float-end">Back</a>
                     </h4>
                 </div>
                 <div class="card-body">
 
                 <?php
-                    if(isset($_GET['id']))
+                    if(isset($_GET['audio_id']))
                     {
-                        $post_id = $_GET['id'];
-                        $post_query = "SELECT * FROM posts WHERE id='$post_id' LIMIT 1";
+                        $audio_id = $_GET['audio_id'];
+                        $post_query = "SELECT * FROM audio WHERE audio_id='$audio_id' LIMIT 1";
                         $post_query_res = mysqli_query($con, $post_query);
 
                         if(mysqli_num_rows($post_query_res) > 0)
@@ -34,9 +34,9 @@ include('includes/header.php');
                         
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
-                <input type="hidden" name="post_id" value="<?= $post_row['id'] ?>">
+                <input type="hidden" name="audio_id" value="<?= $post_row['audio_id'] ?>">
 
-                    <div class="row">
+                <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="">Gallery list</label>
                             <?php
@@ -73,39 +73,14 @@ include('includes/header.php');
                             
                         </div>
                             <div class="col-md-6 mb-3">
-                                <label for="">Name</label>
-                                <input type="text" name="name" value="<?= $post_row['name'] ?>" required class="form-control">
+                                <label for="">Title</label>
+                                <input type="text" name="name" value="<?= $post_row['title'] ?>" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Slug (URL)</label>
-                                <input type="text" name="slug" value="<?= $post_row['slug'] ?>" required class="form-control">
-                            </div>
-
-                            <div class="col-md-12 mb-3">
-                                <label for="">Description</label>
-                                <textarea name="description" id="summernote" required class="form-control" rows="4"><?= $post_row['description'] ?></textarea>
-                            </div>
-
-                            <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
-                                <input type="text" name="meta_title" value="<?= $post_row['meta_title'] ?>" max="200" class="form-control">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
-                                <textarea name="meta_description" required class="form-control" rows="4"><?= $post_row['meta_description'] ?></textarea>
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
-                                <textarea name="meta_keyword" required class="form-control" rows="4"><?= $post_row['meta_keyword'] ?></textarea>
-                            </div>
-                            
-                            <div class="col-md-6 mb-3">
-                                <label for="">Image</label>
-                                <input type="hidden" name="old_image" value="<?= $post_row['image'] ?>" />
-                                <input type="file" name="image" class="form-control">
+                                <label for="">Audio File</label>
+                                <input type="hidden" name="old_audio" value="<?= $post_row['audio'] ?>" />
+                                <input type="file" name="audio" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
@@ -114,7 +89,7 @@ include('includes/header.php');
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="post_update" class="btn btn-primary">Update</button>
+                                <button type="submit" name="audio_update" class="btn btn-primary">Update</button>
                             </div>
 
 
@@ -132,11 +107,11 @@ include('includes/header.php');
                     }
                 ?>
 
-                
 
 
 
-                
+
+
                 </div>
             </div>
         </div>

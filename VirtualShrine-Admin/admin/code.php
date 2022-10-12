@@ -475,6 +475,7 @@ if(isset($_POST['assistant-admin-archive']))
     }
 
 }
+}
 
 // ADD ASSISTANT ADMIN
 if(isset($_POST['add_admin']))
@@ -526,16 +527,16 @@ if(isset($_POST['add_admin']))
                 }
             }
                 
-                }
-                else
-                {
-                    $_SESSION['message'] = "Password does not match";
-                    header("Location: assistant-admin-add.php");
-                    exit(0);
-            }
+    }
+    else
+    {
+        $_SESSION['message'] = "Password does not match";
+        header("Location: assistant-admin-add.php");
+        exit(0);
+    }
 
 }
-}
+
 
 
 // UPDATE ASISTANT ADMIN INFORMATION

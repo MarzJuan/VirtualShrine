@@ -7,10 +7,10 @@ include('includes/header.php');
     <h4 class="mt-4"></h4>
 
     <div class="container-fluid px-4">
-    <h4 class="mt-4">Category</h4>
+    <h4 class="mt-4">Gallery Category</h4>
     <ol class="breadcrumb mb-4">
     <a class="breadcrumb-item active" href="index.php">Dashboard</a>
-        <li class="breadcrumb-item">Users</li>                                                                                           
+        <li class="breadcrumb-item">Category</li>                                                                                           
     </ol>
 
     <div class="row mt-4">
@@ -20,8 +20,8 @@ include('includes/header.php');
         
             <div class="card">
                 <div class="card-header">
-                    <h4>Category List
-                        <a href="category-add.php" class="btn btn-primary float-end">Add Category</a>
+                    <h4>Gallery List
+                        <a href="category-add.php" class="btn btn-primary float-end">Add Gallery</a>
                     </h4>
                 </div>
                 <div class="card-body">

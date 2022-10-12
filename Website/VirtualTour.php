@@ -33,7 +33,7 @@
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Explore<i class="fas fa-angle-down"></i></a>
                             <ul class="sub-menu">
-                                   <li class="sub-item"><a href="Gallery2.php">Galleries</a></li>
+                                   <li class="sub-item"><a href="Gallery.php">Galleries</a></li>
                                    <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
                                    <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                             </ul>
@@ -45,7 +45,7 @@
        </div>
        </div>
         <div class="container">
-             <div class="virtual-text fs-primary-heading fw-semi-bold color-neutral-100">Virtual Tours</div>   
+             <div class="virtual-text fs-primary-heading fw-semi-bold color-neutral-100">Virtual Tours</div>
 </header>
 <main class="main-content-visit container">
         <div class="Access-text fs-secondary-heading color-primary-400 padding-block-700 fw-bold">Access the tours</div>
@@ -53,14 +53,13 @@
         <!-- <div class="flex-item flex-item-1">
             <div class="item-text">Virtual Lobby</div></div> -->
         <div class="flex-item flex-item-2">
-            <div class="item-text">Virtual 360</div></div>
+        <a href="../VirtualTours/index.html"><div class="item-text">Virtual 360</div></div></a>
         </div>
         <div class="container">
         <div class="Visit-Gen-text1 color-primary-400 padding-block-700 fs-650">
-                The Casa Real Shrine Museum of Malolos virtual tours allow guests toenjoy self-guided, room-by-room 
+                The Casa Real Shrine Museum of Malolos virtual tours allow guests to enjoy self-guided, room-by-room 
                 tours of certain exhibits and places inside the museum from their PC or mobile device. Visitors can also 
-                visit certain collections and study areas at our satellite support and research stations, as well as former
-                exhibitions that are no longer on display.
+                visit certain collections and study areas at our satellite support and research stations.
         
         </div>
         <div class="Virtul-tour-title color-primary-400 padding-block-500 fs-700 fw-bold">Virtual tour tips</div>

@@ -14,7 +14,7 @@ include('includes/header.php');
 
             <div class="card">
                 <div class="card-header">
-                    <h4>Add Post
+                    <h4>Add Content
                         <a href="post-view.php" class="btn btn-primary float-end">Back</a>
                     </h4>
                 </div>
@@ -99,7 +99,7 @@ include('includes/header.php');
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="post_add" class="btn btn-primary">Save Post</button>
+                                <button type="submit" name="post_add" class="btn btn-primary">Save Content</button>
                             </div>
 
 

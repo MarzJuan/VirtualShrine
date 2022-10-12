@@ -14,7 +14,7 @@ include('includes/header.php');
         
             <div class="card">
                 <div class="card-header">
-                    <h4>Edit Category
+                    <h4>Edit Gallery
                         <a href="category-view.php" class="btn btn-primary float-end">Back</a>
                     </h4>
                 </div>
@@ -83,7 +83,7 @@ include('includes/header.php');
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="edit_category" class="btn btn-primary">Update Category</button>
+                                <button type="submit" name="edit_category" class="btn btn-primary">Update Gallery</button>
                             </div>
 
 

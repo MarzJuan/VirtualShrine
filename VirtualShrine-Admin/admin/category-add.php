@@ -11,7 +11,7 @@ include('includes/header.php');
         <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                    <h4>Add Category
+                    <h4>Add Gallery
                         <a href="category-view.php" class="btn btn-primary float-end">Back</a>
                     </h4>
                 </div>
@@ -67,7 +67,7 @@ include('includes/header.php');
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="add_category" class="btn btn-primary">Save Category</button>
+                                <button type="submit" name="add_category" class="btn btn-primary">Save Gallery</button>
                             </div>
 
 

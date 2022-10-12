@@ -34,7 +34,7 @@ include('includes/header.php');
               <p><?php if($user['role_as'] == 0){echo "Head Admin";} 
                     if($user['role_as'] == 1){echo "Assistant Admin";}
                     ?></p>
-              <i class="far fa-edit mb-5"></i>
+              <a href="profile-edit.php?=<?= $user_id['id']?>"><i class="far fa-edit mb-5"></i></a>
             </div>
             <div class="col-md-8">
               <div class="card-body p-4">

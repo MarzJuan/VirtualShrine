@@ -128,7 +128,7 @@
                             <?php if($_SESSION['auth_role'] == '0') : ?><!--ONLY SUPER ADMIN CAN VIEW-->
                             <a class="nav-link collapsed <?= $page == 'category-add.php' || $page == 'category-view.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-category-alt'></i></div>
-                                Category
+                                Gallery Category
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <?php endif; ?>
