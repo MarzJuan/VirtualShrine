@@ -27,7 +27,6 @@
                 <nav class="primary-navigation fs-button"  id="primary-navigation">
                      <ul araial-label="Primary" role="list" class="nav-list fs-button" >
                      <li class="menu-item"><a href="homePage.php">Home</a></li>
-
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Visit<i class="fas fa-angle-down"></i></a> <!--Plan your Visit, Book a visit, Audio Guide-->
                             <ul class="sub-menu">
@@ -35,7 +34,6 @@
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
                             </ul>
                      </li>
-
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Explore<i class="fas fa-angle-down"></i></a>
                             <ul class="sub-menu">
@@ -82,7 +80,6 @@
                      </div>
               </section>
   </header>
-
   <main>
        <section class="section1 padding-block-700">
               <div class="section1-title fs-secondary-heading fw-bold color-primary-400">WHAT TO SEE</div>
@@ -117,12 +114,11 @@
                      </div>
               </div>
               </section >
-
               <section class="section2 padding-block-900">
                             <div class="section2-title  fs-secondary-heading fw-bold color-primary-400">VIRTUALSHRINE NEXT TO YOU</div>
                             <div class="section2-flex">
                             <div class="section2-image2">
-                                          <div><button class="section2-btn fw-bold fs-600 bg-neutral-100 color-accent-600">Audio</button></div>
+                                          <div><a href="Audio.php"><button class="section2-btn fw-bold fs-600 bg-neutral-100 color-accent-600">Audio</button></a></div>
                                           <div class="section2-text fw-semi-bold fs-700 color-neutral-100">Audio Guide</div>
                                    </div>
                             <div class="section2-image3">
@@ -130,13 +126,11 @@
                                    <div class="section2-text fw-semi-bold fs-700 color-neutral-100 ">Rooms and Galleries</div>
                             </div>
                             <div class="section2-image4">
-                                   <div><button class="section2-btn2 fw-bold fs-600 bg-neutral-100 color-accent-600">Virtual Collection</button></div>
+                                   <div><a href="Gallery.php"><button class="section2-btn2 fw-bold fs-600 bg-neutral-100 color-accent-600">Virtual Collection</button></a></div>
                                    <div class="section2-text fw-semi-bold fs-700 color-neutral-100 ">Collection</div>
-                            </div>
                             </div>
                             </section>
   </main>
-
   <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color">
        <div class="container">
               <div class="primary-footer-wrapper">
@@ -144,11 +138,9 @@
                           <nav class="footer-nav fs-500">
                                  <ul class="flow" style="--flow-spacer: 1em " arial-label="footer " role="list">
                                         <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Museums</a></li>
-                                        <li><a href="#">Book a Tour</a></li>
-                                        <li><a href="#">Collections</a></li>
-                                        <li><a href="#">Virtual Tour</a></li>
+                                        <li><a href="consent-form.php">Book a Tour</a></li>
+                                        <li><a href="Gallery.php">Collections</a></li>
+                                        <li><a href="VirtualTour.php">Virtual Tour</a></li>
                                  </ul>
                           </nav>  
                      </div>
@@ -169,7 +161,7 @@
                                    <img class="footer-logo" src="Images/Logo.png" alt="">
                      </div>
                      <div class="primary-footer-info">
-                                   <h2 class="Contact-info fs-650 fw-semi-bold">Contact Information</h2>
+                                   <h1 class="Contact-info fs-650 fw-semi-bold">Contact Information</h1>
                                    <div class="Details">
                                    <div>Paseo Del Congreso, Liang, City of Malolos,<br> Bulacan</div>
                                    <div>Museum Curactor: Ms. Ma. Antonia T. Jimenez        

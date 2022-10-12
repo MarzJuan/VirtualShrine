@@ -139,7 +139,7 @@ picture {
     background-size: cover;
     padding-bottom: 100px;
     justify-content: space-between;
-    padding: 0px 100px;
+    padding: 0px 100px 100px;
 }
 
 .main-header .navigation{
@@ -557,6 +557,14 @@ padding: 10px 0;
 
 }
 
+.section1-title{
+    margin:100px 0 50px 150px;
+}
+
+.section2-title{
+    margin:100px 0 50px 150px;
+}
+
 
 .section1-Title1{
     color:white;
@@ -625,7 +633,8 @@ padding: 10px 0;
 
 @media (min-width: 50em){
 .section2-title{
-  margin-left: 220px;
+padding-top: 30px;
+  margin-left: 154px;
   margin-block: 50px;
 }
 }
@@ -706,7 +715,7 @@ button{
 }
 
 .footer-logo{
-    width: 55%;
+    width: 100px;
     height: auto;
     margin-inline:auto;
 }
@@ -2257,3 +2266,4 @@ section{
     margin-right: 150px;
     line-height: 1.5;
 }
+

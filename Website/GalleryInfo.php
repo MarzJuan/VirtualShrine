@@ -87,8 +87,10 @@ include('config/dbcon.php');
 ?>
 
 <?php
-                                    
-        $posts = "SELECT * FROM posts WHERE status='0' AND id='$category_id' ";
+       if(isset($_GET['id']))
+       {              
+        $category_id = $_GET['id'];                         
+        $posts = "SELECT * FROM posts WHERE status='0' AND category_id='$category_id' ";
         $posts_run = mysqli_query($con, $posts);
 
         if(mysqli_num_rows($posts_run) > 0)
@@ -120,7 +122,7 @@ include('config/dbcon.php');
 
                 }
         }
-
+}
 ?>
 
 <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color">
