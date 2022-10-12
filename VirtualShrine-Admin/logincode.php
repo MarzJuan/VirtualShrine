@@ -30,7 +30,7 @@ if(isset($_POST['login_btn']))
 
         if($_SESSION['auth_role'] == '0') // Head Admin
         {
-            $_SESSION['message'] = "Welcome to Head Admin dashboard";
+            $_SESSION['message'] = "Welcome to Super Admin dashboard";
             header("Location: admin/index.php");
             exit(0);
         }
