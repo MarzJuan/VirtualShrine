@@ -23,11 +23,11 @@ $mail->SMTPOptions = array(
 );
 $mail->isHTML(true);// Set email format to HTML
 
-$mail->Username = 'mauricio.angelo.d.5478@gmail.com';// SMTP username
-$mail->Password = 'bqvebckyeakauhpw';// SMTP password
+$mail->Username = 'virtualshrine.developers@gmail.com';// SMTP username
+$mail->Password = 'cttkljrtkwfbawhf';// SMTP password
 
-$mail->setFrom('mauricio.angelo.d.5478@gmail.com', 'Angelo Mauricio');//Your application NAME and EMAIL
-$mail->Subject = 'Capstone Project';//Message subject
+$mail->setFrom('virtualshrine.developers@gmail.com', 'MKPP Reservation');//Your application NAME and EMAIL
+$mail->Subject = 'Casa Real Shrine Online Reservation';//Message subject
 $mail->MsgHTML('Testing');// Message body
 $mail->addAddress('kjnacional11@gmail.com', 'Kristine Nacional');// Target email
 

@@ -238,8 +238,16 @@
                     <div class="sb-sidenav-footer">
                         <hr>
                         <div class="small">Logged in as:</div>
-                        <?php if(isset($_SESSION['auth_user'])) : ?>
-                            <?= $_SESSION['auth_user']['user_name']; ?>
+                        <?php if(isset($_SESSION['auth_user'])) : 
+                            if($_SESSION['auth_role'] == '0')
+                            {
+                            echo "Super Admin"; 
+                            }
+                            else
+                            {
+                            echo "Assistant Admin";
+                            }
+                            ?>
                         <?php endif; ?>
                     </div>
                 </nav>

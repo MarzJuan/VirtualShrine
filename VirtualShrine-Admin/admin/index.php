@@ -1,6 +1,5 @@
 <?php
-session_start();
-include('config/dbcon.php');
+include('authentication.php');
 include('includes/header.php');
 ?>
 
@@ -63,7 +62,7 @@ include('includes/header.php');
                         </div>
                     </div>
                 </div>
-        <div class="col-xl-3 col-md-6">
+        <!-- <div class="col-xl-3 col-md-6">
             <div class="card bg-success text-white mb-4">
                 <div class="card-body">Page Views</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
@@ -80,139 +79,43 @@ include('includes/header.php');
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
     </div>
     </div>
-
-    <!-- Only the Assistant Admin will be able to see this card-->
-    <?php if($_SESSION['auth_role'] == '1') : ?>
-    <div class="container-fluid px-4">
-    <h4 class="mt-4"></h4>
-
-    <div class="row mt-4">
-        <div class="col-md-6">
-
-            <div class="card">
-                <div class="card-header">
-                    <h4>Pending Booking</h4>
-                </div>
-                <div class="card-body">
-
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th><center>ID</center></th>
-                            <th><center>Name</center></th>
-                            <th><center>Date of Visit</center></th>
-                            <th><center>No. of Visitors</center></th>
-                            
-                        </tr>
-                    </thead>
-                
-
-                <tbody>
-                            <?php
-                            $query = "SELECT * FROM bookings";
-                            $query_run = mysqli_query($con, $query);
-
-                            if(mysqli_num_rows($query_run) > 0)
-                            {
-                                foreach($query_run as $bookings)
-                                {
-                                    ?>
-                                    <tr>
-                                        <td><?= $bookings['booking_id']; ?></td>
-                                        <td><?= $bookings['fname']. " " . $bookings["lname"]; ?></td>
-                                        <td><?= $bookings['date_visit']; ?></td>
-                                        <td><?= $bookings['no_visitors']; ?></td>
-                                
-                                    </tr>
-                            <?php
-                            }
-                        }
-                            ?>
-                            
-
-                            
-                </tbody>
-
-                
-                </table>
-                <td>
-                    <a href="booking-pending.php">View Details</a>
-                </td>
-                <?php endif; ?>
-                <!-- end -->
-
-                
     
+            <div style="width: 500px; padding-left: 30px">
+                 <canvas id="myChart"></canvas>
+            </div>
 
-    <!-- Only the Head Admin will be able to see this card-->
-    <?php if($_SESSION['auth_role'] == '0') : ?>
-    <div class="container-fluid px-4">
-    <h4 class="mt-4"></h4>
+<script>
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
 
-    <div class="row mt-4">
-        <div class="col-md-6">
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Number of Visitor',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
 
-            <div class="card">
-                <div class="card-header">
-                    <h4>Users</h4>
-                </div>
-                <div class="card-body">
+  const config = {
+  type: 'line',
+  data: data,
+};
+</script>
+ 
 
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th><center>ID</center></th>
-                            <th><center>Name</center></th>
-                            <th><center>username</center></th>
-                            <th><center>status</center></th>
-                            
-                        </tr>
-                    </thead>
-                
 
-                    <tbody>
-                            <?php
-                            $query = "SELECT * FROM users WHERE role_as=1"; //role_as 1 is to retrieve assistant admin data from the database
-                            $query_run = mysqli_query($con, $query);
-
-                            if(mysqli_num_rows($query_run) > 0)
-                            {
-                                foreach($query_run as $row)
-                                {
-                                    ?>
-                                    <tr>
-                                        <td><?= $row['id']; ?></td>
-                                        <td><?= $row['fname']. " " .$row['lname']; ?></td>
-                                        <td><?= $row['username']; ?></td>
-
-                                        <td>
-                                            <?php
-                                            if($row['status'] == 1){
-                                                echo 'Active';
-                                            }
-                                            elseif($row['status'] == 0){
-                                                echo 'Inactive';
-                                            }
-
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <?php
-                            }
-                        }
-                            ?>
-                        </tbody>
-
-                
-                </table>
-                <td>
-                    <a href="assistant-admin-list.php">View Details</a>
-                </td>
-                <?php endif; ?>
-            <!-- End -->
+    
                
 
 <?php

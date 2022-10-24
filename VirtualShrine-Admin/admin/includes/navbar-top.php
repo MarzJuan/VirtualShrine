@@ -14,6 +14,19 @@
 
             <!-- Navbar-->
 
+        <?php
+        $user_pic = "../uploads/user/".$username.".jpg";
+        $default = "../uploads/user/defaultPFP.jpeg";
+
+        if(file_exists($user_pic)){
+        $profile_picture = $user_pic;
+        }
+        else
+        {
+        $profile_picture = $default;
+        }
+        ?>
+
             
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 
@@ -22,7 +35,7 @@
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         </i><?= $_SESSION['auth_user']['user_name']; ?> <!-- Display the username on top navbar-->
                         <img class="img-profile rounded-circle "
-                                src="../uploads/admin-image.png"
+                                src="<?php if(isset($profile_picture)) echo $profile_picture; ?>"
                                 width="30" 
                                 height="30"/>
                     </a>
@@ -35,10 +48,6 @@
                                 <a href="user-profile.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="dropdown-item" >
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>

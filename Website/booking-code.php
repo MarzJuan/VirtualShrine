@@ -1,6 +1,44 @@
 <?php
 include('config/dbcon.php');
 
+//BOOKING RESCHEDULE
+if(isset($_POST['new_sched']))
+{
+    $booking_id = $_POST['booking_id'];
+    $date_visit =  $_POST['date_visit'];
+    $time_visit = $_POST['time_visit'];
+
+    $query = "UPDATE bookings SET status='0', date_visit='$date_visit', time_visit='$time_visit' WHERE booking_id='$booking_id'";
+    $query_run = mysqli_query($con, $query);
+
+    
+    if($query_run)
+        {
+            header('Location: booking_reschedule.php?booking_id=' .$booking_id);
+            exit(0);
+        }
+}
+
+
+//BOOKING RESCHEDULE AND CANCEL
+if(isset($_POST['submit_id']))
+{
+    $booking_id = $_POST['booking_id'];
+
+    $query = "SELECT * FROM bookings";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        header('Location: ReschedCancel_details.php?id='.$booking_id);
+        exit(0);
+    }
+    else
+    {
+        header('Location: resched-cancel.php?id='.$booking_id);
+        exit(0);
+    }
+}
 
 //BOOKING
 if(isset($_POST['submit_booking']))

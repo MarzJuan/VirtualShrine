@@ -49,5 +49,24 @@ session_start();
     </div>
     </div>
 </div>
+
+<!-- Modal
+<div class="modal fade" id="no-slot" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body" id="loading-msg">           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+
+    <script src="assets/js/main.js?v1"></script>
+    <script src="assets/js/parsely.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script> -->
+
     </body>
 </html>

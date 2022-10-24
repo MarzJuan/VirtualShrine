@@ -1,6 +1,17 @@
 <?php
 include('authentication.php');
 include('includes/header.php');
+
+$user_pic = "../uploads/user/".$username.".jpg";
+$default = "../uploads/user/defaultPFP.jpeg";
+
+if(file_exists($user_pic)){
+  $profile_picture = $user_pic;
+}
+else
+{
+  $profile_picture = $default;
+}
 ?>
 
 
@@ -21,6 +32,7 @@ include('includes/header.php');
                 ?>
 
 <section class="vh-100" style="background-color: #f4f5f7;">
+<?php include('message.php'); ?>
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-left align-items-center h-200">
       <div class="col col-lg-12 mb-4 mb-lg-0">
@@ -28,13 +40,12 @@ include('includes/header.php');
           <div class="row g-0">
             <div class="col-md-4 gradient-custom text-center text-black"
               style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+              <img class="rounded-circle mt-5" width="150px" src="<?php if(isset($profile_picture)) echo $profile_picture; ?>">
               <h5>@<?= $user['username']; ?></h5>
               <p><?php if($user['role_as'] == 0){echo "Head Admin";} 
                     if($user['role_as'] == 1){echo "Assistant Admin";}
                     ?></p>
-              <a href="profile-edit.php?=<?= $user_id['id']?>"><i class="far fa-edit mb-5"></i></a>
+              <a href="profile-edit.php?id=<?= $user['id']?>"><i class="far fa-edit mb-5"></i></a>
             </div>
             <div class="col-md-8">
               <div class="card-body p-4">

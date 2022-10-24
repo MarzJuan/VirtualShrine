@@ -43,7 +43,6 @@ else
                 <img class="rounded-circle mt-5" width="150px" src="<?php if(isset($profile_picture)) echo $profile_picture; ?>">
                 <span class="font-weight-bold">
                 <form action="code.php" method = "POST">
-                <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
                 <i class = "fa fa-camera" style = "color: #fff;"></i>
                 </form>
                 <?= $user['fname']. " " .$user['lname']; ?></span>
@@ -81,6 +80,8 @@ else
         }
 
 ?>
+
+
 
 
 
