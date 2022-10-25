@@ -29,6 +29,14 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <!-- //Summernote CSS - CDN Link -->
+
+    <style type="text/css" media="print">
+        @media print{
+            .noprint, .noprint *{
+                display: none; !important;
+            }
+        }
+    </style>
     </head>
 
     <body class="sb-nav-fixed">

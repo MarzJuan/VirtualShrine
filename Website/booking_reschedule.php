@@ -84,17 +84,18 @@ include('config/dbcon.php');
                                     {
                                         $booking_id = $_GET['booking_id'];
 
-                                        $query = "SELECT * FROM bookings WHERE status='1' AND booking_id='$booking_id' ";
+                                        $query = "SELECT * FROM bookings WHERE booking_id='$booking_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
                                         {
-                                            while($row = mysqli_fetch_assoc($query_run))
-                                            {
-                                                ?>
+                                        $row = mysqli_fetch_array($query_run);
+                                        ?>
                     
+                    <form action="booking-code.php" method="POST" enctype='multipart/form-data'>
+                    <input type="hidden" name="booking_id" value="<?= $row['booking_id'] ?>">
                         <div class="row">
-                        <form action="booking-code.php" method="GET">
+                        
                             <div class="col-md-12">
                             <div class="form-group mb-3">
                                 
@@ -112,7 +113,7 @@ include('config/dbcon.php');
                                                 <div style="margin-left:80px;" class="col-md-10 col-10">
                                                     <div class="form-group">
                                                     <label>Select new Session:</label>
-                                                    <select class="form-control" name="time_visit" value="<?=$row['time_visit']?>" data-parsley-required="" data-parsley-required-message="Please select a session">
+                                                    <select class="form-control" name="time_visit" data-parsley-required="" data-parsley-required-message="Please select a new session">
                                                     <option value="">Select session</option>
                                                     <option value="AM">AM</option>
                                                     <option value="PM">PM</option>
@@ -123,18 +124,17 @@ include('config/dbcon.php');
                                                 
                                                 <div class="col-12 p-0 mt-3"> 
                                                     <div style="margin-left:250px;" class="col-3 p-0 mt-3"> 
-                                                    <button type="submit" name="new_sched" class="btn btn-info mb-5"  style="width:100%!important;">Save</button>
+                                                    <button type="submit" name="new_sched" class="btn btn-info mb-5" style="width:100%!important;">Save</button>
                                                     </div>
                                                 </div>
                                                 
                                                 <?php
                                             }
+                                            else
+                                            {
+                                                echo "No Record Found";
+                                            }
                                         }
-                                        else
-                                        {
-                                            echo "No Record Found";
-                                        }
-                                    }
                                    
                                 ?>
 

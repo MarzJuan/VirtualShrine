@@ -13,7 +13,7 @@ include('includes/header.php');
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                    <h4>Pending Booking</h4>
+                    <h4>Cancelled Booking</h4>
                 </div>
                 <div class="card-body">
 
@@ -26,14 +26,14 @@ include('includes/header.php');
                             <th><center>Date of Visit</center></th>
                             <th><center>No. of Visitors</center></th>
                             <th><center>Status</center></th>
-                            <th><center>Action</center></th>
+                            <!-- <th><center>Action</center></th> -->
                             <th></th>
                             
                         </tr>
                     </thead>
                         <tbody>
                             <?php
-                            $query = "SELECT * FROM bookings WHERE status='0' OR status='3' ";
+                            $query = "SELECT * FROM bookings WHERE status='4'";
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)
@@ -74,13 +74,13 @@ include('includes/header.php');
 
                                             ?>
                                             
-                                        <td>
+                                        <!-- <td>
                                             <form action="code.php" method="POST">
                                                 <button type="submit" name="approve_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-success">Approve</button>
                                             
                                                 <button type="submit" name="reject_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-danger">Reject</button>
                                             </form>
-                                        </td>
+                                        </td> -->
 
 
                                         <td>

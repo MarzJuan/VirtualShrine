@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <title>Cancel or Reschedule Booking - VirtualShrine</title>
@@ -59,23 +63,22 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <hr>
-                                <?php 
-                                    $con = mysqli_connect("localhost","root","","virtualshrine");
+                                <?php
 
                                     if(isset($_GET['booking_id']))
                                     {
                                         $booking_id = $_GET['booking_id'];
 
-                                        $query = "SELECT * FROM bookings WHERE booking_id='$booking_id' ";
+                                        $query = "SELECT * FROM bookings WHERE status='1' AND booking_id='$booking_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
                                         {
-                                            foreach($query_run as $row)
-                                            {
-                                                ?>
+                                            $row = mysqli_fetch_array($query_run);
+                                        ?>
+
                                                 <div style="margin-left:50px;" class="form-group mb-3">
-                                                    <label for=""><b>Name:</b></label><a style="margin-left:95px;">
+                                                    <label for=""><b>Name:</b></label><a style="margin-left:90px;">
                                                     <?php echo $row['fname'].' '.$row['lname']; ?></a>
                                                 </div>
                                                 <div style="margin-left:50px;" class="form-group mb-3">
@@ -88,15 +91,15 @@
                                                 </div><br>
                                                 <hr>
 
-                                                <p style="margin-left:50px;">Want to make changes? <a value="<?$row['booking_id']?>" href="booking_reschedule.php?booking_id=<?= $row['booking_id']?>">Reschedule</a> or <a href="">Cancel Booking</a></p>
+                                                <p style="margin-left:50px;">Want to make changes? <a value="<?$row['booking_id']?>" href="booking_reschedule.php?booking_id=<?= $row['booking_id']?>">Reschedule</a> or <a href="#" data-toggle="modal" data-target="#cancelBooking<?php $row['booking_id']?>">Cancel Booking</a></p>
                                                 <?php
                                             }
-                                        }
                                         else
                                         {
                                             echo "No Record Found";
                                         }
                                     }
+                                    
                                    
                                 ?>
 
@@ -110,7 +113,29 @@
         </div>
     </div>
 
+    <!-- MODAL -->
+    <div class="modal fade" id="cancelBooking<?php $row['booking_id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        <form action="booking-code.php" method="POST">
+        <input type="hidden" name="booking_id" value="<?= $row['booking_id'] ?>">
+          <div class="modal-body" id="loading-msg">    
+            Are you sure you wish to cancel this booking?       
+          </div>
+          <div class="modal-footer">
+            <button type="submit" name="cancelBook" class="btn btn-primary">Yes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>   
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js?v1"></script>
+    <script src="assets/js/parsely.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
 </body>
 </html>

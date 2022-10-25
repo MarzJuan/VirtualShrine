@@ -56,13 +56,13 @@
 
                             
                             <!--START OF BOOKINGS-->
-                            <a class="nav-link collapsed <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
+                            <a class="nav-link collapsed <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-book-content' ></i></div>
                                 Bookings
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
-                            <div class="collapse <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' ? 'show':'' ?>" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' ? 'show':'' ?>" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
 
                                     <a class="nav-link <?= $page == 'booking-pending.php' ? 'active':'' ?>" href="booking-pending.php">
@@ -82,6 +82,13 @@
                                     <a class="nav-link <?= $page == 'booking-rejected.php' ? 'active':'' ?>" href="booking-rejected.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Rejected Bookings
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    </div>
+
+                                    <a class="nav-link <?= $page == 'booking-cancelled.php' ? 'active':'' ?>" href="booking-cancelled.php">
+                                    <div class="sb-nav-link-icon"></div>
+                                        Cancelled Bookings
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>

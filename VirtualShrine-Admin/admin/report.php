@@ -15,11 +15,13 @@ include('includes/header.php');
         <div class="col-md-12">
 
         <?php include('message.php'); ?>
+
+        
         
             <div class="card">
                 <div class="card-header">
                     <h4>Activity Report
-                    <a href="assistant-admin-list.php" class="btn btn-primary float-end">Back</a>
+                    <a href="report-print.php" class="btn btn-secondary float-end mr-1"><span>Print Report</span></a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -51,10 +53,10 @@ include('includes/header.php');
                                         {
                                             ?>
                                             <tr>
-                                                <td><?= $log['id']?></td>
-                                                <td><?= $log['username']?></td>
-                                                <td><?= $log['action']?></td>
-                                                <td><?= $log['created_at']?></td>
+                                                <td class="id"><?= $log['id']?></td>
+                                                <td class="username"><?= $log['username']?></td>
+                                                <td class="action_made"><?= $log['action']?></td>
+                                                <td class="created_at"><?= $log['created_at']?></td>
                                             <?php
                                         }
                                     }

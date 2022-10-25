@@ -211,7 +211,7 @@ if(isset($_POST['approve_booking']))
                                     <ul><li>Face mask must be worn at all times within the museum building.</li></ul>
                                     <ul><li>Visitors are allowed to bring their own sanitizing kits (small bottles of alcohol, small spray bottles, and tissue papers), but visitors must be mindful of their surroundings when using their sanitizing kits.</li></ul>
                                     <ul><li>Social distancing of at least <b>TWO (2)</b> meters between persons not belonging to the same household must be observed at all times.</li></ul><br><br>
-                                    If you wish to cancel or reschedule this booking, please <a href="http://localhost/VirtualShrine/website/resched-cancel.php">click here</a></p>');// Message body
+                                    If you wish to cancel or reschedule this booking, please <a href="http://localhost/VirtualShrine/website/ReschedCancel_details.php">click here</a></p>');// Message body
                     $mail->addAddress($to);// Target email
 
 

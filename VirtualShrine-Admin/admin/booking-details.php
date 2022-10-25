@@ -51,14 +51,26 @@ include('includes/header.php');
                                     </form>
                                     <?php
                                 }
-                                if($bookings['status'] ==1)
-                                {
-                                    echo '<span style="color:GREEN;text-align:center;">Approved</span>';
-                                }
-                                if($bookings['status'] ==2)
-                                {
-                                    echo '<span style="color:RED;text-align:center;">Rejected</span>';
-                                }
+                                                if($bookings['status'] ==0)
+                                                {
+                                                    echo "Pending";
+                                                }
+                                                if($bookings['status'] ==1)
+                                                {
+                                                    echo '<span style="color:GREEN;text-align:center;">Approved</span>';
+                                                }
+                                                if($bookings['status'] ==2)
+                                                {
+                                                    echo '<span style="color:RED;text-align:center;">Rejected</span>';
+                                                }
+                                                if($bookings['status'] ==3)
+                                                {
+                                                    echo '<span style="color:BLUE;text-align:center;">Reschedule</span>';
+                                                }
+                                                if($bookings['status'] ==4)
+                                                {
+                                                    echo '<span style="color:RED;text-align:center;">Cancelled</span>';
+                                                }
                             }
                         }
                         }
