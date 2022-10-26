@@ -1555,6 +1555,21 @@ form {
 }
 
 @media (max-width: 1060px){
+    .nav-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        height: 150px;
+        width: 345px;
+        position: center;
+        margin: 0;
+        padding-left: 157px;
+    }
+    
     .main-header .navigation .menu{
         position: relative;
         display: block;
