@@ -3,7 +3,7 @@ include('authentication.php');
 include('includes/header.php');
 
 $user_pic = "../uploads/user/".$username.".jpg";
-$default = "../uploads/user/defaultPFP.jpeg";
+$default = "../uploads/user/defaultProfile.jpeg";
 
 if(file_exists($user_pic)){
   $profile_picture = $user_pic;

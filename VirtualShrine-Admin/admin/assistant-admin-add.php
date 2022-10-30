@@ -7,14 +7,14 @@ include('includes/header.php');
 <div class="container-fluid px-4">
     <h4 class="mt-4"></h4>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Dashboard</li>
+    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
         <li class="breadcrumb-item">Add User</li>
     </ol>
 
     <div class="row">
         <div class="col-md-12">
         <?php include('message.php'); ?>
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header">
                     <h4>Add User
                     <a href="assistant-admin-list.php" class="btn btn-primary float-end">Back</a>

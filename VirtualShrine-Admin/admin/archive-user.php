@@ -6,10 +6,10 @@ include('includes/header.php');
 
 <div class="container-fluid px-4">
     <h4 class="mt-4"> </h4>
-
+    <h2>&nbsp;</h2>
     <div class="col-md-12">
             <?php include('message.php'); ?>
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header">
                 <h4>Archived Users</h4>
                 </div>

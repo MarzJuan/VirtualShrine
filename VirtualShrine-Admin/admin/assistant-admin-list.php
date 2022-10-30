@@ -53,10 +53,10 @@ include('includes/header.php');
 
                                         <td>
                                             <?php
-                                            if($row['status'] == 1){
+                                            if($row['status'] == 0){
                                                 echo 'Active';
                                             }
-                                            elseif($row['status'] == 0){
+                                            elseif($row['status'] == 1){
                                                     echo 'Inactive';
                                             }
 
