@@ -2295,3 +2295,85 @@ section{
     line-height: 1.5;
 }
 
+/*Audio Description*/
+
+.Audio-Title{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.Audio-picture{
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 500px;
+    width: 500px;
+}
+
+.audio-nav{
+    text-align: center;
+    
+}
+
+.audio-button, .info-button{
+    border:none;
+    background: none;
+}
+
+
+.audio-button{
+margin-left: 100px;
+}
+
+.Audio-info{
+width: 500px;
+margin-left: 50px;
+margin-top: 50px;
+text-align: justify;
+line-height: 1.5;
+}
+
+.playlist-text{
+    margin: 0px 0 30px 100px;
+}
+
+.playlist-content{
+    position: relative;
+    overflow-y: scroll;
+    height: 320px;
+    margin-left: 50px;
+    width: 500px;
+}
+
+.audio-player{
+    display: inline-block;
+    width: 500px;
+    margin-top: 50px;
+    margin-left:50px;
+}
+
+
+.play-list1, .play-list2, .play-list3{
+   position: relative;
+}
+
+.playlist-img{
+    display: inline-block;
+    position: relative;
+    margin-bottom:10px;
+}
+.playlist-title-text{
+    position: absolute;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-top:20px;
+}
+
+@media (max-width: 50em){
+    .Audio-picture{
+       margin-left: 150px;
+    }
+    .audio-content{
+        margin-left: 50px;
+    }
+}
