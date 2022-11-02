@@ -13,9 +13,10 @@ include('includes/header.php');
     
         <div class="row">
 
+        <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
         <div class="col-xl-3 col-md-6">
             <div class="card bg-primary text-white mb-4">
-                <div class="card-body">No. of Admins
+                <div class="card-body">No. of Admins</div>
                 <?php
                     $dash_users_query = "SELECT * FROM users";
                     $dash_users_query_run = mysqli_query($con, $dash_users_query);
@@ -30,20 +31,19 @@ include('includes/header.php');
                     }
 
                 ?>
-                
-                </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="assistant-admin-list.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
 
         <div class="col-xl-3 col-md-6">
             <div class="card bg-warning text-white mb-4">
-                <div class="card-body">Total Bookings
+                <div class="card-body">Total Pending Bookings</div>
                 <?php
-                    $dash_bookings_query = "SELECT * FROM bookings";
+                    $dash_bookings_query = "SELECT * FROM bookings WHERE status='0'";
                     $dash_bookings_query_run = mysqli_query($con, $dash_bookings_query);
 
                     if($bookings_total = mysqli_num_rows($dash_bookings_query_run))
@@ -56,32 +56,63 @@ include('includes/header.php');
                     }
 
                 ?>
-                </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="booking-pending.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xl-3 col-md-6">
+            <div class="card bg-info text-white mb-4">
+                <div class="card-body">Total Rescheduled Bookings</div>
+                <?php
+                    $dash_bookings_query = "SELECT * FROM bookings WHERE status='3'";
+                    $dash_bookings_query_run = mysqli_query($con, $dash_bookings_query);
+
+                    if($bookings_total = mysqli_num_rows($dash_bookings_query_run))
+                    {
+                        echo '<h4 class=""mb-0>'.$bookings_total.'</h4>';
+                    }
+                    else
+                    {
+                        echo '<h4 class=""mb-0>No Data</h4>';
+                    }
+
+                ?>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="booking-pending.php">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
         <div class="col-xl-3 col-md-6">
             <div class="card bg-success text-white mb-4">
-                <div class="card-body">Gallery Content</div>
+                <div class="card-body">Total Gallery Content</div>
+                <?php
+                    $dash_content_query = "SELECT * FROM posts WHERE status='0'";
+                    $dash_content_query_run = mysqli_query($con, $dash_content_query);
+
+                    if($content_total = mysqli_num_rows($dash_content_query_run))
+                    {
+                        echo '<h4 class=""mb-0>'.$content_total.'</h4>';
+                    }
+                    else
+                    {
+                        echo '<h4 class=""mb-0>No Data</h4>';
+                    }
+
+                ?>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="post-view.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
             </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-danger text-white mb-4">
-                <div class="card-body">Danger Card</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
+        <!--  -->
     </div>
+
 
 <style>
 {
@@ -146,6 +177,9 @@ body {
 }
     </style>
 
+<?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
+<!-- ADMIN ACTIVITY -->
+
 <div class="card-1" style="width: 300px; height: 380px; float: right; margin-right:6px;margin-top: 0;">
 <h4 style="text-align: left;  padding: 16px;margin-left:15px;">Admin Activity</h4>
 
@@ -158,7 +192,7 @@ body {
                         while($user = mysqli_fetch_assoc($dash_users_query_run))
                         {
                         ?>
-    <div class="card mb-3" style="max-width: 300px;max-height: 70px;margin-left:5px;">
+    <div class="card mb-3" style="max-width: 300px;max-height: 70px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="../uploads/user/defaultProfile.jpeg" style="height: 40px;margin-top:5px;" class="img-fluid rounded-start" alt="...">
@@ -184,15 +218,17 @@ body {
     </div>
     </div>
     </div>
+  
+<!-- END ADMIN ACTIVITY -->
 
 
-<!-- ADMIN ACTIVITY -->
+<!-- USER LIST -->
     
 <div class="card-2" style="width: 300px; height: 380px; float: right; margin-right:6px;margin-top: 0;">
 <h4 style="text-align: left;  padding: 16px;margin-left:15px;">Users</h4>
 
 <?php
-                    $dash_users_query = "SELECT * FROM users LIMIT 3";
+                    $dash_users_query = "SELECT * FROM users WHERE role_as='1' AND status='0' LIMIT 3";
                     $dash_users_query_run = mysqli_query($con, $dash_users_query);
 
                     if(mysqli_num_rows($dash_users_query_run) > 0)
@@ -223,7 +259,7 @@ body {
                 echo 'Active';
             }
             elseif($user['status'] == 1){
-                echo 'Inactive';
+                echo 'Archived';
             }
         ?>
         </small></p>
@@ -242,8 +278,8 @@ body {
     </div>
     </div>
     </div>
-    
-
+<!-- END USER LIST -->
+<?php endif; ?>
     
 <!-- VISITOR ANALYTICS -->
 
@@ -360,7 +396,7 @@ body {
         scales: {
           x: {
             min: '2022-10-01',
-            max: '2022-10-30',
+            max: '2022-10-31',
             type: 'time',
             time: {
                 unit: 'day'
@@ -394,7 +430,7 @@ body {
     }
     </script>
 </div>
-
+<!-- VISITOR ANALYTICS -->
     
                
 

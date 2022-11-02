@@ -2,8 +2,21 @@
 session_start();
 ?>
 
+<html>
+<head>
+       <title>Login - VirtualShrine</title>
+       <meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+<link rel="icon" type="image/png" href="image/crs-logo.png">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+
+<link rel="stylesheet" href="assets/css/style.css">
         <div class="py5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -67,6 +80,8 @@ session_start();
     <script src="assets/js/parsely.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

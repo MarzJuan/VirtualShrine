@@ -114,7 +114,7 @@ include('config/dbcon.php');
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              max-width: 35ch;">
+              max-width: 10ch;">
         <?= $post['description']?></p>
         </div>
         </div>

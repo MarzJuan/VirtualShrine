@@ -66,8 +66,8 @@ include('includes/header.php');
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Status</label>
-                                <input type="checkbox" name="status" <?=$user['status'] == '1' ? 'checked':'' ?> width="70px" height="70px">
+                                <label for="">Status - <i>Check the box to set status as active</label> <br/>
+                                <input type="checkbox" name="status" <?=$user['status'] == '0' ? 'checked':'' ?> width="70px" height="70px">
                             </div>
 
                             <div class="com-md-12 mb-3">

@@ -47,7 +47,7 @@ include('includes/header.php');
                                                 echo 'Active';
                                             }
                                             else if($row['status'] == 1){
-                                                echo 'Inactive';
+                                                echo 'Archived';
                                             }
 
                                             ?>
