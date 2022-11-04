@@ -243,7 +243,9 @@ if(isset($_POST['post_update']))
 
     $category_id = $_POST['category_id'];
     
-    $name = $_POST['name'];
+    $post_name = $_POST['name'];
+    $final_postname = ucwords($post_name);
+    $name = $final_postname;
 
     
     $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
@@ -321,7 +323,9 @@ if(isset($_POST['post_add']))
 {
     $category_id = $_POST['category_id'];
     
-    $name = $_POST['name'];
+    $post_name = $_POST['name'];
+    $final_postname = ucwords($post_name);
+    $name = $final_postname;
    
     $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
     $final_string = preg_replace('/-+/', '-', $string);
@@ -372,7 +376,10 @@ if(isset($_POST['post_add']))
 if(isset($_POST['edit_category']))
 {
     $category_id = $_POST['category_id'];
-    $name = $_POST['name'];
+
+    $cat_name = $_POST['name'];
+    $final_categoryname = ucwords($cat_name);
+    $name = $final_categoryname;
     
     $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
     $final_string = preg_replace('/-+/', '-', $string);
@@ -438,7 +445,10 @@ if(isset($_POST['edit_category']))
 // ADD CATEGORY
 if(isset($_POST['add_category']))
 {
-    $name = $_POST['name'];
+    $cat_name = $_POST['name'];
+    $final_categoryname = ucwords($cat_name);
+    $name = $final_categoryname;
+
     
     $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
     $final_string = preg_replace('/-+/', '-', $string);
@@ -559,8 +569,16 @@ if(isset($_POST['assistant-admin-archive']))
 if(isset($_POST['add_admin']))
 {
 
-    $fname = mysqli_real_escape_string($con, $_POST['fname']);
-    $lname = mysqli_real_escape_string($con, $_POST['lname']);
+    $firstname = mysqli_real_escape_string($con, $_POST['fname']);
+    $lower_fname = strtolower($firstname);
+    $final_firstname = ucwords($lower_fname);
+    $fname = $final_firstname;
+        
+    $lastname = mysqli_real_escape_string($con, $_POST['lname']);
+    $lower_lname = strtolower($lastname);
+    $final_lastname = ucwords($lower_lname);
+    $lname = $final_lastname;
+
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $role_as = $_POST['role_as'];
@@ -577,7 +595,7 @@ if(isset($_POST['add_admin']))
         if(mysqli_num_rows($checkusername_run) > 0)
         {
             //Username already exists
-            $_SESSION['message'] = "Username unavailable";
+            $_SESSION['message'] = "Username already exists";
             header("Location: assistant-admin-add.php");
             exit(0);
         }
@@ -592,7 +610,7 @@ if(isset($_POST['add_admin']))
                     $sql_run = mysqli_query($con, $sql);
                     if($sql_run)
                     {
-                        $_SESSION['message'] = "Added Succesfully";
+                        $_SESSION['message'] = "New User Added Succesfully";
                         header("Location: assistant-admin-add.php");
                         exit(0);
                     }
@@ -622,12 +640,38 @@ if(isset($_POST['update_information']))
 {
 
         $user_id = $_POST['user_id'];
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
+
+        $firstname = $_POST['fname'];
+        $lower_fname = strtolower($firstname);
+        $final_firstname = ucwords($lower_fname);
+        $fname = $final_firstname;
+
+        $lastname = $_POST['lname'];
+        $lower_lname = strtolower($lastname);
+        $final_lastname = ucwords($lower_lname);
+        $lname = $final_lastname;
+
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $status = $_POST['status'] == true ? '1':'0';
+        $confirm_password = $_POST['cpassword'];
+        $status = $_POST['status'] == true ? '0':'1';
+
+    if($password == $confirm_password)
+    {
+        //Check username
+        $checkusername = "SELECT username FROM users WHERE username='$username' AND id!='$user_id'";
+        $checkusername_run = mysqli_query($con, $checkusername);
+
+        if(mysqli_num_rows($checkusername_run) > 0)
+        {
+            //Username already exists
+            $_SESSION['message'] = "Username already exists";
+            header('Location: assistant-admin-edit.php?id='.$user_id);
+            exit(0);
+        }
+        else
+        {
 
         $query = "UPDATE users SET fname='$fname', lname='$lname', username='$username', email='$email', password='$password', status='$status'
                     WHERE role_as=1 AND ID='$user_id' ";
@@ -651,8 +695,16 @@ if(isset($_POST['update_information']))
             header('Location: assistant-admin-edit.php?id='.$user_id);
             exit(0);
         }
+    }
+}
+else
+{
+$_SESSION['message'] = "Password does not match";
+header('Location: assistant-admin-edit.php?id='.$user_id);
+exit(0);
 }
 
+}
 
 
 ?>

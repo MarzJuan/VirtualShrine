@@ -153,6 +153,11 @@ body {
   background-color: #f1f1f1;
   border: none;
   margin-left: 10px;
+  width: 300px; 
+  height: 380px; 
+  float: right; 
+  margin-right:6px;
+  margin-top: 0;
 }
 .card-2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -160,6 +165,11 @@ body {
   background-color: #f1f1f1;
   border: none;
   margin-right: 10px;
+  width: 300px; 
+  height: 380px; 
+  float: right; 
+  margin-right:6px;
+  margin-top: 0;
 }
 
 .card-user {
@@ -180,7 +190,7 @@ body {
 <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
 <!-- ADMIN ACTIVITY -->
 
-<div class="card-1" style="width: 300px; height: 380px; float: right; margin-right:6px;margin-top: 0;">
+<div class="card-1 col-xl-3 col-md-6">
 <h4 style="text-align: left;  padding: 16px;margin-left:15px;">Admin Activity</h4>
 
 <?php
@@ -224,7 +234,7 @@ body {
 
 <!-- USER LIST -->
     
-<div class="card-2" style="width: 300px; height: 380px; float: right; margin-right:6px;margin-top: 0;">
+<div class="card-2">
 <h4 style="text-align: left;  padding: 16px;margin-left:15px;">Users</h4>
 
 <?php
