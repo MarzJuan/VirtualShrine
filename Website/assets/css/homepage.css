@@ -2298,12 +2298,13 @@ section{
 /*Audio Description*/
 
 .Audio-Title{
-    margin-left: 50px;
+    margin-left: 150px;
+    font-size: 40px;
 }
 
 .Audio-picture{
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 150px;
     height: 500px;
     width: 600px;
 }
