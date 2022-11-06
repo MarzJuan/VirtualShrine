@@ -112,6 +112,7 @@ include('includes/header.php');
             </div>
         <!--  -->
     </div>
+    </div>
 
 
 <style>
@@ -186,110 +187,6 @@ body {
   }
 }
     </style>
-
-<?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
-<!-- ADMIN ACTIVITY -->
-
-<div class="card-1 col-xl-3 col-md-6">
-<h4 style="text-align: left;  padding: 16px;margin-left:15px;">Admin Activity</h4>
-
-<?php
-                    $dash_users_query = "SELECT * FROM auditlog LIMIT 3";
-                    $dash_users_query_run = mysqli_query($con, $dash_users_query);
-
-                    if(mysqli_num_rows($dash_users_query_run) > 0)
-                    {
-                        while($user = mysqli_fetch_assoc($dash_users_query_run))
-                        {
-                        ?>
-    <div class="card mb-3" style="max-width: 300px;max-height: 70px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="../uploads/user/defaultProfile.jpeg" style="height: 40px;margin-top:5px;" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-user">
-        <h6 style="align-text:left;"><b><?= $user['username']; ?></b></h6>
-        <p class="card-text"><?= $user['action']; ?></p>
-        <p class="card-text" style="margin-top: -10px;"><small class="text-muted"><?= $user['created_at']; ?></small></p>
-      </div>
-    </div>
-    </div>
-    <?php
-            }
-        }
-        ?>
-        <div class="d-flex align-items-center justify-content-between" style="margin-top:20px;margin-left:160px;">
-            <a class="small text-black stretched-link" href="report.php">View More<i style="margin-left:15px;" class="fas fa-angle-right"></i></a>
-            <div class="small text-black"></div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-  
-<!-- END ADMIN ACTIVITY -->
-
-
-<!-- USER LIST -->
-    
-<div class="card-2">
-<h4 style="text-align: left;  padding: 16px;margin-left:15px;">Users</h4>
-
-<?php
-                    $dash_users_query = "SELECT * FROM users WHERE role_as='1' AND status='0' LIMIT 3";
-                    $dash_users_query_run = mysqli_query($con, $dash_users_query);
-
-                    if(mysqli_num_rows($dash_users_query_run) > 0)
-                    {
-                        while($user = mysqli_fetch_assoc($dash_users_query_run))
-                        {
-                        ?>
-    <div class="card mb-3" style="max-width: 300px;max-height: 70px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="../uploads/user/defaultProfile.jpeg" style="height: 40px;margin-top:5px;" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-user">
-        <h6 style="align-text:left;"><b><?= $user['fname']." ".$user['lname']; ?></b></h6>
-        <p class="card-text">
-        <?php
-            if($user['role_as'] == 0){
-                echo 'Head Admin';
-            }
-            elseif($user['role_as'] == 1){
-                echo 'Assistant Admin';
-            }
-        ?>
-        <p class="card-text" style="margin-top: -10px;"><small class="text-muted">
-        <?php
-            if($user['status'] == 0){
-                echo 'Active';
-            }
-            elseif($user['status'] == 1){
-                echo 'Archived';
-            }
-        ?>
-        </small></p>
-      </div>
-    </div>
-    </div>
-    <?php
-            }
-        }
-        ?>
-        <div class="d-flex align-items-center justify-content-between" style="margin-top:20px;margin-left:180px;">
-            <a class="small text-black stretched-link" href="assistant-admin-list.php">View More<i style="margin-left:15px;" class="fas fa-angle-right"></i></a>
-            <div class="small text-black"></div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-<!-- END USER LIST -->
-<?php endif; ?>
     
 <!-- VISITOR ANALYTICS -->
 
@@ -336,16 +233,17 @@ body {
     
       <div class="chartBox">
         <h4>Visitor Analytics</h4>
+        <canvas id="myChart"></canvas>
+      
         <input type="date" onchange="startDateFilter(this)" value="2022-10-01" min="2022-10-01" max="2022-10-30">
         <input type="date" onchange="endDateFilter(this)" value="2022-10-30" min="2022-10-01" max="2022-10-30">
-        <canvas id="myChart"></canvas>
+        </div>
       </div>
-    </div>
 
     <?php
 
       try {
-        $sql = "SELECT * FROM virtualshrine.bookings WHERE status='1'";
+        $sql = "SELECT * FROM virtualshrine.bookings";
         $result = $pdo->query($sql);
 
         if($result->rowCount() > 0) {

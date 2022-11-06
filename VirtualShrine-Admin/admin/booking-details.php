@@ -8,6 +8,9 @@ include('includes/header.php');
     <h4 class="mt-4"></h4>
 
     <div class="row mt-4">
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
         <div class="col-md-12">
 
         <?php include('message.php'); ?>
@@ -22,64 +25,131 @@ include('includes/header.php');
 
                 
                 <?php
+                
+                if(isset($_GET['booking_id']))
+                    {
                         $booking_id = $_GET['booking_id'];
-                        $bookings = "SELECT booking_id, fname, lname, phone_no, email, id_image, org_name, date_visit, time_visit, no_visitors, status FROM bookings WHERE booking_id='$booking_id'";
+                        $bookings = "SELECT * FROM bookings WHERE booking_id='$booking_id' LIMIT 1";
                         $booking_run = mysqli_query($con, $bookings);
 
                         if(mysqli_num_rows($booking_run) > 0)
                         {
-                            while($bookings = $booking_run->fetch_assoc()) 
-                        {
-                            {
-                                echo "<br><b>Booking ID:</b> " .'<span style="margin-right: 5.9em;"></span>'. $bookings["booking_id"]."<br>";
-                                echo "<b>Name:</b> " .'<span style="margin-right: 8.4em;"></span>'. $bookings["fname"]. " " . $bookings["lname"] ."<br>";
-                                echo "<b>Phone Number:</b> " .'<span style="margin-right: 4em;"></span>'. $bookings["phone_no"]."<br>";
-                                echo "<b>Email:</b> " .'<span style="margin-right: 8.6em;width="60px" height="60px"></span>'. $bookings["email"]."<br>";
-                                echo "<b>Attached File:</b> " .'<span style="margin-right: 8.6em;"></span>'.'<img src="Website/Images/visitor_attachment/<?=$bookings["id_image"]?>'."<br>";
-                                echo "<b>Name of Organization:</b> " .'<span style="margin-right: 0.70em;"></span>'. $bookings["org_name"]."<br>";
-                                echo "<b>Date of Visit</b> " .'<span style="margin-right: 5.6em;"></span>'. $bookings["date_visit"]."<br>";
-                                echo "<b>Time of Visit</b> " .'<span style="margin-right: 5.5em;"></span>'. $bookings["time_visit"]."<br>";
-                                echo "<b>Number of Visitors</b> " .'<span style="margin-right: 2.5em;"></span>'. $bookings["no_visitors"]."<br>"."<br>";
+                            $row = mysqli_fetch_array($booking_run);
+                        ?>
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>Booking ID:</b></label><a style="margin-left:57px;">
+                                    <?php echo $row['booking_id']; ?></a>
+                            </div>
 
-                                if($bookings['status'] == 0)
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>Name:</b></label><a style="margin-left:95px;">
+                                    <?php echo $row['fname'].' '.$row['lname']; ?></a>
+                            </div>
+
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>Phone No:</b></label><a style="margin-left:65px;">
+                                    <?php echo $row['phone_no']; ?></a>
+                            </div>
+
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>Email:</b></label><a style="margin-left:99px;">
+                                    <?php echo $row['email']; ?></a>
+                            </div>
+
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>Attached File:</b></label><a style="margin-left:40px;">
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#exampleModal<?php $row['booking_id']?>">
+                                    Show image
+                                </a>
+                            </div>
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>Date of Visit:</b></label><a style="margin-left:47.5px;">
+                                    <?php echo $row['date_visit']; ?></a>
+                            </div>
+                                                
+                            <div style="margin-left:50px;" class="form-group mb-3">
+                                <label for=""><b>No. of Visitors:</b></label><a style="margin-left:34px;">
+                                    <?php echo $row['no_visitors']; ?></a>
+                            </div><br>
+
+                            <?php
+
+                                if($row['status'] == 0 || $row['status'] == 3)
                                 {
                                     ?>
                                     <form action="code.php" method="POST">
-                                        <button type="submit" name="approve_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-success">Approve</button>
+                                        <button style="margin-left:50px;" type="submit" name="approve_booking" value="<?=$row['booking_id'];?>" class="btn btn-success">Approve</button>
                                             
-                                        <button type="submit" name="reject_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-danger">Reject</button>
+                                        <button type="submit" name="reject_booking" value="<?=$row['booking_id'];?>" class="btn btn-danger">Reject</button>
                                     </form>
                                     <?php
                                 }
-                                                if($bookings['status'] ==0)
+                                                if($row['status'] ==1)
                                                 {
-                                                    echo "Pending";
+                                                    echo '<b style="margin-left:50px;">Status:</b><span style="color:GREEN;text-align:center;margin-left:50px;">Approved</span>';
                                                 }
-                                                if($bookings['status'] ==1)
+                                                if($row['status'] ==2)
                                                 {
-                                                    echo '<span style="color:GREEN;text-align:center;">Approved</span>';
+                                                    echo '<b style="margin-left:50px;">Status:</b><span style="color:RED;text-align:center;margin-left:50px;">Rejected</span>';
                                                 }
-                                                if($bookings['status'] ==2)
+                                                if($row['status'] ==4)
                                                 {
-                                                    echo '<span style="color:RED;text-align:center;">Rejected</span>';
+                                                    echo '<b style="margin-left:50px;">Status:</b><span style="color:RED;text-align:center;margin-left:50px;">Cancelled</span>';
                                                 }
-                                                if($bookings['status'] ==3)
-                                                {
-                                                    echo '<span style="color:BLUE;text-align:center;">Reschedule</span>';
-                                                }
-                                                if($bookings['status'] ==4)
-                                                {
-                                                    echo '<span style="color:RED;text-align:center;">Cancelled</span>';
-                                                }
-                            }
-                        }
-                        }
-                      else {
-                            echo "0 results";
-                        }
+                                            }
+                                        
+                                      else {
+                                            echo "0 results";
+                                        }
+                                    }
+                
+                                       
+                                    ?>
 
-                    
-    ?>
+ <!-- Modal -->
+ <div class="modal fade"
+        id="exampleModal<?php $row['booking_id']?>"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+         
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+             
+                <!-- Add image inside the body of modal -->
+                <div class="modal-body">
+                    <img id="image" src="../../Website/Images/visitor_attachment/<?php echo $row['id_image'];?>" width='470' height='300'
+                        alt="Attached File" />
+                </div>
+ 
+                <div class="modal-footer">
+                    <button type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal">
+                        Close
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Adding scripts to use bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous">
+    </script>  
 
 <?php
 include('includes/footer.php');

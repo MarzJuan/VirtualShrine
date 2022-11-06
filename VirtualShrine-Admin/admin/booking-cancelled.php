@@ -6,14 +6,21 @@ include('includes/header.php');
 
 <h1></h1>
 <div class="container-fluid px-4">
+<h4 class="mt-4">Cancelled Booking</h4>
+    <ol class="breadcrumb mb-4">
+        <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <li class="breadcrumb-item">Cancelled Booking</li>  
+    </ol>
 
     <div class="row">
-
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
         <div class="col-md-12">
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                    <h4>Cancelled Booking</h4>
+                    <h4>List of Cancelled Booking</h4>
                 </div>
                 <div class="card-body">
 
@@ -64,11 +71,11 @@ include('includes/header.php');
                                                 }
                                                 if($bookings['status'] ==3)
                                                 {
-                                                    echo '<span style="color:BLUE;text-align:center;">Reschedule</span>';
+                                                    echo '<span style="color:VIOLET;text-align:center;">Reschedule</span>';
                                                 }
                                                 if($bookings['status'] ==4)
                                                 {
-                                                    echo '<span style="color:RED;text-align:center;">Cancelled</span>';
+                                                    echo '<span style="color:BLUE;text-align:center;">Cancelled</span>';
                                                 }
 
 
@@ -84,7 +91,7 @@ include('includes/header.php');
 
 
                                         <td>
-                                            <a href="booking-details.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
+                                            <a href="booking-details-cancelled.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
                                         </td>
                                 
                                     </tr>

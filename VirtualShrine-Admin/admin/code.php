@@ -46,6 +46,68 @@ if (isset($_POST['edit_profile']))
         }
 }
 
+//EDIT AUDIO
+if(isset($_POST['audio_update']))
+{
+    $audio_id = $_POST['audio_id'];
+    $category_id = $_POST['category_id'];
+    
+    $audio_title = $_POST['name'];
+    $final_audioname = ucwords($audio_title);
+    $title = $final_audioname;
+
+    $old_filename = $_POST['old_audio'];
+    $audio = $_FILES['audio']['name'];
+
+    $update_filename = "";
+    if($audio != NULL)
+    {
+    //rename this image
+        $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
+        $filename = time().'.'.$audio_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $old_filename;
+    }
+
+    $status = $_POST['status'] == true ? '0':'1';
+
+
+
+    $query = "UPDATE audio SET category_id='$category_id', title='$title', audio='$update_filename',
+                    status='$status' WHERE audio_id='$audio_id' ";
+    $query_run = mysqli_query($con, $query);
+
+    
+    if($query_run)
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated a Audio Guide Content')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($audio != NULL)
+            {
+                if(file_exists('../uploads/audio/'.$old_filename)){
+                    unlink("../uploads/audio/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['audio']['tmp_name'], '../uploads/audio/'.$update_filename);
+            }
+            
+                $_SESSION['message'] = "Audio Updated Successfully";
+                header('Location: audio-edit.php?audio_id='.$audio_id);
+                exit(0);
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: audio-edit.php?audio_id='.$audio_id);
+            exit(0);
+        }
+
+}
+
 // ADD AUDIO
 if (isset($_POST['audio_add']) && isset($_FILES['my_audio'])) 
 {
@@ -113,9 +175,75 @@ if(isset($_POST['reject_booking']))
 
             if($sql_run)
             {
+                    
+                    $res  = mysqli_query($con,"SELECT email, fname, lname, date_visit, time_visit, no_visitors FROM bookings WHERE booking_id='$bookings_id'");
+
+                    $row = mysqli_fetch_assoc($res);
+                    $to = $row["email"];
+                    $fname = $row["fname"];
+                    $lname = $row["lname"];
+                    $date_visit = $row["date_visit"];
+                    $time_visit = $row["time_visit"];
+                    $no_visitors = $row["no_visitors"];
+                    
+
+                    require 'EMAIL/mymail/vendor/autoload.php';
+
+                    $mail = new PHPMailer(true);
+
+                    $mail->isSMTP();// Set mailer to use SMTP
+                    $mail->CharSet = "utf-8";// set charset to utf8
+                    $mail->SMTPAuth = true;// Enable SMTP authentication
+                    $mail->SMTPSecure = 'tls';// Enable TLS encryption, `ssl` also accepted
+
+                    $mail->Host = 'smtp.gmail.com';// Specify main and backup SMTP servers
+                    $mail->Port = 587;// TCP port to connect to
+                    $mail->SMTPOptions = array(
+                        'ssl' => array(
+                            'verify_peer' => false,
+                            'verify_peer_name' => false,
+                            'allow_self_signed' => true
+                        )
+                    );
+                    $mail->isHTML(true);// Set email format to HTML
+
+                    $mail->Username = 'virtualshrine.developers@gmail.com';// SMTP username
+                    $mail->Password = 'cttkljrtkwfbawhf';// SMTP password
+
+                    $mail->setFrom('virtualshrine.developers@gmail.com', 'MKPP Reservation');//Your application NAME and EMAIL
+                    $mail->Subject = 'Casa Real Shrine Online Reservation';//Message subject
+                    $mail->MsgHTML('<b>Your booking reservation is rejected!</b><br>
+                                    <p>Booking Number: '.$bookings_id.'<br>
+                                    Name: '.$fname.' '.$lname.'<br>
+                                    Date of Visit: '.$date_visit.'<br>
+                                    No. of Visitors: '.$no_visitors.'<br>
+                                    Museum: Museo ng Kasaysayang Pampulitika ng Pilipinas<br><br>
+                                    Hi '.$fname.',<br>
+                                    Thank you for Booking!<br><br>
+                                    <b>IMPORTANT REMINDERS<br><br>
+                                    1. Visiting Hours for Museum</b><br>
+                                    <ul><li><b>Tuesday to Sunday</b>, excluding religious holidays, with morning session from
+                                    <b>8:00 AM to 12:00 NN</b>, and afternoon session from <b>1:00 PM to 4:00 PM</b></ul>
+                                    <ul><li>Please bring a photo ID with you.</li></ul>
+                                    <ul><li>To help you plan for your visit, here is a <a href="http://localhost/VirtualShrine/Website/Plan.php">link </a>
+                                        to the museum list of current exhibits.</li></ul><br><br>
+                                    <b>2. Staying safe inside the Museum</b><br>
+                                    <ul><li>A temperature scan will be taken of every visitor upon entry. Persons with a temperature of 37.5 degrees Celsius and above will not be allowed to enter. Likewise, any person with fever and flu-like symptoms will not be allowed to enter.</li></ul>
+                                    <ul><li>Every individual must complete a health declaration form prior to entry to museum building. This will be facilitated as part of the online reservation process.</li></ul>
+                                    <ul><li>Face mask must be worn at all times within the museum building.</li></ul>
+                                    <ul><li>Visitors are allowed to bring their own sanitizing kits (small bottles of alcohol, small spray bottles, and tissue papers), but visitors must be mindful of their surroundings when using their sanitizing kits.</li></ul>
+                                    <ul><li>Social distancing of at least <b>TWO (2)</b> meters between persons not belonging to the same household must be observed at all times.</li></ul><br><br>
+                                    If you wish to cancel or reschedule this booking, please <a href="http://localhost/VirtualShrine/website/ReschedCancel_details.php">click here</a></p>');// Message body
+                    $mail->addAddress($to);// Target email
+
+
+                    $mail->send();
+
+
                 $_SESSION['message'] = "Booking has been Rejected";
                 header('Location: booking-pending.php');
                 exit(0);
+        }
     }
     else
     {
@@ -125,7 +253,7 @@ if(isset($_POST['reject_booking']))
     }
 
 }
-}
+
 
 // ACCEPT BOOKING
 
@@ -142,17 +270,6 @@ if(isset($_POST['approve_booking']))
             $sql_run = mysqli_query($con, $sql);
             if($sql_run)
             {
-                
-                
-                // $emailing = "SELECT * FROM bookings WHERE booking_id='$bookings_id'";
-                // $emailing_run = mysqli_query($con, $emailing);
-                
-                // if(mysqli_num_rows($emailing_run) > 0)
-                // {
-                //     while($emails = mysqli_fetch_assoc($emailing_run))
-                //     {
-
-                    
                     
                     $res  = mysqli_query($con,"SELECT email, fname, lname, date_visit, time_visit, no_visitors FROM bookings WHERE booking_id='$bookings_id'");
 

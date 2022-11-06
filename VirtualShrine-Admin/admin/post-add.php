@@ -75,7 +75,7 @@ include('includes/header.php');
 
                             <div class="col-md-12 mb-3">
                                 <label for="">Meta Title</label>
-                                <input type="text" name="meta_title" max="200" class="form-control">
+                                <input type="text" name="meta_title" max="200" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
@@ -90,16 +90,16 @@ include('includes/header.php');
                             
                             <div class="col-md-6 mb-3">
                                 <label for="">Image</label>
-                                <input type="file" name="image" class="form-control">
+                                <input type="file" name="image" class="form-control" required accept="image/*">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Status</label> <br/>
+                                <label for="">Status - <i>Check the box to set status as active</label> <br/>
                                 <input type="checkbox" name="status" width="70px" height="70px" />
                             </div>
 
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="post_add" class="btn btn-primary">Save Content</button>
+                                <button type="submit" name="post_add" required class="btn btn-primary">Post</button>
                             </div>
 
 

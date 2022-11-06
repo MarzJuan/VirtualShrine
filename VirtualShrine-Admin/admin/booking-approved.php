@@ -6,14 +6,21 @@ include('includes/header.php');
 
 <h1></h1>
 <div class="container-fluid px-4">
+<h4 class="mt-4">Approved Booking</h4>
+    <ol class="breadcrumb mb-4">
+        <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <li class="breadcrumb-item">Approved Booking</li>  
+    </ol>
 
     <div class="row">
-
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
         <div class="col-md-12">
             <?php include('message.php'); ?>
             <div class="card">
                 <div class="card-header">
-                    <h4>Approved Booking</h4>
+                    <h4>List of Approved Booking</h4>
                 </div>
                 <div class="card-body">
 
@@ -67,7 +74,7 @@ include('includes/header.php');
 
 
                                         <td>
-                                            <a href="booking-details.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
+                                        <a name="booking_id" href="booking-details-approved.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
                                         </td>
                                 
                                     </tr>

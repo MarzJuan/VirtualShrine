@@ -6,6 +6,11 @@ include('includes/header.php');
 
 <h1></h1>
 <div class="container-fluid px-4">
+<h4 class="mt-4">Rejected Booking</h4>
+    <ol class="breadcrumb mb-4">
+        <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <li class="breadcrumb-item">Rejected Booking</li>  
+    </ol>
 
     <div class="row">
         <h1></h1>
@@ -16,7 +21,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                 
-                    <h4>Rejected Booking</h4>
+                    <h4>List of Rejected Bookings</h4>
                 </div>
                 <div class="card-body">
 
@@ -56,7 +61,7 @@ include('includes/header.php');
 
                                                 if($bookings['status'] ==0)
                                                 {
-                                                    echo "Pending";
+                                                    echo '<span style="color:Yellow;text-align:center;">Pending</span>';
                                                 }
                                                 if($bookings['status'] ==1)
                                                 {
@@ -72,7 +77,7 @@ include('includes/header.php');
 
 
                                         <td>
-                                            <a href="booking-details.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
+                                        <a name="booking_id" href="booking-details-reject.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
                                         </td>
                                 
                                     </tr>

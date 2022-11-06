@@ -25,7 +25,7 @@
                             
                             <!--START OF ADMIN-->
                             <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
-                            <a class="nav-link collapsed <?= $page == 'assistant-admin-list.php' ? 'active':'' ?>" href="assistant-admin-list.php">
+                            <a class="nav-link collapsed <?= $page == 'assistant-admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="assistant-admin-list.php">
                             <div class="sb-nav-link-icon"><i class='bx bxs-user-detail'></i></div>
                                 Assistant Admin
                             <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
@@ -36,37 +36,37 @@
 
                             
                             <!--START OF BOOKINGS-->
-                            <a class="nav-link collapsed <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
+                            <a class="nav-link collapsed <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' || $page == 'booking-details.php' || $page == 'booking-details-reject.php' || $page == 'booking-details-cancelled.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
                                 <div class="sb-nav-link-icon"><i class='bx bxs-book-content' ></i></div>
                                 Bookings
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
-                            <div class="collapse <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' ? 'show':'' ?>" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' || $page == 'booking-details.php' || $page == 'booking-details-reject.php' || $page == 'booking-details-cancelled.php' || $page == 'booking-details-approved.php' ? 'show':'' ?>" id="collapseBooking" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
 
-                                    <a class="nav-link <?= $page == 'booking-pending.php' ? 'active':'' ?>" href="booking-pending.php">
+                                    <a class="nav-link <?= $page == 'booking-pending.php' || $page == 'booking-details.php' ? 'active':'' ?>" href="booking-pending.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Pending Bookings
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link <?= $page == 'booking-approved.php' ? 'active':'' ?>" href="booking-approved.php">
+                                    <a class="nav-link <?= $page == 'booking-approved.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>" href="booking-approved.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Approved Bookings
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link <?= $page == 'booking-rejected.php' ? 'active':'' ?>" href="booking-rejected.php">
+                                    <a class="nav-link <?= $page == 'booking-rejected.php' || $page == 'booking-details-reject.php' ? 'active':'' ?>" href="booking-rejected.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Rejected Bookings
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link <?= $page == 'booking-cancelled.php' ? 'active':'' ?>" href="booking-cancelled.php">
+                                    <a class="nav-link <?= $page == 'booking-cancelled.php' || $page == 'booking-details-cancelled.php' ? 'active':'' ?>" href="booking-cancelled.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Cancelled Bookings
                                     </a>
@@ -82,23 +82,23 @@
                             
                             
                             <!-- START OF POSTS-->
-                            <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'audio-view.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts" aria-expanded="false" aria-controls="collapsePosts">
+                            <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'audio-view.php' || $page == 'post-edit.php' || $page == 'audio-edit.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts" aria-expanded="false" aria-controls="collapsePosts">
                                 <div class="sb-nav-link-icon"><i class='bx bx-windows'></i></div>
                                 CMS
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
-                            <div class="collapse <?= $page == 'post-view.php' || $page == 'audio-view.php' ? 'show':'' ?>" id="collapsePosts" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse <?= $page == 'post-view.php' || $page == 'audio-view.php' || $page == 'post-edit.php' || $page == 'audio-edit.php' ? 'show':'' ?>" id="collapsePosts" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
 
-                                    <a class="nav-link <?= $page == 'post-view.php' ? 'active':'' ?>" href="post-view.php">
+                                    <a class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':'' ?>" href="post-view.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Gallery
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     </div>
 
-                                    <a class="nav-link <?= $page == 'audio-view.php' ? 'active':'' ?>" href="audio-view.php">
+                                    <a class="nav-link <?= $page == 'audio-view.php' || $page == 'audio-edit.php' ? 'active':'' ?>" href="audio-view.php">
                                     <div class="sb-nav-link-icon"></div>
                                         Audio Guide
                                     </a>
@@ -112,33 +112,14 @@
 
 
                             <!--START OF CATEGORY-->
-                            <?php if($_SESSION['auth_role'] == '0') : ?><!--ONLY SUPER ADMIN CAN VIEW-->
-                            <a class="nav-link collapsed <?= $page == 'category-add.php' || $page == 'category-view.php' ? 'active':'' ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
-                                <div class="sb-nav-link-icon"><i class='bx bxs-category-alt'></i></div>
+
+                            <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
+                            <a class="nav-link collapsed <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>" href="category-view.php">
+                            <div class="sb-nav-link-icon"><i class='bx bxs-category-alt'></i></div>
                                 Gallery Category
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
                             </a>
                             <?php endif; ?>
-
-                            <div class="collapse <?= $page == 'category-add.php' || $page == 'category-view.php' ? 'show':'' ?>" id="collapseCategory" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-
-                                    <a class="nav-link <?= $page == 'category-add.php' ? 'active':'' ?>" href="category-add.php">
-                                    <div class="sb-nav-link-icon"></div>
-                                        Add Category
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                    </div>
-
-                                    <a class="nav-link <?= $page == 'category-view.php' ? 'active':'' ?>" href="category-view.php">
-                                    <div class="sb-nav-link-icon"></div>
-                                        View Category
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        
-                                    </div>
-                                </nav>
-                            </div>
                             <!--END OF CATEGORY-->
 
                             

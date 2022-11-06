@@ -29,14 +29,14 @@ include('includes/header.php');
 
                         if(mysqli_num_rows($post_query_res) > 0)
                         {
-                            $post_row = mysqli_fetch_array($post_query_res);
+                            $audio_row = mysqli_fetch_array($post_query_res);
                             ?>
                         
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
-                <input type="hidden" name="audio_id" value="<?= $post_row['audio_id'] ?>">
+                <input type="hidden" name="audio_id" value="<?= $audio_row['audio_id'] ?>">
 
-                <div class="row">
+                    <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="">Gallery list</label>
                             <?php
@@ -52,7 +52,7 @@ include('includes/header.php');
                                     foreach($category_run as $categoryitem)
                                         {
                                         ?>
-                                        <option value="<?= $categoryitem['id']?>" <?= $categoryitem['id'] == $post_row['category_id'] ? 'selected':'' ?>>
+                                        <option value="<?= $categoryitem['id']?>" <?= $categoryitem['id'] == $audio_row['category_id'] ? 'selected':'' ?>>
                                         <?= $categoryitem['name']?>
                                     </option>
                                         <?php
@@ -74,18 +74,18 @@ include('includes/header.php');
                         </div>
                             <div class="col-md-6 mb-3">
                                 <label for="">Title</label>
-                                <input type="text" name="name" value="<?= $post_row['title'] ?>" required class="form-control">
+                                <input type="text" name="name" value="<?= $audio_row['title'] ?>" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Audio File</label>
-                                <input type="hidden" name="old_audio" value="<?= $post_row['audio'] ?>" />
+                                <input type="hidden" name="old_audio" value="<?= $audio_row['audio'] ?>" />
                                 <input type="file" name="audio" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Status - <i>Check the box to set status as active</label> <br/>
-                                <input type="checkbox" name="status" <?= $post_row['status'] == '0' ? 'checked':'' ?> width="70px" height="70px" />
+                                <input type="checkbox" name="status" <?= $audio_row['status'] == '0' ? 'checked':'' ?> width="70px" height="70px" />
                             </div>
 
                             <div class="com-md-6 mb-3">
@@ -106,11 +106,6 @@ include('includes/header.php');
                         }
                     }
                 ?>
-
-
-
-
-
 
                 </div>
             </div>

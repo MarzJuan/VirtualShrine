@@ -91,7 +91,7 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="audio-edit.php?id=<?= $audio['audio_id']?>" class="btn btn-success">Edit</a>
+                                                    <a href="audio-edit.php?audio_id=<?= $audio['audio_id']?>" class="btn btn-success">Edit</a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
                                                     <button type="submit" name="audio_archive" value="<?=$audio['audio_id'] ?>" class="btn btn-danger">Archive</a>
