@@ -100,24 +100,32 @@ include('config/dbcon.php');
                 ?>
 
 <!-- <div class="container gallery-flex"> -->
+<a style="text-decoration: none;color: black;" href="Audio-Description.php?id=<?= $post['id']?>">
 <div class="cards">
                 <div class="image">
                 <img src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>" width="300px" height="300px" alt="Collection Image"/>
         </div>
         <div class="title fs-650">
-                <h4><?= $post['name']?></h4>
+                <h4><?= $post['name']?><br></h4>
         </div>
-        <div class="des">
-        <p>
+        <div>
+                <p style="margin-left: 20px;"><i><?= $post['object_type']?></i></p>
+        </div>
+        <div>
+                <p style="margin-left: 20px;"><i><?= $post['year']?><br>&nbsp;</i></p>
+        </div>
+
+        <!-- <div class="des">
         <span style="
               display:inline-block;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
               max-width: 10ch;">
-        <?= $post['description']?></p>
+        <?= $post['description']?>
+        </div> -->
         </div>
-        </div>
+</a>
 <?php
 
                 }

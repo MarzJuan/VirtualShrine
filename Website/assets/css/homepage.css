@@ -2348,9 +2348,8 @@ section{
     color: white;
   }
 
-
 .Audio-info{
-width: 450px;
+max-width: 50px;
 margin-left: 150px;
 margin-top: 8px;
 text-align: justify;
@@ -2402,7 +2401,6 @@ line-height: 1.5;
         margin-left: 50px;
     }
 }
-
 
 
 /*IMAGE MODAL*/

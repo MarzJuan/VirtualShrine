@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -50,12 +54,26 @@
           </div>
    
        <section>
+
+       <?php
+       if(isset($_GET['id']))
+       {              
+        $post_id = $_GET['id'];                         
+        $posts = "SELECT * FROM posts WHERE status='0' AND id='$post_id' ";
+        $posts_run = mysqli_query($con, $posts);
+
+        if(mysqli_num_rows($posts_run) > 0)
+          {
+                foreach($posts_run as $post)
+                {
+                ?>
+                
             <div class="container">
-                <div class="Audio-Title"><b>Bajo la Campana</b></div>
+                <div class="Audio-Title"><b><?= $post['name']?></b></div>
                 <a style="margin-left: 150px;font-size: 30px;text-decoration: none;color: #016F9D;" href=""><i>Paniniil (Oppression)</i></a>
                 <div class="even-columns">
                     <div class="display-picture">
-                        <image id="myImg" alt="Bajo la Campana" class="Audio-picture" src="Images/Audio-Description_1.png"></image>
+                        <img id="myImg" alt="<?= $post['name']?>" class="Audio-picture" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>"></image>
                         <br>
                     </div>
 
@@ -71,14 +89,14 @@
        <!-- Modal Caption (Image Text) -->
        <div id="caption"></div>
      </div>
-                    <div class="audio-playlist"> 
+                    <div class="audio-playlist">
                        <div class="audio-nav">
                         <button  id="button-info" class="info-button fs-secondary-heading active"><b>Information</b></button>
                         <button  id="button-audio" class="audio-button fs-secondary-heading active"><b>Audio</b>
                         </button>
                     </div>
                     <div class="audio-content" id="audio-content">
-                           <p class="Audio-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                           <p class="Audio-info"><?= $post['description']?></p>
                             </div>
                     </div>
                    <!--<div class="right-sidepanel-description even-columns">
@@ -89,6 +107,12 @@
             </div>
             </div>
         </section>
+        <?php
+
+                }
+        }
+}
+?>
 
 <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color">
         <div class="container">
@@ -199,7 +223,7 @@ btnAudio.addEventListener('click' , () =>{
 })
 
 btnInfo.addEventListener('click' , () =>{
-  audioContent.innerHTML = ` <p class="Audio-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p> `;
+  audioContent.innerHTML = ` <p class="Audio-info"><?= $post['description']?></p> `;
 })
  </script>
 

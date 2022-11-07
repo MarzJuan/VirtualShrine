@@ -456,15 +456,17 @@ if(isset($_POST['post_add']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
-    $image = $_FILES['image']['name'];
-    //rename this image
-    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
-    $filename = time().'.'.$image_extension;
+    $imageCount = count ($_FILES['image']['name']);
+    for ($i=0;$i<$imageCount;$i++){
+        $imageName = $_FILES['image']['name'][$i];
+        $imageTempName = $_FILES['image']['tmp_name'][$i];
+        $targetPath = '../uploads/posts/'.$imageName;
+        if(move_uploaded_file($imageTempName, $targetPath)){
 
     $status = $_POST['status'] == true ? '0':'1';
 
     $query = "INSERT INTO posts(category_id, name, slug, description, year, object_type, image, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$description', '$year', '$object_type', '$filename', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+            ('$category_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -473,7 +475,6 @@ if(isset($_POST['post_add']))
         $sql_run = mysqli_query($con, $sql);
             if($sql_run)
             {
-                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$filename);
                 $_SESSION['message'] = "Post Created Successfully";
                 header('Location: post-add.php');
                 exit(0);
@@ -483,6 +484,8 @@ if(isset($_POST['post_add']))
         $_SESSION['message'] = "Something Went Wrong";
         header('Location: post-add.php');
         exit(0);
+    }
+        }
     }
 
 }

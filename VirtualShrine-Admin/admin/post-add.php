@@ -73,6 +73,16 @@ include('includes/header.php');
                                 <textarea name="description" id="summernote" required class="form-control" rows="4"></textarea>
                             </div>
 
+                            <div class="col-md-6 mb-3">
+                                <label for="">Year</label>
+                                <input type="text" name="year" required class="form-control">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="">Type of Object</label>
+                                <input type="text" name="object_type" required class="form-control">
+                            </div>
+
                             <div class="col-md-12 mb-3">
                                 <label for="">Meta Title</label>
                                 <input type="text" name="meta_title" max="200" required class="form-control">
@@ -90,7 +100,7 @@ include('includes/header.php');
                             
                             <div class="col-md-6 mb-3">
                                 <label for="">Image</label>
-                                <input type="file" name="image" class="form-control" required accept="image/*">
+                                <input type="file" name="image[]" class="form-control" multiple required accept="image/*">
                             </div>
 
                             <div class="col-md-6 mb-3">
