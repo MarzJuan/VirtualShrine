@@ -97,6 +97,7 @@ include('config/dbcon.php');
                 {
                 ?>
 <!-- <div class="container gallery-flex"> -->
+<a style="text-decoration: none;color: black;" href="GalleryInfo.php?id=<?= $post['id']?>">
         <div class="cards">
                 <div class="image">
                 <img src="../VirtualShrine-Admin/uploads/category/<?= $post['image'];?>" width="300px" height="300px" alt="Collection Image"/>
@@ -117,7 +118,7 @@ include('config/dbcon.php');
         <a href="GalleryInfo.php?id=<?= $post['id']?>">Read More</a>
         </div>
         </div>
-
+        </a>
         <?php
 
                 }

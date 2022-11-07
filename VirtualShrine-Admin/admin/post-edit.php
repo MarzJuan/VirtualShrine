@@ -105,7 +105,7 @@ include('includes/header.php');
                             <div class="col-md-6 mb-3">
                                 <label for="">Image</label>
                                 <input type="hidden" name="old_image" value="<?= $post_row['image'] ?>" />
-                                <input type="file" name="image" class="form-control">
+                                <input type="file" name="image" class="form-control" accept="image/*">
                             </div>
 
                             <div class="col-md-6 mb-3">
