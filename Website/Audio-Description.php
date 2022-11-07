@@ -96,7 +96,7 @@ include('config/dbcon.php');
                         </button>
                     </div>
                     <div class="audio-content" id="audio-content">
-                           <p class="Audio-info"><?= $post['description']?></p>
+                           <p class="s"><?= $post['description'];?></p>
                             </div>
                     </div>
                    <!--<div class="right-sidepanel-description even-columns">

@@ -2311,7 +2311,7 @@ section{
 
 .audio-nav{
     text-align: center;
-    
+    margin-left: 100px;
 }
 
 .audio-button{
@@ -2354,6 +2354,7 @@ margin-left: 150px;
 margin-top: 8px;
 text-align: justify;
 line-height: 1.5;
+position: relative;
 }
 
 .playlist-text{
