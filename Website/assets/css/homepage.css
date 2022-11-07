@@ -2311,7 +2311,8 @@ section{
 
 .audio-nav{
     text-align: center;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .audio-button{
@@ -2350,30 +2351,32 @@ section{
 
 .Audio-info{
 max-width: 50px;
-margin-left: 150px;
 margin-top: 8px;
+padding-right: 50px;
 text-align: justify;
 line-height: 1.5;
 position: relative;
 }
 
 .playlist-text{
-    margin: 20px 0 30px 150px;
+    margin: 20px 0 30px 50px;
 }
 
 .playlist-content{
     position: relative;
     overflow-y: scroll;
     height: 320px;
-    margin-left: 150px;
+    margin-left: 90px;
     width: 450px;
+    margin-left:50px;
 }
 
 .audio-player{
     display: inline-block;
     width: 450px;
     margin-top: 10px;
-    margin-left:150px;
+    margin-left:90px;
+    margin-left:50px;
 }
 
 

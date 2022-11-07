@@ -70,7 +70,26 @@ include('config/dbcon.php');
                 
             <div class="container">
                 <div class="Audio-Title"><b><?= $post['name']?></b></div>
-                <a style="margin-left: 150px;font-size: 30px;text-decoration: none;color: #016F9D;" href=""><i>Paniniil (Oppression)</i></a>
+                <a style="margin-left: 150px;font-size: 30px;text-decoration: none;color: #016F9D;" href=""><i>
+                     <?php
+                     if($post['category_id'] == 1)
+                     {
+                            echo "Kaginhawaan (Prosperity)";
+                     }
+                     if($post['category_id'] == 5)
+                     {
+                            echo "Paniniil (Oppression)";
+                     }
+                     if($post['category_id'] == 6)
+                     {
+                            echo "Pagbabagong-Puri (Revolution)";
+                     }
+                     if($post['category_id'] == 7)
+                     {
+                            echo "Pagbubuo ng Bayan(Making the Nation)";
+                     }
+                     ?>
+                     </i></a>
                 <div class="even-columns">
                     <div class="display-picture">
                         <img id="myImg" alt="<?= $post['name']?>" class="Audio-picture" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>"></image>
@@ -95,7 +114,7 @@ include('config/dbcon.php');
                         <button  id="button-audio" class="audio-button fs-secondary-heading active"><b>Audio</b>
                         </button>
                     </div>
-                    <div class="audio-content" id="audio-content">
+                    <div class="audio-content" id="audio-content" style="padding-right: 100px;padding-left: 100px;text-align: justify;">
                            <p class="s"><?= $post['description'];?></p>
                             </div>
                     </div>
