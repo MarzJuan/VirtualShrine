@@ -54,10 +54,10 @@ include('includes/header.php');
                                         <td>
                                             <?php
                                             if($row['status'] == 0){
-                                                echo 'Active';
+                                                echo '<span style="color:GREEN;text-align:center;">Active</span>';
                                             }
-                                            elseif($row['status'] == 1){
-                                                    echo 'Inactive';
+                                            if($row['status'] == 1){
+                                                echo '<span style="color:BLUE;text-align:center;">Inactive</span>';
                                             }
 
                                             ?>

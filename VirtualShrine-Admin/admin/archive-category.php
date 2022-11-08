@@ -5,23 +5,28 @@ include('includes/header.php');
 ?>
 
 <div class="container-fluid px-4">
-    <h4 class="mt-4"> </h4>
-    <h1>&nbsp;</h1>
+<h4 class="mt-4">Archived Gallery Category</h4>
+    <ol class="breadcrumb mb-4">
+    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <li class="breadcrumb-item">Archived Gallery Categories</li>                                                                                           
+    </ol>
+
+    <div class="row">
     <div class="col-md-12">
             <?php include('message.php'); ?>
             <div class="card shadow">
                 <div class="card-header">
-                <h4>Archived Category</h4>
+                <h4>Archived Gallery Category</h4>
                 </div>
                 <div class="card-body">
 
-                <table class="table table-bordered">
+                <table id="myDataTable" class="table table-bordered">
                     <thead>
                         <tr>
-                        <th>ID</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Recover</th>
+                            <th><center>ID</center></th>
+                            <th><center>Name</center></th>
+                            <th><center>Status</center></th>
+                            <th><center>Action</center></th>
                         </tr>
                     </thead>
                         <tbody>
@@ -43,7 +48,7 @@ include('includes/header.php');
                                         </td>
                                         <td>
                                             <form action="code-superAdmin.php" method="POST">
-                                                <button type="submit" name="archive_recover" value="<?=$item['id'] ?>" class="btn btn-success">Recover</button>
+                                            <center><button type="submit" name="assistant-admin-recover" value="<?=$row['id'];?>" class="btn btn-success">Recover</button></center>
                                             </form>
                                         </td>
                                     </tr>
