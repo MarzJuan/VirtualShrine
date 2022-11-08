@@ -69,7 +69,7 @@ include('includes/header.php');
                             
                             <div class="col-md-6 mb-3">
                             <label for="">Audio File</label>
-                            <input type="file" name="my_audio" class="form-control">
+                            <input type="file" name="my_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 
                             <div class="col-md-6 mb-3">

@@ -12,6 +12,7 @@ include('config/dbcon.php');
     <head>
     <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
        <link rel="stylesheet" href="assets/css/homepage.css">
+       <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 </head>
@@ -19,7 +20,7 @@ include('config/dbcon.php');
        <div class="container nav-background audio-guide-header">
        <div class="nav-wrapper">
                  <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
-                 <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                 <button class="mobile-nav-toggle noprint" aria-controls="primary-navigation" aria-expanded="false">
                         <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
                         <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
                         <span class="visually-hidden">Menu</span>
@@ -70,7 +71,8 @@ include('config/dbcon.php');
                 
             <div class="container">
                 <div class="Audio-Title"><b><?= $post['name']?></b></div>
-                <a style="margin-left: 150px;font-size: 30px;text-decoration: none;color: #016F9D;" href=""><i>
+                <div class="Audio-category" >
+                     <a style="margin-left: 0px;font-size: 20px;text-decoration: none;color: #016F9D;" href="GalleryInfo.php?id=<?= $post['category_id']?>"><i>
                      <?php
                      if($post['category_id'] == 1)
                      {
@@ -89,7 +91,24 @@ include('config/dbcon.php');
                             echo "Pagbubuo ng Bayan(Making the Nation)";
                      }
                      ?>
-                     </i></a>
+                     </i></a></div>
+
+                     <style>
+                     @media print {
+                     .noprint {
+                     visibility: hidden;
+                     }
+                     }
+                     </style>
+
+              <div style="margin-left: 700px;">
+                     <button id="share_button" type="button" class="extra-button noprint"><i class='bx bxs-share-alt'></i></button>
+                     <button type="button" id="printButton" name="printButton" class="extra-button noprint" onclick="window.print()"><i class='bx bxs-printer' ></i></button>
+                     <button onclick="copyToClipboard()" class="extra-button noprint"><i class='bx bx-link' ></i></button>
+              
+              </div>
+
+
                 <div class="even-columns">
                     <div class="display-picture">
                         <img id="myImg" alt="<?= $post['name']?>" class="Audio-picture" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>"></image>
@@ -110,12 +129,12 @@ include('config/dbcon.php');
      </div>
                     <div class="audio-playlist">
                        <div class="audio-nav">
-                        <button  id="button-info" class="info-button fs-secondary-heading active"><b>Information</b></button>
-                        <button  id="button-audio" class="audio-button fs-secondary-heading active"><b>Audio</b>
+                        <button  id="button-info" class="info-button fs-secondary-heading active noprint"><b>Information</b></button>
+                        <button  id="button-audio" class="audio-button fs-secondary-heading active noprint"><b>Audio</b>
                         </button>
                     </div>
                     <div class="audio-content" id="audio-content" style="padding-right: 100px;padding-left: 100px;text-align: justify;">
-                           <p class="s"><?= $post['description'];?></p>
+                           <p class="Audio-info"><?= $post['description'];?></p>
                             </div>
                     </div>
                    <!--<div class="right-sidepanel-description even-columns">
@@ -133,7 +152,7 @@ include('config/dbcon.php');
 }
 ?>
 
-<footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color">
+<footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color noprint">
         <div class="container">
                <div class="primary-footer-wrapper">
                       <div class="primary-footer-nav">
@@ -267,6 +286,16 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+}
+ </script>
+ <script>
+  function copyToClipboard(text) {
+  var inputc = document.body.appendChild(document.createElement("input"));
+  inputc.value = window.location.href;
+  inputc.select();
+  document.execCommand('copy');
+  inputc.parentNode.removeChild(inputc);
+  alert("Page URL Copied to Clipboard");
 }
  </script>
  <script src="assets/js/homepage.js" defer></script>

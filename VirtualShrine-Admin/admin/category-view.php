@@ -59,15 +59,15 @@ include('includes/header.php');
 
                                                 if($item['status'] ==0)
                                                 {
-                                                    echo "Visible";
+                                                    echo '<span style="color:GREEN;text-align:center;">Active</span>';
                                                 }
                                                 if($item['status'] ==1)
                                                 {
-                                                    echo "Hidden";
+                                                    echo '<span style="color:Blue;text-align:center;">Hidden</span>';
                                                 }
                                                 if($item['status'] ==2)
                                                 {
-                                                    echo "Archived";
+                                                    echo '<span style="color:RED;text-align:center;">Archived</span>';
                                                 }
 
 
