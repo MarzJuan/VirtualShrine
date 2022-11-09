@@ -525,6 +525,7 @@ box-shadow: 11px 6px 14px rgba(0, 0, 0, 0.5);
 .carousel-nav{
 display:flex;
 justify-content: center;
+gap:100px;
 padding: 310px 0;
 }
 
@@ -533,13 +534,13 @@ padding: 310px 0;
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    background: rgb(0 0 0 / 0.3);
+    background: white;
     margin: 12px 12px;
     cursor: pointer;
 }
 
  .current-slide{
-    background: #0C8695;
+    background: white;
 }
 
 
