@@ -64,7 +64,7 @@ include('config/dbcon.php');
                             </ul>
                      </li> <!--All the Galleries-->
                      
-                     <li class="menu-item"><a href="#">About</a></li>
+                     <li class="menu-item"><a href="about.php">About</a></li>
                 </div>
             </div>
        </div>
@@ -139,12 +139,10 @@ include('config/dbcon.php');
                   <div class="primary-footer-nav">
                        <nav class="footer-nav fs-500">
                               <ul class="flow" style="--flow-spacer: 1em " arial-label="footer " role="list">
-                                     <li><a href="#">About Us</a></li>
-                                     <li><a href="#">Services</a></li>
-                                     <li><a href="#">Museums</a></li>
-                                     <li><a href="#">Book a Tour</a></li>
-                                     <li><a href="#">Collections</a></li>
-                                     <li><a href="#">Virtual Tour</a></li>
+                                     <li><a href="about.php">About Us</a></li>
+                                         <li><a href="consent-form.php">Book a Tour</a></li>
+                                         <li><a href="Gallery.php">Collections</a></li>
+                                         <li><a href="VirtualTour.php">Virtual Tour</a></li>
                               </ul>
                        </nav>  
                   </div>

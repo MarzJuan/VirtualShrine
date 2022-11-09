@@ -43,77 +43,30 @@
                             </ul>
                      </li> <!--All the Galleries-->
                      
-                     <li class="menu-item"><a href="#">About</a></li>
+                     <li class="menu-item"><a href="about.php">About</a></li>
                 </div>
             </div>
        </div>
        </div>
+       <!-- END TOP NAV -->
+
        <section class="padding-block-600">
                      <div class="container">
+                     
                             <div class="even-columns">
                                    <div class="header-text flow">
                                           <h3 class="entry-text fs-600 fw-bold">Free Entry - Operation time : 8:00AM - 4:00PM</h3>
                                           <h1 class="fs-primary-heading fw-semi-bold color-primary-400">WELCOME TO THE<br> VIRTUAL SHRINE</h1>
                                           <a href="consent-form.php"><button class="book-button color-neutral-100"><u>Book Now</u></button></a>
                                    </div>
-                                   <!-- <div class="header-image flow">
-                                          <div class="box1">
-                                                        <image class="Home-Image1" src="Images/HomePage1.jpg"></image> 
-                                                        <div class="title-text1">EXHIBITS</div>
-                                                        <hr class="horizontal1">
-                                                        <div class="sub-text1">First Filipino Women President</div>
-                                          </div>
-                                          
-                                          <div class="box2">
-                                                 <image class="Home-Image2" src="Images/HomePage2.jpg"></image>
-                                                 <div class="title-text2">VIRTUAL TOURS</div>
-                                                 <hr class="horizontal1">
-                                                 <div class="sub-text2">EXPERIENCE 360</div>
-                                          
-                                          <div class="box3">
-                                                 <image class="Home-Image3" src="Images/HomePage3.jpg"></image>
-                                                 <div class="title-text3">EVENTS</div>
-                                                 <hr class="horizontal1">
-                                                 <div class="sub-text3">National Herritage Month</div>  -->
                                    </div>
                                 </div>
                      </div>
               </section>
   </header>
   <main>
-      <!-- <section class="section1 padding-block-700">
-              <div class="section1-title fs-secondary-heading fw-bold color-primary-400">WHAT TO SEE</div>
-              <div class="carousel">
-                     <button class="carousel-button carousel-button-left"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                   <path fill="currentColor" d="M18,11V13H10L13.5,16.5L12.08,17.92L6.16,12L12.08,6.08L13.5,7.5L10,11H18M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12Z" />
-                               </svg></button>
-                     <div class="carousel-track-container">
-                            <ul class="carousel-track">
-                                   <li class="carousel-slide current-slide"> <div class="carousel-image section1-image1">
-                                                 <div class="section1-Title1">Gallery</div>
-                                                 <div class="section1-text1">There are 5 free galleries at Casa Real ready <br> to be explored</div>
-                                          </div></li>
-                                   <li class="carousel-slide"> <div class="carousel-image section1-image2">
-                                                 <div class="section1-Title1">Group Visits</div>
-                                                 <div class="section1-text1">Many displays to see with friends, classmates, <br> and family.</div>
-                                                 </div></li>
-                                   <li class="carousel-slide"><div class="carousel-image section1-image3">
-                                                 <div class="section1-Title1">Exhibitions and Events</div>
-                                                 <div class="section1-text1">Discover what exhibitions and events are  <br> on the Casa Real Shrine.</div>
-                                                 </div></li>
-                            </ul>
-                     </div>
-                     <button class="carousel-button carousel-button-right"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                   <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" />
-                               </svg></image></button>
-                     
-                     <div class="carousel-nav">
-                            <button class="carousel-indicator current-slide"></button>
-                            <button class="carousel-indicator"></button>
-                            <button class="carousel-indicator"></button>
-                     </div>
-              </div>
-              </section >-->
+
+      
               <section class="section1 padding-block-700">
                      <div class="section1-title fs-secondary-heading fw-bold color-primary-400">WHAT TO SEE</div>
                      <div class="carousel">
@@ -149,12 +102,14 @@
                                                      </button>
                                    </div>
                             </div>
-                            
-                            
-                          
                      </div>
                      </section >
        
+              
+              
+
+              
+              
               <section class="section2 padding-block-900">
                             <div class="section2-title  fs-secondary-heading fw-bold color-primary-400">VIRTUALSHRINE NEXT TO YOU</div>
                             <div class="section2-flex">
@@ -178,10 +133,10 @@
                      <div class="primary-footer-nav">
                           <nav class="footer-nav fs-500">
                                  <ul class="flow" style="--flow-spacer: 1em " arial-label="footer " role="list">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="consent-form.php">Book a Tour</a></li>
-                                        <li><a href="Gallery.php">Collections</a></li>
-                                        <li><a href="VirtualTour.php">Virtual Tour</a></li>
+                                        <li><a href="about.php">About Us</a></li>
+                                         <li><a href="consent-form.php">Book a Tour</a></li>
+                                         <li><a href="Gallery.php">Collections</a></li>
+                                         <li><a href="VirtualTour.php">Virtual Tour</a></li>
                                  </ul>
                           </nav>  
                      </div>

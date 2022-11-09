@@ -122,14 +122,14 @@ section {
                 <div class="row">
                   <div class="col-md-4 col-12">
                     <div class="form-group">
-                      <label>Date of Visit</label>
+                      <label>Date of Visit<span style="color:red;">*</span></label>
                       <input type="text" name="date_visit" value="" id="datevisit" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Date of Visit" autocomplete="off" data-parsley-required="" data-parsley-required-message="Date of Visit is required" readonly="">
                     </div>
                   </div>
 
                  <div class="col-md-4 col-12">
                     <div class="form-group">
-                      <label>Session</label>
+                      <label>Session<span style="color:red;">*</span></label>
                       <select class="form-control" name="time_visit" data-parsley-required="" data-parsley-required-message="Please select a session">
                       <option value="">Select session</option>
                       <option value="AM">AM</option>
@@ -141,7 +141,7 @@ section {
 
                   <div class="col-md-4 col-12">
                     <div class="form-group">
-                      <label>No. of Visitor</label>
+                      <label>No. of Visitor<span style="color:red;">*</span></label>
                       <input class="form-control" name="no_visitors" data-parsley-required="" data-parsley-required-message="Please select number of pax">
                       </input>
                     </div>   
@@ -159,14 +159,14 @@ section {
                 <div class="row">   
                   <div class="col-md-6 col-12">             
                     <div class="form-group">
-                      <label for="email">First Name:
+                      <label for="email">First Name<span style="color:red;">*</span>
                       </label>
                       <input type="text" name="fname" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="First Name" autocomplete="off" data-parsley-required="" data-parsley-required-message="First Name is required">
                     </div>
                   </div>
                   <div class="col-md-6 col-12">
                     <div class="form-group">
-                      <label for="email">Last Name:
+                      <label for="email">Last Name<span style="color:red;">*</span>
                       </label>
                       <input type="text" name="lname" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Last Name" autocomplete="off" data-parsley-required="" data-parsley-required-message="Last Name is required">
                     </div>  
@@ -175,14 +175,14 @@ section {
                 <div class="row">   
                   <div class="col-md-6 col-12">             
                     <div class="form-group">
-                      <label for="pwd">Email:
+                      <label for="pwd">Email<span style="color:red;">*</span>
                       </label>
                       <input type="text" name="email" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Email" autocomplete="off" data-parsley-required="" data-parsley-type="email" data-parsley-error-message="Invalid Email">
                     </div>
                   </div>
                   <div class="col-md-6 col-12">
                     <div class="form-group">
-                      <label for="email">Mobile Number:
+                      <label for="email">Mobile Number<span style="color:red;">*</span>
                       </label>
                       <input type="text" name="phone_no" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Mobile Number" autocomplete="off" data-parsley-required="" data-parsley-type="digits" data-parsley-required-message="Mobile Number is required" data-parsley-type="digits">
                     </div> 
@@ -202,8 +202,8 @@ section {
 
 
                   <div class="col-md-12 mb-3">
-                    <label for="">Attach ID</label>
-                    <input type="file" name="id_image" class="form-control" accept=".jpg,.png,.gif,.webp"/>
+                    <label for="">Attach ID<span style="color:red;">*</span></label>
+                    <input type="file" name="id_image" class="form-control" accept=".jpg,.png,.gif,.webp" aria-required="true" aria-invalid="false" placeholder="Mobile Number" autocomplete="off" data-parsley-required="" data-parsley-type="digits" data-parsley-required-message="Attach ID is required" data-parsley-type="digits"/>
                   </div>
 
                   <div class="col-md-12 col-12">

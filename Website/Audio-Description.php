@@ -48,7 +48,7 @@ include('config/dbcon.php');
                                </ul>
                         </li> <!--All the Galleries-->
                         
-                        <li class="menu-item"><a href="#">About</a></li>
+                        <li class="menu-item"><a href="about.php">About</a></li>
                    </div>
                </div>
           </div>
@@ -133,7 +133,7 @@ include('config/dbcon.php');
                         <button  id="button-audio" class="audio-button fs-secondary-heading active noprint"><b>Audio</b>
                         </button>
                     </div>
-                    <div class="audio-content" id="audio-content" style="padding-right: 100px;padding-left: 100px;text-align: justify;">
+                    <div class="audio-content" id="audio-content" style="padding-right: 100px;padding-left: 100px;text-align: justify;text-indent: 50px;">
                            <p class="Audio-info"><?= $post['description'];?></p>
                             </div>
                     </div>
@@ -158,7 +158,7 @@ include('config/dbcon.php');
                       <div class="primary-footer-nav">
                            <nav class="footer-nav fs-500">
                                   <ul class="flow" style="--flow-spacer: 1em " arial-label="footer " role="list">
-                                         <li><a href="#">About Us</a></li>
+                                         <li><a href="about.php">About Us</a></li>
                                          <li><a href="consent-form.php">Book a Tour</a></li>
                                          <li><a href="Gallery.php">Collections</a></li>
                                          <li><a href="VirtualTour.php">Virtual Tour</a></li>
