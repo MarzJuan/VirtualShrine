@@ -45,7 +45,7 @@
                             </ul>
                      </li> <!--All the Galleries-->
                      
-                     <li class="menu-item"><a href="#">About</a></li>
+                     <li class="menu-item"><a href="about.php">About</a></li>
                 </div>
             </div>
        </div>
@@ -55,7 +55,7 @@
              <div class="Plan-text fs-primary-heading fw-semi-bold color-neutral-100 padding-block-900">Plan your visit</div>   
              <a href="consent-form.php"><button class="book-button-plan color-neutral-100"><u>Book Now</u></button></a>
 </header>
-<section class="guideLine-section">
+<!-- <section class="guideLine-section">
         <div class="guideline-flex container">
         <div class="visitor-guideline-text fs-700 fw-semi-bold padding-block-700">Visitor GuideLines</div>
         <div class="guide-cloumn2">
@@ -63,11 +63,11 @@
         <div class="Read-Guideline-link color-neutral-100 fs-650"><a href="#">Read Visitor Guidelines</a></div>
         </div>
         </div>
-        </section>
+        </section> -->
         <main class="main-content-plan">
                 <div class="plan-grid container">
                 <div class="left-content">
-                <div class="gen-text color-primary-400 fs-700 fw-semi-bold">General Admission</div>
+                <div class="gen-text color-primary-400 fs-700 fw-semi-bold"><b>General Admission</b></div>
                 <div class="Admission-text fs-650">Admission is <strong class="fw-bold">FREE.</strong> Ticket is not required.</div>
                 <div class="gen-sub-text fs-650">You are advised to book a scheduled slot in advance to
                      guarantee entry and help control the number of individuals 
@@ -77,7 +77,7 @@
                         number of visitors depends on the capacity. Please speak to   
                         a staff upon your arrival to inquire about availability.</div>
                 <hr class="plan-line">
-                <div class="gen-text color-primary-400 fs-700 fw-semi-bold"> Health and Safety <br> Guidelines</div>
+                <div class="gen-text color-primary-400 fs-700 fw-semi-bold"><b> Health and Safety Guidelines</b></div>
                 <div class="gen-sub-text fs-650">The safety of our staffs and visitors are at the top of our priority.
                      The Museum has updated its visitor guidelines and regulations to help keep you safe. 
                      Please be assured that the Casa Real Shrine is following guidelines issued by Department of 
@@ -90,17 +90,16 @@
                         <path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
                 </svg>
                 <div class="Opening">
-                    Openning Time
+                    Opening Time
                 </div>
                 <div class="right-subtext">Tuesday - Sunday (8:00AM - 4:00PM)</div>
-                <div class="right-subtext">See: <strong class="fw-bold">Opening hours</strong></div>
                 <svg class="inline-icon" style="width:53px;height:53px" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M13.09 20C13.21 20.72 13.46 21.39 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H18C19.11 2 20 2.9 20 4V13.09C19.67 13.04 19.34 13 19 13C18.66 13 18.33 13.04 18 13.09V4H13V12L10.5 9.75L8 12V4H6V20H13.09M23 19L20 16V18H16V20H20V22L23 19Z" />
                     </svg>
                     <div class="right-title-text">
                             Advanced booking advised
                         </div>
-                        <div class="right-subtext">See: <strong class="fw-bold">Booking Information</strong></div>
+                        
                 
                         <svg class="inline-icon" style="width:53px;height:53px" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z" />
@@ -109,13 +108,12 @@
                                    Casa Real Shrine of Malolos
                                 </div>
                                 <div class="right-subtext">Paseo Del Congreso, Liang, City of Malolos,<br> Bulacan</div>
-                            <div class="right-subtext">See: <strong class="fw-bold">Getting here</strong></div>
                             <div><button class="right-btn">Book a tour <svg class="right-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" />
                                 </svg></button></div>
-                            <div><button class="right-btn">View Museum Map <svg class="right-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <!-- <div><button class="right-btn">View Museum Map <svg class="right-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" />
-                                </svg></button></div>
+                                </svg></button></div> -->
                 </div>
                 </div>
                 </main>
@@ -125,12 +123,10 @@
                      <div class="primary-footer-nav">
                           <nav class="footer-nav fs-500">
                                  <ul class="flow" style="--flow-spacer: 1em " arial-label="footer " role="list">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Museums</a></li>
-                                        <li><a href="#">Book a Tour</a></li>
-                                        <li><a href="#">Collections</a></li>
-                                        <li><a href="#">Virtual Tour</a></li>
+                                        <li><a href="about.php">About Us</a></li>
+                                         <li><a href="consent-form.php">Book a Tour</a></li>
+                                         <li><a href="Gallery.php">Collections</a></li>
+                                         <li><a href="VirtualTour.php">Virtual Tour</a></li>
                                  </ul>
                           </nav>  
                      </div>

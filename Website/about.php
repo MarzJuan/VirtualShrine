@@ -11,7 +11,7 @@ include('config/dbcon.php');
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <head>
     <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
-       <link rel="stylesheet" href="assets/css/homepage.css">
+       <link rel="stylesheet" href="assets/css/about.css">
        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
@@ -49,7 +49,7 @@ include('config/dbcon.php');
                                </ul>
                         </li> <!--All the Galleries-->
                         
-                        <li class="menu-item"><a href="#">About</a></li>
+                        <li class="menu-item"><a href="about.php">About</a></li>
                    </div>
                </div>
           </div>
@@ -63,7 +63,7 @@ include('config/dbcon.php');
 <div class="about-container">
     <div class="about-title">
         <b>OUR ORGANIZATION</b>
-    </div><br>
+    </div><br><br>
 
     <section>
         <video id="slider" autoplay muted loop>
@@ -94,7 +94,7 @@ include('config/dbcon.php');
                       <div class="primary-footer-nav">
                            <nav class="footer-nav fs-500">
                                   <ul class="flow" style="--flow-spacer: 1em " arial-label="footer " role="list">
-                                         <li><a href="#">About Us</a></li>
+                                         <li><a href="about.php">About Us</a></li>
                                          <li><a href="consent-form.php">Book a Tour</a></li>
                                          <li><a href="Gallery.php">Collections</a></li>
                                          <li><a href="VirtualTour.php">Virtual Tour</a></li>
