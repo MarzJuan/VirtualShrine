@@ -7,5 +7,4 @@ if($_SESSION['auth_role'] != "0")
         exit(0);
     }
 
-
 ?>

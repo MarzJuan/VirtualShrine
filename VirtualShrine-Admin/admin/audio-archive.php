@@ -68,7 +68,7 @@ include('includes/header.php');
                                     </td>
                                         <td>
                                             <form action="code-superAdmin.php" method="POST">
-                                            <center><button type="submit" name="assistant-admin-recover" value="<?=$row['id'];?>" class="btn btn-success">Recover</button></center>
+                                            <center><button type="submit" name="audio_recover" value="<?=$audio['audio_id'];?>" class="btn btn-success">Recover</button></center>
                                             </form>
                                         </td>
                                     </tr>

@@ -1,7 +1,16 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
+
+<title>Gallery - VirtualShrine</title>
+       <meta name="MobileOptimized" content="width">
+       <meta name="HandheldFriendly" content="true">
+       <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <head>
-        <title>Gallery Page</title>
+<link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="stylesheet" href="assets/css/gallery.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -53,9 +62,8 @@
 <div class="even-columns">
 <div class="main-text-gallery">
 <div class="gen-text fs-700 color-primary-400 fw-bold">Explore the 5 galleries at the Casa Real Shrine  Museum from home.</div>
-<div class="Admission-text fs-650 fw-semi-bold">Our gallery sections provide a variety of interesting tools,
-     such as 360-degree virtual tours, object highlights, timelines, and facts.</div>
-<div class="gen-sub-text fs-650 fw-semi-bold">A list of galleries on the first and second levels is shown below.</div>
+<div class="Admission-text fs-650 fw-semi-bold">The VirtualShrine's collections represent our nation's shared political history.</div>
+<div class="gen-sub-text fs-650 fw-semi-bold">The scope of objects in VirtualShrine's collections is staggering - relics from the First Philippine Republic, memorabilia of Gen. Emilio Aguinaldo, relics from the wealthy families of Malolos, exhibits, a printing press of the Malolos Republic, and a display of the 21 Women of Malolos memorabilia. </div>
 </div>
 <div class="rightside-panel padding-block-700">
 
@@ -65,7 +73,7 @@
     <div><svg class="inline-icon" style="width:53px;height:53px" viewBox="0 0 24 24">
             <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
     </svg></div>
-    Openning Time
+    Opening Time
 </div>
 <div class="right-subtext fs-650 fw-regular">Tuesday - Sunday (8:00AM - 4:00PM)</div>
             <div><button class="right-btn">View Museum Map <svg class="right-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -75,23 +83,44 @@
 </div>
 </div>
 
+
+
 <div class="container gallery-info-grid">
+<?php
+                                    
+       $posts = "SELECT * FROM categories WHERE status='0' ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
+
+        if($check)
+       {
+           while($post = mysqli_fetch_assoc($posts_run))
+           {
+           ?>
+       
         <div class="grid-item">
+        <a style="text-decoration: none;color: black;" href="GalleryInfo.php?id=<?= $post['id']?>">
                 <div class="image">
-                <img src="Images/Img1.jpg">
+                <img src="../VirtualShrine-Admin/uploads/category/<?= $post['image'];?>" width="200px" height="300px" alt="Collection Image">
         </div>
         <div class="title fs-650">
-                Gallery Name
+        <h4><?= $post['name']?></h4>
         </div>
         <div class="des">
-        
-        <p>Short Information about the gallery displays here</p>
+        <?= $post['description']?></p>
         <br>
-        <a href="">Read More</a>
+        <a class="read-more" href="GalleryInfo.php?id=<?= $post['id']?>">Read More</a>
         </div>
         </div>
-        <!---------Card2--------->
-        <div class="grid-item ">
+        </a>
+        <?php
+
+                }
+        }
+
+?>
+        <!-- -------Card2------- -->
+        <!-- <div class="grid-item ">
                 <div class="image">
                 <img src="Images/Img2.jpg">
         </div>
@@ -104,10 +133,10 @@
         <br>
         <a href="">Read More</a>
         </div>
-        </div>
+        </div> -->
         
         <!---------Card3--------->
-        <div class="grid-item">
+        <!-- <div class="grid-item">
                 <div class="image">
                 <img src="Images/Img3.jpg">
         </div>
@@ -120,7 +149,7 @@
         <br>
         <a href="">Read More</a>
         </div>
-        </div>
+        </div> -->
         </div>
 
 

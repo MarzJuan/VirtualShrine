@@ -2,7 +2,7 @@
 include('authentication.php');
 include('middleware/superadminAuth.php');
 
-// RECOVER ARCHIVED POST
+// RECOVER ARCHIVED AUDIO
 
 if(isset($_POST['audio_recover']))
 {
