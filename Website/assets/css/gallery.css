@@ -56,7 +56,7 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 
 /* Box sizing rules */
@@ -288,10 +288,9 @@ section{
 
 .logo{
     height: 150px;
-    width: 300px;
-    position: abolute;
-    margin:0;
-    padding: 0;
+    width: 385px;
+    margin: 0;
+    padding-left: 148px;
 }
 
 
@@ -755,11 +754,13 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
 .Admission-text{
     margin-top:30px;
     margin-left:131px;
+    text-align: justify;
 }
 
 .gen-sub-text{
     margin: 25px;
     margin-left:131px;
+    text-align: justify;
 }
 
 
