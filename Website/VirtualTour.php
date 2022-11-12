@@ -8,13 +8,24 @@
 <head>
 <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 
-<link rel="stylesheet" href="assets/css/homepage.css">
+<link rel="stylesheet" href="assets/css/virtualtour.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 </head>
-    <header class="primary-header Virtual-header">
-    <div class="container">
-              <div class="nav-wrapper">
+<body>
+
+<div class="video-container">
+       <video autoplay muted loop class="back-video">
+            <source src="video/casareal.mp4" type="video/mp4">
+        </video>
+
+        <div class="virtual360-btn">
+        <a href="../VirtualTours/index.html"><button type="button">Go to Virtual 360</button></a>
+       </div>
+<div class="container nav-background audio-guide-header">
+    <div class="nav-wrapper">
+       
+
               <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
               <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                      <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
@@ -49,17 +60,12 @@
             </div>
        </div>
        </div>
-        <div class="container">
-             <div class="virtual-text fs-primary-heading fw-semi-bold color-neutral-100">Virtual Tours</div>
+       </div>
+
+
 </header>
 <main class="main-content-visit container">
-        <div class="Access-text fs-secondary-heading color-primary-400 padding-block-700 fw-bold">Access the tours</div>
-        <div class="flex-visit-container">
-        <!-- <div class="flex-item flex-item-1">
-            <div class="item-text">Virtual Lobby</div></div> -->
-        <div class="flex-item flex-item-2">
-        <a href="../VirtualTours/index.html"><div class="item-text">Virtual 360</div></div></a>
-        </div>
+        
         <div class="container">
         <div class="Visit-Gen-text1 color-primary-400 padding-block-700 fs-650">
                 The Casa Real Shrine Museum of Malolos virtual tours allow guests to enjoy self-guided, room-by-room 

@@ -87,6 +87,16 @@ include('includes/header.php');
                                 <textarea name="description" id="summernote" required class="form-control" rows="4"><?= $post_row['description'] ?></textarea>
                             </div>
 
+                            <div class="col-md-6 mb-3">
+                                <label for="">Year</label>
+                                <input type="text" name="year" value="<?= $post_row['year'] ?>" required class="form-control">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="">Type of Object</label>
+                                <input type="text" name="object_type" value="<?= $post_row['object_type'] ?>" required class="form-control">
+                            </div>
+
                             <div class="col-md-12 mb-3">
                                 <label for="">Meta Title</label>
                                 <input type="text" name="meta_title" value="<?= $post_row['meta_title'] ?>" max="200" class="form-control">

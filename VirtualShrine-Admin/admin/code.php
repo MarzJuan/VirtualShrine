@@ -370,7 +370,9 @@ if(isset($_POST['post_update']))
     $slug = $final_string;
 
     $description = $_POST['description'];
-    
+    $year = $_POST['year'];
+    $object_type = $_POST['object_type'];
+
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
@@ -398,12 +400,11 @@ if(isset($_POST['post_update']))
 
 
 
-    $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', image='$update_filename',
-                    meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+    $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
+            image='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
                     status='$status' WHERE id='$post_id' ";
     
     $query_run = mysqli_query($con, $query);
-
     
     if($query_run)
         {

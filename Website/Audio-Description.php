@@ -109,11 +109,16 @@ include('config/dbcon.php');
               </div>
 
 
-                <div class="even-columns">
+              <div class="even-columns">
                     <div class="display-picture">
                         <img id="myImg" alt="<?= $post['name']?>" class="Audio-picture" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>"></image>
                         <br>
-                    </div>
+              <div class="action-button">
+              <a id="download_button" type="button" href="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>" download class="extra-button download-btn noprint"><i class='bx bx-download'></i></a>
+              </div>
+              </div>
+
+              
 
        <!-- The Modal -->
        <div id="myModal" class="modal">
@@ -127,13 +132,14 @@ include('config/dbcon.php');
        <!-- Modal Caption (Image Text) -->
        <div id="caption"></div>
      </div>
+     
                     <div class="audio-playlist">
                        <div class="audio-nav">
                         <button  id="button-info" class="info-button fs-secondary-heading active noprint"><b>Information</b></button>
                         <button  id="button-audio" class="audio-button fs-secondary-heading active noprint"><b>Audio</b>
                         </button>
                     </div>
-                    <div class="audio-content" id="audio-content" style="padding-right: 100px;padding-left: 100px;text-align: justify;text-indent: 50px;">
+                    <div class="audio-content" id="audio-content">
                            <p class="Audio-info"><?= $post['description'];?></p>
                             </div>
                     </div>
@@ -145,12 +151,15 @@ include('config/dbcon.php');
             </div>
             </div>
         </section>
+
+       
         <?php
 
                 }
         }
 }
 ?>
+       
 
 <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color noprint">
         <div class="container">

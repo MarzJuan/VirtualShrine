@@ -1616,6 +1616,66 @@ form {
 
 }
 
+@media (max-width: 1060px){
+    .nav-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        height: 150px;
+        width: 184px;
+        margin: 0;
+        padding-left: 5px;
+    }
+    
+    .main-header .navigation .menu{
+        position: relative;
+        display: block;
+        color: #000;
+        min-width: 350px;
+        top: 0;
+        right: 0;
+        padding: 90px 50px;
+        overflow-y: auto;
+    }
+
+    .menu-item{
+        position: relative;
+    }
+
+    .menu-item .sub-menu{
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transform: translateX(10px);
+        background: #E3AD3F;
+        border-radius: 5px;
+        overflow: hidden;
+        display: none;
+    }
+
+    .menu-item:hover .sub-menu{
+        transform: translateX(10px);
+    }
+
+    .menu-item .sub-menu .sub-item{
+        box-shadow: none;
+    }
+
+    .menu-item .sub-menu .sub-item:hover{
+        background: none;
+    }
+
+    .menu-item .sub-menu .sub-item a:hover{
+        color: #517B79;
+        transition: 0.3s;
+    }
+
+}
+
 @media (max-width: 50em){
     
     .rightside-panel{
@@ -2310,7 +2370,7 @@ section{
 }
 
 .Audio-picture{
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 150px;
     height: 500px;
     width: 600px;
@@ -2375,6 +2435,12 @@ position: relative;
     width: 550px;
 }
 
+.audio-content{
+    padding-left: 55px;
+    text-align: justify;
+    text-indent: 50px;
+}
+
 .audio-player{
     display: inline-block;
     width: 500px;
@@ -2402,7 +2468,9 @@ position: relative;
 .mini-button{
     margin-left: 630px;
 }
-
+.action-button .extra-button{
+    padding-left: 150px;
+}
 @media (max-width: 50em){
     .Audio-category {
         margin-left: 185px;
@@ -2439,6 +2507,7 @@ position: relative;
         display: block;
     }
 }
+
 
 
 /*IMAGE MODAL*/

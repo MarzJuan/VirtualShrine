@@ -81,6 +81,7 @@ include('config/dbcon.php');
         <p>The <i>Museo ng Kasaysayang Pampulitika ng Pilipinas</i> (Museum of Philippine Political History) was inaugurated in 1995 and re-conceptualized two years later with the theme “The Filipino Struggle for Freedom.” The Museum thus traces the evolution of the Filipino nation-state and the emergence of its system of government and democratic traditions amid the backdrop of long struggles for independence. Miniature dioramas, theatrical backdrops, interactive terminals, and original artifacts recreate these periods, from the earliest communities to the Spanish and American colonial periods, through the Second World War until the present. Major events and figures in the country's political history are highlighted in the process.</p>
     </div>
 </div>
+</div>
 
 <!-- END OF PAGE CONTENT -->
 
@@ -138,6 +139,17 @@ include('config/dbcon.php');
             document.getElementById("slider").src = hmmmmmm;
         }
     </script>
+
+<script type="text/javascript">
+       //jquery for dropdown menus
+       $(document).ready(function(){
+              //toggle sub-menus
+              $(".sub-btn").click(function(){
+                     $(this).next(".sub-menu").slideToggle();
+              })
+       })
+</script>
+<script src="assets/js/homepage.js" defer></script>
 
        </body>
 </html>

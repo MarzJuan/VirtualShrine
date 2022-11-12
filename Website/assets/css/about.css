@@ -876,7 +876,7 @@ button{
         background: var(--clr-neutral-100);
         border-radius: var(--size-100);
         box-shadow: 0 0 1em rgb(0 0 0 / 50%);
-        z-index: 1;
+        z-index: 100;
 }
 
 .primary-header[data-overlay]::before{
@@ -1564,10 +1564,9 @@ form {
 
     .logo{
         height: 150px;
-        width: 345px;
-        position: center;
-        margin: 0;
-        padding-left: 157px;
+        width: 290px;
+        padding-left: 72px;
+        margin: auto;
     }
     
     .main-header .navigation .menu{
@@ -2715,7 +2714,88 @@ section .about-navigation li img:hover{
     .crs-about{
         padding-left: 70px;
         font-size: 0.9rem;
-        width: 670px;
+        width: 1020px;
+        -webkit-text-size-adjust: 100%;
+        color: #41505c;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .about-container{
+        --max-width: 11110px;
+        /* --padding: 1rem; */
+    
+        width: min(var(--max-width), 100% - (var(--padding) * 2 ));
+        margin-inline: auto;
+    }
+    .about-title{
+        font-size: 2rem;
+        line-height: 1.08;
+        font-weight: 600;
+        color: #101820;
+        padding-left: 115px;
+    }
+    
+    
+    section{
+        position: relative;
+        width: 100%;
+        height: 35vh;
+    }
+    
+    section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 246px;
+        margin-left: 70px;
+        object-fit: cover;
+    }
+    
+    section .about-navigation {
+        position: absolute;
+        bottom: 33px;
+        left: 37px;
+        transform: translateX(10%);
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section .about-navigation li{
+        list-style: none;
+        cursor: pointer;
+        margin: 0 10px;
+        border-radius: 4px;
+        background: #fff;
+        padding: 3px 3px 0;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+    section .about-navigation li:hover{
+        opacity: 1;
+    }
+    
+    section .about-navigation li img {
+        width: 70px;
+        transition: 0.5s;
+    }
+    
+    section .about-navigation li img:hover{
+        width: 100px;
+    }
+    
+    .crs-about {
+        padding-left: 70px;
+        font-size: 0.9rem;
+        width: 815px;
         -webkit-text-size-adjust: 100%;
         color: #41505c;
         line-height: 1.5;
