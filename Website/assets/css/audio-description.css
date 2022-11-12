@@ -2378,7 +2378,7 @@ section{
 
 .audio-nav{
     text-align: center;
-    margin-left: 50px;
+    margin-left: 18px;
 }
 
 .audio-button{
@@ -2415,8 +2415,8 @@ section{
     color: white;
   }
 
-.Audio-info{
-max-width: 50px;
+.Audio-info p{
+max-width: 30px;
 margin-top: 8px;
 padding-right: 50px;
 text-align: justify;
@@ -2432,18 +2432,24 @@ position: relative;
     position: relative;
     overflow-y: scroll;
     height: 320px;
-    width: 550px;
+    width: 520px;
 }
 
 .audio-content{
-    padding-left: 55px;
+    padding-left: 50px;
+    text-align: justify;
+    text-indent: 50px;
+}
+.audio-text{
+    padding-left: 50px;
+    padding-right: 100px;
     text-align: justify;
     text-indent: 50px;
 }
 
 .audio-player{
     display: inline-block;
-    width: 500px;
+    width: 480px;
     margin-top: 10px;
 }
 
@@ -2473,13 +2479,13 @@ position: relative;
 }
 @media (max-width: 50em){
     .Audio-category {
-        margin-left: 185px;
+        margin-left: 100px;
         font-size: 30px;
         text-decoration: none;
         color: #016F9D;
     }
     .Audio-Title {
-        margin-left: 185px;
+        margin-left: 100px;
         font-size: 40px;
     }
     .audio-nav {
@@ -2494,17 +2500,23 @@ position: relative;
     }
     .Audio-picture {
         margin-top: -124px;
-        margin-left: 182px;
+        margin-left: 100px;
         height: 390px;
         width: 400px;
     }
     .mini-button{
-        margin-left: 615px;
+        margin-left: 500px;
         padding-top: 30px;
         
     }
     .mini-button button{
         display: block;
+    }
+    .audio-text {
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: justify;
+        text-indent: 50px;
     }
 }
 

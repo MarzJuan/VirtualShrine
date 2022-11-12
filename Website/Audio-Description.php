@@ -139,9 +139,30 @@ include('config/dbcon.php');
                         <button  id="button-audio" class="audio-button fs-secondary-heading active noprint"><b>Audio</b>
                         </button>
                     </div>
-                    <div class="audio-content" id="audio-content">
+                    <div class="audio-text" id="audio-content">
                            <p class="Audio-info"><?= $post['description'];?></p>
                             </div>
+                     
+                            <?php
+       if(isset($_GET['audio_id']))
+       {              
+        $post_id = $_GET['audio_id'];                      
+        $posts = "SELECT a.*, c.name AS cname FROM audio a,categories c WHERE c.id = a.category_id AND a.status!='2'";
+        $posts_run = mysqli_query($con, $posts);
+
+        if(mysqli_num_rows($posts_run) > 0)
+          {
+                foreach($posts_run as $post)
+                {
+                ?>
+
+                     <audio id="button-audio" controls src="../VirtualShrine-Admin/uploads/audio/<?= $post['audio']?>">
+                     </audio>
+                     <?php
+}
+        }
+}
+?>
                     </div>
                    <!--<div class="right-sidepanel-description even-columns">
                         <span class="fs-secondary-heading">Information</span>
@@ -205,6 +226,9 @@ include('config/dbcon.php');
                </div>
         </div>
    </footer>
+
+
+
  <script type="text/javascript">
         //jquery for dropdown menus
         $(document).ready(function(){
@@ -221,7 +245,7 @@ let audioContent = document.querySelector('#audio-content');
 btnAudio.addEventListener('click' , () =>{
   audioContent.innerHTML = `<div class="audio-content" id="audio-content">
   <audio class="audio-player" controls>
-      <source src="Audio/Sample-audio.mp3" type="audio/mpeg">
+      <source src="../VirtualShrine-Admin/uploads/audio/<?= $post['audio']?>" type="audio/mpeg">
   </audio>
       <div class="playlist">
           <div class="playlist-text | fs-700 fw-semi-bold">
@@ -229,40 +253,8 @@ btnAudio.addEventListener('click' , () =>{
           </div>
           <div class="playlist-content">
               <div class="playlist1">
-              <image class="playlist-img" src="Images/audio-paylist_1.png"></image>
+              <image class="playlist-img" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image']?>"></image>
               <div class="playlist-title-text fs-650">Bajo la Campana</div>
-              </div>
-              <div class="playlist2">
-              <image class="playlist-img" src="Images/audio-paylist_2.png"></image>
-              <div class="playlist-title-text fs-650">Mannunggul Jar</div>
-              </div>
-              <div class="playlist3">
-              <image class="playlist-img" src="Images/audio-paylist_3.png"></image>
-              <div class="playlist-title-text fs-650">Japanese Katana of President Manuel Roxas</div>
-              </div>
-              <div class="playlist1">
-              <image class="playlist-img" src="Images/audio-paylist_1.png"></image>
-              <div class="playlist-title-text fs-650">Bajo la Campana</div>
-              </div>
-              <div class="playlist2">
-              <image class="playlist-img" src="Images/audio-paylist_2.png"></image>
-              <div class="playlist-title-text fs-650">Mannunggul Jar</div>
-              </div>
-              <div class="playlist3">
-              <image class="playlist-img" src="Images/audio-paylist_3.png"></image>
-              <div class="playlist-title-text fs-650">Japanese Katana of President Manuel Roxas</div>
-              </div>
-              <div class="playlist1">
-              <image class="playlist-img" src="Images/audio-paylist_1.png"></image>
-              <div class="playlist-title-text fs-650">Bajo la Campana</div>
-              </div>
-              <div class="playlist2">
-              <image class="playlist-img" src="Images/audio-paylist_2.png"></image>
-              <div class="playlist-title-text fs-650">Mannunggul Jar</div>
-              </div>
-              <div class="playlist3">
-              <image class="playlist-img" src="Images/audio-paylist_3.png"></image>
-              <div class="playlist-title-text fs-650">Japanese Katana of President Manuel Roxas</div>
               </div>
           </div>
       </div>

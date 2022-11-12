@@ -377,6 +377,22 @@ if(isset($_POST['post_update']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
+    $old_filename = $_POST['old_audio'];
+    $audio = $_FILES['audio']['name'];
+
+    $update_filename = "";
+    if($audio != NULL)
+    {
+    //rename this image
+        $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
+        $filename = time().'.'.$audio_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $old_filename;
+    }
    
 
     $old_filename = $_POST['old_image'];
@@ -401,7 +417,7 @@ if(isset($_POST['post_update']))
 
 
     $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
-            image='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+            image='$update_filename', audio='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
                     status='$status' WHERE id='$post_id' ";
     
     $query_run = mysqli_query($con, $query);
@@ -417,6 +433,13 @@ if(isset($_POST['post_update']))
                     unlink("../uploads/posts/'.$old_filename");
                 }
                 move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$update_filename);
+            }
+            if($audio != NULL)
+            {
+                if(file_exists('../uploads/audio/'.$old_filename)){
+                    unlink("../uploads/audio/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['audio']['tmp_name'], '../uploads/audio/'.$update_filename);
             }
             
                 $_SESSION['message'] = "Post Updated Successfully";
@@ -437,8 +460,26 @@ if(isset($_POST['post_update']))
 
 
 //ADD POST
-if(isset($_POST['post_add']))
+if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
 {
+
+    $audio_name = $_FILES['my_audio']['name'];
+    $tmp_name = $_FILES['my_audio']['tmp_name'];
+    $error = $_FILES['my_audio']['error'];
+
+    if ($error === 0) {
+    	$audio_ex = pathinfo($audio_name, PATHINFO_EXTENSION);
+
+    	$audio_ex_lc = strtolower($audio_ex);
+
+    	$allowed_exs = array("mp3", '3gp', 'm4a', 'wav', 'm3u', 'ogg');
+
+    	if (in_array($audio_ex_lc, $allowed_exs)) {
+    		
+    		$new_audio_name = uniqid("audio-", true). '.'.$audio_ex_lc;
+    		$audio_upload_path = '../uploads/audio/'.$new_audio_name;
+    		move_uploaded_file($tmp_name, $audio_upload_path);
+
     $category_id = $_POST['category_id'];
     
     $post_name = $_POST['name'];
@@ -466,8 +507,8 @@ if(isset($_POST['post_add']))
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, name, slug, description, year, object_type, image, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, name, slug, description, year, object_type, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$new_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -490,6 +531,8 @@ if(isset($_POST['post_add']))
     }
 
 }
+}
+    }
 }
 
 

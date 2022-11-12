@@ -1934,17 +1934,17 @@ section{
 .book-button-plan{
     background-color: #517B79;
     border: none;
-    border-radius: .75em;
-    padding: .75em 35px;
-    font-weight:var(--fw-semi-bold);
+    border-radius: 0.75em;
+    padding: 0.75em 35px;
+    font-weight: var(--fw-semi-bold);
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 1em 1em -1em #517B79;
-    margin-left: 50px;
+    box-shadow: 0 1em 1em -1em #517b79;
+    margin: 44px 0 0 549px;
 }
 
 .Plan-text{
-    margin:90px 0 0 50px;
+    margin: 27px 0 0 334px;
     font-size: 5rem;
 }
 

@@ -20,6 +20,9 @@ include('includes/header.php');
                 </div>
                 <div class="card-body">
 
+                <?php if (isset($_GET['error'])) {  ?>
+                <p><?=$_GET['error']?></p>
+                <?php } ?>
                 
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
@@ -101,6 +104,11 @@ include('includes/header.php');
                             <div class="col-md-6 mb-3">
                                 <label for="">Image</label>
                                 <input type="file" name="image[]" class="form-control" multiple required accept="image/*">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                            <label for="">Audio File</label>
+                            <input type="file" name="my_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 
                             <div class="col-md-6 mb-3">
