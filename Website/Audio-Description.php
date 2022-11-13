@@ -114,6 +114,7 @@ include('config/dbcon.php');
                         <img id="myImg" alt="<?= $post['name']?>" class="Audio-picture" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>"></image>
                         <br>
               <div class="action-button">
+                     
               <a id="download_button" type="button" href="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>" download class="extra-button download-btn noprint"><i class='bx bx-download'></i></a>
               </div>
               </div>
@@ -254,7 +255,7 @@ btnAudio.addEventListener('click' , () =>{
           <div class="playlist-content">
               <div class="playlist1">
               <image class="playlist-img" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image']?>"></image>
-              <div class="playlist-title-text fs-650">Bajo la Campana</div>
+              <div class="playlist-title-text fs-650"><?= $post['name']?></div>
               </div>
           </div>
       </div>
