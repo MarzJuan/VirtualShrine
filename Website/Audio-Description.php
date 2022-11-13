@@ -55,12 +55,11 @@ include('config/dbcon.php');
           </div>
    
        <section>
-
        <?php
        if(isset($_GET['id']))
        {              
-        $post_id = $_GET['id'];                         
-        $posts = "SELECT * FROM posts WHERE status='0' AND id='$post_id' ";
+        $post_id = $_GET['id'];               
+        $posts = "SELECT * FROM posts WHERE status='0' AND id='$post_id'";
         $posts_run = mysqli_query($con, $posts);
 
         if(mysqli_num_rows($posts_run) > 0)
@@ -133,37 +132,17 @@ include('config/dbcon.php');
        <!-- Modal Caption (Image Text) -->
        <div id="caption"></div>
      </div>
+
+
      
                     <div class="audio-playlist">
-                       <div class="audio-nav">
+                       <div class="audio-nav" id="audio-nav">
                         <button  id="button-info" class="info-button fs-secondary-heading active noprint"><b>Information</b></button>
-                        <button  id="button-audio" class="audio-button fs-secondary-heading active noprint"><b>Audio</b>
-                        </button>
+                        <button style="padding: 30px 85px;"  id="button-audio" class="info-button fs-secondary-heading noprint"><b>Audio</b></button>
                     </div>
                     <div class="audio-text" id="audio-content">
                            <p class="Audio-info"><?= $post['description'];?></p>
                             </div>
-                     
-                            <?php
-       if(isset($_GET['audio_id']))
-       {              
-        $post_id = $_GET['audio_id'];                      
-        $posts = "SELECT a.*, c.name AS cname FROM audio a,categories c WHERE c.id = a.category_id AND a.status!='2'";
-        $posts_run = mysqli_query($con, $posts);
-
-        if(mysqli_num_rows($posts_run) > 0)
-          {
-                foreach($posts_run as $post)
-                {
-                ?>
-
-                     <audio id="button-audio" controls src="../VirtualShrine-Admin/uploads/audio/<?= $post['audio']?>">
-                     </audio>
-                     <?php
-}
-        }
-}
-?>
                     </div>
                    <!--<div class="right-sidepanel-description even-columns">
                         <span class="fs-secondary-heading">Information</span>
@@ -171,7 +150,9 @@ include('config/dbcon.php');
             
                 </div>-->
             </div>
+            
             </div>
+
         </section>
 
        
@@ -181,6 +162,7 @@ include('config/dbcon.php');
         }
 }
 ?>
+
        
 
 <footer class="primary-footer padding-inline-auto padding-block-500 color-neutral-100 bg-color noprint">
@@ -248,18 +230,35 @@ btnAudio.addEventListener('click' , () =>{
   <audio class="audio-player" controls>
       <source src="../VirtualShrine-Admin/uploads/audio/<?= $post['audio']?>" type="audio/mpeg">
   </audio>
+
+
       <div class="playlist">
           <div class="playlist-text | fs-700 fw-semi-bold">
               Playlist
           </div>
           <div class="playlist-content">
-              <div class="playlist1">
+       <?php
+        $posts = "SELECT * FROM posts WHERE status='0' AND category_id='5'";
+        $posts_run = mysqli_query($con, $posts);
+
+        if(mysqli_num_rows($posts_run) > 0)
+          {
+                foreach($posts_run as $post)
+                {
+                ?>
+          <a href="Audio-Description.php?id=<?= $post['id']?>"><div class="playlist1">
               <image class="playlist-img" src="../VirtualShrine-Admin/uploads/posts/<?= $post['image']?>"></image>
               <div class="playlist-title-text fs-650"><?= $post['name']?></div>
-              </div>
+              </div></a>
+              <?php
+
+}
+}
+?>
           </div>
       </div>
       </div>`;
+
 })
 
 btnInfo.addEventListener('click' , () =>{
@@ -300,6 +299,19 @@ span.onclick = function() {
   alert("Page URL Copied to Clipboard");
 }
  </script>
+
+ <script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("audio-nav");
+var btns = header.getElementsByClassName("info-button");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
  <script src="assets/js/homepage.js" defer></script>
 </body>
 </html>

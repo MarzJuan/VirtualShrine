@@ -2369,24 +2369,30 @@ section{
     color: #016F9D;
 }
 
-
 .Audio-picture{
+    padding-left: 100px;
+    padding-right: 100px;
     margin-top: 10px;
     margin-left: 150px;
     height: 500px;
     width: 600px;
+    border: 1px solid #555;
 }
 
 .audio-nav{
     text-align: center;
-    margin-left: 18px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-right: 0px;
+    margin-top: -139px;
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .audio-button{
     background-color: white; /* Green */
     border: none;
     color: black;
-    padding: 30px 90px;
+    padding: 30px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -2394,7 +2400,7 @@ section{
     transition-duration: 0.4s;
 }
   
-  .audio-button:hover {
+.active, .audio-button:hover {
     background-color: #E3AD3F; /* Green */
     color: white;
   }
@@ -2411,7 +2417,7 @@ section{
     transition-duration: 0.4s;
 }
 
-  .info-button:hover {
+.active, .info-button:hover {
     background-color: #E3AD3F; /* Green */
     color: white;
   }
@@ -2433,25 +2439,31 @@ position: relative;
     position: relative;
     overflow-y: scroll;
     height: 320px;
-    width: 520px;
+    width: 500px;
+    border: 1px solid #555 50px;
 }
 
 .audio-content{
     padding-left: 50px;
     text-align: justify;
     text-indent: 50px;
+
 }
 .audio-text{
     padding-left: 50px;
+    margin-left: 20px;
     padding-right: 100px;
     text-align: justify;
     text-indent: 50px;
+    padding-top: 57px;
 }
 
 .audio-player{
     display: inline-block;
     width: 480px;
     margin-top: 10px;
+    margin-bottom: 30px;
+    padding-right: 63px;
 }
 
 
@@ -2497,7 +2509,7 @@ position: relative;
        margin-left: -6px;
     }
     .audio-content{
-        margin-left: -9px;
+        margin-left: -117px;
     }
     .Audio-picture {
         margin-top: -124px;
@@ -2553,7 +2565,7 @@ position: relative;
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 500px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -2636,6 +2648,15 @@ position: relative;
         ::-webkit-scrollbar {
             display: none;
         }
+        .logo {
+            height: 150px;
+            width: 350px;
+            margin: 0;
+            padding-left: 11rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .Audio-Title {
             margin-top: -100px;
@@ -2658,6 +2679,9 @@ position: relative;
             width: 50%;
             height: 400px;
             width: 300px;
+            border: none;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .Audio-info{
@@ -2666,6 +2690,14 @@ position: relative;
             margin-top: -100px;
             text-align: justify;
             line-height: 1.5;
+            }
+            .audio-text {
+                padding-left: 50px;
+                margin-left: 20px;
+                padding-right: 100px;
+                text-align: justify;
+                text-indent: 50px;
+                padding-top: 100px;
             }
             
         

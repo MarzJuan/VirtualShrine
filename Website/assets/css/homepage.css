@@ -523,10 +523,10 @@ box-shadow: 11px 6px 14px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-nav{
-display:flex;
-justify-content: center;
-gap:100px;
-padding: 310px 0;
+    display: flex;
+    justify-content: center;
+    gap: 825px;
+    padding: 150px 0;
 }
 
 .carousel-indicator{
@@ -682,8 +682,7 @@ padding-top: 30px;
 }
 
 .section2-text{
-    margin-top: 150px;
-    margin-left: 30px;
+    margin-top: 176px;
 }
 
 .section2-btn{
@@ -696,19 +695,19 @@ padding-top: 30px;
 }
 
 .section2-btn1{
-    margin-top:20px;
-    margin-left:150px;
-    padding: 10px 25px;
-    border:none;
+    margin-top: 20px;
+    margin-left: 150px;
+    padding: 10px 17px;
+    border: none;
     border-radius: 5px;
 
 }
 
 .section2-btn2{
-    margin-top:20px;
-    margin-left:120px;
-    padding: 10px 20px;
-    border:none;
+    margin-top: 20px;
+    margin-left: 120px;
+    padding: 10px 13px;
+    border: none;
     border-radius: 5px;
 }
 
@@ -1029,7 +1028,10 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
 .fs-620{ font-size: var(--fs-620);
 }
 .fs-650{ font-size: var(--fs-650);}
-.fs-700{ font-size: var(--fs-700);}
+.fs-700{ 
+    font-size: 25px;
+    text-align: center;
+}
 .fs-800{ font-size: var(--fs-800);}
 .fs-900{ font-size: var(--fs-900);}
 
@@ -1507,7 +1509,9 @@ form {
 
 .gen-sub-text{
     margin: 25px;
-    margin-left:131px;
+    margin-left: 131px;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 .Opening{
@@ -1932,19 +1936,22 @@ section{
 }
 
 .book-button-plan{
-    background-color: #517B79;
+    background-color: #E3AD3F;
     border: none;
-    border-radius: 0.75em;
-    padding: 0.75em 35px;
+    border-radius: 50px;
+    padding: 1em 55px;
     font-weight: var(--fw-semi-bold);
     cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 1em 1em -1em #517b79;
     margin: 44px 0 0 549px;
 }
 
+.book-button-plan u{
+    text-decoration: none;
+    font-size: 15px;
+}
+
 .Plan-text{
-    margin: 27px 0 0 334px;
+    margin: 27px 0 0 362px;
     font-size: 5rem;
 }
 

@@ -1624,7 +1624,7 @@ form {
     border: none;
     position: absolute;
     margin-top: 350px;
-    margin-left: 580px;
+    margin-left: 600px;
     border-radius: 50px;
     padding: 14px 70px;
     background-color: #E3AD3F;
@@ -1641,52 +1641,7 @@ form {
     text-decoration: none;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
-    .logo {
-        height: 150px;
-        width: 300px;
-        position: absolute;
-        margin-top: -50px;
-        padding-left: var(--size-800);
-    }
-    .virtual360-btn button {
-        margin-top: 350px;
-        margin-left: 150px;
-    }
-    .virtual360-btn button:hover{
-        background-color: #800000;
-        padding: 20px 76px;
-        margin-top: 345px;
-        margin-left: 145px;
-        font-size: 23px;
-    }
-    .virtual360-btn a{
-        text-decoration: none;
-    }
-    .Visit-Gen-text1 {
-        margin-left: 63px;
-        margin-right: 55px;
-        text-align: justify;
-        margin-top: -119px;
-    }
-    .Virtul-tour-title {
-        margin-left: 67px;
-        margin-right: 150px;
-    }
-    .tips {
-        margin-left: 88px;
-        margin-right: 55px;
-        text-align: justify;
-    }
-    .note {
-        margin-right: 55px;
-        margin-left: 65px;
-        line-height: 1.5;
-        text-align: justify;
-    }
-}
-
-@media screen and (min-width: 769) and (max-width: 1024px){
+@media screen and (max-width: 1024px){
     .logo {
         height: 150px;
         width: 232px;
@@ -1738,3 +1693,49 @@ form {
         text-align: justify;
     }
 }
+
+@media screen and (max-width: 768px){
+    .logo {
+        height: 150px;
+        width: 251px;
+        position: absolute;
+        margin-top: -50px;
+        padding-left: 3rem;
+    }
+    .virtual360-btn button {
+        margin-top: 350px;
+        margin-left: 103px;
+    }
+    .virtual360-btn button:hover{
+        background-color: #800000;
+        padding: 20px 76px;
+        margin-top: 345px;
+        margin-left: 145px;
+        font-size: 23px;
+    }
+    .virtual360-btn a{
+        text-decoration: none;
+    }
+    .Visit-Gen-text1 {
+        margin-left: 63px;
+        margin-right: 55px;
+        text-align: justify;
+        margin-top: -119px;
+    }
+    .Virtul-tour-title {
+        margin-left: 67px;
+        margin-right: 150px;
+    }
+    .tips {
+        margin-left: 88px;
+        margin-right: 55px;
+        text-align: justify;
+    }
+    .note {
+        margin-right: 55px;
+        margin-left: 65px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+}
+
