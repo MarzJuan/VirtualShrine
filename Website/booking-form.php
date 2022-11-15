@@ -61,7 +61,7 @@ section {
         
          $(function() {           
             $( "#datevisit" ).datepicker({
-                dateFormat: 'dd MMMM yyyy',
+                dateFormat: 'dd MM yy',
                 minDate: +1,
                 maxDate: '+90D',
                 beforeShowDay : DisableDates
@@ -77,7 +77,7 @@ section {
             var holidays = ["01\/04\/2021","02\/04\/2021","03\/04\/2021","27\/03\/2021","28\/03\/2021","20\/03\/2021","21\/03\/2021","23\/03\/2021","24\/03\/2021","25\/03\/2021","26\/03\/2021","30\/03\/2021","31\/03\/2021","04\/04\/2021","05\/04\/2021","06\/04\/2021","07\/04\/2021","08\/04\/2021","09\/04\/2021","12\/04\/2021","13\/04\/2021","14\/04\/2021","15\/04\/2021","16\/04\/2021","19\/04\/2021","20\/04\/2021","21\/04\/2021","22\/04\/2021","23\/04\/2021","26\/04\/2021","27\/04\/2021","28\/04\/2021","29\/04\/2021","30\/04\/2021","01\/05\/2021","03\/05\/2021","04\/05\/2021","05\/04\/2021","06\/05\/2021","17\/06\/2021","18\/06\/2021","25\/07\/2021","24\/07\/2021","27\/07\/2021","28\/07\/2021","29\/07\/2021","30\/07\/2021","31\/07\/2021","17\/10\/2021","16\/10\/2021","25\/12\/2021","01\/01\/2022","05\/02\/2022","20\/04\/2022","14\/04\/2022","15\/04\/2022","16\/04\/2022","03\/05\/2022","27\/06\/2022","28\/06\/2022","29\/06\/2022","30\/06\/2022","01\/07\/2022","02\/07\/2022","03\/07\/2022","04\/07\/2022","05\/07\/2022"]
             function DisableDates(date) {
 
-              var string = jQuery.datepicker.formatDate('dd MMMM yyyy', date);
+              var string = jQuery.datepicker.formatDate('dd MM yy', date);
               var day = date.getDay();
               return [ ( day !== 1 && holidays.indexOf(string) == -1), "" ];
             }
@@ -203,13 +203,13 @@ section {
 
                   <div class="col-md-12 mb-3">
                     <label for="">Attach ID<span style="color:red;">*</span></label>
-                    <input type="file" name="id_image" class="form-control" accept=".jpg,.png,.gif,.webp" aria-required="true" aria-invalid="false" placeholder="Mobile Number" autocomplete="off" data-parsley-required="" data-parsley-type="digits" data-parsley-required-message="Attach ID is required" data-parsley-type="digits"/>
+                    <input type="file" name="id_image" class="form-control" accept=".jpg,.png,.gif,.webp" aria-required="true" aria-invalid="false" data-parsley-required-message="Attach ID is required"/>
                   </div>
 
                   <div class="col-md-12 col-12">
                     <div class="form-group">
                       <label for="email">Name of Company/Agency (If applicable)</label>
-                      <input type="text" name="org_name" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Name of Company/Agency">
+                      <input type="text" name="org_name" value="" class="form-control input-md" aria-invalid="false" placeholder="Name of Company/Agency">
                     </div> 
                   </div>                
                       <!-- <div class="col-md-6 col-12">   
