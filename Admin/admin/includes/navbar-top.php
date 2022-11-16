@@ -120,7 +120,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="user-profile.php">
+              <a class="dropdown-item d-flex align-items-center" href="user-profile.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
