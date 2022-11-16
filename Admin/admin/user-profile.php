@@ -38,7 +38,7 @@ include('includes/header.php');
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
               <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Kevin Anderson</h2>
+              <h2><?= $user['fname'].' '.$user['lname']?></h2>
               <h3>
                 <?php 
                   if($user['role_as'] == 0){echo "Head Admin";} 
@@ -83,17 +83,17 @@ include('includes/header.php');
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                    <div class="col-lg-9 col-md-8"><?= $user['fname'].' '.$user['lname']?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Username</div>
-                    <div class="col-lg-9 col-md-8">Web Designer</div>
+                    <div class="col-lg-9 col-md-8"><?= $user['username']?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    <div class="col-lg-9 col-md-8"><?= $user['email']?></div>
                   </div>
 
                 </div>
