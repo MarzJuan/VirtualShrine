@@ -50,7 +50,7 @@
       <hotspot skinid="ht_node" tilt="0.39" url="{node3}" use3D="0" id="Point04" customimageheight="150" pan="-286.52" distance3D="571.503" fov="10" title="President Hall" target="$fwd" customimagewidth="100" description="" customimage="media/next.png"/>
       <hotspot skinid="ht_node" tilt="-2.81" url="{node5}" use3D="0" id="Point05" customimageheight="150" pan="-178.52" distance3D="571.503" fov="10" title="" target="$fwd" customimagewidth="100" description="" customimage="media/next.png"/>
       <hotspot skinid="ht_url" tilt="5.25" url="https://www.facebook.com/CasaRealMalolos" use3D="0" id="Point06" customimageheight="70" pan="-41.4" distance3D="697.233" fov="10" title="Casa Real Facebook" target="_blank" customimagewidth="122" description="" customimage="media/298455892_489108556550542_7620537028177388276_n.jpg"/>
-      <hotspot skinid="ht_url" tilt="-2.07" url="http://localhost/virtualshrine/website/consent-form.php" use3D="0" id="Point07" customimageheight="70" pan="-252.01" distance3D="502.922" fov="10" title="BOOK NOW!" target="_blank" customimagewidth="88" description="" customimage="media/book.png"/>
+      <hotspot skinid="ht_url" tilt="-2.07" url="https://virtualshrine.online/Website/consent-form.php" use3D="0" id="Point07" customimageheight="70" pan="-252.01" distance3D="502.922" fov="10" title="BOOK NOW!" target="_blank" customimagewidth="88" description="" customimage="media/book.png"/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="20" zoomoutpause="1" zoomspeed="2" type="crossdissolve" zoomout="0" zoomafterinfov="90" blendtime="1" softedge="0" blendcolor="0x000000" enabled="1" zoomin="0" zoomfov="20"/>
