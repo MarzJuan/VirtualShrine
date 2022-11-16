@@ -41,7 +41,7 @@
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Visit<i class="fas fa-angle-down"></i></a> <!--Plan your Visit, Book a visit, Audio Guide-->
                             <ul class="sub-menu">
-                                   <li class="sub-item"><a href="Plan2.php">Plan Your Visit</a></li>
+                                   <li class="sub-item"><a href="Plan.php">Plan Your Visit</a></li>
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
                             </ul>
                      </li>
