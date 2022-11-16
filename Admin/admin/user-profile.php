@@ -5,6 +5,20 @@ include('includes/header.php');
 
 <main id="main" class="main">
 
+<?php
+    if(isset($_GET['id']))
+        {  
+            $user_id = $_GET['id'];
+            $users = "SELECT * FROM users WHERE id='$user_id'";
+            $user_run = mysqli_query($con, $users);
+
+
+            if(mysqli_num_rows($user_run) > 0)
+            {
+                while($user = mysqli_fetch_assoc($user_run))
+                {
+                ?>
+
     <div class="pagetitle">
       <h1>Profile</h1>
       <nav>
@@ -172,6 +186,12 @@ include('includes/header.php');
 
   </main><!-- End #main -->
 
+  <?php
+                }
+            }
+        }
+
+?>
 
   
 <?php
