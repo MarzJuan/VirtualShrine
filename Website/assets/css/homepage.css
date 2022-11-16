@@ -802,7 +802,7 @@ button{
 
 @media (max-width: 50em){
     .main-header{
-        padding-bottom: 100px;
+        padding-bottom: 0px;
     }
 
     .header-text{
@@ -869,7 +869,7 @@ button{
     .primary-navigation{
         display: none;
         position: fixed;
-        padding: var(--size-800);
+        padding: 10px;
         inset: 7rem var(--size-400) auto;
         max-width: 25rem;
         margin-inline: auto;
@@ -888,7 +888,7 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
 
 .nav-list{
  display: grid;
- gap: var(--size-700);
+ gap: 6px;
  text-align: center;
  margin-inline: auto;
  font-weight: var(--fw-bold);
@@ -996,15 +996,16 @@ background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8))
     font-weight: var(--fw-regular);
 }
 .fw-semi-bold{
-    font-weight: var(--fw-semi-bold);
+    font-weight: bolder;
 }
 .fw-bold{
     font-weight: var(--fw-bold);
 }
 /*font sizes*/
 .fs-primary-heading{
-    font-size: var(--fs-primary-heading);
+    font-size: 20px;
     line-height: 1.1;
+    margin-left: -50px;
 }
 .fs-secondary-heading{
     font-size: var(--fs-secondary-heading);
@@ -1570,7 +1571,7 @@ form {
     .logo{
         height: 150px;
         width: 290px;
-        padding-left: 72px;
+        padding-left: 5px;
         margin: auto;
     }
     
@@ -1932,7 +1933,8 @@ section{
 }
 
 .entry-text{
-    margin-left: 4px;
+    margin-left: -70px;
+    margin-top: -10rem;
 }
 
 .book-button-plan{
@@ -2228,6 +2230,8 @@ section{
         border-radius: 5px;
         overflow: hidden;
         display: none;
+        margin-left: -13px;
+        margin-right: 8px;
     }
 
     .menu-item:hover .sub-menu{
