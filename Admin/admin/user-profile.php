@@ -47,12 +47,7 @@ include('includes/header.php');
               </h3>
             </div>
           </div>
-          <?php
-                }
-            }
-        }
 
-?>
         </div>
 
         <div class="col-xl-8">
@@ -188,7 +183,12 @@ include('includes/header.php');
         </div>
       </div>
     </section>
+    <?php
+                }
+            }
+        }
 
+?>
   </main><!-- End #main -->
 
 
