@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2022 at 06:46 AM
+-- Generation Time: Nov 18, 2022 at 07:24 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -322,7 +322,8 @@ INSERT INTO `auditlog` (`id`, `username`, `action`, `created_at`, `time`) VALUES
 (273, 'kristhayne', 'Archived a Admin Data', '2022-11-15 02:20:45', '02:20:45'),
 (274, 'kristhayne', 'Archived a Admin Data', '2022-11-15 02:22:00', '02:22:00'),
 (275, 'kristhayne', 'Added a New Admin', '2022-11-15 06:16:53', '06:16:53'),
-(276, 'Nathan_C', 'Updated a Gallery Content', '2022-11-15 06:19:53', '06:19:53');
+(276, 'Nathan_C', 'Updated a Gallery Content', '2022-11-15 06:19:53', '06:19:53'),
+(277, 'kristhayne', 'Updated a Gallery Content', '2022-11-18 14:17:37', '14:17:37');
 
 -- --------------------------------------------------------
 
@@ -541,7 +542,7 @@ ALTER TABLE `audio`
 -- AUTO_INCREMENT for table `auditlog`
 --
 ALTER TABLE `auditlog`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=278;
 
 --
 -- AUTO_INCREMENT for table `bookings`
