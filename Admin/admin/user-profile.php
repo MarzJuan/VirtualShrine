@@ -1,17 +1,6 @@
 <?php
 include('authentication.php');
 include('includes/header.php');
-
-$user_pic = "../uploads/user/".$username.".jpg";
-$default = "../uploads/user/defaultProfile.jpeg";
-
-if(file_exists($user_pic)){
-  $profile_picture = $user_pic;
-}
-else
-{
-  $profile_picture = $default;
-}
 ?>
 
 <main id="main" class="main">
@@ -49,7 +38,13 @@ else
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="<?php $user['profileImage']; ?>" alt="Profile" class="rounded-circle">
+            <?php
+            $image = $user['profileImage'];
+            if (empty($image))
+            $image = "../../uploads/user/Default_pfp.jpeg";
+            
+            echo '<img src="../uploads/user/'.$image.'" alt="Profile" class="rounded-circle">'
+            ?>
               <h2><?= $user['fname'].' '.$user['lname']?></h2>
               <h3>
                 <?php 
@@ -108,14 +103,14 @@ else
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form action="user-profile-code.php" method="POST">
+                  <form action="user-profile-code.php" method="POST" enctype='multipart/form-data'>
                     
                   <input type="hidden" name="user_id" value="<?=$user['id']?>">
                     <div class="row mb-3">
                         <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                     <div class="col-md-8 col-lg-9">
-                        <input type="hidden" name="old_image" value="<?= $post_row['image'] ?>" />
-                        <input type="file" name="image" class="form-control" accept="image/*">
+                        <input type="hidden" name="old_image" value="<?= $user['profileImage'] ?>" />
+                        <input type="file" name="profileImage" class="form-control" accept="image/*">
                       </div>
                     </div>
 
@@ -156,7 +151,9 @@ else
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form>
+                  <form action="user-profile-code.php" method="POST">
+
+                  <input type="hidden" name="user_id" value="<?=$user['id']?>">
 
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
@@ -180,7 +177,7 @@ else
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Change Password</button>
+                      <button name="change_pass" type="submit" class="btn btn-primary">Change Password</button>
                     </div>
                   </form><!-- End Change Password Form -->
 
