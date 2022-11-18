@@ -1,6 +1,17 @@
 <?php
 include('authentication.php');
 include('includes/header.php');
+
+$user_pic = "../uploads/user/".$username.".jpg";
+$default = "../uploads/user/defaultProfile.jpeg";
+
+if(file_exists($user_pic)){
+  $profile_picture = $user_pic;
+}
+else
+{
+  $profile_picture = $default;
+}
 ?>
 
 <main id="main" class="main">
@@ -18,7 +29,6 @@ include('includes/header.php');
                 while($user = mysqli_fetch_assoc($user_run))
                 {
                 ?>
-
     <div class="pagetitle">
       <h1>Profile</h1>
       <nav>
@@ -39,7 +49,7 @@ include('includes/header.php');
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <img src="<?php if(isset($profile_picture)) echo $profile_picture; ?>" alt="Profile" class="rounded-circle">
               <h2><?= $user['fname'].' '.$user['lname']?></h2>
               <h3>
                 <?php 
@@ -98,96 +108,48 @@ include('includes/header.php');
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
-                  <form action="user-profile.php" method="POST" enctype='multipart/form-data'>
+                  <form action="user-profile-code.php" method="POST">
+                    
+                  <input type="hidden" name="user_id" value="<?=$user['id']?>">
                     <div class="row mb-3">
-                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                      <div class="col-md-8 col-lg-9">
-                        <img src="../assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </div>
+                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                    <div class="col-md-8 col-lg-9">
+                        <input type="hidden" name="old_image" value="<?= $post_row['image'] ?>" />
+                        <input type="file" name="image" class="form-control" accept="image/*">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="fname" class="col-md-4 col-lg-3 col-form-label">First Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fname" type="text" class="form-control" id="fname" value="<?= $user['fname']?>">
+                        <input  type="text" name="fname" class="form-control" id="fname" value="<?= $user['fname']?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="lname" class="col-md-4 col-lg-3 col-form-label">Last Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="lname" type="text" class="form-control" id="lname" value="<?= $user['lname']?>">
+                        <input type="text" name="lname" class="form-control" id="lname" value="<?= $user['lname']?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="username" class="col-md-4 col-lg-3 col-form-label">Username</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="username" type="text" class="form-control" id="username" value="<?= $user['lname']?>">
+                        <input type="text" name="username" class="form-control" id="username" value="<?= $user['username']?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="<?= $user['email']?>">
+                        <input type="email" name="email" class="form-control" id="Email" value="<?= $user['email']?>">
                       </div>
                     </div>
 
                     <div class="text-center">
                       <button type="submit" name="save_changes" class="btn btn-primary">Save Changes</button>
                     </div>
-
-                    <?php
-                    if(isset($_POST['save_changes']))
-                    {
-                      $user_id = ['id'];
-                      $fname = ['fname'];
-                      $lname = ['lname'];
-                      $username = ['username'];
-                      $email = ['email'];
-
-                      $checkusername = "SELECT username FROM users WHERE username='$username' AND id!='$user_id'";
-                      $checkusername_run = mysqli_query($con, $checkusername);
-
-                      if(mysqli_num_rows($checkusername_run) > 0)
-                      {
-                          //Username already exists
-                          $_SESSION['message'] = "Username already exists";
-                          header('Location: assistant-admin-edit.php?id='.$user_id);
-                          exit(0);
-                      }
-                      else
-                      {
-                      $query = "UPDATE users SET fname = '$fname', lname = '$lname', username = '$username', email = '$email' WHERE id = '$user_id' "
-                      $query_run = mysqli_query($con, $query);
-    
-                        if($query_run)
-                        {
-                          $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated their profile information')";
-                          $sql_run = mysqli_query($con, $sql);
-                          if($sql_run)
-                          {
-                              $_SESSION['message'] = "Updated Successfuly";
-                              header('Location: user-profile.php');
-                              exit(0);
-                          }
-                        }
-                        else
-                        {
-                            $_SESSION['message'] = "Something Went Wrong!";
-                            header('Location: user-profile.php');
-                            exit(0);
-                        }
-                        }
-                  }
-
-                    ?>
                   </form><!-- End Profile Edit Form -->
 
                 </div>

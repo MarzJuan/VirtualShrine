@@ -41,9 +41,9 @@
                      <li class="menu-item">
                             <a class="sub-btn" href="#">Explore<i class="fas fa-angle-down"></i></a>
                             <ul class="sub-menu">
-                                   <li class="sub-item"><a href="Gallery.php">Galleries</a></li>
-                                   <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
-                                   <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
+                                <li class="sub-item"><a href="Gallery.php">Galleries</a></li>
+                                <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
+                                <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                             </ul>
                      </li> <!--All the Galleries-->
                      

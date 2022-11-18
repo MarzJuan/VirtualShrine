@@ -377,7 +377,7 @@ if(isset($_POST['post_update']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
-    $old_filename = $_POST['old_audio'];
+    $audio_old_filename = $_POST['old_audio'];
     $audio = $_FILES['audio']['name'];
 
     $update_filename = "";
@@ -391,11 +391,11 @@ if(isset($_POST['post_update']))
     }
     else
     {
-        $update_filename = $old_filename;
+        $update_filename = $audio_old_filename;
     }
    
 
-    $old_filename = $_POST['old_image'];
+    $audio_old_filename = $_POST['old_image'];
     $image = $_FILES['image']['name'];
 
     $update_filename = "";
@@ -436,8 +436,8 @@ if(isset($_POST['post_update']))
             }
             if($audio != NULL)
             {
-                if(file_exists('../uploads/audio/'.$old_filename)){
-                    unlink("../uploads/audio/'.$old_filename");
+                if(file_exists('../uploads/audio/'.$audio_old_filename)){
+                    unlink("../uploads/audio/'.$audio_old_filename");
                 }
                 move_uploaded_file($_FILES['audio']['tmp_name'], '../uploads/audio/'.$update_filename);
             }
