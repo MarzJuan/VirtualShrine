@@ -49,7 +49,7 @@ else
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="<?php if(isset($profile_picture)) echo $profile_picture; ?>" alt="Profile" class="rounded-circle">
+              <img src="<?php $user['profileImage']; ?>" alt="Profile" class="rounded-circle">
               <h2><?= $user['fname'].' '.$user['lname']?></h2>
               <h3>
                 <?php 
