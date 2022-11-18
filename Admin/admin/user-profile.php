@@ -138,11 +138,11 @@ include('includes/header.php');
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                      <button type="submit" name="save_changes" class="btn btn-primary">Save Changes</button>
                     </div>
 
                     <?php
-                    if(isset($_POST['submit']))
+                    if(isset($_POST['save_changes']))
                     {
                       $user_id = ['id'];
                       $fname = ['fname'];
