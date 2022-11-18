@@ -104,7 +104,7 @@ include('config/dbcon.php');
 <a style="text-decoration: none;color: black;" href="Audio-Description.php?id=<?= $post['id']?>">
 <div class="cards">
                 <div class="image">
-                <img src="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>" width="300px" height="300px" alt="Collection Image"/>
+                <img src="../Admin/uploads/posts/<?= $post['image'];?>" width="300px" height="300px" alt="Collection Image"/>
         </div>
         <div class="title fs-650">
                 <h4><?= $post['name']?><br></h4>
