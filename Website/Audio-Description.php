@@ -114,7 +114,7 @@ include('config/dbcon.php');
                         <br>
               <div class="action-button">
                      
-              <a id="download_button" type="button" href="../VirtualShrine-Admin/uploads/posts/<?= $post['image'];?>" download class="extra-button download-btn noprint"><i class='bx bx-download'></i></a>
+              <a id="download_button" type="button" href="../Admin/uploads/posts/<?= $post['image'];?>" download class="extra-button download-btn noprint"><i class='bx bx-download'></i></a>
               </div>
               </div>
 
@@ -228,7 +228,7 @@ let audioContent = document.querySelector('#audio-content');
 btnAudio.addEventListener('click' , () =>{
   audioContent.innerHTML = `<div class="audio-content" id="audio-content">
   <audio class="audio-player" controls>
-      <source src="../VirtualShrine-Admin/uploads/audio/<?= $post['audio']?>" type="audio/mpeg">
+      <source src="../Admin/uploads/audio/<?= $post['audio']?>" type="audio/mpeg">
   </audio>
 
 
