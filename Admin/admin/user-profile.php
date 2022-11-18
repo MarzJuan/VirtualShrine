@@ -31,7 +31,7 @@ include('includes/header.php');
     </div><!-- End Page Title -->
 
     <?php include('message.php'); ?>
-    
+
     <section class="section profile">
       <div class="row">
         <div class="col-xl-4">
@@ -174,14 +174,14 @@ include('includes/header.php');
                           if($sql_run)
                           {
                               $_SESSION['message'] = "Updated Successfuly";
-                              header('Location: user-profile.php?id='.$user_id);
+                              header('Location: user-profile.php');
                               exit(0);
                           }
                         }
                         else
                         {
                             $_SESSION['message'] = "Something Went Wrong!";
-                            header('Location: user-profile.php?id='.$user_id);
+                            header('Location: user-profile.php');
                             exit(0);
                         }
                         }
