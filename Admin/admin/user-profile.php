@@ -30,6 +30,8 @@ include('includes/header.php');
       </nav>
     </div><!-- End Page Title -->
 
+    <?php include('message.php'); ?>
+    
     <section class="section profile">
       <div class="row">
         <div class="col-xl-4">
