@@ -395,7 +395,7 @@ if(isset($_POST['post_update']))
     }
    
 
-    $audio_old_filename = $_POST['old_image'];
+    $old_filename = $_POST['old_image'];
     $image = $_FILES['image']['name'];
 
     $update_filename = "";
