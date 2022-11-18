@@ -97,6 +97,7 @@ include('includes/header.php');
 
                   <!-- Profile Edit Form -->
                   <form>
+                  <form action="user-profile.php" method="POST" enctype='multipart/form-data'>
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
@@ -123,6 +124,13 @@ include('includes/header.php');
                     </div>
 
                     <div class="row mb-3">
+                      <label for="username" class="col-md-4 col-lg-3 col-form-label">Username</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="username" type="text" class="form-control" id="username" value="<?= $user['lname']?>">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="email" type="email" class="form-control" id="Email" value="<?= $user['email']?>">
@@ -132,6 +140,52 @@ include('includes/header.php');
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
+
+                    <?php
+                    if(isset($_POST['submit']))
+                    {
+                      $user_id = ['id'];
+                      $fname = ['fname'];
+                      $lname = ['lname'];
+                      $username = ['username'];
+                      $email = ['email'];
+
+                      $checkusername = "SELECT username FROM users WHERE username='$username' AND id!='$user_id'";
+                      $checkusername_run = mysqli_query($con, $checkusername);
+
+                      if(mysqli_num_rows($checkusername_run) > 0)
+                      {
+                          //Username already exists
+                          $_SESSION['message'] = "Username already exists";
+                          header('Location: assistant-admin-edit.php?id='.$user_id);
+                          exit(0);
+                      }
+                      else
+                      {
+                      $query = "UPDATE users SET fname = '$fname', lname = '$lname', username = '$username', email = '$email' WHERE id = '$user_id' "
+                      $query_run = mysqli_query($con, $query);
+    
+                        if($query_run)
+                        {
+                          $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated their profile information')";
+                          $sql_run = mysqli_query($con, $sql);
+                          if($sql_run)
+                          {
+                              $_SESSION['message'] = "Updated Successfuly";
+                              header('Location: user-profile.php?id='.$user_id);
+                              exit(0);
+                          }
+                        }
+                        else
+                        {
+                            $_SESSION['message'] = "Something Went Wrong!";
+                            header('Location: user-profile.php?id='.$user_id);
+                            exit(0);
+                        }
+                        }
+                  }
+
+                    ?>
                   </form><!-- End Profile Edit Form -->
 
                 </div>
