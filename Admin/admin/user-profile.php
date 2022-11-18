@@ -48,7 +48,7 @@ include('includes/header.php');
               <h2><?= $user['fname'].' '.$user['lname']?></h2>
               <h3>
                 <?php 
-                  if($user['role_as'] == 0){echo "Head Admin";} 
+                  if($user['role_as'] == 0){echo "Super Admin";} 
                   if($user['role_as'] == 1){echo "Assistant Admin";}
                 ?>
               </h3>
