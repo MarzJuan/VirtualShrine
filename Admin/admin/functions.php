@@ -20,10 +20,10 @@ function getActiveVisits($analytics){
     $rows = $result->getRows();
     if($rows){
       foreach($rows as $row){
-        $div .= '<tr class="open-link" data-link="'.$row[1].'">';
-        $div .= '<td>'.htmlspecialchars($row[0],ENT_NOQUOTES).'</td>';
-        $div .= '<td>'.htmlspecialchars($row[2],ENT_NOQUOTES).'</td>';
-        $div .= '</tr>';
+        $div .= '<div class="open-link" data-link="'.$row[1].'">';
+        $div .= '<div>'.htmlspecialchars($row[0],ENT_NOQUOTES).'</div>';
+        $div .= '<div>'.htmlspecialchars($row[2],ENT_NOQUOTES).'</div>';
+        $div .= '</div>';
       }
     }else{
       $div .= '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
