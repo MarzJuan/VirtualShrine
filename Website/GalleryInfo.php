@@ -25,6 +25,16 @@ include('config/dbcon.php');
        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
        <head>
 
+       <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EX6J146FEC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EX6J146FEC');
+</script>
+
        <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
        <link rel="stylesheet" href="assets/css/homepage.css">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
