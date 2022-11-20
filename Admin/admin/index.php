@@ -1,7 +1,6 @@
 <?php
 include('authentication.php');
 include('includes/header.php');
-include_once('functions.php');
 ?>
 
   <main id="main" class="main">
@@ -104,7 +103,6 @@ include_once('functions.php');
           </div>
 
         </div><!-- End Customers Card -->
-
 
         <!-- Reports -->
         <div class="col-12">
