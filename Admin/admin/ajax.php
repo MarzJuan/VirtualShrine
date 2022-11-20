@@ -12,11 +12,11 @@ $analytics = new Google_Service_Analytics($client);
 
 if(isset($_GET['action'])){
   $action = $_GET['action'];
-  if($action=='pages'){
-    echo getActivePages($analytics);
+  if($action=='visits'){
+    echo getActiveVisits($analytics);
   }
-  elseif($action=='users'){
-    echo getActiveUsers($analytics);
+  elseif($action=='visitor'){
+    echo getActiveVisitors($analytics);
   }
   elseif($action=='devices'){
     echo getDevices($analytics);
