@@ -16,7 +16,7 @@ if(isset($_GET['action'])){
     echo getActiveVisits($analytics);
   }
   elseif($action=='visitor'){
-    echo getActiveUsers($analytics);
+    echo getActiveVisitors($analytics);
   }
   elseif($action=='devices'){
     echo getDevices($analytics);

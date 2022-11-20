@@ -5,7 +5,7 @@ define('SERVICE_ACCOUNT','analytics/virtualshrine-7e8a47d0f687.json');
 define('DOMAIN','https://virtualshrine.online');
 
 
-function getActivePages($analytics){
+function getActiveVisits($analytics){
   $optParams = array(
     'dimensions' => 'rt:pageTitle,rt:pagePath',
     'sort' => '-rt:activeVisitors',
@@ -34,7 +34,7 @@ function getActivePages($analytics){
   }
 }
 
-function getActiveUsers($analytics){
+function getActiveVisitors($analytics){
   $active_users = $analytics
           ->data_realtime
           ->get('ga:'.VIEW, 'rt:activeVisitors');
