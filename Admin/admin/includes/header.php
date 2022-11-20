@@ -46,6 +46,38 @@
         }
     </style>
 
+    <!-- GOOGLE API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- EASY DATA GOOGLE ANALYTICS -->
+    <script type="text/javascript" src="js/easyData-google-analytics.js"></script>
+
+    <!-- EASYDATA - FETCH DATA -->
+    <script>
+        //Client ID
+        const CLIENT_ID = "228187318090-n0ofjfct4b7gggg2btbo7fs3b2ph7tu3.apps.googleusercontent.com";
+
+        function loadData() {
+            //GA PROPERTY ID
+            const propertyId = "343177169";
+
+            const startDate = "7DaysAgo";
+            const endDate = "today"
+            const metrics = [
+                { name: "activeUsers" },
+                { name: "screenPageViews" },
+                { name: "sessions" },
+            ];
+
+            const query = {
+                dateRanges: [{startDate, endDate }],
+                metrics: metrics,
+            };
+            
+            runReport(propertyId, query, displayResult);
+        }
+    </script>
+
 </head>
 
 <body>
