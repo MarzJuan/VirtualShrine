@@ -64,15 +64,14 @@ include('includes/header.php');
           <div class="card info-card revenue-card">
 
             <div class="card-body">
-              <h5 class="card-title">Website</h5>
+              <h5 class="card-title">Website Visitors</h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                   <i class="bi bi-binoculars"></i>
                 </div>
-                <div class="ps-3">
+                <div class="ps-3" class="count" id="result-visits">
                   <h6>
-                  <div class="count" id="result-visits"></div>
                   </h6>
                 </div>
               </div>
@@ -93,9 +92,8 @@ include('includes/header.php');
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                   <i class="bi bi-people"></i>
                 </div>
-                <div class="ps-3">
+                <div class="ps-3" class="count" id="active-visitor">
                   <h6>
-                  <div class="count" id="active-visitor"></div>
                   </h6>
 
                 </div>
