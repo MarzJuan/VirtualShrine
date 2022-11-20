@@ -106,6 +106,93 @@ include('includes/header.php');
 
         <!-- ------------------------------------------------------------------------------------------- -->
 
+        <style type="text/css">
+  .count{
+    font-size: 50px;
+  }
+  .open-link:hover{
+    background: #ddd;
+    cursor: pointer;
+  }
+   body{
+     background: aliceblue;
+   }
+   .header{
+     background: #2285ef;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     font-size: 18px;
+   }
+  .page-content{
+    margin-top: 20px;
+  }
+  .site-name{
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .site-list{
+    display: none;
+    position: absolute;
+    padding: 30px;
+    background: #ddd;
+    top: 50px;
+    z-index: 100;
+    background: #000;
+    padding: 0px;
+  }
+  table {
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(158,155,158,1);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(158,155,158,1);
+    box-shadow: 0px 0px 5px -1px rgba(158,155,158,1);
+    padding-bottom: 15px;
+  }
+  h1,p{
+      text-align: center;
+  }
+  .progress {
+    display: flex;
+  }
+  .progress-cotent{
+    position: absolute;
+      text-align: center;
+      width: inherit;
+      padding-top: 5px;
+  }
+  .count{
+    font-size: 86px;
+  }
+  .progress-bar-success, .label-success:before {background-color: #50b432;}
+  .progress-bar-warning, .label-warning:before {background-color: #ed561b;}
+  .progress-bar-danger, .label-danger:before {background-color: #058dc7;}
+  .label-success, .label-warning, .label-danger{background: transparent;color: #444;display: inline-block;font-size: 1em;line-height: 1.1em;font-weight: bold;font-family: arial;}
+  .progress-label .label:before{content:'';width:10px; height:10px;float:left; margin-right:3px;}
+  .progress-bar-danger span, .label-success span + span, .label-warning span + span{}
+  .progress-label{text-transform:uppercase;font-size:0.8em; font-weight:bold;margin:5px 0 8px}
+  .table{border-radius:5px 5px 0 0;box-shadow:inherit; -webkit-box-shadow:inherit; border-top:2px solid #666}
+  .table  th{background:#fff;padding:10px 8px; height:auto;font-size:0.95em;}
+  .table tr:nth-child(odd) td:nth-child(even) { background: rgba(0,0,0,0.03);text-align:center;}
+  .table tr:nth-child(even) td { background: rgba(0,0,0,0.02)}
+  .table tr:nth-child(even) td:nth-child(even) { background: rgba(0,0,0,0.06);text-align:center;}
+  .table>tbody>tr>td{padding:7px 8px;color:#444; font-size:0.95em;}
+  .table td{width:90%}
+  .table td:nth-child(even){width:10%;}
+  .col-md-3 .table td{width:64%}
+  .col-md-3 .table td:nth-child(even){width:36%;}
+  @media (max-width:768px){
+    .col-md-9, .col-md-3{padding:0}
+  }
+  @media (max-width: 991px) {
+      .col-md-3.pull-right {
+          float: none !important;
+      }
+  }
+</style>
+
         <div class="container page-content">
   <div class="row">
     <div class="col-md-8">
