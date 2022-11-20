@@ -107,7 +107,7 @@ include_once('functions.php');
 
         <!-- ------------------------------------------------------------------------------------------- -->
 
-        <style type="text/css">
+<style type="text/css">
   .count{
     font-size: 50px;
   }
@@ -115,9 +115,6 @@ include_once('functions.php');
     background: #ddd;
     cursor: pointer;
   }
-   body{
-     background: aliceblue;
-   }
    .header{
      background: #2285ef;
      height: 50px;
