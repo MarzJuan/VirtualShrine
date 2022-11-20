@@ -80,7 +80,7 @@ include('includes/header.php');
         <!-- WEBSITE VISITS CARD -->
 
         <!-- Customers Card -->
-        <div class="col-xxl-4 col-xl-12" id="active-visitor">
+        <div class="col-xxl-4 col-xl-12">
 
           <div class="card info-card customers-card">
 
@@ -92,7 +92,7 @@ include('includes/header.php');
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>1244</h6>
+                  <h6  id="active-visitor"></h6>
                   <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
 
                 </div>
