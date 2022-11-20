@@ -64,7 +64,7 @@ include('includes/header.php');
           <div class="card info-card revenue-card">
 
             <div class="card-body">
-              <h5 class="card-title">Website Visits</h5>
+              <h5 class="card-title">Website</h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
