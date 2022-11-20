@@ -36,7 +36,7 @@ include('includes/header.php');
                 </div>
                 <div class="ps-3">
                   <?php
-                    $dash_bookings_query = "SELECT * FROM bookings WHERE status='1'";
+                    $dash_bookings_query = "SELECT * FROM bookings";
                     $dash_bookings_query_run = mysqli_query($con, $dash_bookings_query);
 
                     if($bookings_total = mysqli_num_rows($dash_bookings_query_run))
