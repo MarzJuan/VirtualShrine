@@ -37,7 +37,6 @@
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
   <!-- //Summernote CSS - CDN Link -->
 
-  <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 
 
