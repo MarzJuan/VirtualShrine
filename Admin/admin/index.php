@@ -93,7 +93,6 @@ include('includes/header.php');
                 </div>
                 <div class="ps-3">
                   <h6  id="active-visitor"></h6>
-                  <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
 
                 </div>
               </div>
