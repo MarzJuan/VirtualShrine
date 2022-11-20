@@ -71,7 +71,9 @@ include('includes/header.php');
                   <i class="bi bi-binoculars"></i>
                 </div>
                 <div class="ps-3">
-                  <h6 id="result-visits"></h6>
+                  <h6>
+                  <div class="count" id="result-visits"></div>
+                  </h6>
                 </div>
               </div>
             </div>
@@ -92,7 +94,9 @@ include('includes/header.php');
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3">
-                  <h6  id="active-visitor"></h6>
+                  <h6>
+                  <div class="count" id="active-visitor"></div>
+                  </h6>
 
                 </div>
               </div>
