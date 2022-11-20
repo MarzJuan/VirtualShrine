@@ -13,7 +13,7 @@ $analytics = new Google_Service_Analytics($client);
 if(isset($_GET['action'])){
   $action = $_GET['action'];
   if($action=='visits'){
-    echo getActivePages($analytics);
+    echo getActiveVisits($analytics);
   }
   elseif($action=='visitor'){
     echo getActiveUsers($analytics);
