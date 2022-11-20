@@ -617,7 +617,7 @@ include('includes/header.php');
       type:'get',
       success:function(res){
         if(action=='pages'){
-          $("#result-visits tbody").html(res);
+          $("#result-visits").html(res);
         }
         else if(action=='visitors'){
           $("#active-visitor").html(res);
