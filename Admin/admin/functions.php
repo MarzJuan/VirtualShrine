@@ -15,20 +15,20 @@ function getActivePages($analytics){
         ->data_realtime
         ->get('ga:'.VIEW, 'rt:activeVisitors',$optParams);
 
-  $table = '';
+  $div = '';
   if($result){
     $rows = $result->getRows();
     if($rows){
       foreach($rows as $row){
-        $table .= '<tr class="open-link" data-link="'.$row[1].'">';
-        $table .= '<td>'.htmlspecialchars($row[0],ENT_NOQUOTES).'</td>';
-        $table .= '<td>'.htmlspecialchars($row[2],ENT_NOQUOTES).'</td>';
-        $table .= '</tr>';
+        $div .= '<tr class="open-link" data-link="'.$row[1].'">';
+        $div .= '<td>'.htmlspecialchars($row[0],ENT_NOQUOTES).'</td>';
+        $div .= '<td>'.htmlspecialchars($row[2],ENT_NOQUOTES).'</td>';
+        $div .= '</tr>';
       }
     }else{
-      $table .= '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
+      $div .= '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
     }
-    return $table;
+    return $div;
   }else{
     return '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
   }
@@ -82,21 +82,21 @@ function getDevices($analytics){
 
 
 function getFormattedData($result){
-  $table = '';
+  $div = '';
   if($result){
     $rows = $result->getRows();
     if($rows){
       foreach($rows as $row){
-        $table .= '<tr>';
+        $div .= '<tr>';
         foreach($row as $cell){
-          $table .= '<td>'.htmlspecialchars($cell,ENT_NOQUOTES).'</td>';
+          $div .= '<td>'.htmlspecialchars($cell,ENT_NOQUOTES).'</td>';
         }
-        $table .= '</tr>';
+        $div .= '</tr>';
       }
     }else{
-      $table .= '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
+      $div .= '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
     }
-    return $table;
+    return $div;
   }else{
     return '<tr><td colspan="2"><small>There is no data to view</small></td></tr>';
   }
