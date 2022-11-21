@@ -53,7 +53,8 @@
 <?php
     //session_start();
     include('includes/navbar-top.php')
-    include('includes/sidebar.php')
 ?>
+
+<?php include('includes/sidebar.php')?>
 
   <!-- ======= Header ======= -->
