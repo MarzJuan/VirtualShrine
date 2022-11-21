@@ -9,7 +9,7 @@
 <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/")+1); ?>
 
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'index.php' ? 'active':'' ?>" href="index.php">
+    <a class="nav-link collapsed <?= $page == 'index.php' ? 'active':'' ?>" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
