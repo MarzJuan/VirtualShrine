@@ -51,7 +51,7 @@ include('includes/header.php');
                                 {
                                 ?>
                                 <tr>
-                                    <td><?=$item['bookingID'] ?></td>
+                                    <td><?=$item['id'] ?></td>
                                     <td><?=$item['name'] ?></td>
                                     <td>
 
