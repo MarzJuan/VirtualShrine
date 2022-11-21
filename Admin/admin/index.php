@@ -207,7 +207,7 @@ include('includes/header.php');
                 <tbody>
 
                 <?php
-          $bookings = "SELECT * FROM bookings WHERE status!='2' AND status!='4'";
+          $bookings = "SELECT * FROM bookings WHERE status='0'";
           $bookings_run = mysqli_query($con, $bookings);
           $check = mysqli_num_rows($bookings_run) > 0;
 
