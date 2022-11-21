@@ -9,7 +9,7 @@
 <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/")+1); ?>
 
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'index.php' ? 'active':'' ?>" href="index.php">
+    <a class="nav-link collapsed <?= $page == 'index.php' ? 'active':'' ?>" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
@@ -17,7 +17,7 @@
 
   <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="admin-list.php">
+    <a class="nav-link collapsed <?= $page == 'admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="admin-list.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
       <i class="bi bi-people"></i>
       <span>Users</span>
     </a>
@@ -34,22 +34,22 @@
     data-bs-parent="#sidebar-nav">
 
       <li>
-        <a href="booking-pending.php" class="nav-link <?= $page == 'booking-pending.php' || $page == 'booking-details.php' ? 'active':'' ?>">
+        <a href="booking-pending.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-pending.php' || $page == 'booking-details.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Pending</span>
         </a>
       </li>
       <li>
-        <a  href="booking-approved.php" class="nav-link <?= $page == 'booking-approved.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>">
+        <a  href="booking-approved.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-approved.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Approved</span>
         </a>
       </li>
       <li>
-        <a href="booking-rejected.php" class="nav-link <?= $page == 'booking-rejected.php' || $page == 'booking-details-reject.php' ? 'active':'' ?>">
+        <a href="booking-rejected.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-rejected.php' || $page == 'booking-details-reject.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Rejected</span>
         </a>
       </li>
       <li>
-        <a href="booking-cancelled.php" class="nav-link <?= $page == 'booking-cancelled.php' || $page == 'booking-details-cancelled.php' ? 'active':'' ?>">
+        <a href="booking-cancelled.php<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-cancelled.php' || $page == 'booking-details-cancelled.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Cancelled</span>
         </a>
       </li>
@@ -70,12 +70,12 @@
     data-bs-parent="#sidebar-nav">
 
       <li>
-        <a href="post-view.php" class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':'' ?>">
+        <a href="post-view.php<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Content</span>
         </a>
       </li>
       <li>
-        <a href="category-view.php" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
+        <a href="category-view.php<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Category</span>
         </a>
       </li>
@@ -84,7 +84,7 @@
 
   <?php if($_SESSION['auth_role'] == '0') : ?>
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'report.php' ? 'active':'' ?>" href="report.php">
+    <a class="nav-link collapsed <?= $page == 'report.php' ? 'active':'' ?>" href="report.php<?= $_SESSION['auth_user']['user_id'];?>">
       <i class="bi bi-people"></i>
       <span>Report</span>
     </a>
