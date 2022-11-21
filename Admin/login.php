@@ -9,14 +9,15 @@ session_start();
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <head>
 
-    <link rel="icon" type="Admin/image/png" href="image/crs-logo.png">
+    <link rel="icon" type="image/png" href="image/CRS-logo.png">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/css/login-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 </head>
 
 
-<link rel="stylesheet" href="assets/css/login-style.css">
+
         <div class="py5">
             <div class="container">
                 <div class="row justify-content-center">
