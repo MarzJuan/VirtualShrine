@@ -100,7 +100,7 @@
           if(isset($_GET['id']))
               {  
                   $user_id = $_GET['id'];
-                  $users = "SELECT * FROM users WHERE id='$user_id'";
+                  $users = "SELECT * FROM users WHERE id='". $_SESSION["user_name"]."'";
                   $user_run = mysqli_query($con, $users);
 
 
@@ -110,7 +110,7 @@
                       {
                       ?>
           <?php
-            $image = $_SESSION($user['profileImage']);
+            $image = $user['profileImage'];
             if (empty($image))
             $image = "../../uploads/user/Default_pfp.jpeg";
             
