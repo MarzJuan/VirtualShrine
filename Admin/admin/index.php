@@ -218,7 +218,7 @@ include('includes/header.php');
                 ?>
 
                   <tr>
-                    <th scope="row"><a href="#"><?= $act['booking_id'] ?></a></th>
+                    <th scope="row"><a href="#"><?= $act['bookingID'] ?></a></th>
                     <td><?= $act['fname'].' '.$act['lname'] ?></td>
                     <td><?= $act['date_visit'] ?></td>
                     <td>
