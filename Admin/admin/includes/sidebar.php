@@ -17,7 +17,7 @@
 
   <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="admin-list.php">
+    <a class="nav-link collapsed <?= $page == 'admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="admin-list.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
       <i class="bi bi-people"></i>
       <span>Users</span>
     </a>
@@ -34,17 +34,17 @@
     data-bs-parent="#sidebar-nav">
 
       <li>
-        <a href="booking-pending.php" class="nav-link <?= $page == 'booking-pending.php' || $page == 'booking-details.php' ? 'active':'' ?>">
+        <a href="booking-pending.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-pending.php' || $page == 'booking-details.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Pending</span>
         </a>
       </li>
       <li>
-        <a  href="booking-approved.php" class="nav-link <?= $page == 'booking-approved.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>">
+        <a  href="booking-approved.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-approved.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Approved</span>
         </a>
       </li>
       <li>
-        <a href="booking-rejected.php" class="nav-link <?= $page == 'booking-rejected.php' || $page == 'booking-details-reject.php' ? 'active':'' ?>">
+        <a href="booking-rejected.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-rejected.php' || $page == 'booking-details-reject.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Rejected</span>
         </a>
       </li>

@@ -78,7 +78,7 @@ include('includes/header.php');
                                     <td><center>
                                     
                                         <form action="code-superAdmin.php" method = "POST">
-                                        <a href="category-edit.php?id=<?= $item['id'] ?>" class="btn btn-info">Edit</a>
+                                        <a href="category-edit.php?id=<?= $_SESSION['auth_user']['user_id'];?><?= $item['id'] ?>" class="btn btn-info">Edit</a>
                                     
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
                                         <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>
