@@ -3,11 +3,12 @@ session_start();
 ?>
 <html>
 
+<head>
     <title>Login - VirtualShrine</title>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<head>
+
 
     <link rel="icon" type="image/png" href="image/CRS-logo.png">
 
