@@ -7,7 +7,7 @@ include('includes/header.php');
 <main id="main" class="main">
     <h4 class="mt-4">Edit Assistant Admin Information</h4>
     <ol class="breadcrumb mb-4">
-    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+    <a class="breadcrumb-item active" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">Dashboard</a>
         <li class="breadcrumb-item">Edit User Information</li>
     </ol>
 
@@ -19,7 +19,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>Edit Information
-                    <a href="admin-list.php" class="btn btn-primary float-end">Back</a>
+                    <a href="admin-list.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="btn btn-primary float-end">Back</a>
                     </h4>
                 </div>
                 <div class="card-body">

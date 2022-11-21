@@ -7,7 +7,7 @@ include('includes/header.php');
 <main id="main" class="main">
 <h4 class="mt-4">Rejected Booking</h4>
     <ol class="breadcrumb mb-4">
-        <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+        <a class="breadcrumb-item active" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">Dashboard</a>
         <li class="breadcrumb-item">Rejected Booking</li>  
     </ol>
 
@@ -76,7 +76,7 @@ include('includes/header.php');
 
 
                                         <td>
-                                        <a name="booking_id" href="booking-details-reject.php?booking_id=<?=$bookings['booking_id'];?>">View Details</a>
+                                        <a name="booking_id" href="booking-details-reject.php?id=<?= $_SESSION['auth_user']['user_id'];?>&booking_id=<?=$bookings['booking_id'];?>">View Details</a>
                                         </td>
                                 
                                     </tr>

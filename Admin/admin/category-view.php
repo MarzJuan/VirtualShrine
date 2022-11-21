@@ -21,7 +21,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>Gallery List
-                        <a href="category-add.php" class="btn btn-primary float-end">Add Gallery</a>
+                        <a href="category-add.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="btn btn-primary float-end">Add Gallery</a>
                     </h4>
                 </div>
                 <div class="card-body">

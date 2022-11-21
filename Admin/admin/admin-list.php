@@ -7,7 +7,7 @@ include('includes/header.php');
 <main id="main" class="main">
     <h4 class="mt-4">Assistant Admin</h4>
     <ol class="breadcrumb mb-4">
-    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+    <a class="breadcrumb-item active" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">Dashboard</a>
         <li class="breadcrumb-item">Users</li>                                                                                           
     </ol>
 
@@ -18,7 +18,7 @@ include('includes/header.php');
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                 <h4> Assistant Admin List
-                <a href="assistant-admin-add.php" class="btn btn-primary float-end">Add User</a>
+                <a href="assistant-admin-add.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="btn btn-primary float-end">Add User</a>
                 </h4>
                     
                 </div>
@@ -68,7 +68,7 @@ include('includes/header.php');
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
 
                                             <form action="code.php" method="POST">
-                                            <a href= "assistant-admin-edit.php?id=<?=$row['id'];?>" class="btn btn-success">Edit</a>
+                                            <a href= "assistant-admin-edit.php??id=<?= $_SESSION['auth_user']['user_id'];?>&id=<?=$row['id'];?>" class="btn btn-success">Edit</a>
                                             
                                             <button type="submit" name="assistant-admin-archive" value="<?=$row['id'];?>" class="btn btn-danger">Archive</button>
                                             </form>

@@ -6,7 +6,7 @@ include('includes/header.php');
 <main id="main" class="main">
 <h4 class="mt-4">Archived Assistant Admin</h4>
     <ol class="breadcrumb mb-4">
-    <a class="breadcrumb-item active" href="index.php">Dashboard</a>
+    <a class="breadcrumb-item active" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">Dashboard</a>
         <li class="breadcrumb-item">Archived Assistant Admin</li>                                                                                           
     </ol>
 
