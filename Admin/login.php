@@ -3,7 +3,6 @@ session_start();
 ?>
 
 <html>
-<head>
        <title>Login - VirtualShrine</title>
        <meta name="MobileOptimized" content="width">
 <meta name="HandheldFriendly" content="true">
