@@ -96,23 +96,18 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
           
           <!-- TOP NAV USER ICON PICTURE -->
-
           <?php
-          if (!isset($_SESSION)) session_start();
+          if(isset($_GET['id']))
+              {  
+                  $user_id = $_GET['id'];
+                  $users = "SELECT * FROM users WHERE id='$user_id'";
+                  $user_run = mysqli_query($con, $users);
 
-          $sql=sprintf("SELECT profileImage FROM users WHERE profileImage=%s", 
-                        $_POST["profileImage"]);
-          
-          //You'd better use parameterized query
-          
-          $result = mysqli->query($con, $sql);
-          
-          $row = $result->fetch_assoc();
-          
-          if(mysqli->num_rows > 0)
-          {
-              $_SESSION["profileImage"] = $row["profileImage"];
-          ?>
+                  if(mysqli_num_rows($user_run) > 0)
+                  {
+                      while($user = mysqli_fetch_assoc($user_run))
+                      {
+                      ?>
           <?php
             $image = $user['profileImage'];
             if (empty($image))
@@ -121,10 +116,9 @@
             echo '<img src="../uploads/user/'.$image.'" alt="Profile" class="rounded-circle">'
           ?>
           <?php
-          else 
-          {
-           //operation for no matches
-          }
+                      }
+                    }
+                }
           ?>
 
            <!-- TOP NAV USER ICON PICTURE -->
