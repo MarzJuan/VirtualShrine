@@ -49,7 +49,7 @@
         </a>
       </li>
       <li>
-        <a href="booking-cancelled.php<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-cancelled.php' || $page == 'booking-details-cancelled.php' ? 'active':'' ?>">
+        <a href="booking-cancelled.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'booking-cancelled.php' || $page == 'booking-details-cancelled.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Cancelled</span>
         </a>
       </li>
@@ -70,12 +70,12 @@
     data-bs-parent="#sidebar-nav">
 
       <li>
-        <a href="post-view.php<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':'' ?>">
+        <a href="post-view.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Content</span>
         </a>
       </li>
       <li>
-        <a href="category-view.php<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
+        <a href="category-view.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Category</span>
         </a>
       </li>
@@ -84,7 +84,7 @@
 
   <?php if($_SESSION['auth_role'] == '0') : ?>
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'report.php' ? 'active':'' ?>" href="report.php<?= $_SESSION['auth_user']['user_id'];?>">
+    <a class="nav-link collapsed <?= $page == 'report.php' ? 'active':'' ?>" href="report.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
       <i class="bi bi-people"></i>
       <span>Report</span>
     </a>
@@ -102,17 +102,17 @@
     <ul id="tables-nav" class="nav-content collapse <?= $page == 'archive-user.php' || $page == 'archive-category.php' || $page == 'post-archive.php' || $page == 'audio-archive.php' ? 'show':'' ?>" 
     data-bs-parent="#sidebar-nav">
       <li>
-        <a href="archive-user.php" class="nav-link <?= $page == 'archive-user.php' ? 'active':'' ?>">
+        <a href="archive-user.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'archive-user.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Users</span>
         </a>
       </li>
       <li>
-        <a href="post-archive.php" class="nav-link <?= $page == 'post-archive.php' ? 'active':'' ?>">
+        <a href="post-archive.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'post-archive.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Content</span>
         </a>
       </li>
       <li>
-        <a href="archive-category.php" class="nav-link <?= $page == 'archive-category.php' ? 'active':'' ?>">
+        <a href="archive-category.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="nav-link <?= $page == 'archive-category.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Category</span>
         </a>
       </li>
