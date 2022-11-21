@@ -1,5 +1,7 @@
 <?php
-include('admin/authentication.php');
+session_start();
+include('admin/config/dbcon.php');
+include('security.php');
 
 if(isset($_POST['login_btn']))
 {
