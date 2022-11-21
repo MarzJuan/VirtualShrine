@@ -42,7 +42,7 @@ include('includes/header.php');
                             <tbody>
                                 <?php
                                     
-                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.id = p.category_id AND p.status!='2'";
+                                    $posts = "SELECT p.*, c.name AS cname FROM posts p,categories c WHERE c.post_id = p.category_id AND p.status!='2'";
                                     $posts_run = mysqli_query($con, $posts);
 
                                     //$posts = "SELECT * FROM posts WHERE status!='1' ";
