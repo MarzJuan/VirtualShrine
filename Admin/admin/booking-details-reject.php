@@ -38,7 +38,7 @@ include('includes/header.php');
                         ?>
                             <div style="margin-left:50px;" class="form-group mb-3">
                                 <label for=""><b>Booking ID:</b></label><a style="margin-left:57px;">
-                                    <?php echo $row['booking_id']; ?></a>
+                                    <?php echo $row['bookingID']; ?></a>
                             </div>
 
                             <div style="margin-left:50px;" class="form-group mb-3">

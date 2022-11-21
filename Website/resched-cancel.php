@@ -99,7 +99,7 @@ section {
                     <div class="form-group">
                       <label for="email">Insert Booking ID:
                       </label>
-                      <input type="text" name="booking_id" value="<?php if(isset($_GET['booking_id'])){echo $_GET['booking_id'];} ?>" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Booking ID" autocomplete="off" data-parsley-required="" data-parsley-required-message="Booking ID is required">
+                      <input type="text" name="booking_id" value="<?php if(isset($_GET['booking_id'])){echo $_GET['bookingID'];} ?>" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Booking ID" autocomplete="off" data-parsley-required="" data-parsley-required-message="Booking ID is required">
                     </div>
                   </div>
 

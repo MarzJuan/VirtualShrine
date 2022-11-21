@@ -50,7 +50,7 @@ include('includes/header.php');
                                 {
                                     ?>
                                     <tr>
-                                        <td><?= $bookings['booking_id']; ?></td>
+                                        <td><?= $bookings['bookingID']; ?></td>
                                         <td><?= $bookings['fname']; ?></td>
                                         <td><?= $bookings['lname']; ?></td>
                                         <td><?= $bookings['date_visit']; ?></td>

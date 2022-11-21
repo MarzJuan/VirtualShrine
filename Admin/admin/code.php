@@ -275,6 +275,7 @@ if(isset($_POST['approve_booking']))
 
                     $row = mysqli_fetch_assoc($res);
                     $to = $row["email"];
+                    $bookingID = $row["bookingID"];
                     $fname = $row["fname"];
                     $lname = $row["lname"];
                     $date_visit = $row["date_visit"];
@@ -308,7 +309,7 @@ if(isset($_POST['approve_booking']))
                     $mail->setFrom('virtualshrine.developers@gmail.com', 'MKPP Reservation');//Your application NAME and EMAIL
                     $mail->Subject = 'Casa Real Shrine Online Reservation';//Message subject
                     $mail->MsgHTML('<b>Your booking reservation is confirmed!</b><br>
-                                    <p>Booking Number: '.$bookings_id.'<br>
+                                    <p>Booking Number: '.$bookingID.'<br>
                                     Name: '.$fname.' '.$lname.'<br>
                                     Date of Visit: '.$date_visit.'<br>
                                     No. of Visitors: '.$no_visitors.'<br>
