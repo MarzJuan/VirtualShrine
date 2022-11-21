@@ -97,12 +97,11 @@
           
           <!-- TOP NAV USER ICON PICTURE -->
           <?php
-          if(isset($_GET['id']))
+          if(isset($_SESSION['auth_user']['user_name']))
               {  
-                  $user_id = $_GET['id'];
-                  $users = "SELECT * FROM users WHERE id='". $_SESSION["user_name"]."'";
+                  $user_id = $_SESSION['auth_user']['user_name'];
+                  $users = "SELECT * FROM users WHERE id='$user_id'";
                   $user_run = mysqli_query($con, $users);
-
 
                   if(mysqli_num_rows($user_run) > 0)
                   {
