@@ -31,13 +31,13 @@ if(isset($_POST['login_btn']))
         if($_SESSION['auth_role'] == '0') // Head Admin
         {
             $_SESSION['message'] = "Welcome to Super Admin dashboard"." ".$user_name;
-            header("Location: admin/index.php?id=" . $_SESSION['user_name']);
+            header("Location: admin/index.php?id=" . $_SESSION['auth_user']);
             exit(0);
         }
         elseif($_SESSION['auth_role'] == '1') // Assistant Admin
         {
             $_SESSION['message'] = "Welcome to Assistant Admin dashboard"." ".$user_name;
-            header("Location: admin/index.php?id=" . $_SESSION['user_name']);
+            header("Location: admin/index.php?id=" . $_SESSION['auth_user']);
             exit(0);
         }
     }
