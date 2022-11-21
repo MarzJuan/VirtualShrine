@@ -63,7 +63,7 @@ include('config/dbcon.php');
                         <p style="margin-left:115px;">Enter Booking ID:</p>
                             <div style="margin-left:100px;" class="row">
                                 <div class="col-md-8">
-                                    <input type="text" name="get_id" class="form-control">
+                                    <input type="text" name="booking_id" value="<?php if(isset($_GET['booking_id'])){echo $_GET['booking_id'];} ?>" class="form-control">
                                 </div>
                                 <div class="col-md-4">
                                     <button type="submit" class="btn btn-primary">Search</button>
@@ -76,11 +76,11 @@ include('config/dbcon.php');
                                 <hr>
                                 <?php
 
-                                    if(isset($_GET['get_id']))
+                                    if(isset($_GET['booking_id']))
                                     {
-                                        $booking_id = $_GET['get_id'];
+                                        $booking_id = $_GET['booking_id'];
 
-                                        $query = "SELECT * FROM bookings WHERE status='1' AND bookingID='$booking_id' LIMIT 1";
+                                        $query = "SELECT * FROM bookings WHERE status='1' AND booking_id='$booking_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)

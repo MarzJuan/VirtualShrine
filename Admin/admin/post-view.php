@@ -55,7 +55,7 @@ include('includes/header.php');
                                         {
                                             ?>
                                             <tr>
-                                                <td><?= $posts['id']?></td>
+                                                <td><?= $posts['post_id']?></td>
                                                 <td><?= $posts['name']?></td>
                                                 <td><?= $posts['cname']?></td>
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
@@ -81,10 +81,10 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="post-edit.php?id=<?= $_SESSION['auth_user']['user_id'];?>&id=<?= $posts['id']?>" class="btn btn-success">Edit</a>
+                                                    <a href="post-edit.php?id=<?= $_SESSION['auth_user']['user_id'];?>&id=<?= $posts['post_id']?>" class="btn btn-success">Edit</a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
-                                                    <button type="submit" name="post_archive" value="<?=$posts['id'] ?>" class="btn btn-danger">Archive</a>
+                                                    <button type="submit" name="post_archive" value="<?=$posts['post_id'] ?>" class="btn btn-danger">Archive</a>
                                                     </form>
                                                     <?php endif; ?>
                                                 </center></td>
