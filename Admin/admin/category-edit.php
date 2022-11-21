@@ -14,7 +14,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>Edit Gallery
-                        <a href="category-view.php" class="btn btn-primary float-end">Back</a>
+                        <a href="category-view.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="btn btn-primary float-end">Back</a>
                     </h4>
                 </div>
                 <div class="card-body">
