@@ -116,6 +116,11 @@
             
             echo '<img src="../uploads/user/'.$image.'" alt="Profile" class="rounded-circle">'
           ?>
+          <?php
+                      }
+                    }
+                }
+          ?>
 
            <!-- TOP NAV USER ICON PICTURE -->
 
