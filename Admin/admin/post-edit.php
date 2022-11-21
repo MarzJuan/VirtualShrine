@@ -20,10 +20,10 @@ include('includes/header.php');
                 <div class="card-body">
 
                 <?php
-                    if(isset($_GET['id']))
+                    if(isset($_GET['post_id']))
                     {
-                        $post_id = $_GET['id'];
-                        $post_query = "SELECT * FROM posts WHERE id='$post_id' LIMIT 1";
+                        $post_id = $_GET['post_id'];
+                        $post_query = "SELECT * FROM posts WHERE post_id='$post_id' LIMIT 1";
                         $post_query_res = mysqli_query($con, $post_query);
 
                         if(mysqli_num_rows($post_query_res) > 0)
@@ -33,7 +33,7 @@ include('includes/header.php');
                         
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
-                <input type="hidden" name="post_id" value="<?= $post_row['id'] ?>">
+                <input type="hidden" name="post_id" value="<?= $post_row['post_id'] ?>">
 
                     <div class="row">
                         <div class="col-md-12 mb-3">
