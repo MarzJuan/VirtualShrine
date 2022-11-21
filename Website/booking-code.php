@@ -79,6 +79,15 @@ if(isset($_POST['submit_booking']))
 
     if($query_run && in_array($image_extension, $accept))
     {
+        $last_id = mysqli_insert_id($con);
+        if ($last_id){
+            $code = rand(1,99999);
+            $year = date('Y');
+            $booking_id = $year."CRSB_".$code."_".$last_id;
+            $query = "UPDATE users SET bookingID = '".$user_id."' WHERE id = '".$last_id."'";
+            $res = mysqli_query($con, $query);
+        }
+
         move_uploaded_file($_FILES['id_image']['tmp_name'], 'Images/visitor_attachment/'.$filename);
         header('Location: booking-processing.php');
         exit(0);
