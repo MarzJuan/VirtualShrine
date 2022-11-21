@@ -21,7 +21,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>Gallery List
-                        <a href="category-add.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="btn btn-primary float-end">Add Gallery</a>
+                        <a href="category-add.php" class="btn btn-primary float-end">Add Gallery</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -78,7 +78,7 @@ include('includes/header.php');
                                     <td><center>
                                     
                                         <form action="code-superAdmin.php" method = "POST">
-                                        <a href="category-edit.php?id=<?= $_SESSION['auth_user']['user_id'];?>&id=<?=$item['id']?>" class="btn btn-info">Edit</a>
+                                        <a href="category-edit.php?id=<?=$item['id']?>" class="btn btn-info">Edit</a>
                                     
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
                                         <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>

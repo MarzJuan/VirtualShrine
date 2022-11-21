@@ -21,7 +21,7 @@ include('includes/header.php');
                 <div class="card-header">
                     <h4>
                     List of Gallery Content
-                        <a href="post-add.php?id=<?= $_SESSION['auth_user']['user_id'];?>" class="btn btn-primary float-end">Add Content</a>
+                        <a href="post-add.php" class="btn btn-primary float-end">Add Content</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -81,7 +81,7 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="post-edit.php?id=<?= $_SESSION['auth_user']['user_id'];?>&post_id=<?= $posts['post_id']?>" class="btn btn-success">Edit</a>
+                                                    <a href="post-edit.php?post_id=<?= $posts['post_id']?>" class="btn btn-success">Edit</a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
                                                     <button type="submit" name="post_archive" value="<?=$posts['post_id'] ?>" class="btn btn-danger">Archive</a>

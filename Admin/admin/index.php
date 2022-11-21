@@ -9,7 +9,7 @@ include('includes/header.php');
   <h1>Dashboard</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html?id=<?= $_SESSION['auth_user']['user_id'];?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
       <li class="breadcrumb-item active">Dashboard</li>
     </ol>
   </nav>
@@ -23,7 +23,7 @@ include('includes/header.php');
       <div class="row">
 
         <!-- BOOKINGS CARD -->
-        <a href="booking-approved.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
+        <a href="booking-approved.php">
         <div class="col-xxl-4 col-md-6">
           <div class="card info-card sales-card">
 
@@ -191,7 +191,7 @@ include('includes/header.php');
           <div class="card recent-sales overflow-auto">
 
             <div class="card-body">
-              <h5 class="card-title">Recent Bookings <a href="booking-pending.php?id=<?= $_SESSION['auth_user']['user_id'];?>"><span>| See More</span></a></h5>
+              <h5 class="card-title">Recent Bookings <a href="booking-pending.php"><span>| See More</span></a></h5>
 
               <table class="table table-borderless datatable">
 
@@ -337,7 +337,7 @@ include('includes/header.php');
       <div class="card">
 
         <div class="card-body">
-          <h5 class="card-title">User Activity <a href="Report.php?id=<?= $_SESSION['auth_user']['user_id'];?>"><span> | See More<span></a></h5>
+          <h5 class="card-title">User Activity <a href="Report.php"><span> | See More<span></a></h5>
 
           <div class="activity">
         <?php
