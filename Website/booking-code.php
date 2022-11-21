@@ -84,7 +84,7 @@ if(isset($_POST['submit_booking']))
             $code = rand(1,99999);
             $year = date('Y');
             $booking_id = $year."CRSB_".$code."_".$last_id;
-            $query = "UPDATE bookings SET bookingID = '".$booking_id."' WHERE id = '".$last_id."'";
+            $query = "UPDATE bookings SET bookingID = '".$booking_id."' WHERE booking_id = '".$last_id."'";
             $res = mysqli_query($con, $query);
         }
 
