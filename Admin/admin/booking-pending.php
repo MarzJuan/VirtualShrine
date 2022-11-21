@@ -82,7 +82,7 @@ include('includes/header.php');
                                         <td>
                                             <form action="code.php" method="POST">
                                                 <button type="submit" name="approve_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-success">Approve</button>
-                                                <button type="button" data-toggle="modal" data-target="#rejectBooking<?php $bookings['booking_id'];?>" class="btn btn-danger">Reject</button>
+                                                <button type="submit" name="reject_booking" value="<?=$bookings['booking_id'];?>" class="btn btn-danger">Reject</button>
                                             </form>
                                         </td>
 
