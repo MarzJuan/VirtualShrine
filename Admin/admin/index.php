@@ -592,59 +592,6 @@ include('includes/header.php');
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
-<!-- SCRIPT FOR GOOGLE ANALYTICS -->
-
-<script type="text/javascript">
-  setInterval(function(){
-    call();
-  },5000);
-  function call(){
-    get('visits');
-    get('visitor');
-    get('devices');
-    get('sources');
-    get('countries');
-    get('browser');
-    get('os');
-  }
-  call();
-  function get(action){
-    var view = '<?php echo VIEW;?>';
-    $.ajax({
-      url:"ajax.php?action="+action+'&view='+view,
-      type:'get',
-      success:function(res){
-        if(action=='pages'){
-          $("#result-visits").html(res);
-        }
-        else if(action=='visitors'){
-          $("#active-visitor").html(res);
-        }
-        else if(action=='devices'){
-          $("#devices").html(res);
-        }
-        else if(action=='sources'){
-          $("#result-sources tbody").html(res);
-        }
-        else if(action=='countries'){
-          $("#countries-sources tbody").html(res);
-        }
-        else if(action=='browser'){
-          $("#browser-sources tbody").html(res);
-        }
-        else if(action=='os'){
-          $("#os-sources tbody").html(res);
-        }
-      }
-    });
-  }
-  $(document).on('click','.open-link',function(){
-    link = $(this).attr('data-link');
-    link = '<?php echo DOMAIN;?>'+link;
-    window.open(link, '_blank');
-  });
-</script>
-
 <?php
 include('includes/footer.php');
 include('includes/script.php');
