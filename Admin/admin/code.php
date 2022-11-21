@@ -419,7 +419,7 @@ if(isset($_POST['post_update']))
 
     $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
             image='$update_filename', audio='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
-                    status='$status' WHERE id='$post_id' ";
+                    status='$status' WHERE post_id='$post_id' ";
     
     $query_run = mysqli_query($con, $query);
     
