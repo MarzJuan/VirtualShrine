@@ -3,7 +3,6 @@ include('authentication.php');
 include('includes/header.php');
 ?>
 
-
 <main id="main" class="main">
 <h4 class="mt-4">Approved Booking</h4>
     <ol class="breadcrumb mb-4">

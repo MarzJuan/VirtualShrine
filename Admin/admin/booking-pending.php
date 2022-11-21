@@ -161,7 +161,7 @@ include('includes/header.php');
     <script src="../../Website/assets/js/main.js?v1"></script>
     <script src="../../Website/assets/js/parsely.min.js"></script>
     <script src="../../Website/assets/js/popper.min.js"></script>
-    <script src="../../Website/assets/js/bootstrap.min.js"></script>
+
 
 <?php
 include('includes/footer.php');
