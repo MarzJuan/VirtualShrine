@@ -499,12 +499,13 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
-    $imageCount = count ($_FILES['image']['name']);
-    for ($i=0;$i<$imageCount;$i++){
-        $imageName = $_FILES['image']['name'][$i];
-        $imageTempName = $_FILES['image']['tmp_name'][$i];
-        $targetPath = '../uploads/posts/'.$imageName;
-        if(move_uploaded_file($imageTempName, $targetPath)){
+    // $imageCount = count ($_FILES['image']['name']);
+    // for ($i=0;$i<$imageCount;$i++){
+    //     $imageName = $_FILES['image']['name'][$i];
+    //     $imageTempName = $_FILES['image']['tmp_name'][$i];
+    //     $targetPath = '../uploads/posts/'.$imageName;
+    //     if(move_uploaded_file($imageTempName, $targetPath)){
+
 
     $status = $_POST['status'] == true ? '0':'1';
 
@@ -514,27 +515,71 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
 
     if($query_run)
         {
-        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a Gallery Content')";
-        $sql_run = mysqli_query($con, $sql);
-            if($sql_run)
-            {
-                $_SESSION['message'] = "Post Created Successfully";
-                header('Location: post-add.php');
-                exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: post-add.php');
-        exit(0);
-    }
-        }
-    }
+        
+        // MULTIPLE IMAGE FILE UPLOAD
+    $targetDir = "../uploads/posts/";
+    $allowTypes = array('jpg','png','jpeg');
 
-}
-}
+    $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = ''; 
+    $fileNames = array_filter($_FILES['image']['name']);
+    if(!empty($fileNames))
+    { 
+        foreach($_FILES['image']['name'] as $key=>$val)
+        { 
+            // File upload path 
+            $fileName = basename($_FILES['image']['name'][$key]); 
+            $targetFilePath = $targetDir . $fileName;
+
+            // Check whether file type is valid 
+            $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION); 
+            if(in_array($fileType, $allowTypes)){
+                // Upload file to server 
+                if(move_uploaded_file($_FILES["image"]["tmp_name"][$key], $targetFilePath))
+                { 
+                    // Image db insert sql 
+                    $insertValuesSQL .= "('".$fileName."', NOW()),"; 
+                }
+                else
+                { 
+                    $errorUpload .= $_FILES['image']['name'][$key].' | '; 
+                } 
+                }
+                else
+                { 
+                    $errorUploadType .= $_FILES['image']['name'][$key].' | '; 
+                } 
+        }
+
+        // Error message 
+        $errorUpload = !empty($errorUpload)?'Upload Error: '.trim($errorUpload, ' | '):''; 
+        $errorUploadType = !empty($errorUploadType)?'File Type Error: '.trim($errorUploadType, ' | '):''; 
+        $errorMsg = !empty($errorUpload)?'<br/>'.$errorUpload.'<br/>'.$errorUploadType:'<br/>'.$errorUploadType;
+
+        if(!empty($insertValuesSQL)){
+            $insertValuesSQL = trim($insertValuesSQL, ','); 
+            // Insert image file name into database 
+            $insert = $con->query("INSERT INTO posts (image) VALUES $insertValuesSQL"); 
+            if($insert){
+
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a Gallery Content')";
+            $sql_run = mysqli_query($con, $sql);
+                if($sql_run)
+                {
+                    $_SESSION['message'] = "Post Created Successfully";
+                    header('Location: post-add.php');
+                    exit(0);
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: post-add.php');
+            exit(0);
+        }
+            }
+        }
+
     }
-}
+    }
 
 
 //EDIT CATEGORY

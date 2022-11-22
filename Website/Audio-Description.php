@@ -67,7 +67,7 @@ include('config/dbcon.php');
    
        <section>
        <?php
-       if(isset($_GET['id']))
+       if(isset($_GET['post_id']))
        {              
         $post_id = $_GET['id'];               
         $posts = "SELECT * FROM posts WHERE status='0' AND id='$post_id'";
