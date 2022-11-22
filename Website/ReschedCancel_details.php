@@ -76,9 +76,9 @@ include('config/dbcon.php');
                                 <hr>
                                 <?php
 
-                                    if(isset($_GET['booking_id']))
+                                    if(isset($_GET['book']))
                                     {
-                                        $booking_id = $_GET['booking_id'];
+                                        $booking_id = $_GET['book'];
 
                                         $query = "SELECT * FROM bookings WHERE status='1' AND booking_id='$booking_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
