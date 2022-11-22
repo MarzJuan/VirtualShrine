@@ -76,7 +76,7 @@ include('config/dbcon.php');
                                 <hr>
                                 <?php
 
-                                    if(isset($_GET['book']))
+                                    if(isset($_GET['booking_id']))
                                     {
                                         $booking_id = $_GET['booking_id'];
 
