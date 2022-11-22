@@ -91,7 +91,7 @@ include('config/dbcon.php');
                     <div class="card-body">
                     
                     <?php
-                                    if(isset($_GET['booking_id']))
+                                    if(isset($_GET['bookingID']))
                                     {
                                         $booking_id = $_GET['booking_id'];
 
