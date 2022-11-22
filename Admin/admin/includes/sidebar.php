@@ -9,7 +9,7 @@
 <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/")+1); ?>
 
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'index.php' ? 'active':'' ?>" href="index.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
+    <a class="nav-link collapsed <?= $page == 'index.php' ? 'active':'' ?>" href="index.php">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
@@ -17,7 +17,7 @@
 
   <?php if($_SESSION['auth_role'] == '0') : ?> <!--ONLY SUPER ADMIN CAN VIEW-->
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="admin-list.php?id=<?= $_SESSION['auth_user']['user_id'];?>">
+    <a class="nav-link collapsed <?= $page == 'admin-list.php' || $page == 'assistant-admin-edit.php' ? 'active':'' ?>" href="admin-list.php">
       <i class="bi bi-people"></i>
       <span>Users</span>
     </a>
