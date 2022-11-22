@@ -63,7 +63,7 @@ include('config/dbcon.php');
                         <p style="margin-left:115px;">Enter Booking ID:</p>
                             <div style="margin-left:100px;" class="row">
                                 <div class="col-md-8">
-                                    <input type="text" name="booking_id" value="<?php if(isset($_GET['bookingID'])){echo $_GET['bookingID'];} ?>" class="form-control">
+                                    <input type="text" name="book" value="<?php if(isset($_GET['book'])){echo $_GET['bookingID'];} ?>" class="form-control">
                                 </div>
                                 <div class="col-md-4">
                                     <button type="submit" class="btn btn-primary">Search</button>
@@ -76,7 +76,7 @@ include('config/dbcon.php');
                                 <hr>
                                 <?php
 
-                                    if(isset($_GET['bookingID']))
+                                    if(isset($_GET['book']))
                                     {
                                         $booking_id = $_GET['bookingID'];
 
