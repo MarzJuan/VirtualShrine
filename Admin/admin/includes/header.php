@@ -61,6 +61,9 @@
             xhttp.send();
         }
     </script>
+    <div id="table">
+        
+    </div>
 
 <?php
     //session_start();
