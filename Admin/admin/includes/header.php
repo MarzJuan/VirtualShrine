@@ -50,7 +50,17 @@
 
 </head>
 
-<body>
+<body onload = "table();">
+    <script type="text/javascript">
+        function table(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementbyId("table").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "index.php")
+            xhttp.send();
+        }
+    </script>
 
 <?php
     //session_start();
