@@ -91,7 +91,7 @@ include('config/dbcon.php');
                     <div class="card-body">
                     
                     <?php
-                                    if(isset($_GET['bookingID']))
+                                    if(isset($_GET['booking_id']))
                                     {
                                         $booking_id = $_GET['booking_id'];
 
@@ -112,7 +112,7 @@ include('config/dbcon.php');
                                 
                                                 <div style="margin-left:100px;" class="form-group mb-3">
                                                     <label for=""><b>Booking ID:</b></label><a style="margin-left:95px;">
-                                                    <?php echo $row['booking_id']; ?></a>
+                                                    <?php echo $row['bookingID']; ?></a>
                                                 </div>
                                                 <hr style="margin-left:80px;width: 500px;"></hr>
                                                 

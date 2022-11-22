@@ -102,7 +102,7 @@ include('config/dbcon.php');
                                                 </div><br>
                                                 <hr>
 
-                                                <p style="margin-left:50px;">Want to make changes? <a value="<?$row['bookingID']?>" href="booking_reschedule.php?booking_id=<?= $row['bookingID']?>">Reschedule</a> or <a href="#" data-toggle="modal" data-target="#cancelBooking<?php $row['bookingID']?>">Cancel Booking</a></p>
+                                                <p style="margin-left:50px;">Want to make changes? <a value="<?$row['booking_id']?>" href="booking_reschedule.php?booking_id=<?= $row['booking_id']?>">Reschedule</a> or <a href="#" data-toggle="modal" data-target="#cancelBooking<?php $row['booking_id']?>">Cancel Booking</a></p>
                                                 <?php
                                             }
                                         else
