@@ -80,7 +80,7 @@ include('config/dbcon.php');
                                     {
                                         $booking_id = $_GET['book'];
 
-                                        $query = "SELECT * FROM bookings WHERE status='1' AND booking_id='$booking_id' LIMIT 1";
+                                        $query = "SELECT * FROM bookings WHERE status='1' AND bookingID='$booking_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
