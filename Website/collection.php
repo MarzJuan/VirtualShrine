@@ -288,7 +288,7 @@
         </div>
 
         <div class="social-links">
-        <img src="assets/Images/Logo.png" class="footer-img">
+        <img src="Images/Logo.png" class="footer-img">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-instagram"></i>
             <i class="fa fa-twitter"></i>
