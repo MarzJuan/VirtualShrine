@@ -383,8 +383,8 @@ h5 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: 5px;
         justify-content: center;
-        margin: 0 calc(-1*(8px + 0.25vw));
     }
     /* CONTENT 1 */
 }
