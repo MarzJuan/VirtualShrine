@@ -15,11 +15,11 @@
 </head>
 <body>
 
-    <section class="header">
+<section class="header">
         <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
-            <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <div class="nav-links" id="mySidebar">
+            <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
                     <li class="menu-item"><a href="homepage.php">HOME</a></li>
 
@@ -29,7 +29,7 @@
                         <ul class="sub-menu">
                                    <li class="sub-item"><a href="plan_visit.php">Plan Your Visit</a></li>
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
-                                   <li class="sub-item"><a href="Audio.php">Audio Guide</a></li>
+                                   <li class="sub-item"><a href="audio-guide.php">Audio Guide</a></li>
                                    <li class="sub-item"><a href="map.php">Museum Map</a></li>
                                    <li class="sub-item"><a href="group.php">Group Visits</a></li>
                         </ul>
@@ -38,7 +38,7 @@
                         <a href="#">EXPLORE<i class="fas fa-angle-down"></i></a>
 
                         <ul class="sub-menu">
-                                   <li class="sub-item"><a href="Gallery.php">Collections</a></li>
+                                   <li class="sub-item"><a href="collection.php">Collections</a></li>
                                    <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
@@ -47,10 +47,10 @@
                     <li class="menu-item"><a href="about.php">ABOUT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <div id="main"></div>
+                <i class="fa fa-bars" onclick="openNav()"></i>
+            </div>
         </nav>
-        <!-- [END] NAVIGATION -->
-    </section>
 
 <!-----------------------------------------[START] COLLECTION DESCRIPTION----------------------------------------->
 
@@ -352,27 +352,15 @@ $(".item-intro-desc .button").click(function() {
  <!----------------------------------------------SCRIPT FOR IMAGE MODAL----------------------------------------->
 
 <script>
-// Get the modal
-var modal = document.getElementById('myModal');
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    }
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    modalImg.alt = this.alt;
-    captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    }
+</script>
  </script>
  <!----------------------------------------------SCRIPT FOR IMAGE MODAL----------------------------------------->
 
