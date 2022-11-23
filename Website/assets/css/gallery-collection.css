@@ -442,12 +442,12 @@ h5 {
     .row{
         flex-direction: column;
     }
-    .gallery-row-title h1{
+    .gallery-row-title{
         font-size: 30px;
         font-weight: 700;
         line-height: 1.1;
     }
-    .gallery-row-text p{
+    .gallery-row-text{
         font-size: 13px;
     }
 }
