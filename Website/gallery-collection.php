@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -127,15 +131,33 @@
         </p>
 
         <div class="row">
+
+        <?php
+                                    
+       $posts = "SELECT * FROM categories WHERE status='0' ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
+
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
+            <a style="text-decoration: none;color: black;" href="GalleryInfo.php?id=<?= $post['id']?>">
             <div class="features-col">
                 <div id="container">
-                <img id="image" src="Images/homepage-features/image1.jpg" alt="">
+                <img id="image" src="../VirtualShrine-Admin/uploads/category/<?= $post['image'];?>" alt="">
                 </div>
-                <h3>Audio Guide</h3>
-                <p>Explore Casa Real with an Audio Guide</p>
+                <h3><?= $post['name']?></h3>
+                <p><?= $post['description']?></p>
             </div>
+            </a>
+        <?php
+            }
+        }
+            ?>
 
-            <div class="features-col">
+            <!-- <div class="features-col">
                 <div id="container">
                 <img id="image" src="Images/homepage-features/image2.JPG" alt="">
                 </div>
@@ -157,7 +179,7 @@
                 </div>
                 <h3>Collections</h3>
                 <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
-            </div>
+            </div> -->
 
         </div>
     </section>
