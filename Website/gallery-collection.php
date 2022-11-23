@@ -120,7 +120,7 @@
     <!-- [END] GALLERY INTRO CONTENT -->
 
     <section class="gallery-rows">
-        <h1>VIRTUALSHRINE NEXT TO YOU</h1>
+        <h1>Start Exploring the Collections</h1>
         <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
 
         <div class="row">
