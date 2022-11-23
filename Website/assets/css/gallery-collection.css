@@ -484,8 +484,9 @@ h5 {
     display: flex;
     flex-basis: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    padding: calc(24px + 0.75vw) calc((100% - min(85vw - (100vw - 100%),1600px))/2) calc(32px + 1vw);
+    margin-left: 4rem;
+    margin-top: 20px;
+    width: 257px;
 }
 .content-card-descriptor, .content-card-eyebrow {
     color: currentColor;
