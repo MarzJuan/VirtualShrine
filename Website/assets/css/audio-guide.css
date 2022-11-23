@@ -219,7 +219,7 @@ input {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 20px;
 }
 .audio-guide-row{
     width: 90%;
