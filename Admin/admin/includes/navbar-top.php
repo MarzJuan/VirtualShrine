@@ -28,7 +28,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
            
             <li class="dropdown-header">
-              You have <span><?php echo mysqli_num_rows($res);?></span> notifications
+            &nbsp;&nbsp;You have <span><?php echo mysqli_num_rows($res);?></span> notifications &nbsp;&nbsp;
             </li>
             <?php
                   if (mysqli_num_rows($res) > 0){
@@ -38,6 +38,7 @@
               <hr class="dropdown-divider">
             </li>
             
+            <a href="booking-pending.php">
             <li class="notification-item">
               <i class="bi bi-exclamation-circle text-warning"></i>
               <div>
@@ -46,6 +47,7 @@
                 <p>30 min. ago</p>
               </div>
             </li>
+            </a>
 
             <li>
               <hr class="dropdown-divider">
