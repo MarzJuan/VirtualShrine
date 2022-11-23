@@ -227,13 +227,13 @@ input {
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #E3AD3F;
 }
 .features-col{
     flex-basis: 25%;
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
+    background-color: #E3AD3F;
 }
 .features-col img{
     width: 100%;
