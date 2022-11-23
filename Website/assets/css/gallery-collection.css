@@ -366,6 +366,15 @@ h5 {
         display: flex;
         flex-wrap: nowrap;
     }
+    .content-split-main {
+        flex-grow: 1;
+        margin-bottom: calc(-10px + 1vw);
+        overflow: hidden;
+        padding-right: calc(-1px + 2vw);
+    }
+    .content-split-main .rich-text{
+        text-align: justify;
+    }
     /* CONTENT 1 */
 }
 
