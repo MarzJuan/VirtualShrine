@@ -17,8 +17,8 @@
     <section class="header">
         <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
-            <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="myFunction()"></i>
+            <div class="nav-links" id="mySidebar">
+            <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
                     <li class="menu-item"><a href="homepage.php">HOME</a></li>
 
@@ -46,7 +46,9 @@
                     <li class="menu-item"><a href="about.php">ABOUT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <div id="main"></div>
+                <i class="fa fa-bars" onclick="openNav()"></i>
+            </div>
         </nav>
         <!-- [END] NAVIGATION -->
 
@@ -183,14 +185,17 @@
     //     navLinks.style.right = "-200px";
     // }
 
-    function myFunction() {
-        var navLinks = document.getElementById("navLinks");
-        if (navLinks.style.display === "none") {
-            navLinks.style.display = "block";
-        } else {
-            navLinks.style.display = "none";
-        }
-        }
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    }
 </script>
 
 
