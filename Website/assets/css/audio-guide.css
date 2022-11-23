@@ -186,21 +186,27 @@ input {
     }
     .simple-acs-search__input {
         flex: 1;
-        font-size: 24px;
+        font-size: 15px;
         margin-right: 6px;
-        padding: 6px;
     }
     input {
         border: 1px solid #fff;
         border-radius: 4px;
-        height: 40px;
+        height: 30px;
         padding: 10px;
         transition: all .3s;
     }
     .search-button{
-        height: 53px;
+        height: 44px;
         padding: 10px;
         transition: all .3s;
+    }
+    .jumplink-banner-description {
+        font-size: calc(0.9rem + 4*(100vw - 375px)/1065);
+    }
+    h1.expressive {
+        font-size: 50px;
+        margin-bottom: calc(12px + 0.75vw);
     }
 }
 /* Search Bar */
