@@ -427,7 +427,7 @@ h5 {
     flex-shrink: 1;
 }
 .card-image-wrapper.card-image-wrapper-fixed-ratio.ratio-16-9 {
-    padding-bottom: 56.25%;
+    padding-bottom: 50%;
 }
 .card-image-wrapper.card-image-wrapper-fixed-ratio {
     height: 0;
@@ -446,7 +446,7 @@ h5 {
     line-height: 0;
     overflow: hidden;
     padding-bottom: 0;
-    width: 70%;
+    width: 50%;
 }
 .invisible-redundant-link {
     height: 100%;
