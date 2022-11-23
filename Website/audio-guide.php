@@ -109,6 +109,17 @@
             </div>
             </a>
 
+            <a style="text-decoration: none;color: black;" href="audio-guide-player.php">
+            <div class="features-col">
+                <div id="container">
+                <img id="image" src="Images/Img2.jpg" alt="">
+                </div>
+                <h3 class="title-hover">Title</h3>
+                <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
+                    and the importance of preserving Australia's biodiversity.</p>
+            </div>
+            </a>
+
         </div>
     </section>
     <hr>
