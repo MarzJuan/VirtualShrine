@@ -175,14 +175,22 @@
 
     <!-- JAVASCRIPT FOR TOGGLE MENU -->
 <script>
-    var navLinks = document.getElementById("navLinks");
-    if (navLinks.style.display === "block") {
-    navLinks.style.display = "none";
-    } 
-    else 
-    {
-        navLinks.style.display = "block";
-    }
+    // var navLinks = document.getElementById("navLinks");
+    // function showMenu(){
+    //     navLinks.style.right = "0";
+    // }
+    // function hideMenu(){
+    //     navLinks.style.right = "-200px";
+    // }
+
+    function myFunction() {
+        var navLinks = document.getElementById("navLinks");
+        if (navLinks.style.display === "none") {
+            navLinks.style.display = "block";
+        } else {
+            navLinks.style.display = "none";
+        }
+        }
 </script>
 
 
