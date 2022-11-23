@@ -256,11 +256,11 @@ input {
     font-size: 1.8rem;
     margin-left: 20px;
 }
-.title-hover{
+.title-hover a{
     text-decoration: none;
     transition: .5s;
 }
-.title-hover:hover{
+.title-hover:hover a{
     text-decoration: underline;
 }
 #container {
