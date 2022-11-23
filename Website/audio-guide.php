@@ -53,10 +53,17 @@
         <!-- [END] NAVIGATION -->
 
         <!-- [START] HEADER -->
-        <div class="text-box">
-            <h1>Audio Guide</h1>
-            <p>Delve into the Australian Museum exhibitions and enrich your understanding of our collection on display through our self-guided audio guides.</p>
-        </div>
+        <div class="header-content">
+        <h1 class="expressive">Audio Guide</h1>
+        <h3 class="jumplink-banner-description"><p>Let Casa Real Shrine speak to you.</p>
+
+            <div class="simple-acs-search">
+                <form name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
+                    <input placeholder="Search the collection" type="text" class="simple-acs-search__input js-simple-acs-search__input"><input type="submit" value="Go">
+                </form>
+            </div> 
+       
+    </div>
         <!-- [END] OF HEADER -->
     </section>
 
