@@ -265,8 +265,7 @@ h5 {
         text-indent: "50px"
     }
     .content-split-main {
-        flex-grow: 1;
-        margin-bottom: calc(32px + 1vw);
+        overflow: hidden;
         padding-right: 0;
         text-align: justify;
     }
