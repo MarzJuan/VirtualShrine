@@ -172,7 +172,7 @@
     if (time < 8) {
     greet = 'Sorry, we are close!';
     } else if (time > 16) {
-    greet = 'Sorry, we are close!';
+    greet = '<span style="color:red;">Sorry, we are close!</span>';
     } else if (dayOfWeek === 1) {
     greet = 'Sorry, we are close!';
     } else {
