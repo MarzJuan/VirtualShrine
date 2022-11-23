@@ -264,16 +264,10 @@ input {
     .row{
         flex-direction: column;
     }
-    .gallery-row-title{
+    .audio-row-title{
         font-size: 30px;
         font-weight: 700;
         line-height: 1.1;
-    }
-    .gallery-row-text{
-        font-size: 13px;
-        text-align: justify;
-        text-indent: 50px;
-        margin-bottom: 30px;
     }
 }
 
