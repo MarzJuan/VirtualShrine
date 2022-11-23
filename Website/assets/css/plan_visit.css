@@ -255,9 +255,14 @@ h5 {
     max-height: none;
 }
 
-
-
 /* Content */
+@media(max-width: 700px){
+    .content-wrap {
+        flex-direction: column-reverse;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
 
 nav .fa{
     display: none;
