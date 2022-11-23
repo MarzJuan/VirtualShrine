@@ -9,17 +9,6 @@ include('config/dbcon.php');
   <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EX6J146FEC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EX6J146FEC');
-</script>
-
 <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/all.min.css">
@@ -112,7 +101,7 @@ include('config/dbcon.php');
                                 
                                                 <div style="margin-left:100px;" class="form-group mb-3">
                                                     <label for=""><b>Booking ID:</b></label><a style="margin-left:95px;">
-                                                    <?php echo $row['bookingID']; ?></a>
+                                                    <?php echo $row['booking_id']; ?></a>
                                                 </div>
                                                 <hr style="margin-left:80px;width: 500px;"></hr>
                                                 

@@ -5,9 +5,9 @@
 }
 
 .header{
-    min-height: 100vh;
+    min-height: 20vh;
     width: 100%;
-    background-image: linear-gradient(rgba(43, 5, 5, 0.5), rgba(36, 8, 2, 0.5)), url(../Images/CRS-Front.JPG);
+    background-color: #E3AD3F;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -47,7 +47,7 @@ nav img{
     content: '';
     width: 0%;
     height: 2px;
-    background: #E3AD3F;
+    background: #fff;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -69,44 +69,6 @@ nav img{
 
 .nav-links ul li:hover .sub-menu{
     display: block;
-}
-
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1{
-    font-size: 62px;
-}
-
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-
-.book-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    border: 2px solid #E3AD3F;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-
-.book-btn:hover{
-    border: 1px solid #E3AD3F;
-    background: #E3AD3F;
-    transition: 1s;
 }
 
 nav .fa{
@@ -166,109 +128,162 @@ nav .fa{
     }
 }
 
-/* [START] HOME CONTENT - EXPLORE OUR GALLERIES */
+/* [START] ITEM DESCRIPTION */
 
-.home-content{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: rgb(159, 159, 159);
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 15px;
-    padding: 5px;
-}
-.row{
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-@media(max-width: 700px){
-    .row{
-        flex-direction: column;
-    }
-}
-.gallery-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-.gallery-col img{
-    width: 100%;
-    height: 100%;
+section {
+    border: 1px solid #fff;
     display: block;
 }
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
+.content-wrap {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
 }
-.layer:hover{
-    background: rgba(237, 213, 136, 0.7);
+.content-split {
+    max-width: min(calc(85vw - (100vw - 100%)),1600px);
 }
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 20px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
+.content-split {
+    margin: calc(48px + 1.5vw) auto;
 }
-
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
+.content-split-main {
+    flex-grow: 1;
+    margin-bottom: calc(32px + 1vw);
+    overflow: hidden;
+    padding-right: calc(64px + 2vw);
+    overflow-y: scroll;
 }
-/* [END] HOME CONTENT - EXPLORE OUR GALLERIES */
-
-
-/* [START] HOME CONTENT - VIRTUALSHRINE NEXT TO YOU */
-
-.vs-features{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+.content-split-side {
+    overflow: hidden;
+    flex-basis: 100%;
 }
-.features-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
+.item-section{
+    border-bottom: 1px solid #e6e6e6;
 }
-.features-col img{
-    width: 100%;
-    border-radius: 10px;
+.item-section .section-inset{
+    padding-bottom: calc(32px + 1vw);
+    width: auto;
 }
-.features-col p{
+.section-inset{
+    margin: 0 auto;
     padding: 0;
+    width: min(calc(85vw - (100vw - 100%)),1600px);
 }
-.features-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
+.interlink{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.interlinked-splash{
+    grid-template-columns: 1fr 64%;
+    grid-column-gap: calc(29px + 1vw);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: row;
+}
+.item-des{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: min(calc(85vw - (100vw - 100%)),1600px);
+}
+.section-destinct{
+    margin-top: calc(-57px + 1vw);
+    padding-top: calc(32px + 1vw);
+}
+.item-des .section-destinct{
+    margin-top: 0;
+    padding-top: 0;
+}
+.item-title{
+    font-size: calc(22px + 1.5vw);
+    font-weight: 500;
+    line-height: 1.05;
+    display: inline;
+}
+span{
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+.item-title-text {
+    font-family: MetSerif,Georgia,serif;
+}
+.item-date {
+    display: block;
+    font-size: calc(20px + .9vw);
+    font-weight: 500;
+    line-height: 1.1;
+    padding: 0.5vw 0;
+}
+.item-date time {
+    color: #757575;
+    display: block;
+}
+.item-location {
+    font-size: calc(.875rem + (16 - 14) * ((100vw - 375px)/ (1440 - 375)));
+    font-weight: 600;
+    line-height: 18px;
+    color: #4a4a4a;
+    font-weight: 300;
+    margin-top: calc(5px + 0.75vw);
+    display: block;
+}
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+}
+.location-onview .icon {
+    margin-top: -5px;
+}
+.item-location .icon {
+    height: 15px;
+    margin-right: 4px;
+}
+.item-intro-desc {
+    font-size: calc(15px + .3vw);
+    line-height: 1.3333;
+    word-break: break-word;
+    font-weight: 400;
+    margin-top: calc(24px + 0.75vw);
+    overflow: hidden;
+    position: relative;
+    text-indent: 50px;
+}
+.the-item-inset {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 8%;
+    margin-left: 3%;
+    position: absolute;
 }
 
-/* [END] HOME CONTENT - VIRTUALSHRINE NEXT TO YOU */
+
+@media(max-width: 700px){
+.item-title-wrapper .item-intro-padded{
+    padding-top: 35px;
+}
+.the-item-sticky {
+    position: sticky;
+    top: 40px;
+}
+.the-item {
+    height: calc(100vh - 35px);
+    margin-top: -13px;
+}
+
+}
+
+/* [END] ITEM DESCRIPTION */
 
 
 /* [START] FOOTER */
@@ -325,9 +340,6 @@ p{
     color: maroon;
     margin: 10px;
 }
-.footer-left p, .footer-right p{
-    color: maroon;
-}
 .footer-img{
     max-width: 159px;
     position: absolute;
@@ -361,7 +373,6 @@ p{
 .social-links p{
     font-size: 12px;
     margin-top: 20px;
-    color: black;
 }
 
 @media screen and (max-width:770px){
@@ -387,3 +398,4 @@ p{
     }
 
 }
+
