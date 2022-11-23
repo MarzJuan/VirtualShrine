@@ -119,61 +119,40 @@
 
     <!-- [END] GALLERY INTRO CONTENT -->
 
+    <section class="gallery-rows">
+        <h1>VIRTUALSHRINE NEXT TO YOU</h1>
+        <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
+
+        <div class="row">
+            <div class="features-col">
+                <img src="Images/homepage-features/image1.jpg" alt="">
+                <h3>Audio Guide</h3>
+                <p>Explore Casa Real with an Audio Guide</p>
+            </div>
+
+            <div class="features-col">
+                <img src="Images/homepage-features/image2.JPG" alt="">
+                <h3>Virtual 360</h3>
+                <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
+            </div>
+
+            <div class="features-col">
+                <img src="Images/homepage-features/image3.jpg" alt="">
+                <h3>Collections</h3>
+                <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
+            </div>
+
+            <div class="features-col">
+                <img src="Images/homepage-features/image3.jpg" alt="">
+                <h3>Collections</h3>
+                <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
+            </div>
+        </div>
+    </section>
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
 
     <section id="galleries" class="gallery-room">
-        <h2 class="productive-component component-title">Explore the Gallery Collections</h2>
-
-        <div class="featured-gallery-room featured-gallery-productive">
-            
-            <div class="content-card content-productive content-card-no-align">
-                <div class="card-image-wrapper card-image-wrapper-fixed-ratio ratio-16-9">
-					<a href="" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
-					<img src="Images/homepage-features/image3.jpg" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
-				</div>
-
-                <div class="content-card-body">
-				<div class="content-card-eyebrow">Art</div>
-				<h3 class="content-card-heading">
-					<a href="collection.php">
-						Highlights
-					</a>
-				</h3>
-
-				<div>
-                    <p>
-                    <span style="color: #333333; background-color: #ffffff;">Browse some of The Met's most 
-                    recognizable and eye-catching objects.</span>
-                    </p>					
-                </div>
-			</div>
-        </div>
-
-        <div class="content-card content-productive content-card-no-align">
-                <div class="card-image-wrapper card-image-wrapper-fixed-ratio ratio-16-9">
-					<a href="" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
-					<img src="Images/homepage-features/image3.jpg" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
-				</div>
-
-                <div class="content-card-body">
-				<div class="content-card-eyebrow">Art</div>
-				<h3 class="content-card-heading">
-					<a href="collection.php">
-						Highlights
-					</a>
-				</h3>
-
-				<div>
-                    <p>
-                    <span style="color: #333333; background-color: #ffffff;">Browse some of The Met's most 
-                    recognizable and eye-catching objects.</span>
-                    </p>					
-                </div>
-			</div>
-        </div>
-        
-    </div>
     
     </section>
 
