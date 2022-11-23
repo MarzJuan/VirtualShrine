@@ -33,7 +33,7 @@
                 <span class="item-title-text">Kaginhawaan (Prosperity)</span>
             </h1>
 
-            <div>
+            <div class="audio-image">
                 <img src="assets/Images/HomePage1.jpg" alt="">
             </div>
         </div>
