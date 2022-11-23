@@ -178,6 +178,31 @@ input {
     padding: 17px;
     transition: all .3s;
 }
+@media(max-width: 700px){
+    input[type=text] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    .simple-acs-search__input {
+        flex: 1;
+        font-size: 24px;
+        margin-right: 6px;
+        padding: 6px;
+    }
+    input {
+        border: 1px solid #fff;
+        border-radius: 4px;
+        height: 40px;
+        padding: 10px;
+        transition: all .3s;
+    }
+    .search-button{
+        height: 53px;
+        padding: 10px;
+        transition: all .3s;
+    }
+}
 /* Search Bar */
 @media(max-width: 700px){
     .text-box h1{
