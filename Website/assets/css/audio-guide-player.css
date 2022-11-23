@@ -14,10 +14,10 @@
     justify-content: space-between;
     align-items: center;
 } */
-div{
+/* div{
     display: flex;
     justify-content: center;
-}
+} */
 .logo{
     width: 200px;
     height: 150px;
