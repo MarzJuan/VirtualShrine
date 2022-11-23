@@ -68,13 +68,13 @@
 
 <p>&nbsp;</p></h3>
         <div class="header-jumplink-banner">
-                <a href="#galleries" class="js-jump-link jumplink-banner__link button secondary-button">
+                <a href="#galleries" class="js-jump-link header-jumplink-banner button secondary-button">
                     Galleries
                 </a>
-                <a href="#vid-audio" class="js-jump-link jumplink-banner__link button secondary-button">
+                <a href="#vid-audio" class="js-jump-link header-jumplink-banner button secondary-button">
                     Videos, and Audio Guide
                 </a>
-                <a href="#exhibit" class="js-jump-link jumplink-banner__link button secondary-button">
+                <a href="#exhibit" class="js-jump-link header-jumplink-banner button secondary-button">
                     Exhibits
                 </a>
         </div>
@@ -85,7 +85,7 @@
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
 
-    <section class="content-split content-admission" id="GeneralAdmission">
+    <section class="content-split content-admission" id="galleries">
     <div class="content-wrap">
         <div class="content-split-main rich-text">
             <p></p>
