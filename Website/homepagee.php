@@ -18,7 +18,7 @@
         <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <i class="fa fa-times" onclick="myFunction()"></i>
                 <ul>
                     <li class="menu-item"><a href="homepage.php">HOME</a></li>
 
