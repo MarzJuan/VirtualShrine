@@ -17,12 +17,14 @@
     <section class="sub-header">
         <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
-            <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <div class="nav-links" id="mySidebar">
+            <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
                     <li class="menu-item"><a href="homepage.php">HOME</a></li>
+
                     <li class="menu-item">
                         <a href="#">VISIT <i class="fas fa-angle-down"></i></a>
+
                         <ul class="sub-menu">
                                    <li class="sub-item"><a href="plan_visit.php">Plan Your Visit</a></li>
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
@@ -33,8 +35,9 @@
                     </li>
                     <li class="menu-item">
                         <a href="#">EXPLORE<i class="fas fa-angle-down"></i></a>
+
                         <ul class="sub-menu">
-                                   <li class="sub-item"><a href="Gallery.php">Collections</a></li>
+                                   <li class="sub-item"><a href="collection.php">Collections</a></li>
                                    <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
@@ -43,7 +46,9 @@
                     <li class="menu-item"><a href="about.php">ABOUT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <div id="main"></div>
+                <i class="fa fa-bars" onclick="openNav()"></i>
+            </div>
         </nav>
         <!-- [END] NAVIGATION -->
         <h1>Plan Your Visit</h1>
@@ -331,6 +336,18 @@
     }
     var show = document.getElementById('message');
     show.textContent = greet;
+</script>
+
+<script>
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    }
 </script>
 </body>
 </html>
