@@ -26,6 +26,10 @@
   <!-- End Users Nav -->
 
   <li class="nav-item">
+  <?php
+              $sql = "SELECT * FROM  bookings WHERE status='0' ORDER BY booking_id DESC";
+              $res = mysqli_query($con, $sql);
+          ?>
     <a class="nav-link collapsed <?= $page == 'booking-pending.php' || $page == 'booking-approved.php' || $page == 'booking-rejected.php' || $page == 'booking-cancelled.php' || $page == 'booking-details.php' || $page == 'booking-details-reject.php' || $page == 'booking-details-cancelled.php' || $page == 'booking-details-approved.php' ? 'active':'' ?>" 
     data-bs-target="#bookings-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-journal-bookmark"></i><span>Bookings</span><i class="bi bi-chevron-down ms-auto"></i>
