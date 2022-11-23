@@ -79,7 +79,7 @@
             <p></p>
             <h5>Museum Operation Details</h5><br>
             <p>The museum is open every <b>Tuesday - Sunday</b> from <b>8:00 am to 4:00 pm</b>. Make sure to follow the rules and 
-            regulation being implemented inside the museum.</p><br>
+            regulation being implemented inside the museum.</p>
             <hr>
             <br>
             <h5>Booking Online</h5><br>
