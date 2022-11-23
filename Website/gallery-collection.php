@@ -55,8 +55,36 @@
         <!-- [START] HEADER -->
         <div class="header-content">
             <h1 class="expressive">Audio Guide</h1>
+            <h1 class="expressive">The Met Collection</h1>
             <p>Delve into the Australian Museum exhibitions and enrich your understanding of our collection on display through our self-guided audio guides.</p>
         </div>
+
+        <div class="header-content">
+        <h1 class="expressive">The Met Collection</h1>
+        <h3 class="jumplink-banner-description"><p>Explore more than 490,000 works—from around the world and throughout history—and the research and conversations they inspire.</p>
+
+
+        <!-- SEARCHBAR
+            <div class="simple-acs-search">
+                <form name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
+                    <input placeholder="Search the collection" type="text" class="simple-acs-search__input js-simple-acs-search__input"><input type="submit" value="Go">
+                </form>
+            </div> 
+        -->
+        
+<p>&nbsp;</p></h3>
+        <div class="header-jumplink-banner">
+                <a href="#galleries" class="js-jump-link jumplink-banner__link button secondary-button">
+                    Galleries
+                </a>
+                <a href="#vid-audio" class="js-jump-link jumplink-banner__link button secondary-button">
+                    Videos, and Audio Guide
+                </a>
+                <a href="#exhibit" class="js-jump-link jumplink-banner__link button secondary-button">
+                    Exhibits
+                </a>
+        </div>
+    </div>
         <!-- [END] OF HEADER -->
     </section>
 

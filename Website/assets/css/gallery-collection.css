@@ -129,6 +129,50 @@ h1 {
     font-weight: 700;
     line-height: 1.1;
 }
+.jumplink-banner-description {
+    font-size: calc(1.25rem + 4*(100vw - 375px)/1065);
+    font-weight: 700;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: calc(24px + 0.75vw);
+    padding-bottom: 0;
+}
+.header-jumplink-banner {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 calc(-1*(8px + 0.25vw));
+}
+a.button {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+.header-jumplink-banner {
+    margin: 0 calc(8px + 0.25vw) calc(8px + 0.25vw);
+}
+.secondary-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5em;
+    color: #fff;
+    font-size: calc(.875rem + 2*(100vw - 375px)/1065);
+    font-weight: 500;
+    min-width: 16ch;
+    padding: calc(0.875rem + 2*(100vw - 375px)/1065);
+}
+.button {
+    cursor: pointer;
+    font-family: MetSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
 
 @media(max-width: 700px){
     .text-box h1{
