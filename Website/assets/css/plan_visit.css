@@ -415,4 +415,8 @@ nav .fa{
         border-radius: 4px;
         margin-right:10px;
     }
+    .g-map{
+        width: 600;
+        height: 100;
+    }
 }
