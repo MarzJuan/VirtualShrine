@@ -54,9 +54,8 @@
 
         <!-- [START] HEADER -->
         <div class="text-box">
-            <h1>WELCOME TO THE VIRTUALSHRINE</h1>
-            <p>Free Entry - Operation time : 8:00AM - 4:00PM</p>
-            <a class="book-btn" href="consent-form.php">Book a Visit Now</a>
+            <h1>Audio Guide</h1>
+            <p>Delve into the Australian Museum exhibitions and enrich your understanding of our collection on display through our self-guided audio guides.</p>
         </div>
         <!-- [END] OF HEADER -->
     </section>
@@ -64,9 +63,12 @@
 
     <!-- [START] AUDIO GUIDE CONTENTS -->
 
+
     
 
     <!-- [END] AUDIO GUIDE CONTENT-->
+
+
 
     <!-- [START] FOOTER -->
 
@@ -105,14 +107,6 @@
 
     <!-- JAVASCRIPT FOR TOGGLE MENU -->
 <script>
-    // var navLinks = document.getElementById("navLinks");
-    // function showMenu(){
-    //     navLinks.style.right = "0";
-    // }
-    // function hideMenu(){
-    //     navLinks.style.right = "-200px";
-    // }
-
     /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
     function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
