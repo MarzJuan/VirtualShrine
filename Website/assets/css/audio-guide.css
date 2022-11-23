@@ -255,9 +255,12 @@ input {
     text-align: left;
     font-size: 1.8rem;
     margin-left: 20px;
-    transition: .5s;
 }
 .title-hover{
+    text-decoration: none;
+    transition: .5s;
+}
+.title-hover:hover{
     text-decoration: underline;
 }
 #container {
