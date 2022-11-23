@@ -245,7 +245,7 @@
             </ul>
             <br><br>
             
-            <h4>VirtualShrine</h4><br>
+            <h4>VirtualShrine Website</h4><br>
             <p>Can't visit The Casa Real Shrine in person? Be sure to explore our website for groundbreaking resources that connect 
                 you with current exhibitions, VirtualShrine collection, and more. Resources include:</p><br>
                 <ul>

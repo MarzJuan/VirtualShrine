@@ -404,6 +404,7 @@ nav .fa{
         text-indent: 50px;
     }
     .content-split-main {
+        margin-top: 45px;
         overflow: hidden;
         padding-right: 0;
         text-align: justify;
