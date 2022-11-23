@@ -124,8 +124,8 @@
         <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
 
         <div class="row">
-            <div class="features-col">
-                <img src="Images/homepage-features/image1.jpg" alt="">
+            <div id="container" class="features-col">
+                <img id="image" src="Images/homepage-features/image1.jpg" alt="">
                 <h3>Audio Guide</h3>
                 <p>Explore Casa Real with an Audio Guide</p>
             </div>
