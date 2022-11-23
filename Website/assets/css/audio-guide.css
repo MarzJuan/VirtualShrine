@@ -205,7 +205,7 @@ input {
         font-size: calc(0.9rem + 4*(100vw - 375px)/1065);
     }
     h1.expressive {
-        font-size: 50px;
+        font-size: 45px;
         margin-bottom: calc(12px + 0.75vw);
     }
 }
