@@ -7,7 +7,7 @@
 .sub-header{
     min-height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(210, 150, 150, 0.333), rgba(36, 8, 2, 0.5)), url(images/Plan.png);
+    background-image: linear-gradient(rgba(210, 150, 150, 0.333), rgba(36, 8, 2, 0.5)), url(image/Plan.png);
     background-position: center;
     background-size: cover;
     text-align: center;
