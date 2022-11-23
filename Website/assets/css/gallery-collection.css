@@ -269,14 +269,20 @@ h5 {
     font-weight: 600;
 }
 /* BUTTON */
-.button-90 {
-    color: #fff;
-    padding: 15px 25px;
-    border-radius: 100px;
-    background-color: #4C43CD;
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
+.button-89 {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
     font-size: 16px;
   
     border: 0;
@@ -284,8 +290,18 @@ h5 {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+  }
   
-    cursor: pointer;
+  .button-89:hover,
+  .button-89:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .button-89:active {
+    background: var(--color);
+    color: #fff;
   }
   /* BUTTON */
 
