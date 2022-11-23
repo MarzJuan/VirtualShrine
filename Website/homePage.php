@@ -37,7 +37,7 @@
                         <a href="#">EXPLORE<i class="fas fa-angle-down"></i></a>
 
                         <ul class="sub-menu">
-                                   <li class="sub-item"><a href="Gallery.php">Collections</a></li>
+                                   <li class="sub-item"><a href="collection.php">Collections</a></li>
                                    <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
@@ -89,7 +89,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                    <img src="../Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
+                    <img src="Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
                     <div class="layer">
                         <h3>PAGBABAGONG-PURI</h3>
                     </div>
@@ -117,19 +117,19 @@
 
         <div class="row">
             <div class="features-col">
-                <img src="assets/Images/homepage-features/image1.jpg" alt="">
+                <img src="Images/homepage-features/image1.jpg" alt="">
                 <h3>Audio Guide</h3>
                 <p>Explore Casa Real with an Audio Guide</p>
             </div>
 
             <div class="features-col">
-                <img src="assets/Images/homepage-features/image2.jpg" alt="">
+                <img src="Images/homepage-features/image2.jpg" alt="">
                 <h3>Virtual 360</h3>
                 <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
             </div>
 
             <div class="features-col">
-                <img src="assets/Images/homepage-features/image3.jpg" alt="">
+                <img src="Images/homepage-features/image3.jpg" alt="">
                 <h3>Collections</h3>
                 <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
             </div>
@@ -160,7 +160,7 @@
         </div>
 
         <div class="social-links">
-        <img src="assets/Images/Logo.png" class="footer-img">
+        <img src="Images/Logo.png" class="footer-img">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-instagram"></i>
             <i class="fa fa-twitter"></i>
