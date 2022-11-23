@@ -22,3 +22,122 @@ nav img{
     width: 200px;
     height: 150px;
 }
+
+
+/* [START] COLLECTION CONTENT */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    height: 700px;
+    display: block;
+    width: 35%;
+    overflow-y: scroll;
+    padding-left: 5%;
+}
+.right {
+    height: 100%;
+    display: block;
+    width: 65%;
+    overflow-y: none;
+}
+.collection-title{
+    margin-top: calc(30px + 1vw);
+    margin-left: calc(30px + 1vw);
+    margin-bottom: calc(30px + 1vw);
+    padding-top: calc(15px + 1vw);
+}
+.item-title{
+    font-size: calc(22px + 1.5vw);
+    font-weight: 500;
+    line-height: 1.05;
+    display: inline;
+    text-align: center;
+}
+.item-title-text {
+    font-family: MetSerif,Georgia,serif;
+}
+.item-date {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+    padding: 0.5vw 0;
+    color: #757575;
+    display: block;
+}
+.item-location {
+    font-size: calc(.875rem + (16 - 14) * ((100vw - 375px)/ (1440 - 375)));
+    font-weight: 600;
+    line-height: 18px;
+    color: #4a4a4a;
+    font-weight: 300;
+    margin-top: -30px;
+    display: block;
+    margin-left: 6%;
+}
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+}
+.location-onview .icon {
+    margin-top: -5px;
+}
+.item-location .icon {
+    height: 15px;
+    margin-right: 4px;
+}
+.item-intro-desc {
+    font-size: calc(15px + .3vw);
+    line-height: 1.3333;
+    word-break: break-word;
+    font-weight: 300;
+    margin-top: calc(24px + 0.75vw);
+    margin-left: 6%;
+    margin-right: 6.5%;
+    overflow: hidden;
+    position: relative;
+    text-indent: 50px;
+    max-height: 400px;
+    text-align: justify;
+}
+.item-intro-desc .read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; 
+    padding: 30px 0;
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
+  }
+.read-more .button{
+    font-size: 15px;
+    padding: 9px;
+    color: white;
+    background-color: #E3AD3F;
+    box-shadow: 0px 8px 16px 0px rgb(66 66 66 / 20%);
+    font-weight: 500;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-right: 15%;
+}
+.read-more .button:hover{
+    padding: 5px;
+}
+.the-item-inset {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 8%;
+    margin-left: 3%;
+    position: absolute;
+}

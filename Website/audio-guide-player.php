@@ -14,15 +14,21 @@
 </head>
 <body>
 <!-- push -->
-    <section class="header">
-        <nav>
+<div class="container">
             <a href="homePage.php">
                 <div>
                     <image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image>
                 </div>
             </a>
-        </nav>
-    </section>
+    <!-- left class -->
+    <div class="left">
+        <div class="collection-title">
+            <h1 id="item-title" class="item-title">
+                <span class="item-title-text">Face jug</span>
+            </h1>
+        </div>
+    </div>   
+</div>
 
     
 
