@@ -375,6 +375,17 @@ h5 {
     .content-split-main .rich-text{
         text-align: justify;
     }
+    .jumplink-banner-description{
+        font-size: calc(0.9rem + 4*(100vw - 375px)/1065);
+    }
+    .header-jumplink-banner{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 calc(-1*(8px + 0.25vw));
+    }
     /* CONTENT 1 */
 }
 
