@@ -120,8 +120,10 @@
     <!-- [END] GALLERY INTRO CONTENT -->
 
     <section class="gallery-rows">
-        <h1>Start Exploring the Collections</h1>
-        <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
+        <h1>Start Exploring the Collections</h1><br>
+        <p>Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
+            and artifacts.
+        </p>
 
         <div class="row">
             <div class="features-col">
