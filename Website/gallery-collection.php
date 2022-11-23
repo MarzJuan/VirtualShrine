@@ -127,28 +127,53 @@
 
         <div class="featured-gallery-room featured-gallery-productive">
             <div class="content-card content-productive content-card-no-align">
-                    <div class="card-image-wrapper card-image-wrapper-fixed-ratio ratio-16-9">
-						<a href="" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
-						<img src="Images/homepage-features/image3.jpg" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
-					</div>
-
-                    <div class="content-card-body">
-					<div class="content-card-eyebrow">Art</div>
-					<h3 class="content-card-heading">
-						<a href="collection.php">
-							Highlights
-						</a>
-					</h3>
-
-					<div>
-                        <p>
-                            <span style="color: #333333; background-color: #ffffff;">Browse some of The Met's most 
-                            recognizable and eye-catching objects.</span>
-                        </p>					
-                    </div>
+                <div class="card-image-wrapper card-image-wrapper-fixed-ratio ratio-16-9">
+					<a href="" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
+					<img src="Images/homepage-features/image3.jpg" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
 				</div>
-            </div>
+
+                <div class="content-card-body">
+				<div class="content-card-eyebrow">Art</div>
+				<h3 class="content-card-heading">
+					<a href="collection.php">
+						Highlights
+					</a>
+				</h3>
+
+				<div>
+                    <p>
+                    <span style="color: #333333; background-color: #ffffff;">Browse some of The Met's most 
+                    recognizable and eye-catching objects.</span>
+                    </p>					
+                </div>
+			</div>
         </div>
+    </div>
+
+    <div class="featured-gallery-room featured-gallery-productive">
+            <div class="content-card content-productive content-card-no-align">
+                <div class="card-image-wrapper card-image-wrapper-fixed-ratio ratio-16-9">
+					<a href="" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
+					<img src="Images/homepage-features/image3.jpg" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
+				</div>
+
+                <div class="content-card-body">
+				<div class="content-card-eyebrow">Art</div>
+				<h3 class="content-card-heading">
+					<a href="collection.php">
+						Highlights
+					</a>
+				</h3>
+
+				<div>
+                    <p>
+                    <span style="color: #333333; background-color: #ffffff;">Browse some of The Met's most 
+                    recognizable and eye-catching objects.</span>
+                    </p>					
+                </div>
+			</div>
+        </div>
+    </div>
     </section>
 
     <!-- [END] GALLERY COLLECTION CONTENTS -->
