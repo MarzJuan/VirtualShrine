@@ -123,7 +123,7 @@
             </div>
 
             <div class="features-col">
-                <img src="Images/homepage-features/image2.jpg" alt="">
+                <img src="Images/homepage-features/image2.JPG" alt="">
                 <h3>Virtual 360</h3>
                 <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
             </div>
