@@ -102,9 +102,9 @@
         <p></p>
             <p>
             <h4 id="message">hey</h4><br>
-            <b>Address: </b>RRV6+PJC, Paseo del Congreso, Plaza Rizal, Malolos, 3000 Bulacan<br>
-            <b>Hours: </b>8:00 AM - 4:00 PM<br>
-            <b>Closed: </b>Monday
+            <p class="gallery-status"><b>Address: </b>RRV6+PJC, Paseo del Congreso, Plaza Rizal, Malolos, 3000 Bulacan</p><br>
+            <p class="gallery-status"><b>Hours: </b>8:00 AM - 4:00 PM</p><br>
+            <p class="gallery-status"><b>Closed: </b>Monday</p>
             </p><br>
         </div>
     </div>
