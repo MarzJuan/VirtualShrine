@@ -89,7 +89,7 @@ include('config/dbcon.php');
 
     <!-- [START] GALLERY INTRO CONTENT -->
 
-    <section class="content-split content-admission" id="galleries">
+    <section class="content-split content-admission">
     <div class="content-wrap">
         <div class="content-split-main rich-text">
             <p></p>
@@ -124,7 +124,7 @@ include('config/dbcon.php');
     <!-- [END] GALLERY INTRO CONTENT -->
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
-    <section class="gallery-rows">
+    <section class="gallery-rows" id="galleries">
         <h1>Start Exploring the Collections</h1><br>
         <p>Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
             and artifacts. The Galleries tells the long history of the Philippines from pre-colonial times upto the events 
