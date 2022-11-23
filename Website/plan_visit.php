@@ -69,7 +69,7 @@
                 individuals who can visit. Walk-in visits are available each day for those who arrive at the Museum 
                 without booking in advance. But walk-in entry cannot be guaranteed because catering number of visitors 
                 depends on the capacity. Please speak to a staff upon your arrival to inquire about availability.</p>
-            <div class="split-main-card" style="background-color: #f2f2f2; padding: 12px; border-radius: 4px;margin-right:90px;">
+            <div class="split-main-card" style="">
                 Upon entry to the museum, make sure to prepare a copy or a screenshot of the booking confirmation sent to your email,
                 and a valid ID to show the guard in order to confirm your scheduled visit.
             </div>
