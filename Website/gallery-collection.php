@@ -108,8 +108,8 @@
             </p>
 
             <!-- HTML !-->
-            <button class="button-31" role="button">Plan Your Visit</button>
-            <button class="button-31" role="button">Schedule a Visit</button>
+            <a href="plan_visit.php"><button class="button-31" role="button">Plan Your Visit</button></a>
+            <a href="consent_form.php"><button class="button-31" role="button">Schedule a Visit</button></a>
 
         </div>
     </div>
