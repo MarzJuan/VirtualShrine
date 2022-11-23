@@ -153,17 +153,6 @@ a.button {
 a:hover, a:visited {
     color: inherit;
 }
-
-.secondary-button {
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 5em;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    min-width: 16ch;
-    padding: calc(0.875rem + 2*(100vw - 375px)/1065);
-}
 .header-jumplink-banner {
     margin: 0 calc(8px + 0.25vw) calc(8px + 0.25vw);
 }
