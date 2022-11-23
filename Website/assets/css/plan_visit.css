@@ -423,4 +423,9 @@ nav .fa{
         flex-direction: column;
         display: flex;
     }
+    .content-split-side .map-stat{
+        overflow: hidden;
+        flex-basis: 49%;
+        margin-bottom: -4rem;
+    }
 }
