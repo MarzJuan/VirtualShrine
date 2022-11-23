@@ -29,13 +29,13 @@
             </a>
 
         <div class="collection-title">
-            <h1 id="item-title" class="item-title">
-                <span class="item-title-text">Kaginhawaan (Prosperity)</span>
-            </h1>
-
             <div class="audio-image">
                 <img src="Images/HomePage1.jpg" alt="">
             </div>
+
+            <h1 id="item-title" class="item-title">
+                <span class="item-title-text">Kaginhawaan (Prosperity)</span>
+            </h1>
         </div>
 
         <!-- AUDIO PLAYER -->
