@@ -69,7 +69,7 @@ include('includes/header.php');
                                                 }
                                                 if($bookings['status'] ==3)
                                                 {
-                                                    echo '<span style="color:VIOLET;text-align:center;">Reschedule</span>';
+                                                    echo '<span style="color:VIOLET;text-align:center;">Resched</span>';
                                                 }
                                                 if($bookings['status'] ==4)
                                                 {
