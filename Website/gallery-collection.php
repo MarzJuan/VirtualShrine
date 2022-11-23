@@ -146,7 +146,7 @@ include('config/dbcon.php');
             <a style="text-decoration: none;color: black;" href="GalleryInfo.php?id=<?= $post['id']?>">
             <div class="features-col">
                 <div id="container">
-                <img id="image" src="../VirtualShrine-Admin/uploads/category/<?= $post['image'];?>" alt="">
+                <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
                 </div>
                 <h3><?= $post['name']?></h3>
                 <p><?= $post['description']?></p>
