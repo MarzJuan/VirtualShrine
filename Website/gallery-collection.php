@@ -90,13 +90,11 @@
         <div class="content-split-main rich-text">
             <p></p>
             <h4>Explore the 5 Galleries at the Casa Real Shrine</u></h4><br>
-            <p class="split-main-indent">You are advised to book a scheduled slot in advance to guarantee entry and help control the number of 
-                individuals who can visit. Walk-in visits are available each day for those who arrive at the Museum 
-                without booking in advance. But walk-in entry cannot be guaranteed because catering number of visitors 
-                depends on the capacity. Please speak to a staff upon your arrival to inquire about availability.</p>
+            <p class="split-main-indent">The VirtualShrine collection tells our nation's shared political history.</p>
             <div class="split-main-card" style="">
-                Upon entry to the museum, make sure to prepare a copy or a screenshot of the booking confirmation sent to your email,
-                and a valid ID to show the guard in order to confirm your scheduled visit.
+                The scope of objects in VirtualShrine's collection is staggering - relics from the First Philippine
+                Republic, memorabilia of Gen. Emilio Aguinaldo, relics from the wealthy families of Malolos, exhibits, 
+                a printing press of the Malolos Republic, and a display of the 21 Women of Malolos memorabilia.
             </div>
             <br>
         </div>
