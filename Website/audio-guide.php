@@ -59,7 +59,8 @@
 
             <div class="simple-acs-search">
                 <form name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
-                    <input placeholder="Search the collection" type="text" class="simple-acs-search__input js-simple-acs-search__input"><input type="submit" value="Go">
+                    <input placeholder="Search the collection" type="text" class="simple-acs-search__input js-simple-acs-search__input">
+                    <input class="search-button" type="submit" value="Go">
                 </form>
             </div> 
        
