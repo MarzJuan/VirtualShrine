@@ -8,12 +8,12 @@
     position: absolute;
     margin: auto;
 }
-nav{
+/* nav{
     display: flex;
     padding: 1% 47%;
     justify-content: space-between;
     align-items: center;
-}
+} */
 div{
     display: flex;
     justify-content: center;
