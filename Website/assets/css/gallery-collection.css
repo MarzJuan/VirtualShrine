@@ -450,10 +450,10 @@ h5 {
 }
 .invisible-redundant-link {
     height: 100%;
-    left: 0;
+    left: 35px;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 80%;
     z-index: 999;
 }
 .card-image-wrapper-fixed-ratio .card-image {
