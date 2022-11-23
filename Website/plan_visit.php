@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- :) -->
     <section class="sub-header">
         <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
