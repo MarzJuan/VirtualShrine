@@ -394,12 +394,18 @@ nav .fa{
         flex-direction: column-reverse;
         display: flex;
     }
-    .split-main-indent{
+    .split-main-indent {
         text-indent: 50px;
     }
     .content-split-main {
         overflow: hidden;
         padding-right: 0;
         text-align: justify;
+    }
+    .split-main-card{
+        background-color: #f2f2f2; 
+        padding: 12px; 
+        border-radius: 4px;
+        margin-right:10px;
     }
 }
