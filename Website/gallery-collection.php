@@ -129,7 +129,7 @@
             <div class="content-card content-productive content-card-no-align">
                     <div class="card-image-wrapper card-image-wrapper-fixed-ratio ratio-16-9">
 						<a href="" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
-						<img src="" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
+						<img src="Images/homepage-features/image3.jpg" class="card-image lazy loaded" alt=", &quot; &quot;" width="672" height="424">
 					</div>
 
                     <div class="content-card-body">
