@@ -263,7 +263,7 @@
     <!-- [START] LOCATION-->
     <section class="content-split content-location" id="Location">
     <h2 class="content-split-title component-title">Location and Hours</h2>
-    <div class="content-wrap">
+    <div class="content-wrap map">
         <div class="content-split-main rich-text">
         <iframe class="g-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.660196653396!2d120.80931511476206!3d14.84431718964763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396522cdc858be5%3A0x41d2d36937bc0e93!2sMuseo%20ng%20Kasaysayang%20Pampulitika%20ng%20Pilipinas%20-%20Casa%20Real%20Shrine!5e0!3m2!1sen!2sph!4v1668867710223!5m2!1sen!2sph" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

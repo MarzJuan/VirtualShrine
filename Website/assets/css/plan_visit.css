@@ -419,4 +419,8 @@ nav .fa{
         width: 60%;
         height: 20%;
     }
+    .content-wrap.map{
+        flex-direction: column;
+        display: flex;
+    }
 }
