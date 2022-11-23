@@ -37,9 +37,6 @@
                 <span class="item-title-text">Kaginhawaan (Prosperity)</span>
             </h1>
         </div>
-
-        <!-- AUDIO PLAYER -->
-
         
     </div>   
 </div>
