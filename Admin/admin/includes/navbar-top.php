@@ -51,7 +51,7 @@
               <hr class="dropdown-divider">
             </li>
 
-            <!-- <li class="notification-item">
+            <li class="notification-item">
               <i class="bi bi-x-circle text-danger"></i>
               <div>
                 <h4>Atque rerum nesciunt</h4>
@@ -64,7 +64,7 @@
               <hr class="dropdown-divider">
             </li>
 
-            <li class="notification-item">
+            <!-- <li class="notification-item">
               <i class="bi bi-check-circle text-success"></i>
               <div>
                 <h4>Sit rerum fuga</h4>
