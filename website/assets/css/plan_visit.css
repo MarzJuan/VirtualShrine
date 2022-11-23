@@ -260,7 +260,6 @@ h5 {
     .content-wrap {
         flex-direction: column-reverse;
         display: flex;
-        flex-wrap: nowrap;
     }
 }
 
