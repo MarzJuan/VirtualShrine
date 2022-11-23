@@ -129,8 +129,9 @@ nav .fa{
         top: 0;
         right: 0;
         text-align: left;
-        z-index: 2;
+        z-index: 1;
         transition: 1s;
+        overflow-x: hidden;
     }
     .nav-links ul li::after{
         display: none;
