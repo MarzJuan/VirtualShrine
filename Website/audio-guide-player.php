@@ -15,13 +15,15 @@
 <body>
 <!-- push -->
 <div class="container">
+    <!-- left class -->
+    <div class="left">
+
             <a href="homepage.php">
                 <div class="logo">
                     <image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image>
                 </div>
             </a>
-    <!-- left class -->
-    <div class="left">
+
         <div class="collection-title">
             <h1 id="item-title" class="item-title">
                 <span class="item-title-text">Face jug</span>
