@@ -2,7 +2,7 @@
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <head>
-        <title>VirtualShrine - Homepage</title>
+        <title>VirtualShrine - Collection</title>
         <link rel="stylesheet" href="assets/css/collection.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
