@@ -89,7 +89,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                    <img src="Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
+                    <img src="../Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
                     <div class="layer">
                         <h3>PAGBABAGONG-PURI</h3>
                     </div>
