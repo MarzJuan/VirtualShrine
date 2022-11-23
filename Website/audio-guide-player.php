@@ -18,5 +18,11 @@
         <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
         </nav>
-        <h1>HELLO</h1>
     </section>
+
+
+
+    
+
+</body>
+</html>
