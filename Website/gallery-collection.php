@@ -83,12 +83,39 @@
     </section>
 
 
-    <!-- [START] AUDIO GUIDE CONTENTS -->
+    <!-- [START] GALLERY COLLECTION CONTENTS -->
 
-
+    <section class="content-split content-admission" id="GeneralAdmission">
+    <h2 class="content-split-title component-title">General Admission</h2>
+    <div class="content-wrap">
+        <div class="content-split-main rich-text">
+            <p></p>
+            <h4>Explore the 5 Galleries at the Casa Real Shrine</u></h4><br>
+            <p class="split-main-indent">You are advised to book a scheduled slot in advance to guarantee entry and help control the number of 
+                individuals who can visit. Walk-in visits are available each day for those who arrive at the Museum 
+                without booking in advance. But walk-in entry cannot be guaranteed because catering number of visitors 
+                depends on the capacity. Please speak to a staff upon your arrival to inquire about availability.</p>
+            <div class="split-main-card" style="">
+                Upon entry to the museum, make sure to prepare a copy or a screenshot of the booking confirmation sent to your email,
+                and a valid ID to show the guard in order to confirm your scheduled visit.
+            </div>
+            <br>
+        </div>
+        <div class="content-split-side rich-text">
+            <p></p>
+            <h5>Museum Operation Details</h5><br>
+            <p>The museum is open every <b>Tuesday - Sunday</b> from <b>8:00 am to 4:00 pm</b>. Make sure to follow the rules and 
+            regulation being implemented inside the museum.</p><br>
+            <hr>
+            <br>
+            <h5>Booking Online</h5><br>
+            <p>Booking an admission online is advised. Just show the confirmation email of your booking at the entrance.</p><br>
+        </div>
+    </div>
+    </section>
     
 
-    <!-- [END] AUDIO GUIDE CONTENT-->
+    <!-- [END] GALLERY COLLECTION CONTENTS -->
 
 
 

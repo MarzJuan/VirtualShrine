@@ -173,6 +173,101 @@ a.button {
     touch-action: manipulation;
     white-space: nowrap;
 }
+/* Content */
+
+section{
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+
+div{
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+
+.content-split {
+    margin: calc(48px + 1.5vw) auto;
+}
+
+.content-split {
+    max-width: min(calc(85vw - (100vw - 100%)),1600px);
+}
+
+.component-title {
+    margin-bottom: calc(24px + 0.75vw);
+}
+
+h2 {
+    font-size: calc(2rem + 6*(100vw - 375px)/1065);
+    font-weight: 500;
+    line-height: 1.1;
+    font-family: inherit;
+    margin-bottom: calc(8px + 0.25vw);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+
+.content-wrap {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.rich-text {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.rich-text p{
+    margin-bottom: calc(16px + 0.5vw);
+}
+
+.rich-text ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.rich-text li {
+    line-height: 1.4;
+    margin: 0;
+}
+
+p {
+    font-family: inherit;
+}
+
+.content-split-main {
+    flex-grow: 1;
+    margin-bottom: calc(32px + 1vw);
+    overflow: hidden;
+    padding-right: calc(64px + 2vw);
+}
+
+h4 {
+    font-size: calc(1.25rem + 4*(100vw - 375px)/1065);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.content-split-side {
+    overflow: hidden;
+    flex-basis: 49%;
+}
+
+h5 {
+    font-size: 19px;
+    font-weight: 600;
+}
 
 @media(max-width: 700px){
     .text-box h1{
