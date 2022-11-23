@@ -144,7 +144,7 @@ include('config/dbcon.php');
             while($post = mysqli_fetch_assoc($posts_run))
             {
             ?>
-            <a style="text-decoration: none;color: black;" href="GalleryInfo.php?id=<?= $post['id']?>">
+            <a style="text-decoration: none;color: black;" href="gallery-all-collections.php?id=<?= $post['id']?>">
             <div class="features-col">
                 <div id="container">
                 <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
