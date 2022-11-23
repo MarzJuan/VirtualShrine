@@ -5,6 +5,7 @@
         <title>VirtualShrine - Homepage</title>
         <link rel="stylesheet" href="assets/css/homepage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
