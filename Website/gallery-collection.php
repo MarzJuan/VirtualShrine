@@ -99,14 +99,13 @@
             <br>
         </div>
         <div class="content-split-side rich-text">
-            <p></p>
-            <h5>Museum Operation Details</h5><br>
-            <p>The museum is open every <b>Tuesday - Sunday</b> from <b>8:00 am to 4:00 pm</b>. Make sure to follow the rules and 
-            regulation being implemented inside the museum.</p><br>
-            <hr>
-            <br>
-            <h5>Booking Online</h5><br>
-            <p>Booking an admission online is advised. Just show the confirmation email of your booking at the entrance.</p><br>
+        <p></p>
+            <p>
+            <h4 id="message">hey</h4><br><br>
+            <b>Address: </b>RRV6+PJC, Paseo del Congreso, Plaza Rizal, Malolos, 3000 Bulacan<br><br>
+            <b>Hours: </b>8:00 AM - 4:00 PM<br><br>
+            <b>Closed: </b>Monday
+            </p><br>
         </div>
     </div>
     </section>
@@ -162,6 +161,25 @@
     function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     }
+</script>
+
+<script>
+    var today = new Date();
+    var time = today.getHours();
+    var currentDate = new Date();
+    var dayOfWeek = currentDate.getDay();
+    var greet;
+    if (time < 8) {
+    greet = 'Sorry, we are close!';
+    } else if (time > 16) {
+    greet = 'Sorry, we are close!';
+    } else if (dayOfWeek === 1) {
+    greet = 'Sorry, we are close!';
+    } else {
+    greet = 'Hi, we are open today!';
+    }
+    var show = document.getElementById('message');
+    show.textContent = greet;
 </script>
 
 
