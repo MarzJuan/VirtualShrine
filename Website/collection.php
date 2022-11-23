@@ -38,7 +38,7 @@
                         <a href="#">EXPLORE<i class="fas fa-angle-down"></i></a>
 
                         <ul class="sub-menu">
-                                   <li class="sub-item"><a href="collection.php">Collections</a></li>
+                                   <li class="sub-item"><a href="gallery-collection.php">Collections</a></li>
                                    <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
