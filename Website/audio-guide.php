@@ -81,7 +81,7 @@
                 <div id="container">
                 <img id="image" src="Images/Img2.jpg" alt="">
                 </div>
-                <h3>Title</h3>
+                <h3 class="title-hover">Title</h3>
                 <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
                     and the importance of preserving Australia's biodiversity.</p>
             </div>
@@ -92,7 +92,7 @@
                 <div id="container">
                 <img id="image" src="Images/Img2.jpg" alt="">
                 </div>
-                <h3>Title</h3>
+                <h3 class="title-hover">Title</h3>
                 <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
                     and the importance of preserving Australia's biodiversity.</p>
             </div>
@@ -103,7 +103,7 @@
                 <div id="container">
                 <img id="image" src="Images/Img2.jpg" alt="">
                 </div>
-                <h3>Title</h3>
+                <h3 class="title-hover">Title</h3>
                 <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
                     and the importance of preserving Australia's biodiversity.</p>
             </div>
