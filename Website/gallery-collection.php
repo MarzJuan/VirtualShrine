@@ -122,7 +122,8 @@
     <section class="gallery-rows">
         <h1>Start Exploring the Collections</h1><br>
         <p>Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
-            and artifacts.
+            and artifacts. The Galleries tells the long history of the Philippines from pre-colonial times upto the events 
+            under the rule of colonizers and the tenure of the past presidents of the Philippines
         </p>
 
         <div class="row">
