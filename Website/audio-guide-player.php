@@ -34,7 +34,7 @@
             </h1>
 
             <div class="audio-image">
-                <img src="assets/Images/HomePage1.jpg" alt="">
+                <img src="Images/HomePage1.jpg" alt="">
             </div>
         </div>
 

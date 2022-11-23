@@ -98,7 +98,7 @@
                 <div class="controls">
                     <ul class="item-interactions">
                         <li class="item-interaction item-interactions-download">
-                            <a href="assets/Images/HomePage1.jpg" class="gtm__download__image" title="Download" download="">
+                            <a href="Images/HomePage1.jpg" class="gtm__download__image" title="Download" download="">
                                 <svg class="icon icon-download" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.088.01L5.48 0v14.344L1.067 9.93l-.041.042-.071.07-.004.004v.001l-.003.003-.948.94 5.37 5.37-.005.005 1.063 1.063 6.438-6.438-.947-.94-.001-.001-.007-.006a10.756 10.756 0 01-.07-.07l-.042-.042-4.514 4.513V.01h-.197zM.073 18.503L.065 19.76H13v-1.412H.073a20.492 20.492 0 000 .15v.005z"></path></svg>
                                 <span class="download-text">Download image</span>
                             </a>
