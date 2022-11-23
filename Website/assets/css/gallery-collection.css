@@ -446,7 +446,7 @@ h5 {
     line-height: 0;
     overflow: hidden;
     padding-bottom: 0;
-    width: 100%;
+    width: 70%;
 }
 .invisible-redundant-link {
     height: 100%;
@@ -461,7 +461,7 @@ h5 {
     height: 100%;
     left: 0;
     -o-object-fit: cover;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     right: 0;
     top: 0;
