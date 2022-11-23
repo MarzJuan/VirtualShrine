@@ -43,7 +43,21 @@
         });
     </script>
     <!-- //Summernote JS - CDN Link -->
+    
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#notification").on("click", function(){
+                $.ajax({
+                    url:"php_sql_connections/readNotification.php",
+                    success: function(res){
+                        console.log(res);
+                    }
+                });
+            })
+        })
 
+    </script>
   
 
 </body>
