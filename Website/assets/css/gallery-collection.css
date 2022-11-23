@@ -442,6 +442,14 @@ h5 {
     .row{
         flex-direction: column;
     }
+    .gallery-rows .h1{
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    .gallery-rows p{
+        font-size: 13px;
+    }
 }
 
 /* SECTION2 */
