@@ -105,10 +105,10 @@
             <b>Address: </b>RRV6+PJC, Paseo del Congreso, Plaza Rizal, Malolos, 3000 Bulacan<br>
             <b>Hours: </b>8:00 AM - 4:00 PM<br>
             <b>Closed: </b>Monday
-            </p><br>
+            </p>
 
             <!-- HTML !-->
-            <button class="button-89" role="button">Button 89</button>
+            <button class="button-89" role="button">Schedule a Visit</button>
 
         </div>
     </div>
