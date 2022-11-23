@@ -426,6 +426,6 @@ nav .fa{
     .content-split-main, .map-stat{
         overflow: hidden;
         flex-basis: 49%;
-        margin-bottom: -4rem;
+        margin-bottom: -0.4rem;
     }
 }
