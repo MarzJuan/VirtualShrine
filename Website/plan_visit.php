@@ -24,7 +24,7 @@
                     <li class="menu-item">
                         <a href="#">VISIT <i class="fas fa-angle-down"></i></a>
                         <ul class="sub-menu">
-                                   <li class="sub-item"><a href="plan-visit.php">Plan Your Visit</a></li>
+                                   <li class="sub-item"><a href="plan_visit.php">Plan Your Visit</a></li>
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
                                    <li class="sub-item"><a href="audio-guide.php">Audio Guide</a></li>
                                    <li class="sub-item"><a href="map.php">Museum Map</a></li>
