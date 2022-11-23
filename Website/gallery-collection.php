@@ -82,6 +82,8 @@
         <!-- [END] OF HEADER -->
     </section>
 
+    <hr>
+
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
 
