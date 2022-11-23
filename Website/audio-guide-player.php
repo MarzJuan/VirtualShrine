@@ -15,8 +15,8 @@
 <body>
 <!-- push -->
 <div class="container">
-            <a href="homePage.php">
-                <div>
+            <a href="homepage.php">
+                <div class="logo">
                     <image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image>
                 </div>
             </a>

@@ -18,10 +18,11 @@ div{
     display: flex;
     justify-content: center;
 }
-nav img{
+.logo{
     width: 200px;
     height: 150px;
 }
+
 
 
 /* [START] COLLECTION CONTENT */
