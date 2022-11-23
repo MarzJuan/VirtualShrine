@@ -38,9 +38,10 @@
 .left {
     height: 700px;
     display: block;
-    width: 60%;
+    width: 65%;
     overflow-y: scroll;
-    padding-left: 5%;
+    /* padding-left: 5%; */
+    border-right: 0.1px solid gray;
 }
 .right {
     height: 100%;

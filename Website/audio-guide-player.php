@@ -32,6 +32,10 @@
             <h1 id="item-title" class="item-title">
                 <span class="item-title-text">Kaginhawaan (Prosperity)</span>
             </h1>
+
+            <div>
+                <img src="assets/Images/HomePage1.jpg" alt="">
+            </div>
         </div>
 
         <!-- AUDIO PLAYER -->
