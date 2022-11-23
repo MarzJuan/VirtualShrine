@@ -51,9 +51,10 @@
 .collection-title{
     margin: auto;
     text-align: center;
+    margin-top: -1rem;
 }
 .item-title{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 1.05;
     display: inline;
