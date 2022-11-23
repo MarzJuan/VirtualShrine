@@ -98,7 +98,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                    <img src="Images/homepage-gallery/buo.jpg" alt="kaginhawaan">
+                    <img src="Images/homepage-gallery/pagbubuo.jpg" alt="kaginhawaan">
                     <div class="layer">
                         <h3>PAGBUBUO NG BAYAN</h3>
                     </div>
