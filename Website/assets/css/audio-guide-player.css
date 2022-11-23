@@ -19,8 +19,8 @@
     justify-content: center;
 } */
 .logo{
-    width: 200px;
-    height: 150px;
+    width: 133px;
+    height: 115px;
 }
 
 
@@ -48,10 +48,8 @@
     overflow-y: none;
 }
 .collection-title{
-    margin-top: calc(30px + 1vw);
-    margin-left: calc(30px + 1vw);
-    margin-bottom: calc(30px + 1vw);
-    padding-top: calc(15px + 1vw);
+    margin: auto;
+    text-align: center;
 }
 .item-title{
     font-size: calc(22px + 1.5vw);
