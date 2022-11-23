@@ -255,21 +255,7 @@ h5 {
     max-height: none;
 }
 
-/* Content */
-@media(max-width: 700px){
-    .content-wrap {
-        flex-direction: column-reverse;
-        display: flex;
-    }
-    .split-main-indent{
-        text-indent: "50px"
-    }
-    .content-split-main {
-        overflow: hidden;
-        padding-right: 0;
-        text-align: justify;
-    }
-}
+
 
 nav .fa{
     display: none;
@@ -402,3 +388,18 @@ nav .fa{
 }
 
 
+/* Content */
+@media(max-width: 700px){
+    .content-wrap {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+    .split-main-indent{
+        text-indent: "50px"
+    }
+    .content-split-main {
+        overflow: hidden;
+        padding-right: 0;
+        text-align: justify;
+    }
+}
