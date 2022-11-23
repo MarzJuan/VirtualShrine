@@ -53,8 +53,8 @@
         <!-- [END] NAVIGATION -->
 
         <!-- [START] HEADER -->
-        <div class="text-box">
-            <h1>Audio Guide</h1>
+        <div class="header-content">
+            <h1 class="expressive">Audio Guide</h1>
             <p>Delve into the Australian Museum exhibitions and enrich your understanding of our collection on display through our self-guided audio guides.</p>
         </div>
         <!-- [END] OF HEADER -->
