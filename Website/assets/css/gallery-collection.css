@@ -449,6 +449,9 @@ h5 {
     }
     .gallery-row-text{
         font-size: 13px;
+        text-align: justify;
+        text-indent: 50px;
+        margin-bottom: 30px;
     }
 }
 
