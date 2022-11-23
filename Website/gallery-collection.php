@@ -124,10 +124,10 @@ include('config/dbcon.php');
     <!-- [END] GALLERY INTRO CONTENT -->
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
-    
+
     <section class="gallery-rows" id="galleries">
-        <h1>Start Exploring the Collections</h1><br>
-        <p>Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
+        <h1 class="gallery-row-title">Start Exploring the Collections</h1><br>
+        <p class="gallery-row-text">Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
             and artifacts. The Galleries tells the long history of the Philippines from pre-colonial times upto the events 
             under the rule of colonizers and the tenure of the past presidents of the Philippines
         </p>
