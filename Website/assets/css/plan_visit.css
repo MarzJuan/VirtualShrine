@@ -395,7 +395,7 @@ nav .fa{
         display: flex;
     }
     .split-main-indent{
-        text-indent: "50px"
+        text-indent: 50px;
     }
     .content-split-main {
         overflow: hidden;
