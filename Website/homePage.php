@@ -16,7 +16,7 @@
 <!-- push -->
     <section class="header">
         <nav>
-            <a href="homePage.php"><image  class="logo" src="Website/assets/Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
+            <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -71,7 +71,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                <img src="assets/Images/homepage-gallery/ginhawa.jpg" alt="kaginhawaan">
+                <img src="Images/homepage-gallery/ginhawa.jpg" alt="kaginhawaan">
                 <div class="layer">
                     <h3>KAGINHAWAAN</h3>
                 </div>
@@ -80,7 +80,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                    <img src="assets/Images/homepage-gallery/paniil.jpg" alt="kaginhawaan">
+                    <img src="Images/homepage-gallery/paniil.jpg" alt="kaginhawaan">
                     <div class="layer">
                         <h3>PANINIIL</h3>
                     </div>
@@ -89,7 +89,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                    <img src="assets/Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
+                    <img src="Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
                     <div class="layer">
                         <h3>PAGBABAGONG-PURI</h3>
                     </div>
@@ -98,7 +98,7 @@
 
             <a href="GalleryInfo.php">
             <div class="gallery-col">
-                    <img src="assets/Images/homepage-gallery/buo.jpg" alt="kaginhawaan">
+                    <img src="Images/homepage-gallery/buo.jpg" alt="kaginhawaan">
                     <div class="layer">
                         <h3>PAGBUBUO NG BAYAN</h3>
                     </div>
