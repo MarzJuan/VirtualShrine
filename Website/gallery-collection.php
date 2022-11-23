@@ -55,7 +55,7 @@
         <!-- [START] HEADER -->
         <div class="header-content">
         <h1 class="expressive">Collections</h1>
-        <h3 class="jumplink-banner-description"><p>Explore more than 490,000 works—from around the world and throughout history—and the research and conversations they inspire.</p>
+        <h3 class="jumplink-banner-description"><p>Explore the Political history of the Philippines with VirtualShrine.</p>
 
 
         <!-- SEARCHBAR
