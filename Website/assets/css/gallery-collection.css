@@ -484,9 +484,8 @@ h5 {
     display: flex;
     flex-basis: 100%;
     flex-direction: column;
-    margin-left: 4rem;
     margin-top: 20px;
-    width: 257px;
+    width: 300px;
 }
 .content-card-descriptor, .content-card-eyebrow {
     color: currentColor;
