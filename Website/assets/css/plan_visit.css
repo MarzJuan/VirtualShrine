@@ -368,29 +368,119 @@ nav .fa{
 
 /* [START] FOOTER */
 
-.footer{
-    margin-top: 10rem;
+#footer{
     width: 100%;
+    padding: 100px 0 20px;
+    background: #E3AD3F;
+    position: relative;
+}
+.title-text{
     text-align: center;
-    padding: 30px 0;
-    background-color: #E3AD3F;
+    padding-bottom: 30px;
 }
-.footer h4{
-    color: #fff;
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: maroon;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-text h1{
+    font-size: 25px;
+    color: maroon;
+}
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left, .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    color: maroon;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+.footer-row p{
+    line-height: 25px;
 }
 
-.footer p{
-    color: #fff;
+.footer-left .fa, .footer-right .fa{
+    font-size: 20px;
+    color: maroon;
+    margin: 10px;
+}
+.footer-left p, .footer-right p{
+    color: maroon;
+}
+.footer-img{
+    max-width: 159px;
+    position: absolute;
+    left: 45%;
+    top: 55%;
 }
 
-.icons .fa{
-    color:#fff;
-    margin: 0 13px;
+.social-links{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.social-links .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid maroon;
+    margin: 40px 5px 0;
+    color: maroon;
     cursor: pointer;
-    padding: 18px 0;
+    transition: .5s;
+}
+
+.social-links .fa:hover{
+    background: maroon;
+    color: #E3AD3F;
+    transform: translateY(-7px);
+}
+
+.social-links p{
+    font-size: 12px;
+    margin-top: 20px;
+    color: black;
+}
+
+@media screen and (max-width:770px){
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .footer-img {
+        max-width: 142px;
+        position: absolute;
+        left: 34%;
+        top: 6%;    
+    }
+    .title-text p {
+        font-size: 13px;
+    }
+    .title-text h1 {
+        font-size: 20px;
+    }
+    .footer-row p {
+        line-height: 10px;
+    }
+
 }
 
 
@@ -408,6 +498,8 @@ nav .fa{
         overflow: hidden;
         padding-right: 0;
         text-align: justify;
+        margin-bottom: -0.4rem;
+        margin-top: -1rem;
     }
     .split-main-card{
         background-color: #f2f2f2; 

@@ -279,18 +279,37 @@
     </div>
     </section>
     <!-- [END] LOCATION-->
-    <!-- [START] FOOTER -->
-    <section class="footer">
-        <h4>About Us</h4>
-        <p>The Museum thus traces the evolution of the Filipino nation-state and the emergence of its system of government <br> and democratic traditions amid the backdrop of long struggles for independence.</p>
-    
-        <div class="icons">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-youtube"></i>
+       <!-- [START] FOOTER -->
+
+       <section id="footer">
+    <div class="title-text">
+        <!-- <h1>Visit Casa Real Today</h1> -->
+        
+    </div>
+        <div class="footer-row">
+            <div class="footer-left">
+                <h1>Opening Hours</h1>
+                <p><i class="fa fa-clock-o"></i>  Tuesday to Sunday - 8:00 AM to 4:00 PM</p>
+            </div>
+
+            <div class="footer-right">
+                <h1>Contact Us</h1>
+                <p>Paseo Del Congreso, Liang, City of Malolos, Bulacan  <i class="fa fa-map-marker"></i></p>
+                <p>mpph@nhcp.gov.ph  <i class="fa fa-paper-plane"></i></p>
+                <p>(044) 931-2508   <i class="fa fa-phone"></i></p>
+            </div>
         </div>
-        <p>2022 <i class="fa-regular fa-copyright"></i> VirtualShrine</p>
+
+        <div class="social-links">
+        <img src="Images/Logo.png" class="footer-img">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube-play"></i>
+            <p>2022 <i class="fa-regular fa-copyright"></i> VirtualShrine</p>
+        </div>
     </section>
+
     <!-- [END] FOOTER -->
     <!-- JAVASCRIPT FOR ACCORDION -->
 <script>
