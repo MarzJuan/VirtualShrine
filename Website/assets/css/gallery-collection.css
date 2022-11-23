@@ -359,6 +359,14 @@ h5 {
     .nav-links ul{
         padding: 30px;
     }
+
+    /* CONTENT 1 */
+    .content-wrap {
+        flex-direction: column-reverse;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    /* CONTENT 1 */
 }
 
 
