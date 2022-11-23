@@ -65,7 +65,7 @@
         <div class="content-split-main rich-text">
             <p></p>
             <h4>The Admission is <u>Free</u></h4><br>
-            <p>You are advised to book a scheduled slot in advance to guarantee entry and help control the number of 
+            <p class="split-main-indent">You are advised to book a scheduled slot in advance to guarantee entry and help control the number of 
                 individuals who can visit. Walk-in visits are available each day for those who arrive at the Museum 
                 without booking in advance. But walk-in entry cannot be guaranteed because catering number of visitors 
                 depends on the capacity. Please speak to a staff upon your arrival to inquire about availability.</p>

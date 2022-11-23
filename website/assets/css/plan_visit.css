@@ -261,6 +261,9 @@ h5 {
         flex-direction: column-reverse;
         display: flex;
     }
+    .split-main-indent{
+        text-indent: "50px"
+    }
 }
 
 nav .fa{
