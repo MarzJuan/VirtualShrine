@@ -149,7 +149,7 @@ include('config/dbcon.php');
                 <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
                 </div>
                 <h3><?= $post['name']?></h3>
-                <p><?= $post['description']?></p>
+                <!-- <p>Description area</p> -->
             </div>
             </a>
         <?php
