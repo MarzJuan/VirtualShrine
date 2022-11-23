@@ -176,11 +176,12 @@
     <!-- JAVASCRIPT FOR TOGGLE MENU -->
 <script>
     var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "none";
+    if (navLinks.style.display === "block") {
+    navLinks.style.display = "none";
+    } 
+    else 
+    {
+        navLinks.style.display = "block";
     }
 </script>
 
