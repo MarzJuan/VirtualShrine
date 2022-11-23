@@ -86,7 +86,6 @@
     <!-- [START] GALLERY COLLECTION CONTENTS -->
 
     <section class="content-split content-admission" id="GeneralAdmission">
-    <h2 class="content-split-title component-title">General Admission</h2>
     <div class="content-wrap">
         <div class="content-split-main rich-text">
             <p></p>
