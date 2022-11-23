@@ -11,6 +11,4 @@ else
 {
     echo "Failed";
 }
-
-
 ?>
