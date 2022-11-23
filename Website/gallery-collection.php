@@ -124,6 +124,7 @@ include('config/dbcon.php');
     <!-- [END] GALLERY INTRO CONTENT -->
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
+    
     <section class="gallery-rows" id="galleries">
         <h1>Start Exploring the Collections</h1><br>
         <p>Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
@@ -133,8 +134,7 @@ include('config/dbcon.php');
 
         <div class="row">
 
-        <?php
-                                    
+    <?php                        
        $posts = "SELECT * FROM categories WHERE status='0' ";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
