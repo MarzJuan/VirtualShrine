@@ -16,7 +16,11 @@
 <!-- push -->
     <section class="header">
         <nav>
-            <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
+            <a href="homePage.php">
+                <div>
+                    <image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image>
+                </div>
+            </a>
         </nav>
     </section>
 

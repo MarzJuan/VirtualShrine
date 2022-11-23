@@ -14,6 +14,10 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+div{
+    display: flex;
+    justify-content: center;
+}
 nav img{
     width: 200px;
     height: 150px;
