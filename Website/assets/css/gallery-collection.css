@@ -426,6 +426,7 @@ h5 {
 #container {
     display: inline-block;
     overflow: hidden;
+    border-radius: 10px;
   }
   #container img {
     display: block;
