@@ -53,14 +53,11 @@
     text-align: center;
 }
 .item-title{
-    font-size: calc(22px + 1.5vw);
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.05;
     display: inline;
     text-align: center;
-}
-.item-title-text {
-    font-family: MetSerif,Georgia,serif;
 }
 .item-date {
     display: block;
