@@ -108,7 +108,8 @@
             </p>
 
             <!-- HTML !-->
-<button class="button-31" role="button">Button 31</button>
+            <button class="button-31" role="button">Plan Your Visit</button>
+            <button class="button-31" role="button">Schedule a Visit</button>
 
         </div>
     </div>
