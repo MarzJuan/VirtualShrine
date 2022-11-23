@@ -71,8 +71,26 @@
 
     <!-- [START] AUDIO GUIDE CONTENTS -->
 
+    <section class="audio-guide-row">
+        <h1 class="audio-row-title">Audio Guide Highlights</h1><br>
 
-    
+        <div class="row">
+
+            <a style="text-decoration: none;color: black;" href="audio-guide-player.php">
+            <div class="features-col">
+                <div id="container">
+                <img id="image" src="Images/Img2.jpg" alt="">
+                </div>
+                <h3>Title</h3>
+                <!-- <p>Description area</p> -->
+            </div>
+            </a>
+
+        </div>
+    </section>
+    <hr>
+
+    <br><br>
 
     <!-- [END] AUDIO GUIDE CONTENT-->
 
