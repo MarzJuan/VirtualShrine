@@ -3,7 +3,7 @@
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <head>
         <title>VirtualShrine - Audio Guide</title>
-        <link rel="stylesheet" href="assets/css/homepage.css">
+        <link rel="stylesheet" href="assets/css/audio-guide.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
