@@ -416,14 +416,14 @@ nav .fa{
         margin-right:10px;
     }
     .g-map{
-        width: 60%;
-        height: 20%;
+        width: 100%;
+        height: 300px;
     }
-    .content-wrap .map{
+    .content-wrap, .map {
         flex-direction: column;
         display: flex;
     }
-    .content-split-side .map-stat{
+    .content-split-main, .map-stat{
         overflow: hidden;
         flex-basis: 49%;
         margin-bottom: -4rem;
