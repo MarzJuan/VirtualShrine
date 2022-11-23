@@ -425,8 +425,6 @@ h5 {
 }
 #container {
     display: inline-block;
-    /* margin: 20px;
-    border: 1px solid black; */
     overflow: hidden;
   }
   #container img {
