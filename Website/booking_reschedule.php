@@ -69,7 +69,7 @@ include('config/dbcon.php');
 <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2 pb-2">
-          <div class="text-right"><a href="homePage.php">Home</a></div>
+          <div class="text-right"><a href="homepage.php">Home</a></div>
         </div>        
         <div class="col-md-8 offset-md-2 card pt-4 pb-4 pl-4 pr-4 form-heading">
           <img src="assets/img/crs-logo.png" class="nmp-logo m-auto">
