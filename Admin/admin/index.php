@@ -337,7 +337,7 @@ include('includes/header.php');
       <div class="card">
 
         <div class="card-body">
-          <h5 class="card-title">User Activity <a href="Report.php"><span> | See More<span></a></h5>
+          <h5 class="card-title">User Activity <a href="report.php"><span> | See More<span></a></h5>
 
           <div class="activity">
         <?php
