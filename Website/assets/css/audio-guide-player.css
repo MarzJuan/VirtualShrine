@@ -57,13 +57,13 @@
 .gallery-name{
     order: 2;
     font-size: calc(1rem + 0.5vw + 0.5vh);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     font-family: "apercu-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-top: 1rem;
 }
 .item-title{
     order: 2;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 0;
     font-family: "apercu-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-top: 1rem;
