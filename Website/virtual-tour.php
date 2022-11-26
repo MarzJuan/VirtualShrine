@@ -15,7 +15,7 @@
 <body>
 <!-- push -->
     <section class="header">
-    <div class="video-container">
+        <nav>
        <video autoplay muted loop class="back-video">
             <source src="video/casareal.mp4" type="video/mp4">
         </video>
@@ -23,7 +23,6 @@
         <div class="virtual360-btn">
         <a href="../VirtualTours/index.html"><button type="button">Go to Virtual 360</button></a>
        </div>
-        <nav>
             <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="mySidebar">
             <i class="fa fa-times" onclick="closeNav()"></i>
