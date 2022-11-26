@@ -26,8 +26,7 @@ include('includes/header.php');
                     <thead>
                         <tr>
                             <th><center>ID</center></th>
-                            <th><center>First Name</center></th>
-                            <th><center>Last Name</center></th>
+                            <th><center>Name</center></th>
                             <th><center>Date of Visit</center></th>
                             <th><center>No. of Visitors</center></th>
                             <th><center>Status</center></th>
@@ -48,8 +47,7 @@ include('includes/header.php');
                                     ?>
                                     <tr>
                                         <td><?= $bookings['bookingID']; ?></td>
-                                        <td><?= $bookings['fname']; ?></td>
-                                        <td><?= $bookings['lname']; ?></td>
+                                        <td><?= $bookings['fname'].' '.$bookings['lname']; ?></td>
                                         <td><?= $bookings['date_visit']; ?></td>
                                         <td><?= $bookings['no_visitors']; ?></td>
                                         <td>
