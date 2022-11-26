@@ -522,7 +522,7 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
                     if ($last_id){
                         $code = rand(1,99999);
                         $post_id = "CRSCOL_".$code."_".$last_id;
-                        $query = "UPDATE posts SET postID = '".$post_id."' WHERE id = '".$last_id."'";
+                        $query = "UPDATE posts SET postID = '".$post_id."' WHERE post_id = '".$last_id."'";
                         $res = mysqli_query($con, $query);
                     }
 
