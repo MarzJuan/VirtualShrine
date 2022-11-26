@@ -105,7 +105,7 @@ include('includes/header.php');
         </div><!-- End Customers Card -->
 
         <!-- Reports -->
-        <div class="col-12">
+        <!-- <div class="col-12">
           <div class="card">
 
             <div class="filter">
@@ -122,10 +122,10 @@ include('includes/header.php');
             </div>
 
             <div class="card-body">
-              <h5 class="card-title">Website Visit <span>/Today</span></h5>
+              <h5 class="card-title">Website Visit <span>/Today</span></h5> -->
 
               <!-- Line Chart -->
-              <div id="reportsChart"></div>
+              <!-- <div id="reportsChart"></div>
 
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -178,13 +178,13 @@ include('includes/header.php');
                     }
                   }).render();
                 });
-              </script>
+              </script> -->
               <!-- End Line Chart -->
 
-            </div>
+            <!-- </div>
 
           </div>
-        </div><!-- End Reports -->
+        </div>End Reports -->
 
         <!-- Recent Sales -->
         <div class="col-12">
