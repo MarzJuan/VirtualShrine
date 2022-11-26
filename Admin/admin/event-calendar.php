@@ -3,7 +3,7 @@ include('authentication.php');
 include('includes/header.php');
 ?>
 
-<style>
+<!-- <style>
         :root {
             --bs-success-rgb: 71, 222, 152 !important;
         }
@@ -24,7 +24,7 @@ include('includes/header.php');
             border-style: solid;
             border-width: 1px !important;
         }
-    </style>
+    </style> -->
 
 <div class="container">
             <a class="navbar-brand" href="https://sourcecodester.com">
