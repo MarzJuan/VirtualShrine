@@ -514,18 +514,18 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
 
     if($query_run)
         {
+            $last_id = mysqli_insert_id($con);
+            if ($last_id){
+                $code = rand(1,99999);
+                $post_id = "CRSCOL_".$code."_".$last_id;
+                $query = "UPDATE posts SET postID = '".$post_id."' WHERE post_id = '".$last_id."'";
+                $res = mysqli_query($con, $query);
+            }
+            
         $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a Gallery Content')";
         $sql_run = mysqli_query($con, $sql);
             if($sql_run)
             {
-                $last_id = mysqli_insert_id($con);
-                    if ($last_id){
-                        $code = rand(1,99999);
-                        $post_id = "CRSCOL_".$code."_".$last_id;
-                        $query = "UPDATE posts SET postID = '".$post_id."' WHERE post_id = '".$last_id."'";
-                        $res = mysqli_query($con, $query);
-                    }
-
                 $_SESSION['message'] = "Post Created Successfully";
                 header('Location: post-add.php');
                 exit(0);
