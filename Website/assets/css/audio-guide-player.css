@@ -36,7 +36,7 @@
     flex-direction: row;
 }
 .left {
-    height: 700px;
+    height: 100%;
     display: block;
     width: 65%;
     overflow-y: scroll;
