@@ -10,6 +10,17 @@
         <script src="js/jquery-3.6.1.min.js"></script>
         <script src="js/jquery.dataTables.min.js"></script>
         <script src="js/dataTables.bootstrap5.min.js"></script>  
+
+        <!-- Calendar -->
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./fullcalendar/lib/main.min.js"></script>
+
+
+        <script>
+        var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
+        </script>
+        <script src="./js/script.js"></script>
+
         <script>
             $(document).ready( function () {
                 $('#myDataTable').DataTable();

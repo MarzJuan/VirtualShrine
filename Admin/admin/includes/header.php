@@ -32,6 +32,10 @@
   <link href="../assets/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- Calendar -->
+  <link rel="stylesheet" href="./fullcalendar/lib/main.min.css">
+
+
   <!-- Summernote CSS - CDN Link -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
