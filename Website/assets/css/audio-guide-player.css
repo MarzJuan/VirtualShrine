@@ -401,9 +401,7 @@ hr{
 	border-radius: 20px;
 	margin-bottom: 5px;
 }
-/* 
-*	Стили для заголовка меню 
-*/
+
 .accordion__item:nth-child(odd) > :first-child:not(.accordion__link_active) {
     color: #ffffff;
     background: #696666;
@@ -436,9 +434,7 @@ hr{
 .accordion__link:not(.accordion__link_active):hover:after {
 	border-top: 12px #ffffff solid;
 }
-/* 
-*	Стили для подменю 
-*/
+
 .sub-accordion {
 	padding: 5px 20px;
     display: none;
@@ -448,12 +444,11 @@ hr{
 .sub-accordion__item {
   padding: 22px 18px;
 }
-/* 
-*	Стили для октивного подменю 
-*/
+
 .accordion__link_active {
     color: #ffffff;
-    background-color: #ff8663;   
+    background-color: #ff8663;
+    transition: 0.5s;
 }
 .accordion__link_active:after {
 	position: absolute;
