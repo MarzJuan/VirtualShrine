@@ -256,7 +256,7 @@ p{
     right: 0;
 }
 .features-col{
-    flex-basis: 25%;
+    flex-basis: 30%;
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
