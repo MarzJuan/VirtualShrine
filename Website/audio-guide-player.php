@@ -330,7 +330,7 @@ currentAudio.addEventListener("ended", function(){
             
             innerFunc(i, t, b);
             
-        }, time / 1000000000);
+        }, time / 9000000000);
           
       } else { 
           
