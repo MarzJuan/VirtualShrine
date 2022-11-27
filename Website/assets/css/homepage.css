@@ -247,11 +247,12 @@ p{
 /* [START] HOME CONTENT - VIRTUALSHRINE NEXT TO YOU */
 
 .vs-features{
-    width: 85%;
+    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-left: 135px;
 }
 .features-col{
     flex-basis: 25%;
