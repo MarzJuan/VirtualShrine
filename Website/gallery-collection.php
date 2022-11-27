@@ -71,7 +71,7 @@ include('config/dbcon.php');
         -->
 
 <p>&nbsp;</p></h3>
-        <div class="header-jumplink-banner">
+        <!-- <div class="header-jumplink-banner">
                 <a href="#galleries" class="js-jump-link header-jumplink-banner button secondary-button">
                     Galleries
                 </a>
@@ -81,7 +81,7 @@ include('config/dbcon.php');
                 <a href="#exhibit" class="js-jump-link header-jumplink-banner button secondary-button">
                     Exhibits
                 </a>
-        </div>
+        </div> -->
     </div>
         <!-- [END] OF HEADER -->
     </section>
