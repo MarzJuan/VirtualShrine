@@ -61,9 +61,47 @@
         <!-- [END] OF HEADER -->
     </section>
 
+    <!-- [START] STARTING PAGE -->
+
+    <section class="content-split">
+        <h1>ABOUT CASA REAL SHRINE</h1>
+
+        <div class="content-wrap">
+            <div class="content-split-side rich-text">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div style="background-color: orange;" class="carousel-item"><h1>First slide</h1></div>
+                <div style="background-color: greenyellow;"  class="carousel-item"><h1>Second slide</h1></div>
+                <div style="background-color: rgb(37, 150, 255);" class="carousel-item"><h1>Third slide</h1></div>
+                <div style="background-color: rgb(192, 192, 192);" class="carousel-item"><h1>Fourth slide</h1></div>
+            </div>
+            <div class="carousel-controls">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+            <div class="carousel-indicators"></div>
+        </div>
+        </div>
+
+            <div class="content-split-main rich-text">
+                <p class="about-desc">Located at Paseo del Congreso, Plaza Rizal Malolos Bulacan, Casa Real Shrine served as the 
+                    National Museum and the National Printing Press during the First Philippine Republic. It 
+                    is a government museum consisting of relics from the First Philippine Republic. 
+                    Memorabilia's of Gen. Emilio Aguinaldo are also found here. First class families of Malolos, 
+                    their furnitures, old books, stamps, paper money and coin are also displayed in the Shrine.</p>
+                <p class="about-desc-2">Casa Real is also one of Malolos oldest structure. The building contains 
+                    exhibits, printing press of the Malolos Republic and a display of the 21 Women of Malolos 
+                    memorabilia. Also presented here are the photographs of the 100 Filipino women. Each of them has 
+                    distinct characteristics in their fields.</p>
+
+                    <a href="about.php"><button class="button-31" role="button">Learn More</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- [END] STARTING PAGE -->
+
 
     <!-- [START] HOMEPAGE CONTENTS -->
-
     <section class="home-content">
 
         <h1>Explore Our Galleries</h1>
@@ -202,6 +240,7 @@
     }
 </script>
 
+<script src="assets/js/swiper-script.js"></script>
 
 </body>
 </html>
