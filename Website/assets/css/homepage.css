@@ -190,7 +190,7 @@ p{
 }
 .row{
     display: flex;
-    margin-top: 15px;
+    margin-top: 50px;
     /* justify-content: space-between; */
     gap: 50px;
 }
