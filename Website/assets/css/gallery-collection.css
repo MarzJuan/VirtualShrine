@@ -397,7 +397,7 @@ h5 {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 30px;
 }
 .gallery-rows{
     width: 80%;
