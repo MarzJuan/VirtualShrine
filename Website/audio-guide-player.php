@@ -164,7 +164,7 @@
     let audioList = [
   {
     title:"Evolution",
-    Gallery:"Bensound",
+    album:"Bensound",
     author:"Benjamin Tissot",
     source:"https://www.bensound.com/bensound-music/bensound-evolution.mp3",
     type:"audio/mpeg"

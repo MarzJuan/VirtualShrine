@@ -42,7 +42,7 @@ include('config/dbcon.php');
 
                         <ul class="sub-menu">
                                    <li class="sub-item"><a href="gallery-collection.php">Collections</a></li>
-                                   <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
+                                   <li class="sub-item"><a href="virtual-tour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
                     

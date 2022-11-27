@@ -30,7 +30,7 @@ include('config/dbcon.php');
 <body>
        <div class="container nav-background audio-guide-header">
        <div class="nav-wrapper">
-                 <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
+                 <a href="homepage.php"><image  class="logo" src="Images/Logo.png" alt="manage"></image></a>
                  <button class="mobile-nav-toggle noprint" aria-controls="primary-navigation" aria-expanded="false">
                         <img class="icon-hambuger" src="Images/menu.svg" alt="" aria-hidden="true"></img>
                         <img class="icon-close" src="Images/backburger.svg" alt="" aria-hidden="true" ></img>
@@ -40,7 +40,7 @@ include('config/dbcon.php');
                    <div class="menu">
                    <nav class="primary-navigation fs-button"  id="primary-navigation">
                         <ul araial-label="Primary" role="list" class="nav-list fs-button" >
-                        <li class="menu-item"><a href="homePage.php">Home</a></li>
+                        <li class="menu-item"><a href="homepage.php">Home</a></li>
    
                         <li class="menu-item">
                                <a class="sub-btn" href="#">Visit<i class="fas fa-angle-down"></i></a> <!--Plan your Visit, Book a visit, Audio Guide-->

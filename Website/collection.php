@@ -17,7 +17,7 @@
 
 <section class="header">
         <nav>
-            <a href="homePage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
+            <a href="homepage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="mySidebar">
             <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
@@ -39,7 +39,7 @@
 
                         <ul class="sub-menu">
                                    <li class="sub-item"><a href="gallery-collection.php">Collections</a></li>
-                                   <li class="sub-item"><a href="VirtualTour.php">Virtual Tour</a></li>
+                                   <li class="sub-item"><a href="virtual-tour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
                     
