@@ -113,7 +113,7 @@
             </div>
         
             <div class="back-home">
-                <a href=""><i class="fa-solid fa-house-user"></i></a>
+                <a href="homepage.php"><i class="fa-solid fa-house-user"></i></a>
                 <a class="nav-text" href="homepage.php">Back to Homepage</a>
             </div>
 
@@ -330,7 +330,7 @@ currentAudio.addEventListener("ended", function(){
             
             innerFunc(i, t, b);
             
-        }, time / 100);
+        }, time / 1000000000);
           
       } else { 
           

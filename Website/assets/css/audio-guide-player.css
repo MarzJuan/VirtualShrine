@@ -443,6 +443,7 @@ hr{
 }
 .sub-accordion__item {
   padding: 22px 18px;
+  font-size: 15px;
 }
 
 .accordion__link_active {
@@ -465,8 +466,7 @@ hr{
     height: 100%;
 }
 .transcript{
-  margin-top: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 145px;
 }
 
 /* ACCORDION */
@@ -652,17 +652,17 @@ display: none;
   right: 2rem;
 }
 .player {
-  width: 338px;
-  height: 230px;
-  position: relative;
-  top: calc(50% - 357px);
-  left: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  /* box-shadow: 6px 6px 15px #dfd8d8; */
-  overflow: hidden;
-  background: #fff;
+    width: 297px;
+    height: 230px;
+    position: relative;
+    top: calc(50% - 357px);
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    /* box-shadow: 6px 6px 15px #dfd8d8; */
+    overflow: hidden;
+    background: #fff;
 }
 .player #music-info .album {
   font-size: 14px;
@@ -670,12 +670,12 @@ display: none;
   margin-top: 25px;
 }
 .player #music-info .title {
-  font-size: calc(1.8rem + 0.5vw + 0.5vh);
+  font-size: 18px;
   margin-bottom: 8px;
   z-index: 1;
   font-weight: 600;
   text-align: center;
-  margin-left: -14px;
+  margin-left: -90px;
 }
 .player #music-info {
   padding: 15px;
@@ -691,7 +691,7 @@ display: none;
   left: 0;
   right: 0;
   list-style: none;
-  width: 347px;
+  width: 311px;
 }
 .playlist{
   padding-top: 100rem;
