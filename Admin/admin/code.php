@@ -3,6 +3,204 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 include('authentication.php');
 
+// EDIT EXHIBIT
+if(isset($_POST['exhibit_update']))
+{
+    
+    $exhibit_id = $_POST['exhibit_id'];
+
+    $start_date = $_POST['start_date'];
+    $end_date = $_POST['end_date'];
+    
+    $exhibit_title = $_POST['exhibit_title'];
+    $final_exhibitTitle = ucwords($exhibit_title);
+    $title = $final_exhibitTitle;
+
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
+    $description = $_POST['description'];
+
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $old_filename = $_POST['old_image'];
+    $image = $_FILES['image']['name'];
+
+    $update_filename = "";
+    if($image != NULL)
+    {
+    //rename this image
+        $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+        $filename = time().'.'.$image_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $old_filename;
+    }
+
+    $status = $_POST['status'] == true ? '0':'1';
+
+
+
+    $query = "UPDATE exhibit SET name='$title', slug='$slug', description='$description', image='$update_filename', 
+            meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+            status='$status', start_date='$start_date', end_date='$end_date' WHERE exhibit_id='$exhibit_id' ";
+    
+    $query_run = mysqli_query($con, $query);
+    
+    if($query_run)
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an Exhibit')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($image != NULL)
+            {
+                if(file_exists('../uploads/exhibit/'.$old_filename)){
+                    unlink("../uploads/exhibit/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/exhibit/'.$update_filename);
+            }
+                $_SESSION['message'] = "Exhibit Updated Successfully";
+                header('Location: exhibit-edit.php?exhibit_id='.$exhibit_id);
+                exit(0);
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: exhibit-edit.php?exhibit_id='.$exhibit_id);
+            exit(0);
+        }
+
+}
+
+// ADD EXHIBIT
+if(isset($_POST['add_exhibit']))
+{
+
+    $start_date = $_POST['start_date'];
+    $end_date = $_POST['end_date'];
+
+    $cat_name = $_POST['name'];
+    $final_categoryname = ucwords($cat_name);
+    $name = $final_categoryname;
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+    
+    $description = $_POST['description'];
+    
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $image = $_FILES['image']['name'];
+    //rename this image
+    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = time().'.'.$image_extension;
+
+    // $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
+    $status = $_POST['status'] == true ? '0':'1';
+
+    $query = "INSERT INTO exhibit(name, slug, description, meta_title, meta_description, meta_keyword, image, status, start_date, end_date) VALUES
+            ('$name', '$slug', '$description', '$meta_title', '$meta_description', '$meta_keyword', '$filename', '$status', '$start_date', '$end_date')";
+
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+        {
+            $last_id = mysqli_insert_id($con);
+            if ($last_id){
+                $code = rand(1,99999);
+                $exhibit_id = "CRSEXHBT_".$code."_".$last_id;
+                $query = "UPDATE exhibit SET exhibitID = '".$exhibit_id."' WHERE exhibit_id = '".$last_id."'";
+                $res = mysqli_query($con, $query);
+            }
+
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a new Exhibit')";
+        $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/exhibit/'.$filename);
+                $_SESSION['message'] = "Exhibit Created Successfully";
+                header('Location: exhibit-add.php');
+                exit(0);
+            }
+            else
+            {
+                $_SESSION['message'] = "Something Went Wrong";
+                header('Location: exhibit-add.php');
+                exit(0);
+            }
+        }
+}
+
+// ADD SECTION
+if(isset($_POST['add_section']))
+{
+    $cat_name = $_POST['name'];
+    $final_categoryname = ucwords($cat_name);
+    $name = $final_categoryname;
+
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+    
+    $description = $_POST['description'];
+    
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $image = $_FILES['image']['name'];
+    //rename this image
+    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = time().'.'.$image_extension;
+
+    // $navbar_status = $_POST['navbar_status'] == true ? '1':'0';
+    $status = $_POST['status'] == true ? '0':'1';
+
+    $query = "INSERT INTO section(name, slug, description, meta_title, meta_description, meta_keyword, image, status) VALUES
+            ('$name', '$slug', '$description', '$meta_title', '$meta_description', '$meta_keyword', '$filename', '$status')";
+
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+        {
+            $last_id = mysqli_insert_id($con);
+            if ($last_id){
+                $code = rand(1,99999);
+                $section_id = "CRSSEC_".$code."_".$last_id;
+                $query = "UPDATE section SET sectionID = '".$section_id."' WHERE section_id = '".$last_id."'";
+                $res = mysqli_query($con, $query);
+            }
+
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a new Collection Category')";
+        $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/section/'.$filename);
+                $_SESSION['message'] = "Category Created Successfully";
+                header('Location: section-add.php');
+                exit(0);
+            }
+            else
+            {
+                $_SESSION['message'] = "Something Went Wrong";
+                header('Location: section-add.php');
+                exit(0);
+            }
+        }
+}
+
+
 // EDIT BLOG
 if(isset($_POST['blog_update']))
 {

@@ -7,7 +7,7 @@ include('includes/header.php');
     <h4 class="mt-4"></h4>
 
     <div class="container-fluid px-4">
-    <h4 class="mt-4">Gallery Content</h4>
+    <h4 class="mt-4">Collection</h4>
     <ol class="breadcrumb mb-4">
         <a class="breadcrumb-item active" href="index.php">Dashboard</a>
         <li class="breadcrumb-item">Gallery Contents</li>                                                                                           
@@ -20,7 +20,6 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>
-                    List of Gallery Content
                         <a href="post-add.php" class="btn btn-primary float-end">Add Content</a>
                     </h4>
                 </div>

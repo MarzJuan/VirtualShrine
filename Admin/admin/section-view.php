@@ -7,10 +7,10 @@ include('includes/header.php');
     <h4 class="mt-4"></h4>
 
     <div class="container-fluid px-4">
-    <h4 class="mt-4">Gallery Category</h4>
+    <h4 class="mt-4">Section Collection</h4>
     <ol class="breadcrumb mb-4">
     <a class="breadcrumb-item active" href="index.php">Dashboard</a>
-        <li class="breadcrumb-item">Category</li>                                                                                           
+        <li class="breadcrumb-item">Section</li>                                                                                           
     </ol>
 
     <div class="row mt-4">
@@ -21,7 +21,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        <a href="category-add.php" class="btn btn-primary float-end">Add Gallery</a>
+                        <a href="section-add.php" class="btn btn-primary float-end">Add Section</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -42,7 +42,7 @@ include('includes/header.php');
                         <tbody>
 
                         <?php
-                            $category = "SELECT * FROM categories WHERE status!='2'";
+                            $category = "SELECT * FROM section WHERE status!='2'";
                             $category_run = mysqli_query($con, $category);
 
                             if(mysqli_num_rows($category_run) > 0)
@@ -51,7 +51,7 @@ include('includes/header.php');
                                 {
                                 ?>
                                 <tr>
-                                    <td><?=$item['id'] ?></td>
+                                    <td><?=$item['sectionID'] ?></td>
                                     <td><?=$item['name'] ?></td>
                                     <td>
 
@@ -78,10 +78,10 @@ include('includes/header.php');
                                     <td><center>
                                     
                                         <form action="code-superAdmin.php" method = "POST">
-                                        <a href="category-edit.php?id=<?=$item['id']?>" class="btn btn-info">Edit</a>
+                                        <a href="section-edit.php?section_id=<?=$item['section_id']?>" class="btn btn-info">Edit</a>
                                     
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
-                                        <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>
+                                        <button type="submit" name="section_archive" value="<?=$item['section_id'] ?>" class="btn btn-danger">Archive</a>
                                         </form>
                                         <?php endif; ?>
                                         </center>

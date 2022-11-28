@@ -7,10 +7,10 @@ include('includes/header.php');
     <h4 class="mt-4"></h4>
 
     <div class="container-fluid px-4">
-    <h4 class="mt-4">Gallery Category</h4>
+    <h4 class="mt-4">Exhibits</h4>
     <ol class="breadcrumb mb-4">
     <a class="breadcrumb-item active" href="index.php">Dashboard</a>
-        <li class="breadcrumb-item">Category</li>                                                                                           
+        <li class="breadcrumb-item">Exhibit</li>                                                                                           
     </ol>
 
     <div class="row mt-4">
@@ -21,7 +21,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        <a href="category-add.php" class="btn btn-primary float-end">Add Gallery</a>
+                        <a href="exhibit-add.php" class="btn btn-primary float-end">Add Exhibit</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -34,6 +34,7 @@ include('includes/header.php');
                             <tr>
                                 <th><center>ID</center></th>
                                 <th><center>Name</center></th>
+                                <th><center>Duration</center></th>
                                 <th><center>Status</center></th>
                                 <th><center>Action</center></th>
                             </tr>
@@ -42,30 +43,31 @@ include('includes/header.php');
                         <tbody>
 
                         <?php
-                            $category = "SELECT * FROM categories WHERE status!='2'";
-                            $category_run = mysqli_query($con, $category);
+                            $exhibits = "SELECT * FROM exhibit WHERE status!='2'";
+                            $exhibit_run = mysqli_query($con, $exhibits);
 
-                            if(mysqli_num_rows($category_run) > 0)
+                            if(mysqli_num_rows($exhibit_run) > 0)
                             {
-                                foreach($category_run as $item)
+                                foreach($exhibit_run as $exhibit)
                                 {
                                 ?>
                                 <tr>
-                                    <td><?=$item['id'] ?></td>
-                                    <td><?=$item['name'] ?></td>
+                                    <td><?=$exhibit['exhibitID'] ?></td>
+                                    <td><?=$exhibit['name'] ?></td>
+                                    <td><?=$exhibit['start_date']." to ".$exhibit['end_date'] ?></td>
                                     <td>
 
                                     <?php
 
-                                                if($item['status'] ==0)
+                                                if($exhibit['status'] ==0)
                                                 {
                                                     echo '<span style="color:GREEN;text-align:center;">Active</span>';
                                                 }
-                                                if($item['status'] ==1)
+                                                if($exhibit['status'] ==1)
                                                 {
                                                     echo '<span style="color:Blue;text-align:center;">Hidden</span>';
                                                 }
-                                                if($item['status'] ==2)
+                                                if($exhibit['status'] ==2)
                                                 {
                                                     echo '<span style="color:RED;text-align:center;">Archived</span>';
                                                 }
@@ -78,10 +80,10 @@ include('includes/header.php');
                                     <td><center>
                                     
                                         <form action="code-superAdmin.php" method = "POST">
-                                        <a href="category-edit.php?id=<?=$item['id']?>" class="btn btn-info">Edit</a>
+                                        <a href="exhibit-edit.php?exhibit_id=<?=$exhibit['exhibit_id']?>" class="btn btn-info">Edit</a>
                                     
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
-                                        <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger">Archive</a>
+                                        <button type="submit" name="exhibit_archive" value="<?=$exhibit['exhibit_id'] ?>" class="btn btn-danger">Archive</a>
                                         </form>
                                         <?php endif; ?>
                                         </center>
@@ -103,11 +105,6 @@ include('includes/header.php');
                         </table>
                     </div>
                 </div>
-
-
-
-            
-
 
                 </div>
             </div>

@@ -66,31 +66,55 @@
     <br>
     
   <li class="nav-item">
-
-    <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>" 
+    <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' ? 'active':'' ?>" 
     data-bs-target="#CMSnav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-blockquote-left"></i><span>CMS</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
-    <ul id="CMSnav" class="nav-content collapse <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'show':'' ?>" 
+    <ul id="CMSnav" class="nav-content collapse <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' ? 'show':'' ?>" 
     data-bs-parent="#sidebar-nav">
 
       <li>
-        <a href="post-view.php" class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':'' ?>">
-          <i class="bi bi-circle"></i><span>Gallery Content</span>
+        <a href="post-view.php" class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Collection</span>
         </a>
       </li>
       <li>
-        <a href="blog-view.php" class="nav-link <?= $page == 'blog-view.php' || $page == 'blog-edit.php' ? 'active':'' ?>">
+        <a href="blog-view.php" class="nav-link <?= $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Blog</span>
-        </a>
-      </li>
-      <li>
-        <a href="category-view.php" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
-          <i class="bi bi-circle"></i><span>Gallery Category</span>
         </a>
       </li>
     </ul>
   </li><!-- End CMS Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>" 
+    data-bs-target="#Categorynav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-blockquote-left"></i><span>Categories</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="Categorynav" class="nav-content collapse <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' || $page == 'section-add.php' || $page == 'section-view.php' || $page == 'section-edit.php' || $page == 'exhibit-add.php' || $page == 'exhibit-view.php' || $page == 'exhibit-edit.php' ? 'show':'' ?>" 
+    data-bs-parent="#sidebar-nav">
+
+      <li>
+        <a href="category-view.php" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Gallery</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="section-view.php" class="nav-link <?= $page == 'section-add.php' || $page == 'section-view.php' || $page == 'section-edit.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Section</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="exhibit-view.php" class="nav-link <?= $page == 'exhibit-add.php' || $page == 'exhibit-view.php' || $page == 'exhibit-edit.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Exhibits</span>
+        </a>
+      </li>
+
+
+    </ul>
+  </li><!-- End CATEGORY Nav -->
 
   <?php if($_SESSION['auth_role'] == '0') : ?>
   <li class="nav-item">
@@ -108,7 +132,6 @@
       <i class="bi bi-archive"></i><span>Archive</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
   <?php endif; ?>
-
     <ul id="tables-nav" class="nav-content collapse <?= $page == 'archive-user.php' || $page == 'archive-category.php' || $page == 'post-archive.php' || $page == 'audio-archive.php' ? 'show':'' ?>" 
     data-bs-parent="#sidebar-nav">
       <li>
