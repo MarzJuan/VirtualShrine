@@ -229,13 +229,6 @@
 
     <!-- JAVASCRIPT FOR TOGGLE MENU -->
 <script>
-    // var navLinks = document.getElementById("navLinks");
-    // function showMenu(){
-    //     navLinks.style.right = "0";
-    // }
-    // function hideMenu(){
-    //     navLinks.style.right = "-200px";
-    // }
 
     /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
     function openNav() {
