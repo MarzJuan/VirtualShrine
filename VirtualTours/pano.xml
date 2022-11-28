@@ -1276,7 +1276,7 @@
       <polystyle bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
       <hotspot skinid="ht_node" id="Point01" url="{node39}" customimageheight="45" use3D="0" pan="-77.6" fov="10" customimage="media/Navigation Path.png" tilt="-31.13" title="PAGBUO NG BAYAN" target="" description="" distance3D="285.751" customimagewidth="50"/>
       <hotspot skinid="ht_node" id="Point02" url="{node44}" customimageheight="45" use3D="0" pan="-162.99" fov="10" customimage="media/Navigation Path.png" tilt="-33.22" title="PAGBUO NG BAYAN" target="" description="" distance3D="285.751" customimagewidth="50"/>
-      <hotspot skinid="ht_url" id="Point03" url="" pan="-276.56" tilt="-28.38" title="" target="_blank" description=""/>
+      <hotspot skinid="ht_node" id="Point03" url="{node51}" customimageheight="45" use3D="0" pan="-276.56" fov="10" customimage="media/Navigation Path.png" tilt="-28.38" title="PAGBUO NG BAYAN" target="" description="" distance3D="285.751" customimagewidth="50"/>
       <hotspot skinid="ht_node" id="Point04" url="{node41}" customimageheight="45" use3D="0" pan="-19.67" fov="10" customimage="media/Navigation Path.png" tilt="-35.92" title="PAGBUO NG BAYAN" target="" description="" distance3D="285.751" customimagewidth="50"/>
     </hotspots>
     <media>
