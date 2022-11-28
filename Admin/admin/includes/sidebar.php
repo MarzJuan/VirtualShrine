@@ -80,6 +80,11 @@
         </a>
       </li>
       <li>
+        <a href="blog-view.php" class="nav-link <?= $page == 'blog-view.php' || $page == 'blog-edit.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Blog</span>
+        </a>
+      </li>
+      <li>
         <a href="category-view.php" class="nav-link <?= $page == 'category-add.php' || $page == 'category-view.php' || $page == 'category-edit.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Category</span>
         </a>

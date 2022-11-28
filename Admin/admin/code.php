@@ -3,6 +3,145 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 include('authentication.php');
 
+// EDIT BLOG
+if(isset($_POST['blog_update']))
+{
+    $blog_id = $_POST['blog_id'];
+    
+    $blog_title = $_POST['blog_title'];
+    $final_blogTitle = ucwords($blog_title);
+    $title = $final_blogTitle;
+
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
+    $author = $_POST['author'];
+
+    $description = $_POST['description'];
+
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $old_filename = $_POST['old_image'];
+    $image = $_FILES['image']['name'];
+
+    $update_filename = "";
+    if($image != NULL)
+    {
+    //rename this image
+        $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+        $filename = time().'.'.$image_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $old_filename;
+    }
+
+    $status = $_POST['status'] == true ? '0':'1';
+
+
+
+    $query = "UPDATE blog SET name='$title', slug='$slug', description='$description', image='$update_filename', 
+            meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+            author='$author', status='$status' WHERE blog_id='$blog_id' ";
+    
+    $query_run = mysqli_query($con, $query);
+    
+    if($query_run)
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated a Blog')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($image != NULL)
+            {
+                if(file_exists('../uploads/blog/'.$old_filename)){
+                    unlink("../uploads/blog/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/blog/'.$update_filename);
+            }
+                $_SESSION['message'] = "Blog Updated Successfully";
+                header('Location: blog-edit.php?blog_id='.$blog_id);
+                exit(0);
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: blog-edit.php?blog_id='.$blog_id);
+            exit(0);
+        }
+
+}
+
+//ADD BLOG
+if(isset($_POST['blog_add']))
+{
+    
+    $blog_title = $_POST['blog_title'];
+    $final_blogname = ucwords($blog_title);
+    $title = $final_blogname;
+   
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
+    $author_name = $_POST['author'];
+    $final_authorname = ucwords($author_name);
+    $author = $final_authorname;
+
+    $description = $_POST['description'];
+    
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $imageCount = count ($_FILES['image']['name']);
+    for ($i=0;$i<$imageCount;$i++){
+        $imageName = $_FILES['image']['name'][$i];
+        $imageTempName = $_FILES['image']['tmp_name'][$i];
+        $targetPath = '../uploads/blog/'.$imageName;
+        if(move_uploaded_file($imageTempName, $targetPath)){
+
+    $status = $_POST['status'] == true ? '0':'1';
+
+    $query = "INSERT INTO blog(name, slug, description, image, meta_title, meta_description, meta_keyword, author, status) VALUES
+            ('$title', '$slug', '$description', '$imageName', '$meta_title', '$meta_description', '$meta_keyword', '$author', '$status')";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+        {
+            $last_id = mysqli_insert_id($con);
+            if ($last_id){
+                $code = rand(1,99999);
+                $blog_id = "CRSBLOG_".$code."_".$last_id;
+                $query = "UPDATE blog SET blogID = '".$blog_id."' WHERE blog_id = '".$last_id."'";
+                $res = mysqli_query($con, $query);
+            }
+            
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Created a New Blog')";
+        $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Blog Created Successfully";
+                header('Location: blog-add.php');
+                exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: blog-add.php');
+        exit(0);
+    }
+        }
+    }
+
+}
+}
+
 // EDIT PROFILE
 if (isset($_POST['edit_profile']))
 {
