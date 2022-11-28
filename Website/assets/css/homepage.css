@@ -398,6 +398,11 @@ h5 {
     align-items: center;
     justify-content: center;
   }
+  .carousel-item img{
+    height: 295px;
+    width: 598px;
+    object-fit: cover;
+  }
   .carousel-item h1{
     opacity: .5;
   }
@@ -511,23 +516,27 @@ h5 {
         display: flex;
     }
     .carousel {
-        height: 292px;
-        width: 85vw;
-        margin-top: 40px;
-        margin-bottom: 1px;
-        max-width: 678px;
-        overflow-x: hidden;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        border-radius: 13px;
+    height: 200px;
+    width: 85vw;
+    margin-top: 40px;
+    margin-bottom: 1px;
+    max-width: 678px;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
     }
     .features-col img {
         width: 300px;
         height: 300px;
         border-radius: 10px;
-        object-fit: cover;
+        object-fit: contain;
     }
+    .carousel-item img{
+        height: 293px;
+        width: 436px;
+        object-fit: contain;
+        position: inherit;
+      }
 }
 
 

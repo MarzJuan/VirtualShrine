@@ -43,7 +43,7 @@
                     </li>
                     
                     <li class="menu-item"><a href="about.php">BLOG</a></li>
-                    <li class="menu-item"><a href="about.php">ABOUT</a></li>
+                    <li class="menu-item"><a href="about-crs.php">ABOUT</a></li>
                 </ul>
             </div>
             <div id="main"></div>

@@ -43,7 +43,7 @@
                     </li>
                     
                     <li class="menu-item"><a href="about.php">BLOG</a></li>
-                    <li class="menu-item"><a href="about.php">ABOUT</a></li>
+                    <li class="menu-item"><a href="about-crs.php">ABOUT</a></li>
                 </ul>
             </div>
             <div id="main"></div>
@@ -70,10 +70,18 @@
             <div class="content-split-side rich-text">
         <div class="carousel">
             <div class="carousel-inner">
-                <div style="background-color: orange;" class="carousel-item"><h1>First slide</h1></div>
-                <div style="background-color: greenyellow;"  class="carousel-item"><h1>Second slide</h1></div>
-                <div style="background-color: rgb(37, 150, 255);" class="carousel-item"><h1>Third slide</h1></div>
-                <div style="background-color: rgb(192, 192, 192);" class="carousel-item"><h1>Fourth slide</h1></div>
+                <div class="carousel-item">
+                    <img src="Images/about/history-of-casa-real-shrine.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/about/women-of-malolos.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/about/crs-printing-press.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/about/thumb2.jpg" alt="">
+                </div>
             </div>
             <div class="carousel-controls">
                 <span class="prev"></span>
@@ -94,7 +102,7 @@
                     memorabilia. Also presented here are the photographs of the 100 Filipino women. Each of them has 
                     distinct characteristics in their fields.</p>
 
-                    <a href="about.php"><button class="button-31" role="button">Learn More</button></a>
+                    <a href="about-crs.php"><button class="button-31" role="button">Learn More</button></a>
             </div>
         </div>
     </section>
