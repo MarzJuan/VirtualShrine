@@ -536,6 +536,7 @@ h5 {
         width: 436px;
         object-fit: contain;
         position: inherit;
+        overflow: hidden;
       }
 }
 
