@@ -498,6 +498,10 @@ h3 {
         grid-column-gap: calc(16px + 0.5vw);
         grid-row-gap: calc(16px + 0.5vw);
     }
+    .featured-content {
+        display: none;
+        grid-template-columns: repeat(6,1fr);
+    }
 }
 
 
