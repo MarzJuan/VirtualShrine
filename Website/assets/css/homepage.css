@@ -534,7 +534,7 @@ h5 {
     .carousel-item img{
         height: 293px;
         width: 436px;
-        object-fit: contain;
+        /* object-fit: contain; */
         position: inherit;
         overflow: hidden;
       }
