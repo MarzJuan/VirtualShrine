@@ -499,7 +499,8 @@ h3 {
         grid-row-gap: calc(16px + 0.5vw);
     }
     .featured-content {
-        display: none;
+        display: flex;
+        flex-direction: column;
         grid-template-columns: repeat(6,1fr);
     }
 }
