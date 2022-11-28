@@ -248,7 +248,7 @@
     }
 </script>
 
-<script src="assets/js/swiper-script.js"></script>
+<!-- <script src="assets/js/swiper-script.js"></script> -->
 
 </body>
 </html>
