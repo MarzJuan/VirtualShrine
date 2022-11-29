@@ -64,15 +64,26 @@ include('includes/header.php');
           <div class="card info-card revenue-card">
 
             <div class="card-body">
-              <h5 class="card-title">Website Visitors</h5>
+              <h5 class="card-title">Blog Post</h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                  <i class="bi bi-binoculars"></i>
+                  <i class="bi bi-newspaper"></i>
                 </div>
                 <div class="ps-3" class="count" id="result-visits">
-                  <h6>
-                  </h6>
+                <?php
+                    $dash_blog_query = "SELECT * FROM blog";
+                    $dash_blog_query_run = mysqli_query($con, $dash_blog_query);
+
+                    if($blog_total = mysqli_num_rows($dash_blog_query_run))
+                    {
+                    echo '<h6>'.$blog_total.'</h6>';
+                    }
+                    else
+                    {
+                      echo '<h6>'."0".'</h6>';
+                    }
+                  ?>
                 </div>
               </div>
             </div>
@@ -310,40 +321,30 @@ include('includes/header.php');
         </div>
 
         <div class="card-body pb-0">
-          <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
+          <h5 class="card-title">Blogs <a href="blog-view.php"><span> | See More<span></a></h5>
+
+        <?php
+          $activity_query = "SELECT * FROM blog WHERE created_at > DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY created_at DESC LIMIT 5 ";
+          $activity_run = mysqli_query($con, $activity_query);
+          $check = mysqli_num_rows($activity_run) > 0;
+
+          if($check)
+              {
+                  while($act = mysqli_fetch_assoc($activity_run))
+                  {
+                  ?>
 
           <div class="news">
             <div class="post-item clearfix">
-              <img src="assets/img/news-1.jpg" alt="">
-              <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-              <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+              <img src="../uploads/blog/<?= $act['image']?>" alt="">
+              <h4><a href="#"><?= $act['name']?></a></h4>
+              <p><?= $act['meta_description']?></p>
             </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/news-2.jpg" alt="">
-              <h4><a href="#">Quidem autem et impedit</a></h4>
-              <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/news-3.jpg" alt="">
-              <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
-              <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/news-4.jpg" alt="">
-              <h4><a href="#">Laborum corporis quo dara net para</a></h4>
-              <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="assets/img/news-5.jpg" alt="">
-              <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
-              <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
-            </div>
-
           </div>
+          <?php
+                }
+            }
+            ?>
           <!-- End sidebar recent posts-->
 
         </div>
