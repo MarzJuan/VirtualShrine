@@ -66,11 +66,11 @@
     <br>
     
   <li class="nav-item">
-    <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' ? 'active':'' ?>" 
+    <a class="nav-link collapsed <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' || $page == 'exhibit-display-view.php' || $page == 'exhibit-display-edit.php' || $page == 'exhibit-display-add.php' ? 'active':'' ?>" 
     data-bs-target="#CMSnav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-blockquote-left"></i><span>CMS</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
-    <ul id="CMSnav" class="nav-content collapse <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' ? 'show':'' ?>" 
+    <ul id="CMSnav" class="nav-content collapse <?= $page == 'post-view.php' || $page == 'post-edit.php' || $page == 'post-add.php' || $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' || $page == 'exhibit-display-view.php' || $page == 'exhibit-display-edit.php' || $page == 'exhibit-display-add.php' ? 'show':'' ?>" 
     data-bs-parent="#sidebar-nav">
 
       <li>
@@ -78,6 +78,13 @@
           <i class="bi bi-circle"></i><span>Collection</span>
         </a>
       </li>
+
+      <li>
+        <a href="exhibit-display-view.php" class="nav-link <?= $page == 'exhibit-display-view.php' || $page == 'exhibit-display-edit.php' || $page == 'exhibit-display-add.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Exhibit Display</span>
+        </a>
+      </li>
+
       <li>
         <a href="blog-view.php" class="nav-link <?= $page == 'blog-view.php' || $page == 'blog-edit.php' || $page == 'blog-add.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Blog</span>

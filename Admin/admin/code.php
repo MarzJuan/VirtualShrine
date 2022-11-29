@@ -3,6 +3,195 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 include('authentication.php');
 
+//EDIT DISPLAY EXHIBIT
+if(isset($_POST['exhibit_display_update']))
+{
+    $display_id = $_POST['display_id'];
+
+    $exhibit_id = $_POST['exhibit_id'];
+    
+    $post_name = $_POST['name'];
+    $final_postname = ucwords($post_name);
+    $name = $final_postname;
+
+    
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
+    $description = $_POST['description'];
+    $year = $_POST['year'];
+    $object_type = $_POST['object_type'];
+
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $audio_old_filename = $_POST['old_audio'];
+    $audio = $_FILES['audio']['name'];
+
+    $update_filename = "";
+    if($audio != NULL)
+    {
+    //rename this image
+        $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
+        $filename = time().'.'.$audio_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $audio_old_filename;
+    }
+   
+
+    $old_filename = $_POST['old_image'];
+    $image = $_FILES['image']['name'];
+
+    $update_filename = "";
+    if($image != NULL)
+    {
+    //rename this image
+        $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+        $filename = time().'.'.$image_extension;
+
+        $update_filename = $filename;
+    }
+    else
+    {
+        $update_filename = $old_filename;
+    }
+
+    $status = $_POST['status'] == true ? '0':'1';
+
+
+
+    $query = "UPDATE exhibit_display SET exhibit_id='$exhibit_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
+            image='$update_filename', audio='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+                    status='$status' WHERE display_id='$display_id' ";
+    
+    $query_run = mysqli_query($con, $query);
+    
+    if($query_run)
+        {
+            $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated a Gallery Content')";
+            $sql_run = mysqli_query($con, $sql);
+
+            if($image != NULL)
+            {
+                if(file_exists('../uploads/exhibit/image/'.$old_filename)){
+                    unlink("../uploads/exhibit/image/'.$old_filename");
+                }
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/exhibit/image/'.$update_filename);
+            }
+            if($audio != NULL)
+            {
+                if(file_exists('../uploads/exhibit/audio/'.$audio_old_filename)){
+                    unlink("../uploads/exhibit/audio/'.$audio_old_filename");
+                }
+                move_uploaded_file($_FILES['audio']['tmp_name'], '../uploads/exhibit/audio/'.$update_filename);
+            }
+            
+                $_SESSION['message'] = "Post Updated Successfully";
+                header('Location: exhibit-display-edit.php?display_id='.$display_id);
+                exit(0);
+        }
+        else
+        {
+            $_SESSION['message'] = "Something Went Wrong";
+            header('Location: exhibit-display-edit.php?display_id='.$display_id);
+            exit(0);
+        }
+
+}
+    
+
+// ADD DISPLAY EXHIBIT
+if(isset($_POST['display_add']) && isset($_FILES['my_audio']))
+{
+
+    $audio_name = $_FILES['my_audio']['name'];
+    $tmp_name = $_FILES['my_audio']['tmp_name'];
+    $error = $_FILES['my_audio']['error'];
+
+    if ($error === 0) {
+    	$audio_ex = pathinfo($audio_name, PATHINFO_EXTENSION);
+
+    	$audio_ex_lc = strtolower($audio_ex);
+
+    	$allowed_exs = array("mp3", '3gp', 'm4a', 'wav', 'm3u', 'ogg');
+
+    	if (in_array($audio_ex_lc, $allowed_exs)) {
+    		
+    		$new_audio_name = uniqid("audio-", true). '.'.$audio_ex_lc;
+    		$audio_upload_path = '../uploads/exhibit/audio/'.$new_audio_name;
+    		move_uploaded_file($tmp_name, $audio_upload_path);
+
+    $exhibit_id = $_POST['exhibit_id'];
+    
+    $post_name = $_POST['name'];
+    $final_postname = ucwords($post_name);
+    $name = $final_postname;
+   
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
+    $final_string = preg_replace('/-+/', '-', $string);
+    $slug = $final_string;
+
+    $description = $_POST['description'];
+    $year = $_POST['year'];
+    $object_type = $_POST['object_type'];
+    
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_keyword = $_POST['meta_keyword'];
+
+    $imageCount = count ($_FILES['image']['name']);
+    for ($i=0;$i<$imageCount;$i++){
+        $imageName = $_FILES['image']['name'][$i];
+        $imageTempName = $_FILES['image']['tmp_name'][$i];
+        $targetPath = '../uploads/exhibit/image/'.$imageName;
+        if(move_uploaded_file($imageTempName, $targetPath)){
+
+    $status = $_POST['status'] == true ? '0':'1';
+
+    $query = "INSERT INTO exhibit_display(exhibit_id, name, slug, description, year, object_type, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$exhibit_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$new_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+        {
+            $last_id = mysqli_insert_id($con);
+            if ($last_id){
+                $code = rand(1,99999);
+                $display_id = "CRSEXDIS_".$code."_".$last_id;
+                $query = "UPDATE exhibit_display SET displayID = '".$display_id."' WHERE display_id = '".$last_id."'";
+                $res = mysqli_query($con, $query);
+            }
+            
+        $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Added a Exhibit Display Content')";
+        $sql_run = mysqli_query($con, $sql);
+            if($sql_run)
+            {
+                $_SESSION['message'] = "Exhibit Display Was Added Successfully";
+                header('Location: exhibit-display-add.php');
+                exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: exhibit-display-add.php');
+        exit(0);
+    }
+        }
+    }
+
+}
+}
+    }
+}
+
+
+
 // EDIT EXHIBIT
 if(isset($_POST['exhibit_update']))
 {
