@@ -104,7 +104,7 @@ include('includes/header.php');
 
         </div><!-- End Customers Card -->
 
-        <!-- Recent Sales -->
+        <!-- Recent Bookings -->
         <div class="col-12">
           <div class="card recent-sales overflow-auto">
 
@@ -167,7 +167,84 @@ include('includes/header.php');
             </div>
 
           </div>
-        </div><!-- End Recent Sales -->
+        </div><!-- End Recent Bookings -->
+
+        <!-- USER ADMINS -->
+        <div class="col-12">
+          <div class="card recent-sales overflow-auto">
+
+            <div class="card-body">
+              <h5 class="card-title">User Admins <a href="booking-pending.php"><span>| See More</span></a></h5>
+
+              <table class="table table-borderless datatable">
+
+              <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col"><center>Name</center></th>
+                    <th scope="col"><center>Username</center></th>
+                    <th scope="col"><center>Role</center></th>
+                    <th scope="col"><center>Status</center></th>
+                  </tr>
+                </thead>
+      <tbody>
+
+        <?php
+          $users = "SELECT * FROM users WHERE role_as='1'";
+          $users_run = mysqli_query($con, $users);
+          $check = mysqli_num_rows($users_run) > 0;
+
+        if($check)
+            {
+                while($act = mysqli_fetch_assoc($users_run))
+                {
+                ?>
+
+                  <tr>
+                    <th><center><div style="margin-top:1rem;margin-left:1rem;"><img src="../uploads/user/<?= $act['profileImage'] ?>" style="width:50px;height:50px;border-radius:50px;"></center></th></td>
+                    <td><center><div style="margin-top:1.5rem;"><?= $act['fname'].' '.$act['lname'] ?></div></center></td>
+                    <td><center><div style="margin-top:1.5rem;"><?= $act['username']?></div></center></td>
+                    <td><center><div style="margin-top:1.5rem;">
+                    <?php 
+                    if($act['role_as'] == 0)
+                    {
+                      echo '<span>Head Admin</span>';
+                    }
+                    if($act['role_as'] == 1)
+                    {
+                      echo '<span>Assistant Admin</span>';
+                    }
+                    ?></div></center></td>
+
+                    <td><center><div style="margin-top:1.5rem;">
+                    <?php
+
+                    if($act['status'] ==0)
+                    {
+                        echo '<span class="badge bg-warning">Active</span>';
+                    }
+                    if($act['status'] ==1)
+                    {
+                        echo '<span class="badge bg-success">Inactive</span>';
+                    }
+                    if($act['status'] ==3)
+                    {
+                        echo '<span class="badge bg-info">Archived</span>';
+                    }
+                    ?>
+                    </div></center></td>
+                  </tr>
+                  <?php
+                }
+              }
+              ?>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+        </div><!-- End USER ADMINS -->
 
 
 
@@ -186,7 +263,7 @@ include('includes/header.php');
 
           <div class="activity">
         <?php
-        $activity_query = "SELECT * FROM auditlog WHERE created_at > DATE_SUB( NOW(), INTERVAL 24 HOUR) LIMIT 10";
+        $activity_query = "SELECT * FROM auditlog WHERE created_at > DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY created_at DESC LIMIT 5 ";
         $activity_run = mysqli_query($con, $activity_query);
         $check = mysqli_num_rows($activity_run) > 0;
 
