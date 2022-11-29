@@ -132,7 +132,7 @@ include('config/dbcon.php');
             under the rule of colonizers and the tenure of the past presidents of the Philippines
         </p>
 
-        <div class="row">
+    <div class="row">
 
     <?php                        
        $posts = "SELECT * FROM categories WHERE status='0' ";
