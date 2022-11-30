@@ -337,7 +337,7 @@ include('includes/header.php');
           <div class="news">
             <div class="post-item clearfix">
               <img src="../uploads/blog/<?= $act['image']?>" alt="">
-              <h4><a href="https://virtualshrine.online/website/blog-article.php?blog_id=<?=$act['blog_id']?>"><?= $act['name']?></a></h4>
+              <h4><a href="https://virtualshrine.online/Website/blog-article.php?blog_id=<?=$act['blog_id']?>"><?= $act['name']?></a></h4>
               <p><?= $act['meta_description']?></p>
             </div>
           </div>
