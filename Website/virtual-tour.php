@@ -33,21 +33,22 @@
                                    <li class="sub-item"><a href="plan_visit.php">Plan Your Visit</a></li>
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
                                    <li class="sub-item"><a href="audio-guide.php">Audio Guide</a></li>
+                                   <li class="sub-item"><a href="exhibits.php">Exhibits</a></li>
                                    <li class="sub-item"><a href="map.php">Museum Map</a></li>
-                                   <li class="sub-item"><a href="group.php">Group Visits</a></li>
+
                         </ul>
                     </li>
                     <li class="menu-item">
                         <a href="#">EXPLORE<i class="fas fa-angle-down"></i></a>
 
                         <ul class="sub-menu">
-                                   <li class="sub-item"><a href="gallery-collection.php">Collections</a></li>
+                                   <li class="sub-item"><a href="gallery.php">Collections</a></li>
                                    <li class="sub-item"><a href="virtual-tour.php">Virtual Tour</a></li>
                         </ul>
                     </li>
                     
-                    <li class="menu-item"><a href="about.php">BLOG</a></li>
-                    <li class="menu-item"><a href="about.php">ABOUT</a></li>
+                    <li class="menu-item"><a href="blog.php">BLOG</a></li>
+                    <li class="menu-item"><a href="about-crs.php">ABOUT</a></li>
                 </ul>
             </div>
             <div id="main"></div>

@@ -2,7 +2,7 @@
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <head>
-        <title>VirtualShrine - Audio Guide</title>
+        <title>Audio Guide - VirtualShrine</title>
         <link rel="stylesheet" href="assets/css/audio-guide-player.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
