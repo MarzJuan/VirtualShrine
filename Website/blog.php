@@ -119,7 +119,7 @@ include('config/dbcon.php');
 
 <section class="gallery-rows" id="galleries">
 <?php                        
-       $posts = "SELECT * FROM blog WHERE status='0' AND created_at < DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY created_at DESC ";
+       $posts = "SELECT * FROM blog WHERE status='0' AND DATEPART(m, date_created) = DATEPART(m, DATEADD(m, -1, getdate())) AND DATEPART(yyyy, date_created) = DATEPART(yyyy, DATEADD(m, -1, getdate()))";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
