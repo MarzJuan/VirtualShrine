@@ -119,7 +119,7 @@ include('config/dbcon.php');
 
 <section class="gallery-rows" id="galleries">
 <?php                        
-       $posts = "SELECT * FROM blog WHERE created_at >= DATEADD(M, -3, GETDATE())";
+       $posts = "SELECT * FROM blog WHERE status='0' AND MONTH(created_at) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH) ORDER BY created_at DESC ";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
