@@ -456,5 +456,21 @@ nav .fa{
         margin: calc(6px + 1vw) auto 0;
         max-width: 80vw;
     }
+    .sub-title {
+        display: block;
+        font-size: calc(10px + .5vw);
+        margin: calc(16px + 0.5vw) auto 0;
+        max-width: 90vw;
+    }
+    .longform-banner__byline {
+        font-size: 0.7rem;
+        font-weight: 600;
+        line-height: 25px;
+        margin: calc(0px + 1vw) auto 0;
+        max-width: min(calc(85vw - (100vw - 100%)),1600px);
+    }
+    .blog-body {
+        padding: 40px;
+    }
 
 }
