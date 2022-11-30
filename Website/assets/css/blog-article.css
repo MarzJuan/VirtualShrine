@@ -297,8 +297,9 @@ h4 {
     font-weight: 700;
     line-height: 1.1;
 }
-.blog-body{
-    padding: 100px;
+.blog-body {
+    padding: 100px 209px;
+    line-height: 1.9rem;
 }
 .blog-paragraph{
     text-align: justify;
