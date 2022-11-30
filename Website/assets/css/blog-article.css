@@ -156,13 +156,6 @@ nav .fa{
     .menu-item .sub-menu .sub-item:hover{
         background: none;
     }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
     .nav-links ul{
         padding: 30px;
     }
@@ -471,6 +464,13 @@ nav .fa{
     }
     .blog-body {
         padding: 40px;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
     }
 
 }
