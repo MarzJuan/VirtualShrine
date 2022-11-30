@@ -73,7 +73,7 @@ include('config/dbcon.php');
 <section class="card-blog">
     <div class="container-fluid">
     <?php                        
-       $posts = "SELECT * FROM blog WHERE status='0' ORDER BY created_at DESC ";
+       $posts = "SELECT * FROM blog WHERE status='0' ORDER BY created_at DESC LIMIT 3";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
@@ -99,7 +99,7 @@ include('config/dbcon.php');
 				<div class="postcard__preview-txt"><?= $post['meta_description'];?></div>
 				<ul class="postcard__tagbox">
 					<li class="tag__item play blue">
-						<a href="#"><i class="fas fa-play mr-2"></i> Read More</a>
+						<a href="blog-article.php?blog_id=<?= $post['blog_id']?>"><i class="fas fa-play mr-2"></i> Read More</a>
 					</li>
 				</ul>
 			</div>
@@ -119,7 +119,7 @@ include('config/dbcon.php');
 
 <section class="gallery-rows" id="galleries">
 <?php                        
-       $posts = "SELECT * FROM blog WHERE status='0' AND DATEPART(m, date_created) = DATEPART(m, DATEADD(m, -1, getdate())) AND DATEPART(yyyy, date_created) = DATEPART(yyyy, DATEADD(m, -1, getdate()))";
+       $posts = "SELECT * FROM blog WHERE status='0' AND created_at < DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY created_at DESC ";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
