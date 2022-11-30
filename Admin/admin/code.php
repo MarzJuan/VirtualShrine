@@ -970,13 +970,13 @@ if(isset($_POST['post_update']))
             }
             
                 $_SESSION['message'] = "Post Updated Successfully";
-                header('Location: post-edit.php?id='.$post_id);
+                header('Location: post-edit.php?post_id='.$post_id);
                 exit(0);
         }
         else
         {
             $_SESSION['message'] = "Something Went Wrong";
-            header('Location: post-edit.php?id='.$post_id);
+            header('Location: post-edit.php?post_id='.$post_id);
             exit(0);
         }
 

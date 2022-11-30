@@ -324,7 +324,7 @@ include('includes/header.php');
           <h5 class="card-title">Blogs <a href="blog-view.php"><span> | See More<span></a></h5>
 
         <?php
-          $activity_query = "SELECT * FROM blog WHERE created_at > DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY created_at DESC LIMIT 5 ";
+          $activity_query = "SELECT * FROM blog ORDER BY created_at DESC LIMIT 5 ";
           $activity_run = mysqli_query($con, $activity_query);
           $check = mysqli_num_rows($activity_run) > 0;
 
@@ -337,7 +337,7 @@ include('includes/header.php');
           <div class="news">
             <div class="post-item clearfix">
               <img src="../uploads/blog/<?= $act['image']?>" alt="">
-              <h4><a href="#"><?= $act['name']?></a></h4>
+              <h4><a href="https://virtualshrine.online/website/blog-article.php?blog_id=<?=$act['blog_id']?>"><?= $act['name']?></a></h4>
               <p><?= $act['meta_description']?></p>
             </div>
           </div>
