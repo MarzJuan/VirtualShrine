@@ -89,7 +89,7 @@ include('config/dbcon.php');
 				<img class="postcard__img" src="../Admin/uploads/blog/<?= $post['image'];?>" alt="<?= $post['slug'];?>" />
 			</a>
 			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a href="#"><?= $post['name'];?></a></h1>
+				<h1 class="postcard__title blue"><a href="blog-article.php?blog_id=<?= $post['blog_id']?>"><?= $post['name'];?></a></h1>
 				<div class="postcard__subtitle small">
 					<time datetime="2020-05-25 12:00:00">Author: 
                     <?= $post['author'];?>
