@@ -45,11 +45,6 @@
                     
                     <li class="menu-item"><a href="blog.php">BLOG</a></li>
                     <li class="menu-item"><a href="about-crs.php">ABOUT</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="menu-item"><a href="blog.php">BLOG</a></li>
-                    <li class="menu-item"><a href="about-crs.php">ABOUT</a></li>
                 </ul>
             </div>
             <div id="main"></div>
