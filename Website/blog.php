@@ -119,7 +119,7 @@ include('config/dbcon.php');
 
 <section class="gallery-rows" id="galleries">
 <?php                        
-       $posts = "SELECT * FROM blog WHERE created_at >= DATEADD(M, -1, GETDATE())";
+       $posts = "SELECT * FROM blog WHERE created_at >= DATEADD(M, -3, GETDATE())";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
