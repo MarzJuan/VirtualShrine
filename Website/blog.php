@@ -6,8 +6,8 @@ include('config/dbcon.php');
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <head>
-        <title>Object - VirtualShrine</title>
-        <link rel="stylesheet" href="assets/css/gallery-collection.css">
+        <title>Exhibits - VirtualShrine</title>
+        <link rel="stylesheet" href="assets/css/blog.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,6 @@ include('config/dbcon.php');
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
 <!-- push -->
@@ -58,53 +57,23 @@ include('config/dbcon.php');
         <!-- [END] NAVIGATION -->
     </section>
 
+<!-- [START] BLOG CONTENT -->
 
-    
-<!------------------------------------ /* [START] COLLECTION OBJECT LIST */ ------------------------------------>
+    <section class="blog-content">
 
-    <section class="gallery-object-body">
-    <?php
-       if(isset($_GET['id']))
-       {              
-              $category_id = $_GET['id'];
-              $posts = "SELECT * FROM categories WHERE status='0' AND id = '$category_id'";
-              $posts_run = mysqli_query($con, $posts);
-              $check = mysqli_num_rows($posts_run) > 0;
-                      
-              if($check)
-              {
-                     while($post = mysqli_fetch_assoc($posts_run))
-                     {
-                     ?>
-        <div class="page-title">
-        <h1>
-            <span class="gallery-title"><?= $post['name']?> / </span>
-            <span class="collection-text">Collections </span><span class="gallery-title">/ </span>
-            <span class="collection-text"><?= $check ?> Record </span>
+        <h1 class="blog-title">
+            Blog
         </h1>
-        </div>
+        <p class="blog-sub">Enjoy the latest news and stories from the Casa Real Shrine.</p>
+        <hr>
+        
+    </section>
 
-        <div class="exhibition-objects-grid__header-container">
-            <span class="exhibition-objects-grid__title ng-binding"><?= $check ?> Objects</span>
-            <?php
-
-            }
-        }
-    }
-?>
-
-            <div class="button-list-view">
-                <button onclick="listView()"><i class="fa fa-bars"></i></button>
-                <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
-            </div>
-        </div>
-
-        <div class="band">
-
-<?php
-    if(isset($_GET['id']))
-    {                        
-       $posts = "SELECT * FROM posts WHERE status='0' AND category_id='$category_id' ";
+<!-- [START] BLOG CARD -->
+<section class="card-blog">
+    <div class="container-fluid">
+    <?php                        
+       $posts = "SELECT * FROM blog WHERE status='0' ORDER BY created_at DESC ";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
@@ -113,30 +82,80 @@ include('config/dbcon.php');
             while($post = mysqli_fetch_assoc($posts_run))
             {
             ?>
-        <div class="item-1">
-            <a href="collection-object.php?post_id=<?= $post['post_id']?>" class="card">
-            <div class="thumb" style="background-image: url(../Admin/uploads/posts/<?= $post['image'];?>);"></div>
-            <article>
-                <h1><?= $post['name']?></h1>
-                <span><?= $post['object_type']?></span>
-            </article>
-            </a>
-            <?php
+    <section class="dark">
+	<div class="container py-4">
+		<article class="postcard dark blue">
+			<a class="postcard__img_link" href="blog-article.php?blog_id=<?= $post['blog_id']?>">
+				<img class="postcard__img" src="../Admin/uploads/blog/<?= $post['image'];?>" alt="<?= $post['slug'];?>" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title blue"><a href="#"><?= $post['name'];?></a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">Author: 
+                    <?= $post['author'];?>
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt"><?= $post['meta_description'];?></div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i> Read More</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+    </div>
+    </section>
+    <?php
             }
         }
-    }
-    ?>
-</div>
+            ?>
+</section>
+
+<hr>
+
+<!-- [START] OTHER BLOGS -->
 
 
-    </section>
+<section class="gallery-rows" id="galleries">
+<?php                        
+       $posts = "SELECT * FROM blog WHERE status='0' AND created_at < DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY created_at DESC ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
 
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
+    <div class="row">
+    <a style="text-decoration: none;color: black;" href="">
+        <div class="features-col">
+            <div id="container">
+                <img id="image" src="../Admin/uploads/blog/<?= $post['image'];?>" alt="">
+            </div>
+            <h3><?= $post['name'];?></h3>
+            <p class="meta-description"><?= $post['meta_description'];?></p>
+            <p class="author-name"><?= $post['author'];?></p>
+        </div>
+    </a>
+    </div>
+    <?php
+            }
+        }
+            ?>
+</section>
 
-<!------------------------------------ /* [ END ] COLLECTION OBJECT LIST */ ------------------------------------> 
+<!-- [END] OTHER BLOGS -->
 
-    <!-- [START] FOOTER -->
+<!-- [START] BLOG CARD -->
 
-           <section id="footer">
+<!-- [END] BLOG CONTENT -->
+
+    
+   <!-- [START] FOOTER -->
+
+   <section id="footer">
     <div class="title-text">
         <!-- <h1>Visit Casa Real Today</h1> -->
         
@@ -167,13 +186,11 @@ include('config/dbcon.php');
 
     <!-- [END] FOOTER -->
 
-
     <script>
     /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
     function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     }
-
     /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
     function closeNav() {
     document.getElementById("mySidebar").style.width = "0";

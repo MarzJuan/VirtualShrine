@@ -209,7 +209,7 @@ nav .fa{
     overflow: hidden;
     position: relative;
     text-indent: 50px;
-    max-height: 400px;
+    height: 400px;
     text-align: justify;
 }
 .item-intro-desc .read-more { 

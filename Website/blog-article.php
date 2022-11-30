@@ -6,8 +6,8 @@ include('config/dbcon.php');
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <head>
-        <title>Object - VirtualShrine</title>
-        <link rel="stylesheet" href="assets/css/gallery-collection.css">
+        <title>Exhibits - VirtualShrine</title>
+        <link rel="stylesheet" href="assets/css/blog-article.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,6 @@ include('config/dbcon.php');
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
 <!-- push -->
@@ -58,16 +57,12 @@ include('config/dbcon.php');
         <!-- [END] NAVIGATION -->
     </section>
 
-
-    
-<!------------------------------------ /* [START] COLLECTION OBJECT LIST */ ------------------------------------>
-
-    <section class="gallery-object-body">
+        <!-- [START] HEADER -->
     <?php
-       if(isset($_GET['id']))
+       if(isset($_GET['blog_id']))
        {              
-              $category_id = $_GET['id'];
-              $posts = "SELECT * FROM categories WHERE status='0' AND id = '$category_id'";
+              $blog_id = $_GET['blog_id'];
+              $posts = "SELECT * FROM blog WHERE status='0' AND blog_id = '$blog_id'";
               $posts_run = mysqli_query($con, $posts);
               $check = mysqli_num_rows($posts_run) > 0;
                       
@@ -76,67 +71,56 @@ include('config/dbcon.php');
                      while($post = mysqli_fetch_assoc($posts_run))
                      {
                      ?>
-        <div class="page-title">
-        <h1>
-            <span class="gallery-title"><?= $post['name']?> / </span>
-            <span class="collection-text">Collections </span><span class="gallery-title">/ </span>
-            <span class="collection-text"><?= $check ?> Record </span>
-        </h1>
-        </div>
-
-        <div class="exhibition-objects-grid__header-container">
-            <span class="exhibition-objects-grid__title ng-binding"><?= $check ?> Objects</span>
-            <?php
-
-            }
-        }
-    }
-?>
-
-            <div class="button-list-view">
-                <button onclick="listView()"><i class="fa fa-bars"></i></button>
-                <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
+    <section class="content-split">
+    <div class="content-wrap">
+        <div class="content-split-main rich-text">
+            <div class="header-img">
+                <img src="../Admin/uploads/blog/<?= $post['image'];?>" alt="">
             </div>
         </div>
+        <div class="content-split-side rich-text">
+            <h1 class="article-title">
+                <?= $post['name'];?>
+            </h1>
+            <p class="sub-title">
+            <?= $post['meta_description'];?>
+            </p>
 
-        <div class="band">
+            <p class="longform-banner__byline">
+                <a href=""><?= $post['author'];?></a>
+            </p>
+        </div>
+    </div>
+    </section>
+    
+    <!-- [END] HEADER -->
 
-<?php
-    if(isset($_GET['id']))
-    {                        
-       $posts = "SELECT * FROM posts WHERE status='0' AND category_id='$category_id' ";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
+    <!-- [START] BODY BLOG -->
 
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-        <div class="item-1">
-            <a href="collection-object.php?post_id=<?= $post['post_id']?>" class="card">
-            <div class="thumb" style="background-image: url(../Admin/uploads/posts/<?= $post['image'];?>);"></div>
-            <article>
-                <h1><?= $post['name']?></h1>
-                <span><?= $post['object_type']?></span>
-            </article>
-            </a>
-            <?php
-            }
+    <section class="blog-body">
+        <div class="blog-paragraph">
+        <?= $post['description'];?>
+        </div>
+    
+    <?php
+
         }
     }
-    ?>
-</div>
+}
+
+?>
+</section>
 
 
-    </section>
+    <!-- [END] BODY BLOG -->
 
 
-<!------------------------------------ /* [ END ] COLLECTION OBJECT LIST */ ------------------------------------> 
 
-    <!-- [START] FOOTER -->
 
-           <section id="footer">
+
+       <!-- [START] FOOTER -->
+
+   <section id="footer">
     <div class="title-text">
         <!-- <h1>Visit Casa Real Today</h1> -->
         
@@ -167,13 +151,11 @@ include('config/dbcon.php');
 
     <!-- [END] FOOTER -->
 
-
     <script>
     /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
     function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     }
-
     /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
     function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
