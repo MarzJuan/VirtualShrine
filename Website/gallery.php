@@ -126,15 +126,21 @@ include('config/dbcon.php');
 
     <!-- [START] GALLERY COLLECTION CONTENTS -->
 
-    <section class="gallery-rows" id="galleries">
+    <div class="gallery-rows" id="galleries">
         <h1 class="gallery-row-title">Start Exploring the Collections</h1><br>
         <p class="gallery-row-text">Witness the Political History of the Philippines through the VirtualShrine's Collection of relics, photographs 
             and artifacts. The Galleries tells the long history of the Philippines from pre-colonial times upto the events 
             under the rule of colonizers and the tenure of the past presidents of the Philippines
         </p>
 
-    <div class="row">
+</div>
 
+    <!-- [END] GALLERY COLLECTION CONTENTS -->
+
+    <!-- [TRY START] -->
+
+    <section class="hero-section">
+    <div class="card-grid">
     <?php                        
        $posts = "SELECT * FROM categories WHERE status='0' ";
        $posts_run = mysqli_query($con, $posts);
@@ -145,28 +151,22 @@ include('config/dbcon.php');
             while($post = mysqli_fetch_assoc($posts_run))
             {
             ?>
-            <a style="text-decoration: none;color: black;" href="gallery-collection.php?id=<?= $post['id']?>">
-            <div class="features-col">
-                <div id="container">
-                <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
-                </div>
-                <h3><?= $post['name']?></h3>
-                <!-- <p>Description area</p> -->
-            </div>
-            </a>
+        <a class="card" href="gallery-collection.php?id=<?= $post['id']?>">
+        <div class="card__background" style="background-image: url(../Admin/uploads/category/<?= $post['image'];?>)"></div>
+        <div class="card__content">
+            <p class="card__category">Gallery</p>
+            <h3 class="card__heading"><?= $post['name']?></h3>
+        </div>
+        </a>
         <?php
             }
         }
             ?>
 
-        </div>
+    </div>
     </section>
 
-    <hr>
-
-    <br><br>
-
-    <!-- [END] GALLERY COLLECTION CONTENTS -->
+    <!-- [TRY END] -->
 
     <!-- [START] FOOTER -->
 

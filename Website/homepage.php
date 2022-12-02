@@ -169,25 +169,31 @@
             <div id="container">
                 <img id="image" src="Images/homepage-features/image1.jpg" alt="">
             </div>
+            <div class="card-title">
                 <h3>Audio Guide</h3>
                 <p>Explore Casa Real with an Audio Guide</p>
+            </div>
             </div>
 
             <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image2.JPG" alt="">
             </div>
+                <div class="card-title">
                 <h3>Virtual 360</h3>
                 <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
+                </div>
             </div>
 
             <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image3.jpg" alt="">
             </div>   
+            <div class="card-title">
                 <h3>Collections</h3>
                 <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
             </div>
+            </div></div>
         </div>
     </section>
 
