@@ -43,13 +43,19 @@
   <!-- //Summernote CSS - CDN Link -->
 
 
-  <style type="text/css" media="print">
+  <!-- <style type="text/css" media="print">
         @media print{
             .noprint, .noprint *{
                 display: none; !important;
             }
         }
-    </style>
+    </style> -->
+
+    <!-- <script>
+    function printPage() {
+        window.print();
+    }
+</script> -->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 

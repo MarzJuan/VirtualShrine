@@ -22,8 +22,7 @@ include('includes/header.php');
             <div class="card">
                 <div class="card-header">
                     <h4>Activity Report
-                    <a type="button" id="printButton" name="printButton" onclick="window.print()" 
-                    class="btn btn-secondary float-end mr-1 noprint"><span>Print Report</span></a>
+                    <a href="report-print.php" target="_blank" class="btn btn-secondary float-end mr-1"><span class="glyphicon glyphicon-print"></span> Print</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -42,7 +41,7 @@ include('includes/header.php');
 
                             <?php
 
-                            $log = "SELECT * FROM auditlog";
+                            $log = "SELECT * FROM auditlog WHERE created_at > DATE_SUB( NOW(), INTERVAL 1 MONTH) ORDER BY created_at DESC";
                                     $log_run = mysqli_query($con, $log);
 
                                     //$posts = "SELECT * FROM posts WHERE status!='1' ";
@@ -58,7 +57,11 @@ include('includes/header.php');
                                                 <td class="id"><?= $log['id']?></td>
                                                 <td class="username"><?= $log['username']?></td>
                                                 <td class="action_made"><?= $log['action']?></td>
-                                                <td class="created_at"><?= $log['created_at']?></td>
+                                                <?php $date = strtotime($log['created_at']);?>
+                                                <td class="created_at">
+                                                    <?php
+                                                    echo date('F d Y', $date);?>
+                                                </td>
                                             <?php
                                         }
                                     }

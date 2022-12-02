@@ -1,125 +1,117 @@
+<!DOCTYPE html>
 <?php
 include('authentication.php');
-include('middleware/superadminAuth.php');
 ?>
-
-<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<style>	
+		.table {
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 80%;
+			margin-bottom: 20px;
+		}	
+ 
+		.table-striped tbody > tr:nth-child(odd) > td,
+		.table-striped tbody > tr:nth-child(odd) > th {
+			background-color: #f9f9f9;
+		}
 
-    <title>Dashboard - VirtualShrine</title>
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <head>
-    <link rel="icon" type="image/png" href="../image/crs-logo.png">
-    
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        
-        <!--<link rel="icon" type="image/png" href=".../img/VirtualShrineLogo.png">-->
+		.prepared_details{
+			margin-left: 9vw;
+		}
+		.logo{
+			max-width: 197px;
+    		margin: auto;
+		}
 
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
-        <link href="css/dataTables.bootstrap5.min.css" rel="stylesheet" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+		.logo img{
+			left:0;
+			right:0;
+			margin:auto;
+			width: 100%;
+		}
+ 
+		@media print{
+			#print {
+				display:none;
+			}
+		}
+		@media print {
+			#PrintButton {
+				display: none;
+			}
+		}
+ 
+		@page {
+			size: auto;   /* auto is the initial value */
+			margin: 0;  /* this affects the margin in the printer settings */
+		}
+	</style>
+	</head>
+<body>
 
-        <!-- Summernote CSS - CDN Link -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <!-- //Summernote CSS - CDN Link -->
+	<div class="logo">
+      <a href="index.php" class="logo d-flex align-items-center">
+        <img src="../image/crs-logo.png" alt="">
+      </a>
+	</div>
 
-    <style type="text/css" media="print">
-        @media print{
-            .noprint, .noprint *{
-                display: none; !important;
-            }
-        }
-    </style>
+	<h2 style="text-align: center;">Admin Activity</h2>
+	<br/> <br/>
 
-    </head>
-
-    <body onload="print()" class="sb-nav-fixed">
-
-    <?php
-    //session_start();
-    include('includes/navbar-top.php')
-    ?>
-
-    <div id="layoutSidenav">
-        
-        <?php include('includes/sidebar.php')?>
-
-        <div id="layoutSidenav_content">
-                <main>
-
-<div class="container-fluid px-4">
-<h1>&nbsp;</h1>
-
-    <div class="row">
-        <div class="col-md-12">
-
-        <div class="card">
-                <div class="card-header">
-                    <center>
-                    <h4>Admin Activity Report
-                    <button type="" onclick="window.location.replace('report.php')" href="report-print.php" class="btn btn-secondary float-end mr-1 noprint"><span>Cancel Print</span></button>
-                    </h4>
-                    </center>
-                </div>
-
-                <table id="ready" class="table table-bordered" style="width: 100%;">
-                    <thead>
-                        <tr>
-                            <th><center>ID</center></th>
-                            <th><center>Name</center></th>
-                            <th><center>Action Made</center></th>
-                            <th><center>Date Created</center></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                            <?php
-
-                            $log = "SELECT * FROM auditlog";
-                                    $log_run = mysqli_query($con, $log);
-
-                                    //$posts = "SELECT * FROM posts WHERE status!='1' ";
-                                   // $posts_run = mysqli_query($con, $posts);
-
-
-                                    if(mysqli_num_rows($log_run) > 0)
-                                    {
-                                        foreach($log_run as $log)
-                                        {
-                                            ?>
-                                            <tr>
-                                                <td class="id"><?= $log['id']?></td>
-                                                <td class="username"><?= $log['username']?></td>
-                                                <td class="action_made"><?= $log['action']?></td>
-                                                <td class="created_at"><?= $log['created_at']?></td>
-                                            <?php
-                                        }
-                                    }
-                                        
-                                ?>
-                                
-                            </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<?php
-include('includes/footer.php');
-include('includes/script.php');
-?>
+	<div class="prepared_details">
+	<b style="color:blue;">Prepared By:</b>
+	<?php
+	echo $_SESSION['auth_user']['user_name'];
+	?>
+	<br>
+	<b style="color:blue;">Date Prepared:</b>
+	<?php
+		$date = date("F d, Y", strtotime("+6 HOURS"));
+		echo $date;
+	?>
+	</div>
+	<br /><br />
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th><center>ID</center></th>
+                <th><center>Name</center></th>
+                <th><center>Action Made</center></th>
+                <th><center>Date Created</center></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				$query = $con->query("SELECT * FROM `auditlog` WHERE created_at > DATE_SUB( NOW(), INTERVAL 1 MONTH) ORDER BY created_at DESC");
+				while($fetch = $query->fetch_array()){
+ 
+			?>
+ 
+			<tr>
+				<td style="text-align:center;"><?php echo $fetch['id']?></td>
+				<td style="text-align:center;"><?php echo $fetch['username']?></td>
+				<td style="text-align:center;"><?php echo $fetch['action']?></td>
+				<?php $date = strtotime($fetch['created_at']);?>
+				<td style="text-align:center;"><?php echo date('F d, Y', $date);?></td>
+			</tr>
+ 
+			<?php
+				}
+			?>
+		</tbody>
+	</table>
+	<center><button id="PrintButton" onclick="PrintPage()">Print</button></center>
+</body>
+<script type="text/javascript">
+	function PrintPage() {
+		window.print();
+	}
+	window.addEventListener('DOMContentLoaded', (event) => {
+   		PrintPage()
+		setTimeout(function(){ window.close() },750)
+	});
+</script>
+</html>
