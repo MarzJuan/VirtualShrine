@@ -107,11 +107,11 @@
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         <a href="section-view.php" class="nav-link <?= $page == 'section-add.php' || $page == 'section-view.php' || $page == 'section-edit.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Section</span>
         </a>
-      </li>
+      </li> -->
 
       <li>
         <a href="exhibit-view.php" class="nav-link <?= $page == 'exhibit-add.php' || $page == 'exhibit-view.php' || $page == 'exhibit-edit.php' ? 'active':'' ?>">

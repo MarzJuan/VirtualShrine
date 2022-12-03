@@ -19,7 +19,7 @@ if(isset($_POST['exhibit_display_update']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = $_POST['description'];
+    $description = mysql_real_escape_string($con, $_POST['description']);
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
 
@@ -137,7 +137,7 @@ if(isset($_POST['display_add']) && isset($_FILES['my_audio']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = $_POST['description'];
+    $description = mysql_real_escape_string($con,$_POST['description']);
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
     
@@ -201,7 +201,7 @@ if(isset($_POST['exhibit_update']))
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date'];
     
-    $exhibit_title = $_POST['exhibit_title'];
+    $exhibit_title = mysqli_real_escape_string($con, $_POST['exhibit_title']);
     $final_exhibitTitle = ucwords($exhibit_title);
     $title = $final_exhibitTitle;
 
@@ -210,7 +210,7 @@ if(isset($_POST['exhibit_update']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = $_POST['description'];
+    $description = mysqli_real_escape_string($con, $_POST['description']);
 
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -237,12 +237,11 @@ if(isset($_POST['exhibit_update']))
 
 
 
-    $query = "UPDATE exhibit SET name='$title', slug='$slug', description='$description', image='$update_filename', 
-            meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
-            status='$status', start_date='$start_date', end_date='$end_date' WHERE exhibit_id='$exhibit_id' ";
-    
+    $query = "UPDATE exhibit SET start_date='$start_date', end_date='$end_date', name='$title', slug='$slug', description='$description', meta_title='$meta_title', 
+    meta_description='$meta_description', meta_keyword='$meta_keyword', image='$update_filename', status='$status' 
+    WHERE exhibit_id='$exhibit_id'";
     $query_run = mysqli_query($con, $query);
-    
+
     if($query_run)
         {
             $sql="INSERT INTO auditlog (id, username, action) VALUES ('AUTO_INCREMENT', '".$_SESSION['auth_user']['user_name']."', 'Updated an Exhibit')";
@@ -283,7 +282,7 @@ if(isset($_POST['add_exhibit']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
     
-    $description = $_POST['description'];
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -342,7 +341,7 @@ if(isset($_POST['add_section']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
     
-    $description = $_POST['description'];
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -406,7 +405,7 @@ if(isset($_POST['blog_update']))
 
     $author = $_POST['author'];
 
-    $description = $_POST['description'];
+    $description = mysql_real_escape_string($con, $_POST['description']);
 
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -480,7 +479,7 @@ if(isset($_POST['blog_add']))
     $final_authorname = ucwords($author_name);
     $author = $final_authorname;
 
-    $description = $_POST['description'];
+    $description = mysql_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -1142,7 +1141,7 @@ if(isset($_POST['edit_category']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = $_POST['description'];
+    $description = mysql_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -1211,7 +1210,7 @@ if(isset($_POST['add_category']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
     
-    $description = $_POST['description'];
+    $description = mysql_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];

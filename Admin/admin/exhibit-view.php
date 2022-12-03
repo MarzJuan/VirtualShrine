@@ -54,9 +54,15 @@ include('includes/header.php');
                                 <tr>
                                     <td><?=$exhibit['exhibitID'] ?></td>
                                     <td><?=$exhibit['name'] ?></td>
-                                    <td><?=$exhibit['start_date']." to ".$exhibit['end_date'] ?></td>
-                                    <td>
 
+                                    <?php $date = strtotime($exhibit['start_date']);?>
+                                    <?php $enddate = strtotime($exhibit['end_date']);?>
+                                    <td class="created_at">
+                                    <?php
+                                        echo date('M d', $date)." to ".date('M d', $enddate);
+                                    ?>
+                                    </td>
+                                    <td>
                                     <?php
 
                                                 if($exhibit['status'] ==0)
