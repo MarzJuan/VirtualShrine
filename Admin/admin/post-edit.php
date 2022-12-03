@@ -111,7 +111,7 @@ include('includes/header.php');
                             
                             <div class="col-md-6 mb-3">
                                 <label for="">Audio File (Filipino)</label>
-                                <input type="hidden" name="eng_old_audio" value="<?= $post_row['fil_audio'] ?>"/>
+                                <input type="hidden" name="fil_old_audio" value="<?= $post_row['fil_audio'] ?>"/>
                                 <input type="file" name="fil_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 
