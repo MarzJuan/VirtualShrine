@@ -168,6 +168,7 @@ include('config/dbcon.php');
 
     <!-- [TRY END] -->
 
+
 <!-- [START] FOOTER -->
 
 <section id="footer">
@@ -217,7 +218,6 @@ include('config/dbcon.php');
     </section>
 
     <!-- [END] FOOTER -->
-
 
 
     <!-- JAVASCRIPT FOR TOGGLE MENU -->

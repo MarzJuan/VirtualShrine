@@ -297,24 +297,42 @@ include('config/dbcon.php');
 <!--------------------------------------------[END] OTHER COLLECTION ------------------------------------------->
 
 
-        <!-- [START] FOOTER -->
 
-        <section id="footer">
+<!-- [START] FOOTER -->
+
+<section id="footer">
     <div class="title-text">
         <!-- <h1>Visit Casa Real Today</h1> -->
         
     </div>
         <div class="footer-row">
             <div class="footer-left">
+            <div>
                 <h1>Opening Hours</h1>
                 <p><i class="fa fa-clock-o"></i>  Tuesday to Sunday - 8:00 AM to 4:00 PM</p>
             </div>
+            <br>
+            <div>
+            <h1>Contact Us</h1>
+                <p><i class="fa fa-map-marker"></i>   Paseo Del Congreso, Liang, City of Malolos, Bulacan</p>
+                <p><i class="fa fa-paper-plane"></i>  mpph@nhcp.gov.ph</p>
+                <p><i class="fa fa-phone"></i>  (044) 931-2508</p>
+            </div>
+            </div>
 
             <div class="footer-right">
-                <h1>Contact Us</h1>
-                <p>Paseo Del Congreso, Liang, City of Malolos, Bulacan  <i class="fa fa-map-marker"></i></p>
-                <p>mpph@nhcp.gov.ph  <i class="fa fa-paper-plane"></i></p>
-                <p>(044) 931-2508   <i class="fa fa-phone"></i></p>
+            <div>
+                <h1>Quicklinks</h1>
+                <div class="quicklinks">
+                <span style="margin-right:50px;"><a href="homepage.php">Homepage</a></span><a href="crs-about.php">About Us</a><br>
+                <span style="margin-right:30px;"><a href="plan-visit.php">Plan Your Visit</a></span><a href="consent-form.php">Book a Visit</a><br>
+                <span style="margin-right:70px;"><a href="audio-guide.php">Audio Guide</a></span><a href="exhibits.php">Exhibit</a><br>
+                <span style="margin-right:30px;"><a href="gallery.php">Collection</a></span><a href="virtual-tour.php">Virtual Tour</a><br>
+                <span><a href="">About</a></span>
+                </div>
+
+
+            </div>
             </div>
         </div>
 
@@ -329,7 +347,6 @@ include('config/dbcon.php');
     </section>
 
     <!-- [END] FOOTER -->
-
 
 
     <!-- JAVASCRIPT FOR TOGGLE MENU -->

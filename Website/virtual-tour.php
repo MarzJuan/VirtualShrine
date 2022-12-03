@@ -175,9 +175,6 @@
 
 
 
-
-
-
 <!-- [START] FOOTER -->
 
 <section id="footer">
@@ -228,6 +225,8 @@
 
     <!-- [END] FOOTER -->
 
+
+    
     <!-- JAVASCRIPT FOR ACCORDION -->
 <script>
     var allRadios = document.getElementsByName('accordion');

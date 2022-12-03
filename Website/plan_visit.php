@@ -280,6 +280,8 @@
     </div>
     </section>
     <!-- [END] LOCATION-->
+    
+
 <!-- [START] FOOTER -->
 
 <section id="footer">
@@ -329,6 +331,7 @@
     </section>
 
     <!-- [END] FOOTER -->
+    
     <!-- JAVASCRIPT FOR ACCORDION -->
 <script>
     var allRadios = document.getElementsByName('accordion');

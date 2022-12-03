@@ -564,18 +564,21 @@ h5 {
 /* TRY END */
 
 
-
 /* [START] FOOTER */
 
 #footer{
     width: 100%;
-    padding: 100px 0 20px;
+    padding: 3px 0 3px;
     background: #E3AD3F;
     position: relative;
 }
 .title-text{
     text-align: center;
     padding-bottom: 30px;
+}
+.footer-row h1{
+    font-size: 25px;
+    font-weight: 600;
 }
 .title-text p{
     margin: auto;
@@ -600,8 +603,8 @@ h5 {
 .footer-left, .footer-right{
     flex-basis: 45%;
     padding: 10px;
-    margin-bottom: 20px;
-    margin-top: -20px;
+    margin-bottom: -60px;
+    margin-top: -7px;
     color: maroon;
 }
 .footer-right{
@@ -625,13 +628,19 @@ h5 {
 .footer-img{
     max-width: 159px;
     position: absolute;
-    left: 44.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
     top: 65%;
 }
 
 .social-links{
     text-align: center;
-    margin-bottom: 50px;
+    /* margin-bottom: 0px; */
+    left: 0;
+    width: 30%;
+    right: 0;
+    margin: auto;
 }
 
 .social-links .fa{
@@ -667,18 +676,17 @@ h5 {
     text-decoration: underline;
 }
 
-
 @media (max-width:700px){
     .footer-left, .footer-right{
         flex-basis: 100%;
         font-size: 14px;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
     }
     .footer-img {
         max-width: 142px;
         position: absolute;
-        left: 34%;
-        top: 6%;    
+        left: 0;
+        top: 75%;    
     }
     .title-text p {
         font-size: 13px;
@@ -693,8 +701,10 @@ h5 {
         margin: 10px 0;
         font-size: 20px;
     }
-
-
+    .social-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
     .card__heading {
         color: var(--text-lighter);
         font-size: 7.5vw;
