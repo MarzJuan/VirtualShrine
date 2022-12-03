@@ -1017,7 +1017,8 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = $_POST['description'];
+    $eng_description = $_POST['eng_description'];
+    $fil_description = $_POST['fil_description'];
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
     
@@ -1034,8 +1035,8 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, name, slug, description, year, object_type, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$new_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, name, slug, eng_description, fil_description, year, object_type, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$imageName', '$new_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
