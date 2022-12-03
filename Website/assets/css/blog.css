@@ -576,21 +576,21 @@ a, a:hover {
 
 
 
-
-
-
-
 /* [START] FOOTER */
 
 #footer{
     width: 100%;
-    padding: 100px 0 20px;
+    padding: 3px 0 3px;
     background: #E3AD3F;
     position: relative;
 }
 .title-text{
     text-align: center;
     padding-bottom: 30px;
+}
+.footer-row h1{
+    font-size: 25px;
+    font-weight: 600;
 }
 .title-text p{
     margin: auto;
@@ -615,8 +615,8 @@ a, a:hover {
 .footer-left, .footer-right{
     flex-basis: 45%;
     padding: 10px;
-    margin-bottom: 20px;
-    margin-top: -20px;
+    margin-bottom: -60px;
+    margin-top: -7px;
     color: maroon;
 }
 .footer-right{
@@ -640,13 +640,19 @@ a, a:hover {
 .footer-img{
     max-width: 159px;
     position: absolute;
-    left: 44.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
     top: 65%;
 }
 
 .social-links{
     text-align: center;
-    margin-bottom: 50px;
+    /* margin-bottom: 0px; */
+    left: 0;
+    width: 30%;
+    right: 0;
+    margin: auto;
 }
 
 .social-links .fa{
@@ -681,9 +687,7 @@ a, a:hover {
     color: #FFF;
     text-decoration: underline;
 }
-
-
-@media (max-width:700px){
+@media (max-width:770px){
     .footer-left, .footer-right{
         flex-basis: 100%;
         font-size: 14px;
@@ -692,8 +696,8 @@ a, a:hover {
     .footer-img {
         max-width: 142px;
         position: absolute;
-        left: 34%;
-        top: 6%;    
+        left: 0;
+        top: 75%;    
     }
     .title-text p {
         font-size: 13px;
@@ -707,6 +711,50 @@ a, a:hover {
     .footer-row h1 {
         margin: 10px 0;
         font-size: 20px;
+    }
+    .social-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .content-wrap {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .header-img img {
+        width: 100%;
+        height: 39vh;
+        object-fit: fill;
+    }
+    .article-title {
+        font-family: MetSerif,Georgia,"Times New Roman",Times,serif;
+        font-size: calc(20px + 1.5vw);
+        font-weight: 600;
+        margin: calc(6px + 1vw) auto 0;
+        max-width: 80vw;
+    }
+    .sub-title {
+        display: block;
+        font-size: calc(10px + .5vw);
+        margin: calc(16px + 0.5vw) auto 0;
+        max-width: 90vw;
+    }
+    .longform-banner__byline {
+        font-size: 0.7rem;
+        font-weight: 600;
+        line-height: 25px;
+        margin: calc(0px + 1vw) auto 0;
+        max-width: min(calc(85vw - (100vw - 100%)),1600px);
+    }
+    .blog-body {
+        padding: 40px;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
     }
 
 }
