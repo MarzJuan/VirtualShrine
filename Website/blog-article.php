@@ -183,7 +183,7 @@ include('config/dbcon.php');
 var img = document.getElementById('header-img').firstChild;
 img.onload = function() {
     if(img.height > img.width) {
-        img.height = '100%';
+        img.height = '50%';
         img.width = 'auto';
     }
 };

@@ -273,7 +273,7 @@ h4 {
     flex-basis: 100%;
     background-color: #efefef;
     text-align: center;
-    padding: calc(32px + 1vw) 0 calc(24px + 0.75vw);
+    padding: calc(32px + 1vw) 0 calc(24px + 0.70vw);
 }
 .article-title {
     font-family: MetSerif,Georgia,"Times New Roman",Times,serif;
