@@ -1028,9 +1028,13 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     $category_id = $_POST['category_id'];
     
-    $post_name = $_POST['name'];
-    $final_postname = ucwords($post_name);
-    $name = $final_postname;
+    $eng_post_name = $_POST['eng_name'];
+    $eng_final_postname = ucwords($eng_post_name);
+    $name = $eng_final_postname;
+
+    $fil_post_name = $_POST['fil_name'];
+    $fil_final_postname = ucwords($fil_post_name);
+    $fil_name = $fil_final_postname;
    
     $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
     $final_string = preg_replace('/-+/', '-', $string);
@@ -1054,8 +1058,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, name, slug, eng_description, fil_description, year, object_type, image, eng_audio, fil_audio, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$imageName', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, eng_name, fil_name, slug, eng_description, fil_description, year, object_type, image, eng_audio, fil_audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$eng_name', '$fil_name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$imageName', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
