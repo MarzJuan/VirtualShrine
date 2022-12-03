@@ -887,16 +887,21 @@ if(isset($_POST['post_update']))
 
     $category_id = $_POST['category_id'];
     
-    $post_name = $_POST['name'];
-    $final_postname = ucwords($post_name);
-    $name = $final_postname;
+    $eng_post_name = $_POST['eng_name'];
+    $eng_final_postname = ucwords($eng_post_name);
+    $eng_name = $eng_final_postname;
+
+    $fil_post_name = $_POST['fil_name'];
+    $fil_final_postname = ucwords($fil_post_name);
+    $fil_name = $fil_final_postname;
 
     
     $string = preg_replace('/[^A-Za-z0-9\-]/', '-', $_POST['slug']); //remove all special characters
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = $_POST['description'];
+    $eng_description = mysqli_real_escape_string($con, $_POST['eng_description']);
+    $fil_description = mysqli_real_escape_string($con, $_POST['fil_description']);
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
 
@@ -904,21 +909,41 @@ if(isset($_POST['post_update']))
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
-    $audio_old_filename = $_POST['old_audio'];
-    $audio = $_FILES['audio']['name'];
 
-    $update_filename = "";
-    if($audio != NULL)
+    // ENGLISH AUDIO
+    $eng_audio_old_filename = $_POST['eng_old_audio'];
+    $eng_audio = $_FILES['eng_audio']['name'];
+
+    $eng_update_filename = "";
+    if($eng_audio != NULL)
     {
     //rename this image
-        $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
-        $filename = time().'.'.$audio_extension;
+        $eng_audio_extension = pathinfo($eng_audio, PATHINFO_EXTENSION);
+        $eng_filename = time().'.'.$eng_audio_extension;
 
-        $update_filename = $filename;
+        $eng_update_filename = $eng_filename;
     }
     else
     {
-        $update_filename = $audio_old_filename;
+        $eng_update_filename = $eng_audio_old_filename;
+    }
+
+    // FILIPINO AUDIO
+    $fil_audio_old_filename = $_POST['fil_old_audio'];
+    $fil_audio = $_FILES['fil_audio']['name'];
+
+    $fil_update_filename = "";
+    if($fil_audio != NULL)
+    {
+    //rename this image
+        $fil_audio_extension = pathinfo($fil_audio, PATHINFO_EXTENSION);
+        $fil_filename = time().'.'.$fil_audio_extension;
+
+        $fil_update_filename = $fil_filename;
+    }
+    else
+    {
+        $fil_update_filename = $fil_audio_old_filename;
     }
    
 
@@ -944,7 +969,7 @@ if(isset($_POST['post_update']))
 
 
     $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
-            image='$update_filename', audio='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+            image='$update_filename', eng_audio='$eng_update_filename', fil_audio='$fil_update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
                     status='$status' WHERE post_id='$post_id' ";
     
     $query_run = mysqli_query($con, $query);
@@ -961,12 +986,19 @@ if(isset($_POST['post_update']))
                 }
                 move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$update_filename);
             }
-            if($audio != NULL)
+            if($eng_audio != NULL)
             {
-                if(file_exists('../uploads/audio/'.$audio_old_filename)){
-                    unlink("../uploads/audio/'.$audio_old_filename");
+                if(file_exists('../uploads/audio/english'.$eng_audio_old_filename)){
+                    unlink("../uploads/audio/english'.$eng_audio_old_filename");
                 }
-                move_uploaded_file($_FILES['audio']['tmp_name'], '../uploads/audio/'.$update_filename);
+                move_uploaded_file($_FILES['eng_audio']['tmp_name'], '../uploads/audio/english'.$eng_update_filename);
+            }
+            if($fil_audio != NULL)
+            {
+                if(file_exists('../uploads/audio/filipino'.$fil_audio_old_filename)){
+                    unlink("../uploads/audio/filipino'.$fil_audio_old_filename");
+                }
+                move_uploaded_file($_FILES['fil_audio']['tmp_name'], '../uploads/audio/filipino'.$fil_update_filename);
             }
             
                 $_SESSION['message'] = "Post Updated Successfully";
@@ -1004,8 +1036,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     	if (in_array($english_audio_ex_lc, $english_allowed_exs)) {
     		
-    		$new_english_audio_name = uniqid("english-audio-", true). '.'.$english_audio_ex_lc;
-    		$english_audio_upload_path = '../uploads/audio/english'.$new_english_audio_name;
+    		$new_english_audio_name = uniqid("-audio-", true). '.'.$english_audio_ex_lc;
+    		$english_audio_upload_path = '../uploads/audio/english/english'.$new_english_audio_name;
     		move_uploaded_file($english_tmp_name, $english_audio_upload_path);
 
     // TAGALOG AUDIO
@@ -1022,8 +1054,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     	if (in_array($filipino_audio_ex_lc, $filipino_allowed_exs)) {
     		
-    		$new_filipino_audio_name = uniqid("filipino-audio-", true). '.'.$filipino_audio_ex_lc;
-    		$filipino_audio_upload_path = '../uploads/audio/filipino'.$new_filipino_audio_name;
+    		$new_filipino_audio_name = uniqid("-audio-", true). '.'.$filipino_audio_ex_lc;
+    		$filipino_audio_upload_path = '../uploads/audio/filipino/filipino'.$new_filipino_audio_name;
     		move_uploaded_file($filipino_tmp_name, $filipino_audio_upload_path);
 
     $category_id = $_POST['category_id'];
