@@ -987,25 +987,44 @@ if(isset($_POST['post_update']))
 
 
 //ADD POST
-if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
+if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fil_audio']))
 {
 
-    $audio_name = $_FILES['my_audio']['name'];
-    $tmp_name = $_FILES['my_audio']['tmp_name'];
-    $error = $_FILES['my_audio']['error'];
+    // ENGLISH AUDIO
+    $english_audio_name = $_FILES['eng_audio']['name'];
+    $english_tmp_name = $_FILES['eng_audio']['tmp_name'];
+    $error = $_FILES['eng_audio']['error'];
 
     if ($error === 0) {
-    	$audio_ex = pathinfo($audio_name, PATHINFO_EXTENSION);
+    	$english_audio_ex = pathinfo($english_audio_name, PATHINFO_EXTENSION);
 
-    	$audio_ex_lc = strtolower($audio_ex);
+    	$english_audio_ex_lc = strtolower($english_audio_ex);
 
-    	$allowed_exs = array("mp3", '3gp', 'm4a', 'wav', 'm3u', 'ogg');
+    	$english_allowed_exs = array("mp3", '3gp', 'm4a', 'wav', 'm3u', 'ogg');
 
-    	if (in_array($audio_ex_lc, $allowed_exs)) {
+    	if (in_array($english_audio_ex_lc, $english_allowed_exs)) {
     		
-    		$new_audio_name = uniqid("audio-", true). '.'.$audio_ex_lc;
-    		$audio_upload_path = '../uploads/audio/'.$new_audio_name;
-    		move_uploaded_file($tmp_name, $audio_upload_path);
+    		$new_english_audio_name = uniqid("english-audio-", true). '.'.$english_audio_ex_lc;
+    		$english_audio_upload_path = '../uploads/audio/english'.$new_english_audio_name;
+    		move_uploaded_file($english_tmp_name, $english_audio_upload_path);
+
+    // TAGALOG AUDIO
+    $filipino_audio_name = $_FILES['fil_audio']['name'];
+    $filipino_tmp_name = $_FILES['fil_audio']['tmp_name'];
+    $error = $_FILES['fil_audio']['error'];
+
+    if ($error === 0) {
+    	$filipino_audio_ex = pathinfo($filipino_audio_name, PATHINFO_EXTENSION);
+
+    	$filipino_audio_ex_lc = strtolower($filipino_audio_ex);
+
+    	$filipino_allowed_exs = array("mp3", '3gp', 'm4a', 'wav', 'm3u', 'ogg');
+
+    	if (in_array($filipino_audio_ex_lc, $filipino_allowed_exs)) {
+    		
+    		$new_filipino_audio_name = uniqid("filipino-audio-", true). '.'.$filipino_audio_ex_lc;
+    		$filipino_audio_upload_path = '../uploads/audio/filipino'.$new_filipino_audio_name;
+    		move_uploaded_file($filipino_tmp_name, $filipino_audio_upload_path);
 
     $category_id = $_POST['category_id'];
     
@@ -1035,8 +1054,8 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, name, slug, eng_description, fil_description, year, object_type, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$imageName', '$new_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, name, slug, eng_description, fil_description, year, object_type, image, eng_audio, fil_audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$imageName', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -1068,6 +1087,8 @@ if(isset($_POST['post_add']) && isset($_FILES['my_audio']))
 
 }
 }
+    }
+    }
     }
 }
 

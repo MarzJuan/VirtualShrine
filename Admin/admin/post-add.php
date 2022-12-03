@@ -111,8 +111,13 @@ include('includes/header.php');
                             </div>
 
                             <div class="col-md-6 mb-3">
-                            <label for="">Audio File</label>
-                            <input type="file" name="my_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            <label for="">Audio File (English)</label>
+                            <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                            <label for="">Audio File (Filipino)</label>
+                            <input type="file" name="fil_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 
                             <div class="col-md-6 mb-3">
