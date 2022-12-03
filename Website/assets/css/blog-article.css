@@ -437,7 +437,7 @@ nav .fa{
     text-decoration: underline;
 }
 
-@media (max-width:700px){
+@media (max-width:770px){
     .footer-left, .footer-right{
         flex-basis: 100%;
         font-size: 14px;
@@ -466,10 +466,6 @@ nav .fa{
         width: 100%;
         margin-bottom: 30px;
     }
-
-}
-
-@media screen and (max-width:770px){
     .content-wrap {
         flex-direction: column;
         display: flex;
