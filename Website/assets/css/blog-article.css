@@ -246,7 +246,7 @@ p {
 
 .content-split-main {
     flex-grow: 1;
-    margin-bottom: calc(-19px + 1vw);
+    margin-bottom: calc(-12px + 1vw);
     overflow: hidden;
 }
 .header-img{
