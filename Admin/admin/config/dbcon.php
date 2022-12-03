@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$username = "root";
-$password = "";
-$database = "virtualshrine";
+$username = "u117302041_vsadmin";
+$password = "DEVpass02";
+$database = "u117302041_virtualshrine";
 
 $con = mysqli_connect($host, $username, $password, $database);
 

@@ -1036,8 +1036,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $eng_description = $_POST['eng_description'];
-    $fil_description = $_POST['fil_description'];
+    $eng_description = mysqli_real_escape_string($con, $_POST['eng_description']);
+    $fil_description = mysqli_real_escape_string($con,$_POST['fil_description']);
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
     
