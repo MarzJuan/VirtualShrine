@@ -105,7 +105,7 @@ include('includes/header.php');
                                 <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
                             </div>
                             
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-12 mb-3">
                                 <label for="">Image</label>
                                 <input type="file" name="image[]" class="form-control" multiple required accept="image/*">
                             </div>
