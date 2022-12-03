@@ -48,7 +48,7 @@
         $(document).ready(function() {
             //$("#summernote").summernote();
 
-            $('#summernote_fil').summernote({
+            $('.summernote').summernote({
         placeholder: 'Type your Description',
         height: 300
       });
@@ -57,19 +57,6 @@
     </script>
     <!-- //Summernote JS - CDN Link -->
 
-    <!-- ENGLISH -->
-    <script>
-        $(document).ready(function() {
-            //$("#summernote").summernote();
-
-            $('#summernote_eng').summernote({
-        placeholder: 'Type your Description',
-        height: 300
-      });
-            $('.dropdown-toggle').dropdown();
-        });
-    </script>
-    <!-- //Summernote JS - CDN Link -->
 
     <script>
         $(document).ready(function(){

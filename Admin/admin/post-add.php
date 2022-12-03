@@ -72,12 +72,12 @@ include('includes/header.php');
 
                             <div class="col-md-12 mb-3">
                                 <label for="">Description (English)</label>
-                                <textarea name="eng_description" id="summernote_eng" required class="form-control" rows="4"></textarea>
+                                <textarea name="eng_description" required class="form-control summernote" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-12 mb-3">
                                 <label for="">Description (Filipino)</label>
-                                <textarea name="fil_description" id="summernote_fil" required class="form-control" rows="4"></textarea>
+                                <textarea name="fil_description" required class="form-control summernote" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
