@@ -75,7 +75,7 @@ include('config/dbcon.php');
     <section class="content-split">
     <div class="content-wrap">
         <div class="content-split-main rich-text">
-            <div id="header-img">
+            <div class="header-img">
                 <img src="../Admin/uploads/blog/<?= $post['image'];?>" alt="">
             </div>
         </div>
