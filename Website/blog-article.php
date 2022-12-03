@@ -75,7 +75,7 @@ include('config/dbcon.php');
     <section class="content-split">
     <div class="content-wrap">
         <div class="content-split-main rich-text">
-            <div class="header-img">
+            <div id="header-img">
                 <img src="../Admin/uploads/blog/<?= $post['image'];?>" alt="">
             </div>
         </div>
@@ -175,6 +175,20 @@ include('config/dbcon.php');
     function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     }
+</script>
+
+<script type="text/javascript">
+(function() {
+
+var img = document.getElementById('header-img').firstChild;
+img.onload = function() {
+    if(img.height > img.width) {
+        img.height = '100%';
+        img.width = 'auto';
+    }
+};
+
+}());
 </script>
 </body>
 </html>
