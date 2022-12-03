@@ -69,21 +69,68 @@ include('includes/header.php');
 
 
                             ?>
-                            
                         </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="">Name</label>
-                                <input type="text" name="name" value="<?= $post_row['name'] ?>" required class="form-control">
+
+                        <div>
+                        <p>Language:</p>
+                        <div class="tab">
+                        <button class="tablinks" onclick="openLanguage(event, 'Filipino')">Filipino</button>
+                        <button class="tablinks" onclick="openLanguage(event, 'English')">English</button>
+                        </div>
+                        
+
+                        <!-- Tab content -->
+                        <!-- ENGLISH -->
+                        <div id="English" class="tabcontent">
+                            <div class="col-md-12 mb-3">
+                                <label for="">Name (English)</label>
+                                <input type="text" name="eng_name" value="<?= $post_row['eng_name'] ?>" required class="form-control">
                             </div>
+
+                            
+                            <div class="col-md-6 mb-3">
+                            <label for="">Audio File (English)</label>
+                            <input type="hidden" name="eng_old_audio" value="<?= $post_row['eng_audio'] ?>"/>
+                            <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            </div>
+                            
+                            <div class="col-md-12 mb-3">
+                                <label for="">Description (English)</label>
+                                <textarea name="eng_description" required class="form-control summernote" rows="4"><?= $post_row['eng_description'] ?></textarea>
+                            </div>
+                        </div>
+
+                        <!-- FILIPINO -->
+                        <div id="Filipino" class="tabcontent">
+                        
+                            <div class="col-md-12 mb-3">
+                                <label for="">Name (Filipino)</label>
+                                <input type="text" name="fil_name" value="<?= $post_row['fil_name'] ?>" required class="form-control">
+                            </div>
+
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="">Audio File (Filipino)</label>
+                                <input type="hidden" name="eng_old_audio" value="<?= $post_row['fil_audio'] ?>"/>
+                                <input type="file" name="fil_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label for="">Description (Filipino)</label>
+                                <textarea name="fil_description" required class="form-control summernote" rows="4"><?= $post_row['fil_description'] ?></textarea>
+                            </div>
+                        </div>
+
+                        </div>
+                        <br><br><br><br><br><br>
+                        <hr>
+
+                        <br><br><br>
+                        <!-- OUTSIDE FORM -->
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Slug (URL)</label>
                                 <input type="text" name="slug" value="<?= $post_row['slug'] ?>" required class="form-control">
-                            </div>
-
-                            <div class="col-md-12 mb-3">
-                                <label for="">Description</label>
-                                <textarea name="description" id="summernote" required class="form-control" rows="4"><?= $post_row['description'] ?></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
@@ -115,12 +162,6 @@ include('includes/header.php');
                                 <label for="">Image</label>
                                 <input type="hidden" name="old_image" value="<?= $post_row['image'] ?>" />
                                 <input type="file" name="image" class="form-control" accept="image/*">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="">Audio File</label>
-                                <input type="hidden" name="old_audio" value="<?= $audio_row['audio'] ?>"/>
-                                <input type="file" name="audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 
                             <div class="col-md-6 mb-3">
