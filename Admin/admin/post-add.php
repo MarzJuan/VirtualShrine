@@ -59,7 +59,7 @@ include('includes/header.php');
                         </div>
                         
                         <div>
-                            <p>Language:</p>
+                        <p>Language:</p>
                         <div class="tab">
                         <button class="tablinks" onclick="openLanguage(event, 'Filipino')">Filipino</button>
                         <button class="tablinks" onclick="openLanguage(event, 'English')">English</button>
