@@ -116,12 +116,9 @@ include('config/dbcon.php');
     <!-- [END] BODY BLOG -->
 
 
+<!-- [START] FOOTER -->
 
-
-
-       <!-- [START] FOOTER -->
-
-   <section id="footer">
+<section id="footer">
     <div class="title-text">
         <!-- <h1>Visit Casa Real Today</h1> -->
         

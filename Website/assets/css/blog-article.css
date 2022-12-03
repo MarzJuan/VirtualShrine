@@ -436,7 +436,6 @@ nav .fa{
     color: #FFF;
     text-decoration: underline;
 }
-
 @media (max-width:770px){
     .footer-left, .footer-right{
         flex-basis: 100%;
