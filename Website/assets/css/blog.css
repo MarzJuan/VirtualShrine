@@ -368,6 +368,11 @@ a, a:hover {
         right: -12px !important;
         transform: rotate(-4deg);
    }
+   .card-blog {
+    margin: 55px;
+    /* margin-left: 130px; */
+    /* margin-right: 130px; */
+}
 }
 @media screen and (min-width: 1024px) {
     .postcard__text {
