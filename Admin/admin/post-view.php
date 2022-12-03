@@ -55,7 +55,7 @@ include('includes/header.php');
                                             ?>
                                             <tr>
                                                 <td><?= $posts['postID']?></td>
-                                                <td><?= $posts['name']?></td>
+                                                <td><?= $posts['fil_name']?></td>
                                                 <td><?= $posts['cname']?></td>
                                                 <td><img src="../uploads/posts/<?= $posts['image']?>" width="60px" height="60px" /></td>
                                                 

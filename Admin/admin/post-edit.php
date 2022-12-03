@@ -18,7 +18,7 @@ include('includes/header.php');
                     </h4>
                 </div>
                 <div class="card-body">
-
+                <form action="code.php" method="POST" enctype='multipart/form-data'>
                 <?php
                     if(isset($_GET['post_id']))
                     {
@@ -30,8 +30,6 @@ include('includes/header.php');
                         {
                             $post_row = mysqli_fetch_array($post_query_res);
                             ?>
-                        
-                <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                 <input type="hidden" name="post_id" value="<?= $post_row['post_id'] ?>">
 
@@ -74,24 +72,24 @@ include('includes/header.php');
                         <div>
                         <p>Language:</p>
                         <div class="tab">
-                        <button class="tablinks" onclick="openLanguage(event, 'Filipino')">Filipino</button>
-                        <button class="tablinks" onclick="openLanguage(event, 'English')">English</button>
+                        <button type="button" class="tablinks" onclick="openLanguage(event, 'Filipino')">Filipino</button>
+                        <button type="button" class="tablinks" onclick="openLanguage(event, 'English')">English</button>
                         </div>
                         
-
+                        
                         <!-- Tab content -->
                         <!-- ENGLISH -->
                         <div id="English" class="tabcontent">
                             <div class="col-md-12 mb-3">
                                 <label for="">Name (English)</label>
-                                <input type="text" name="eng_name" value="<?= $post_row['eng_name'] ?>" required class="form-control">
+                                <input type="text" name="eng_name" value="<?= $post_row['eng_name'];?>" required class="form-control">
                             </div>
 
                             
                             <div class="col-md-6 mb-3">
-                            <label for="">Audio File (English)</label>
-                            <input type="hidden" name="eng_old_audio" value="<?= $post_row['eng_audio'] ?>"/>
-                            <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                                <label for="">Audio File (English)</label>
+                                <input type="hidden" name="eng_old_audio" value="<?= $post_row['eng_audio'] ?>"/>
+                                <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
                             
                             <div class="col-md-12 mb-3">
@@ -102,7 +100,6 @@ include('includes/header.php');
 
                         <!-- FILIPINO -->
                         <div id="Filipino" class="tabcontent">
-                        
                             <div class="col-md-12 mb-3">
                                 <label for="">Name (Filipino)</label>
                                 <input type="text" name="fil_name" value="<?= $post_row['fil_name'] ?>" required class="form-control">

@@ -968,7 +968,7 @@ if(isset($_POST['post_update']))
 
 
 
-    $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
+    $query = "UPDATE posts SET category_id='$category_id', eng_name='$eng_name', fil_name='$fil_name', slug='$slug', eng_description='$eng_description', fil_description='$fil_description', year='$year', object_type='$object_type', 
             image='$update_filename', eng_audio='$eng_update_filename', fil_audio='$fil_update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
                     status='$status' WHERE post_id='$post_id' ";
     

@@ -61,7 +61,7 @@
         <div class="text-box">
             <h1 class="expressive">Explore the Casa Real Shrine</h1>
             <!-- <h3 class="jumplink-banner-description"><p>Explore the Political history of the Philippines with VirtualShrine.</p> -->
-            <a class="virtual-btn" href="https://virtualshrine.online/VirtualTours/index.html">Go to Virtual 360</a>
+            <a class="virtual-btn" href="https://virtualshrine.online/VirtualTour/index.html">Go to Virtual 360</a>
         </div>
         <!-- [END] OF HEADER -->
     </section>
