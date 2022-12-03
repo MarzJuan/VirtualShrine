@@ -66,12 +66,31 @@ include('includes/header.php');
                         </div>
 
                         <!-- Tab content -->
+                        <!-- ENGLISH -->
+                        <div id="English" class="tabcontent">
+                            <div class="col-md-12 mb-3">
+                                <label for="">Name (English)</label>
+                                <input type="text" name="eng_name" required class="form-control">
+                            </div>
+
+                            
+                            <div class="col-md-6 mb-3">
+                            <label for="">Audio File (English)</label>
+                            <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            </div>
+                            
+                            <div class="col-md-12 mb-3">
+                                <label for="">Description (English)</label>
+                                <textarea name="eng_description" required class="form-control summernote" rows="4"></textarea>
+                            </div>
+                        </div>
+
                         <!-- FILIPINO -->
                         <div id="Filipino" class="tabcontent">
                         
                             <div class="col-md-12 mb-3">
-                                <label for="">Name</label>
-                                <input type="text" name="name" required class="form-control">
+                                <label for="">Name (Filipino)</label>
+                                <input type="text" name="fil_name" required class="form-control">
                             </div>
 
                             
@@ -87,26 +106,6 @@ include('includes/header.php');
 
                         </div>
 
-                        <!-- ENGLISH -->
-                        <div id="English" class="tabcontent">
-                            <div class="col-md-12 mb-3">
-                                <label for="">Name</label>
-                                <input type="text" name="name" required class="form-control">
-                            </div>
-
-                            
-                            <div class="col-md-6 mb-3">
-                            <label for="">Audio File (English)</label>
-                            <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
-                            </div>
-                            
-                            <div class="col-md-12 mb-3">
-                                <label for="">Description (English)</label>
-                                <textarea name="eng_description" required class="form-control summernote" rows="4"></textarea>
-                            </div>
-
-
-                        </div>
 
                         </div>
                         <br><br><br><br><br><br>
