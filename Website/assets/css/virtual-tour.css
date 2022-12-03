@@ -698,8 +698,8 @@ h5 {
 .footer-img{
     max-width: 159px;
     position: absolute;
-    left: 45%;
-    top: 55%;
+    left: 44.5%;
+    top: 65%;
 }
 
 .social-links{
@@ -730,6 +730,16 @@ h5 {
     margin-top: 20px;
     color: black;
 }
+.quicklinks a{
+    text-decoration: none;
+    color: maroon;
+    transition: .3s;
+}
+.quicklinks a:hover{
+    color: #FFF;
+    text-decoration: underline;
+}
+
 
 @media (max-width:700px){
     .footer-left, .footer-right{
