@@ -68,8 +68,6 @@ include('includes/header.php');
                         <!-- Tab content -->
                         <!-- ENGLISH -->
                         <div id="English" class="tabcontent">
-
-                        <h3>English: </h3>
                             <div class="col-md-12 mb-3">
                                 <label for="">Name (English)</label>
                                 <input type="text" name="eng_name" required class="form-control">
@@ -89,7 +87,7 @@ include('includes/header.php');
 
                         <!-- FILIPINO -->
                         <div id="Filipino" class="tabcontent">
-                        <h3>Filipino: </h3>
+                        
                             <div class="col-md-12 mb-3">
                                 <label for="">Name (Filipino)</label>
                                 <input type="text" name="fil_name" required class="form-control">
