@@ -79,36 +79,19 @@ include('config/dbcon.php');
                      ?>
         <div class="page-title">
         <h1>
-            <span class="gallery-title"><?= $post['name']?> / </span>
-            <span class="collection-text">Collections </span><span class="gallery-title">/ </span>
-            <?php
+            <span class="gallery-title"><?= $post['name']?></span>
+            <p><?= $post['eng_description']?></p>
+    <?php
 
-}
-}
+        }
+    }
 }
 ?>
-
-        <?php
-            $category_id = $_GET['category_id'];
-            $posts = "SELECT * FROM posts WHERE status='0' AND category_id = '$category_id'";
-              $posts_run = mysqli_query($con, $posts);
-              $check = mysqli_num_rows($posts_run) > 0;
-                      
-              if($check)
-              {
-                     while($post = mysqli_fetch_assoc($posts_run))
-                     {
-                     ?>
-            <span class="collection-text"><?= $check ?> Record </span>
         </h1>
         </div>
 
         <div class="exhibition-objects-grid__header-container">
-            <span class="exhibition-objects-grid__title ng-binding"><?= $check ?> Objects</span>
-            <?php
-                     }
-            }
-        ?>
+
             <div class="button-list-view">
                 <button onclick="listView()"><i class="fa fa-bars"></i></button>
                 <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
