@@ -78,7 +78,11 @@ include('config/dbcon.php');
             {
             ?>
     <div class="container">
-        
+        <div class="langWrap">
+            <p>Select Language: </p>
+            <a href="#" language='English' class="active">English</a>
+            <a href="#" language='Filipino'>Filipino</a>
+        </div>
         <!-- START OF LEFT CLASS -->
 
         <div class="left">
