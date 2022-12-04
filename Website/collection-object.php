@@ -113,7 +113,7 @@ include('config/dbcon.php');
 
             <div class="item-intro-desc" itemprop="description">
                 <p><?= $post['eng_description']?></p>
-                <p class="read-more">Read More...</a></p>
+                <p class="read-more"><a href="#" class="button">Read More...</a></p>
             </div>
 
         </div> <!--end of LEFT class-->
