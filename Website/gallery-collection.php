@@ -89,6 +89,9 @@ include('config/dbcon.php');
 ?>
 
         <?php
+        if(isset($_GET['post_id']))
+        {
+            $category_id = $_GET['category_id'];
             $posts = "SELECT * FROM posts WHERE status='0' AND category_id = '$category_id'";
               $posts_run = mysqli_query($con, $posts);
               $check = mysqli_num_rows($posts_run) > 0;
@@ -101,7 +104,8 @@ include('config/dbcon.php');
             <span class="collection-text"><?= $check ?> Record </span>
         <?php
                      }
-                }
+            }
+        }
         ?>
         </h1>
         </div>
