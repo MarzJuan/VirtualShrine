@@ -168,7 +168,7 @@ nav .fa{
     flex-direction: row;
 }
 .left {
-    height: 700px;
+    /* height: 700px; */
     display: block;
     width: 35%;
     overflow-y: scroll;
