@@ -112,10 +112,6 @@ include('config/dbcon.php');
                 </span>
             </p>
 
-            <div class="item-intro-desc description" itemprop="description">
-                <p><?= strip_tags($post['eng_description'])?></p>
-                <p class="read-more"><a href="#" class="button">Read More...</a></p>
-            </div>
 
         </div> <!--end of LEFT class-->
 

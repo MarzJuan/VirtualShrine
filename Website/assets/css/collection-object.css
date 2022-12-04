@@ -226,47 +226,6 @@ nav .fa{
     height: 15px;
     margin-right: 4px;
 }
-.item-intro-desc {
-    font-size: calc(15px + .3vw);
-    line-height: 1.3333;
-    word-break: break-word;
-    font-weight: 300;
-    margin-top: calc(24px + 0.75vw);
-    margin-left: 6%;
-    margin-right: 6.5%;
-    overflow: hidden;
-    position: relative;
-    text-indent: 50px;
-    height: 400px;
-    text-align: justify;
-    overflow-y: scroll;
-}
-.item-intro-desc .read-more { 
-    position: absolute; 
-    bottom: 0; 
-    left: 0;
-    width: 100%; 
-    text-align: center; 
-    margin: 0; 
-    padding: 30px 0;
-    /* "transparent" only works here because == rgba(0,0,0,0) */
-    background-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
-  }
-.read-more .button{
-    font-size: 15px;
-    padding: 9px;
-    color: white;
-    background-color: #E3AD3F;
-    box-shadow: 0px 8px 16px 0px rgb(66 66 66 / 20%);
-    font-weight: 500;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: 0.5s;
-    margin-right: 15%;
-}
-.read-more .button:hover{
-    padding: 5px;
-}
 .the-item-inset {
     -webkit-box-flex: 1;
     -ms-flex: 1;
