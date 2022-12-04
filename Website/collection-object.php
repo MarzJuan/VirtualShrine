@@ -89,9 +89,9 @@ include('config/dbcon.php');
         <div class="left">
             <div class="collection-title">
                 <h1 id="item-title" class="item-title">
-                    <span class="item-title-text title"><?= $post['eng_name']?></span>
+                    <span class="item-title-text title"></span>
                 </h1>
-                    <p class="item-date year"><?= $post['year']?></p>
+                    <p class="item-date year"></p>
             </div> <!--end of COLLECTION-TITLE class-->
 
             <p class="item-location">
