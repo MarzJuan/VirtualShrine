@@ -471,13 +471,13 @@ span.onclick = function() {
         {
             "title": "<?= $post["eng_name"]?>",
             "year": "<?= $post["year"]?>",
-            "description": '<?= $post['eng_description']?>'
+            "description": "<?= $post['eng_description']?>"
         },
         "filipino":
         {
             "title": "<?= $post['fil_name']?>",
             "year": "<?= $post['year']?>",
-            "description": '<?= $post['fil_description']?>'
+            "description": "<?= $post['fil_description']?>"
         }
     }
     <?php
