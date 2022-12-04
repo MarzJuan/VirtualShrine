@@ -182,7 +182,7 @@ nav .fa{
 }
 .collection-title{
     margin-top: calc(30px + 1vw);
-    margin-left: calc(30px + 1vw);
+    margin-left: calc(10px + 1vw);
     margin-bottom: calc(30px + 1vw);
     padding-top: calc(15px + 1vw);
 }
