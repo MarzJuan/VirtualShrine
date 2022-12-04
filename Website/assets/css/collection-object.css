@@ -223,7 +223,8 @@ nav .fa{
     padding: 30px 0;
     /* "transparent" only works here because == rgba(0,0,0,0) */
     background-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
-
+  }
+.read-more{
     font-size: 15px;
     padding: 9px;
     color: white;
