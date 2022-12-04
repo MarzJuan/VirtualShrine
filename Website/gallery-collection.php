@@ -89,8 +89,6 @@ include('config/dbcon.php');
 ?>
 
         <?php
-        if(isset($_GET['post_id']))
-        {
             $category_id = $_GET['category_id'];
             $posts = "SELECT * FROM posts WHERE status='0' AND category_id = '$category_id'";
               $posts_run = mysqli_query($con, $posts);
@@ -102,17 +100,15 @@ include('config/dbcon.php');
                      {
                      ?>
             <span class="collection-text"><?= $check ?> Record </span>
-        <?php
-                     }
-            }
-        }
-        ?>
         </h1>
         </div>
 
         <div class="exhibition-objects-grid__header-container">
             <span class="exhibition-objects-grid__title ng-binding"><?= $check ?> Objects</span>
-            
+            <?php
+                     }
+            }
+        ?>
             <div class="button-list-view">
                 <button onclick="listView()"><i class="fa fa-bars"></i></button>
                 <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
