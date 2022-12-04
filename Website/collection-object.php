@@ -18,11 +18,11 @@ include('config/dbcon.php');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
+<!-- <style>
     .read-more .more-text{
         display: none;
     }
-</style>
+</style> -->
 </head>
 <body>
 
