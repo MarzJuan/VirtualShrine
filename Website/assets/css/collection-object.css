@@ -209,8 +209,9 @@ nav .fa{
     overflow: hidden;
     position: relative;
     text-indent: 50px;
-    height: auto;
+    height: 400px;
     text-align: justify;
+    overflow-y: scroll;
 }
 .item-intro-desc .read-more { 
     position: absolute; 
