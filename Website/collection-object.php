@@ -472,21 +472,13 @@ span.onclick = function() {
         {
             "title": "<?= $post["eng_name"]?>",
             "year": "<?= $post["year"]?>",
-            "description": $('<?= $post['eng_description']?>').find('span').each(function(){
-                if($(this).attr('style')){
-                    $(this).contents().unwrap();
-                }
-            });
+            "description": strip_tags('<?= $post['eng_description']?>')
         },
         "filipino":
         {
             "title": "<?= $post['fil_name']?>",
             "year": "<?= $post['year']?>",
-            "description": $('<?= $post['fil_description']?>').find('span').each(function(){
-                if($(this).attr('style')){
-                    $(this).contents().unwrap();
-                }
-            });
+            "description": strip_tags('<?= $post['fil_description']?>')
         }
     }
     <?php
