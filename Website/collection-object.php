@@ -478,7 +478,11 @@ span.onclick = function() {
         {
             "title": "<?= $post['fil_name']?>",
             "year": "<?= $post['year']?>",
-            "description": strip_tags('<?= $post['fil_description']?>')
+            <?php
+            $filDescription = $post['fil_description'];
+            $a = strip_tags($filDescription);
+            "description": $a
+            ?>
         }
     }
     <?php
