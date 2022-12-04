@@ -4,7 +4,7 @@ include('config/dbcon.php');
 
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <title>Collection - VirtualShrine</title>
         <link rel="stylesheet" href="assets/css/collection-object.css">
@@ -64,6 +64,12 @@ include('config/dbcon.php');
         </nav>
 
 <!-----------------------------------------[START] COLLECTION DESCRIPTION----------------------------------------->
+<div class="container-wrap">
+    <div class="langWrap">
+            Select Language:
+            <a href="#" language='english' class="active">English</a>
+            <a href="#" language='filipino'>Filipino</a>
+        </div>
 <?php
     if(isset($_GET['post_id']))
     {
@@ -78,19 +84,14 @@ include('config/dbcon.php');
             {
             ?>
     <div class="container">
-        <div class="langWrap">
-            <p>Select Language: </p>
-            <a href="#" language='English' class="active">English</a>
-            <a href="#" language='Filipino'>Filipino</a>
-        </div>
         <!-- START OF LEFT CLASS -->
 
         <div class="left">
             <div class="collection-title">
                 <h1 id="item-title" class="item-title">
-                    <span class="item-title-text"><?= $post['eng_name']?></span>
+                    <span class="item-title-text title"><?= $post['eng_name']?></span>
                 </h1>
-                    <p class="item-date">ca. 1850-80</p>
+                    <p class="item-date year"><?= $post['year']?></p>
             </div> <!--end of COLLECTION-TITLE class-->
 
             <p class="item-location">
@@ -115,7 +116,7 @@ include('config/dbcon.php');
                 </span>
             </p>
 
-            <div class="item-intro-desc" itemprop="description">
+            <div class="item-intro-desc description" itemprop="description">
                 <p><?= $post['eng_description']?></p>
                 <p class="read-more"><a href="#" class="button">Read More...</a></p>
             </div>
@@ -155,6 +156,7 @@ include('config/dbcon.php');
 
         </div> <!--end of RIGHT class-->
     </div> <!--end of container class-->
+    </div><!-- End of container-wrap -->
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -177,7 +179,7 @@ include('config/dbcon.php');
 <!-----------------------------------------[END] COLLECTION DESCRIPTION----------------------------------------->
 
 <!-------------------------------------------[START] OTHER COLLECTION ------------------------------------------>
-
+<!-- 
 <section class="other-items">
     <div class="section-inset section-carousel">
         <h2 class="other-items-title">Other Display from <span><i>Gallery Name</i></span></h2>
@@ -301,7 +303,7 @@ include('config/dbcon.php');
                 <button class="carousel-display-right"></button>
             </div>
         </div>
-</section>
+</section> -->
 
 
 <!--------------------------------------------[END] OTHER COLLECTION ------------------------------------------->
@@ -429,6 +431,64 @@ span.onclick = function() {
 }
  </script>
  <!----------------------------------------------SCRIPT FOR IMAGE MODAL----------------------------------------->
+
+
+  <!----------------------------------------------SCRIPT FOR LANGUAGE----------------------------------------->
+<script>
+    const langEl = document.querySelector('.langWrap');
+    const link = document.querySelectorAll('a');
+    const titleEl = document.querySelector('.title');
+    const yearEl = document.querySelector('.year');
+    const desEl = document.querySelector('.description');
+
+
+    link.forEach(el => {
+			el.addEventListener('click', () => {
+				langEl.querySelector('.active').classList.remove('active');
+				el.classList.add('active');
+
+				const attr = el.getAttribute('language');
+
+				titleEl.textContent = data[attr].title;
+				descrEl.textContent = data[attr].description;
+        });
+    });
+    <?php
+    if(isset($_GET['post_id']))
+    {
+       $post_id = $_GET['post_id'];
+       $posts = "SELECT * FROM posts WHERE status='0' AND post_id='$post_id' ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
+
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
+    var data = {
+        "english":
+        {
+            "title": "<?= $post["eng_name"]?>",
+            "year": "<?= $post["year"]?>",
+            "description": '<?= $post['eng_description']?>'
+        },
+        "filipino":
+        {
+            "title": "<?= $post['fil_name']?>",
+            "year": "<?= $post['year']?>",
+            "description": '<?= $post['fil_description']?>'
+        }
+    }
+    <?php
+            }
+        }
+    }
+    ?>
+</script>
+
+
+ <!----------------------------------------------SCRIPT FOR LANGUAGE----------------------------------------->
 
 </body>
 </html>

@@ -131,6 +131,34 @@ nav .fa{
 }
 
 /* [START] COLLECTION CONTENT */
+
+/* Language Choice */
+.langWrap{
+    margin-top: 45px;
+    margin-left: 45px;
+}
+.langWrap a{
+    border:1px solid #bbb;
+    font-size: 15px;
+    padding: 0 15px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.langWrap a.active{
+    background: #E3AD3F;
+    color: maroon;
+    border: none;
+}
+.langWrap a:hover{
+    background: #E3AD3F;
+    color: #fff;
+    border: none;
+}
+.langWrap p{
+    width: 50%;
+}
+/* Language Choice */
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
