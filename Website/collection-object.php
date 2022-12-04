@@ -175,7 +175,6 @@ include('config/dbcon.php');
 
     <br>
     <br>
-    <hr>
     <br>
 <!-----------------------------------------[END] COLLECTION DESCRIPTION----------------------------------------->
 
