@@ -15,6 +15,7 @@ include('config/dbcon.php');
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -477,7 +478,11 @@ span.onclick = function() {
         {
             "title": "<?= $post['fil_name']?>",
             "year": "<?= $post['year']?>",
-            "description": '<?= $post['fil_description']?>'
+            "description": $('<?= $post['fil_description']?>').find('span').each(function(){
+                if($(this).attr('style')){
+                    $(this).contents().unwrap();
+                }
+            })
         }
     }
     <?php
