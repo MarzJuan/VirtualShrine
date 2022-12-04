@@ -16,6 +16,12 @@ include('config/dbcon.php');
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .read-more .more-text{
+        display: none;
+    }
+</style>
 </head>
 <body>
 
@@ -358,6 +364,26 @@ include('config/dbcon.php');
     function hideMenu(){
         navLinks.style.right = "-200px";
     }
+</script>
+
+<script>
+$(document).ready(function(){
+    var maxLength = 300;
+    $(".read-more").each(function(){
+        var myStr = $(this).text();
+        if($.trim(myStr).length > maxLength){
+            var newStr = myStr.substring(0, maxLength);
+            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+            $(this).append('<span class="more-text">' + removedStr + '</span>');
+        }
+    });
+    $(".read-more").click(function(){
+        $(this).siblings(".more-text").contents().unwrap();
+        $(this).remove();
+    });
+});
 </script>
 
 <!-- READ MORE JQUERY -->
