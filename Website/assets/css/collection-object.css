@@ -226,6 +226,21 @@ nav .fa{
     height: 15px;
     margin-right: 4px;
 }
+.item-intro-desc {
+    font-size: calc(15px + .3vw);
+    line-height: 1.3333;
+    word-break: break-word;
+    font-weight: 300;
+    margin-top: calc(24px + 0.75vw);
+    margin-left: 6%;
+    margin-right: 6.5%;
+    overflow: hidden;
+    position: relative;
+    text-indent: 50px;
+    height: 400px;
+    text-align: justify;
+    overflow-y: scroll;
+}
 .the-item-inset {
     -webkit-box-flex: 1;
     -ms-flex: 1;
