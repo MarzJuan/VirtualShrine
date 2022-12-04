@@ -368,7 +368,7 @@ include('config/dbcon.php');
 
 <script>
 $(document).ready(function(){
-    var maxLength = 400;
+    var maxLength = 200;
     $(".read-more").each(function(){
         var myStr = $(this).text();
         if($.trim(myStr).length > maxLength){
