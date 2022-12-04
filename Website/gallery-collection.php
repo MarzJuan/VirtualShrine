@@ -81,7 +81,22 @@ include('config/dbcon.php');
         <h1>
             <span class="gallery-title"><?= $post['name']?> / </span>
             <span class="collection-text">Collections </span><span class="gallery-title">/ </span>
+        <?php
+        $category_id = $_GET['category_id'];
+            $posts = "SELECT * FROM posts WHERE status='0' AND category_id = '$category_id'";
+              $posts_run = mysqli_query($con, $posts);
+              $check = mysqli_num_rows($posts_run) > 0;
+                      
+              if($check)
+              {
+                     while($post = mysqli_fetch_assoc($posts_run))
+                     {
+                     ?>
             <span class="collection-text"><?= $check ?> Record </span>
+        <?php
+                     }
+                }
+        ?>
         </h1>
         </div>
 
