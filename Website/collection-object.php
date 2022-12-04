@@ -480,7 +480,7 @@ span.onclick = function() {
             "year": "<?= $post['year']?>",
 
             <?php $filDes = $post['fil_description'] ?>
-            "description": strip_tags($filDes)
+            "description": "strip_tags($filDes)"
         }
     }
     <?php
