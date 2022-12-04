@@ -478,9 +478,7 @@ span.onclick = function() {
         {
             "title": "<?= $post['fil_name']?>",
             "year": "<?= $post['year']?>",
-
-            <?php $filDes = $post['fil_description'] ?>
-            "description": "strip_tags($filDes)"
+            "description": strip_tags('<?= $post['fil_description']?>')
         }
     }
     <?php
