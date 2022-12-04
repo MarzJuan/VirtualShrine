@@ -80,7 +80,7 @@ include('config/dbcon.php');
         <div class="page-title">
         <h1>
             <span class="gallery-title"><?= $post['name']?></span>
-            <p><?= $post['eng_description']?></p>
+            <p><?= $post['description']?></p>
     <?php
 
         }
