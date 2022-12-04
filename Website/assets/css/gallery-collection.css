@@ -306,13 +306,12 @@ nav .fa{
 }
 @media (min-width: 60em) {
     .item-1 {
-        grid-column: 1 / span 2;
+        grid-column: 1 / span;
    }
     .item-1 h1 {
         font-size: 24px;
    }
 }
-
 /* CARDS */
 
 

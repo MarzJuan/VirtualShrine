@@ -100,37 +100,37 @@ include('config/dbcon.php');
             </div>
         </div>
 
-        <div class="band">
+    <div class="band">
 
-<?php
-    if(isset($_GET['id']))
-    {                        
-       $posts = "SELECT * FROM posts WHERE status='0' AND category_id='$category_id' ";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
+    <?php
+        if(isset($_GET['id']))
+        {                        
+        $posts = "SELECT * FROM posts WHERE status='0' AND category_id='$category_id' ";
+        $posts_run = mysqli_query($con, $posts);
+        $check = mysqli_num_rows($posts_run) > 0;
 
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
+            if($check)
             {
-            ?>
-        <div class="item-1">
-            <a href="collection-object.php?post_id=<?= $post['post_id']?>" class="card">
-            <div class="thumb" style="background-image: url(../Admin/uploads/posts/<?= $post['image'];?>);"></div>
-            <article>
-                <h1><?= $post['name']?></h1>
-                <span><?= $post['object_type']?></span>
-            </article>
-            </a>
-            <?php
+                while($post = mysqli_fetch_assoc($posts_run))
+                {
+                ?>
+            <div class="item-1">
+                <a href="collection-object.php?post_id=<?= $post['post_id']?>" class="card">
+                <div class="thumb" style="background-image: url(../Admin/uploads/posts/<?= $post['image'];?>);"></div>
+                <article>
+                    <h1><?= $post['eng_name']?></h1>
+                    <span><?= $post['object_type']?></span>
+                </article>
+                </a>
+            </div>
+    <?php
+                }
             }
         }
-    }
-    ?>
+        ?>
 </div>
 
-
-    </section>
+</section>
 
 
 <!------------------------------------ /* [ END ] COLLECTION OBJECT LIST */ ------------------------------------> 
