@@ -450,7 +450,7 @@ span.onclick = function() {
 				const attr = el.getAttribute('language');
 
 				titleEl.textContent = data[attr].title;
-				descrEl.textContent = data[attr].description;
+				desEl.textContent = data[attr].description;
         });
     });
     <?php
