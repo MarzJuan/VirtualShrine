@@ -472,7 +472,11 @@ span.onclick = function() {
         {
             "title": "<?= $post["eng_name"]?>",
             "year": "<?= $post["year"]?>",
-            "description": '<?= $post['eng_description']?>'
+            "description": $('<?= $post['eng_description']?>').find('span').each(function(){
+                if($(this).attr('style')){
+                    $(this).contents().unwrap();
+                }
+            });
         },
         "filipino":
         {
@@ -482,7 +486,7 @@ span.onclick = function() {
                 if($(this).attr('style')){
                     $(this).contents().unwrap();
                 }
-            })
+            });
         }
     }
     <?php
