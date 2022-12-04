@@ -19,7 +19,7 @@ if(isset($_POST['exhibit_display_update']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = mysql_real_escape_string($con, $_POST['description']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
 
@@ -137,7 +137,7 @@ if(isset($_POST['display_add']) && isset($_FILES['my_audio']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = mysql_real_escape_string($con,$_POST['description']);
+    $description = mysqli_real_escape_string($con,$_POST['description']);
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
     
@@ -405,7 +405,7 @@ if(isset($_POST['blog_update']))
 
     $author = $_POST['author'];
 
-    $description = mysql_real_escape_string($con, $_POST['description']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
 
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -479,7 +479,7 @@ if(isset($_POST['blog_add']))
     $final_authorname = ucwords($author_name);
     $author = $final_authorname;
 
-    $description = mysql_real_escape_string($con, $_POST['description']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -1141,7 +1141,7 @@ if(isset($_POST['edit_category']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = mysql_real_escape_string($con, $_POST['description']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
@@ -1210,7 +1210,7 @@ if(isset($_POST['add_category']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
     
-    $description = mysql_real_escape_string($con, $_POST['description']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     
     $meta_title = $_POST['meta_title'];
     $meta_description = $_POST['meta_description'];
