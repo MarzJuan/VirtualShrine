@@ -189,17 +189,17 @@
             </div>
             </a>
 
-            <a href="gallery.php">
             <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image3.jpg" alt="">
             </div>   
+            <a href="gallery.php">
             <div class="card-title">
                 <h3>Collections</h3>
                 <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
             </div>
-            </div>
             </a>
+            </div>
         </div>
         </div>
     </section>
