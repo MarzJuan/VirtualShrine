@@ -1,3 +1,7 @@
+<?php
+include('config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -76,50 +80,30 @@
         <h1 class="audio-row-title">Audio Guide Highlights</h1><br>
 
         <div class="row">
+    <?php                        
+       $posts = "SELECT * FROM categories WHERE status='0' ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
 
-            <a style="text-decoration: none;color: black;" href="audio-guide-player.php">
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
+            <a style="text-decoration: none;color: black;" href="audio-player.php?id=<?= $post['id']?>">
             <div class="features-col">
                 <div id="container">
-                <img id="image" src="Images/Img2.jpg" alt="">
+                <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
                 </div>
                 <h3 class="title-hover">Title</h3>
                 <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
                     and the importance of preserving Australia's biodiversity.</p>
             </div>
             </a>
-
-            <a style="text-decoration: none;color: black;" href="audio-guide-player.php">
-            <div class="features-col">
-                <div id="container">
-                <img id="image" src="Images/Img2.jpg" alt="">
-                </div>
-                <h3 class="title-hover">Title</h3>
-                <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
-                    and the importance of preserving Australia's biodiversity.</p>
-            </div>
-            </a>
-
-            <a style="text-decoration: none;color: black;" href="audio-guide-player.php">
-            <div class="features-col">
-                <div id="container">
-                <img id="image" src="Images/Img2.jpg" alt="">
-                </div>
-                <h3 class="title-hover">Title</h3>
-                <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
-                    and the importance of preserving Australia's biodiversity.</p>
-            </div>
-            </a>
-
-            <a style="text-decoration: none;color: black;" href="audio-guide-player.php">
-            <div class="features-col">
-                <div id="container">
-                <img id="image" src="Images/Img2.jpg" alt="">
-                </div>
-                <h3 class="title-hover">Title</h3>
-                <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
-                    and the importance of preserving Australia's biodiversity.</p>
-            </div>
-            </a>
+            <?php
+            }
+        }
+    ?>
 
         </div>
     </section>

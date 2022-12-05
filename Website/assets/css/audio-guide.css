@@ -115,7 +115,7 @@ nav .fa{
 .header-content{
     /* max-width: 85%; */
     color: #fff;
-    padding: calc(-5px + 6vw) calc((100% - min(85vw - (100vw - 100%),1600px))/2) calc((100% - min(85vw - (100vw - 100%),1600px))/2);
+    /* padding: calc(-5px + 6vw) calc((100% - min(85vw - (100vw - 100%),1600px))/2) calc((100% - min(85vw - (100vw - 100%),1600px))/2); */
     text-align: center;
 }
 h1.expressive {
@@ -149,6 +149,7 @@ h1 {
 /* Search Bar */
 .simple-acs-search {
     margin: 30px auto;
+    width: 70%;
 }
 .simple-acs-search__form {
     display: flex;
@@ -160,7 +161,7 @@ input[type=text] {
 }
 .simple-acs-search__input {
     flex: 1;
-    font-size: 24px;
+    font-size: 17px;
     margin-right: 6px;
     padding: 6px;
 }
@@ -301,7 +302,7 @@ input {
     }
     .nav-links{
         position: absolute;
-        background: #c0bfbe;
+        background: #E3AD3F;
         height: 100vh;
         width: 0;
         position: fixed;
