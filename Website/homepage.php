@@ -117,29 +117,42 @@
         <p>Tour the 5 galleries of Casa Real Shrine</p>
 
         <div class="row">
-        <?php                        
-       $posts = "SELECT * FROM categories WHERE status='0' ";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
 
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-            <a href="gallery-collection.php?id=<?= $post['id']?>">
+            <a href="GalleryInfo.php">
             <div class="gallery-col">
-                <img src="../Admin/uploads/category/<?= $post['image'];?>" alt="kaginhawaan">
+                <img src="Images/homepage-gallery/ginhawa.jpg" alt="kaginhawaan">
                 <div class="layer">
-                    <h3><?= $post['name'];?></h3>
+                    <h3>KAGINHAWAAN</h3>
                 </div>
             </div>
             </a>
-            <?php
-            }
-        }
-            ?>
 
+            <a href="GalleryInfo.php">
+            <div class="gallery-col">
+                    <img src="Images/homepage-gallery/paniil.jpg" alt="kaginhawaan">
+                    <div class="layer">
+                        <h3>PANINIIL</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="GalleryInfo.php">
+            <div class="gallery-col">
+                    <img src="Images/homepage-gallery/bago-puri.jpg" alt="kaginhawaan">
+                    <div class="layer">
+                        <h3>PAGBABAGONG-PURI</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="GalleryInfo.php">
+            <div class="gallery-col">
+                    <img src="Images/homepage-gallery/buo.jpg" alt="kaginhawaan">
+                    <div class="layer">
+                        <h3>PAGBUBUO NG BAYAN</h3>
+                    </div>
+                </div>
+            </a>
         </div>
 
     </section>
