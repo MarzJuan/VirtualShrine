@@ -164,18 +164,16 @@
         <h1>VIRTUALSHRINE NEXT TO YOU</h1>
         <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
 
-        
+        <div class="row">
             <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image1.jpg" alt="">
             </div>
-            <div class="row">
             <div class="card-title">
                 <h3>Audio Guide</h3>
                 <p>Explore Casa Real with an Audio Guide</p>
             </div>
             </div>
-            
 
             <div class="features-col">
             <div id="container">
@@ -186,7 +184,6 @@
                 <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
                 </div>
             </div>
-            
 
             <div class="features-col">
             <div id="container">
@@ -196,8 +193,7 @@
                 <h3>Collections</h3>
                 <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
             </div>
-            </div>
-        </div>
+            </div></div>
         </div>
     </section>
 
