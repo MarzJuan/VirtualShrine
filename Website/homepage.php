@@ -164,30 +164,33 @@
         <h1>VIRTUALSHRINE NEXT TO YOU</h1>
         <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
 
-        <div class="row">
+        
             <a href="audio-guide.php">
             <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image1.jpg" alt="">
             </div>
+            <div class="row">
             <div class="card-title">
                 <h3>Audio Guide</h3>
                 <p>Explore Casa Real with an Audio Guide</p>
             </div>
-            </div>
             </a>
+            </div>
+            
 
-            <a href="virtual-tour.php">
             <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image2.JPG" alt="">
             </div>
+            <a href="virtual-tour.php">
                 <div class="card-title">
                 <h3>Virtual 360</h3>
                 <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
                 </div>
+                </a>
             </div>
-            </a>
+            
 
             <div class="features-col">
             <div id="container">
