@@ -111,15 +111,15 @@
                     wide range of virtual resources that you can enjoy from home. 
                     We will be here to welcome you when you are able to return.</li>
                 <li>An inherent risk of exposure to COVID-19 exists in any public space where people are present. 
-                    We cannot guarantee that you will not be exposed to COVID-19 during your visit to The Met. 
+                    We cannot guarantee that you will not be exposed to COVID-19 during your visit to The Casa Real Shrine. 
                     Those visiting The Casa Real Shrine do so at their own risk of such exposure.</li>
             </ul><br>
             <h4>Staff at Your Service</h4><br>
             <p><b>The Casa Real Shrine's expert team of dedicated staff is here to help if you have any questions or concerns during your 
                 visit. So they can provide you with great service, remember that:</b></p>
             <ul>
-                <li>The principles of diversity, inclusion, and equal access apply to all aspects of The Met's operations, across all categories of individuals.</li>
-                <li>Verbally abusive, harassing, discriminatory, or threatening statements or behavior toward Met staff or other visitors is prohibited.</li>
+                <li>The principles of diversity, inclusion, and equal access apply to all aspects of The Casa Real Shrine's operations, across all categories of individuals.</li>
+                <li>Verbally abusive, harassing, discriminatory, or threatening statements or behavior toward Casa Real Shrine staff or other visitors is prohibited.</li>
                 <li><b>Please follow the instructions of security officers.</b></li>
             </ul><br>
             <p><b>The Casa Real Shrine reserves the right to refuse or revoke the admission of any visitor whose conduct violates these guidelines.</b></p>
@@ -234,7 +234,7 @@
                     <label for="fifth">Gallery Photography and Video Policy <span>&#x3e;</span></label>
                     <input type="radio" name="accordion" id="fifth">
                     <div class="accordion_content">
-                        <p>The Met permits photography and video for private, non-commercial use only at The Met Fifth Avenue and The Met Cloisters.</p>
+                        <p>The Casa Real Shrine permits photography and video for private, non-commercial use only.</p>
                         <br>
                         <p><b>Hand-Held Cameras and video on personal cellular devices</b> may be used, without a flash, to photograph and film the galleries unless 
                         otherwise designated.</p>
