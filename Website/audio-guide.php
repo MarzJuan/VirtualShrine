@@ -80,35 +80,55 @@ include('config/dbcon.php');
         <h1 class="audio-row-title">Audio Guide Highlights</h1><br>
 
         <div class="row">
-    <?php                        
-       $posts = "SELECT * FROM categories WHERE status='0' ";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
 
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-            <a style="text-decoration: none;color: black;" href="audio-player.php?id=<?= $post['id']?>">
-            <div class="features-col">
-                <div id="container">
-                <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
+            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML Syntax</h1>
+                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
                 </div>
-                <h3 class="title-hover">Title</h3>
-                <p>Delve into this audio guide of Wild Planet and learn about extraordinary animal adaptations 
-                    and the importance of preserving Australia's biodiversity.</p>
             </div>
             </a>
-            <?php
-            }
-        }
-    ?>
+
+        
+
+            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML Syntax</h1>
+                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+            </a>
+
+            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML Syntax</h1>
+                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+            </a>
+
+            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML Syntax</h1>
+                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+            </a>
 
         </div>
-    </section>
-    <hr>
-
+</section>
     <br><br>
 
     <!-- [END] AUDIO GUIDE CONTENT-->
