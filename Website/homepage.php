@@ -165,9 +165,8 @@
         <p>Explore our virtual tours and experience the Casa Real wherever you are</p>
 
         <div class="row">
-            
-            <div class="features-col">
             <a href="audio-guide.php">
+            <div class="features-col">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image1.jpg" alt="">
             </div>
@@ -175,8 +174,8 @@
                 <h3>Audio Guide</h3>
                 <p>Explore Casa Real with an Audio Guide</p>
             </div>
-            </a>
             </div>
+            </a>
 
             <a href="virtual-tour.php">
             <div class="features-col">
