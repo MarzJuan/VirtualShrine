@@ -988,17 +988,17 @@ if(isset($_POST['post_update']))
             }
             if($eng_audio != NULL)
             {
-                if(file_exists('../uploads/audio/english'.$eng_audio_old_filename)){
-                    unlink("../uploads/audio/english'.$eng_audio_old_filename");
+                if(file_exists('../uploads/audio/'.$eng_audio_old_filename)){
+                    unlink("../uploads/audio/'.$eng_audio_old_filename");
                 }
-                move_uploaded_file($_FILES['eng_audio']['tmp_name'], '../uploads/audio/english'.$eng_update_filename);
+                move_uploaded_file($_FILES['eng_audio']['tmp_name'], '../uploads/audio/'.$eng_update_filename);
             }
             if($fil_audio != NULL)
             {
-                if(file_exists('../uploads/audio/filipino'.$fil_audio_old_filename)){
-                    unlink("../uploads/audio/filipino'.$fil_audio_old_filename");
+                if(file_exists('../uploads/audio/'.$fil_audio_old_filename)){
+                    unlink("../uploads/audio/'.$fil_audio_old_filename");
                 }
-                move_uploaded_file($_FILES['fil_audio']['tmp_name'], '../uploads/audio/filipino'.$fil_update_filename);
+                move_uploaded_file($_FILES['fil_audio']['tmp_name'], '../uploads/audio/'.$fil_update_filename);
             }
             
                 $_SESSION['message'] = "Post Updated Successfully";
@@ -1036,8 +1036,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     	if (in_array($english_audio_ex_lc, $english_allowed_exs)) {
     		
-    		$new_english_audio_name = uniqid("-audio-", true). '.'.$english_audio_ex_lc;
-    		$english_audio_upload_path = '../uploads/audio/english/english'.$new_english_audio_name;
+    		$new_english_audio_name = uniqid("audio-", true). '.'.$english_audio_ex_lc;
+    		$english_audio_upload_path = '../uploads/audio/'.$new_english_audio_name;
     		move_uploaded_file($english_tmp_name, $english_audio_upload_path);
 
     // TAGALOG AUDIO
@@ -1054,8 +1054,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     	if (in_array($filipino_audio_ex_lc, $filipino_allowed_exs)) {
     		
-    		$new_filipino_audio_name = uniqid("-audio-", true). '.'.$filipino_audio_ex_lc;
-    		$filipino_audio_upload_path = '../uploads/audio/filipino/filipino'.$new_filipino_audio_name;
+    		$new_filipino_audio_name = uniqid("audio-", true). '.'.$filipino_audio_ex_lc;
+    		$filipino_audio_upload_path = '../uploads/audio/'.$new_filipino_audio_name;
     		move_uploaded_file($filipino_tmp_name, $filipino_audio_upload_path);
 
     $category_id = $_POST['category_id'];

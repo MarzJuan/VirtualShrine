@@ -87,7 +87,7 @@ include('config/dbcon.php');
                 <h1 id="item-title" class="item-title">
                     <span class="item-title-text title"><?= $post['eng_name']?></span>
                 </h1>
-                    <p class="item-date year"></p>
+                    <p class="item-date year"><?= $post['year']?></p>
             </div> <!--end of COLLECTION-TITLE class-->
 
             <p class="item-location">
@@ -403,7 +403,6 @@ span.onclick = function() {
     const langEl = document.querySelector('.langWrap');
     const link = document.querySelectorAll('a');
     const titleEl = document.querySelector('.title');
-    const yearEl = document.querySelector('.year');
     const desEl = document.querySelector('.description');
 
 
@@ -435,13 +434,11 @@ span.onclick = function() {
         "english":
         {
             "title": "<?= $post["eng_name"]?>",
-            "year": "<?= $post["year"]?>",
             "description": "<?= strip_tags($post['eng_description'])?>"
         },
         "filipino":
         {
             "title": "<?= $post['fil_name']?>",
-            "year": "<?= $post['year']?>",
             "description": "<?= strip_tags($post['fil_description'])?>"
         }
     }

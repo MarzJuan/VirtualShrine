@@ -63,8 +63,8 @@ include('config/dbcon.php');
 <div class="container-wrap">
     <div class="langWrap">
             Select Language:
-            <a href="#" language='english' class="active">English</a>
-            <a href="#" language='filipino'>Filipino</a>
+            <a href="#" language='english' class="active" onClick="changeAudio();">English</a>
+            <a href="#" language='filipino' onClick="changeAudio();">Filipino</a>
         </div>
         <?php
     if(isset($_GET['post_id']))
@@ -91,8 +91,8 @@ include('config/dbcon.php');
             </div> <!--end of COLLECTION-TITLE class-->
         
         <!-- AUDIO PLAYER -->
-        <div class="audio-style">
-        <audio controls class="audio-style">
+        <div class="audio-style audio">
+        <audio controls class="audio-style audio" id="audio_id">
           <source src="../Admin/uploads/audio/<?= $post['eng_audio']?>" type="audio/mpeg">
         </audio>
 
@@ -272,7 +272,7 @@ span.onclick = function() {
     const langEl = document.querySelector('.langWrap');
     const link = document.querySelectorAll('a');
     const titleEl = document.querySelector('.title');
-    const yearEl = document.querySelector('.year');
+    const audioEl = document.querySelector('.audio');
     const desEl = document.querySelector('.description');
 
 
@@ -284,7 +284,8 @@ span.onclick = function() {
 				const attr = el.getAttribute('language');
 
 				titleEl.textContent = data[attr].title;
-				desEl.textContent = data[attr].description;
+                audioEl.AudioNode = data[attr].audio;
+
         });
     });
     <?php
@@ -304,14 +305,12 @@ span.onclick = function() {
         "english":
         {
             "title": "<?= $post["eng_name"]?>",
-            "year": "<?= $post["year"]?>",
-            "description": "<?= strip_tags($post['eng_description'])?>"
+            "audio": "<?= $post["eng_audio"]?>"
         },
         "filipino":
         {
             "title": "<?= $post['fil_name']?>",
-            "year": "<?= $post['year']?>",
-            "description": "<?= strip_tags($post['fil_description'])?>"
+            "audio": "<?= $post["fil_audio"]?>"
         }
     }
     <?php
@@ -323,7 +322,22 @@ span.onclick = function() {
 
 <!-- AUDIO PLAYER -->
 <script>
+// temp js
+var a = 1;
+function changeAudio() {
+  var audio = document.getElementById('audio');
+  if (a==1) {
+    audio.src = '<?= $post["eng_audio"]?>';
+    a = 2;
+  }
+  else {
+    audio.src = '<?= $post["fil_audio"]?>';
+    a = 1;
+  }
+  document.getElementById('audio_id').load();
+}
 
+changeAudio();
 </script>
 
 
