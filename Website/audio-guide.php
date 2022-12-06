@@ -77,58 +77,35 @@ include('config/dbcon.php');
     <!-- [START] AUDIO GUIDE CONTENTS -->
 
     <section class="audio-guide-row">
-        <h1 class="audio-row-title">Audio Guide Highlights</h1><br>
+        <h1 class="audio-row-title">Audio Guide Highlights</h1><br> 
 
         <div class="row">
 
-            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML Syntax</h1>
-                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-            </a>
+        <?php                        
+       $posts = "SELECT * FROM categories WHERE status='0' ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
 
-        
-
-            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML Syntax</h1>
-                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
+            <div class="features-col">
+            <div id="container">
+                <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
             </div>
-            </a>
-
-            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML Syntax</h1>
-                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
+            <div class="card-title">
+                <h3><?= $post['name']?></h3>
             </div>
-            </a>
-
-            <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML Syntax</h1>
-                <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
             </div>
-            </a>
+            <?php
+            }
+        }
+            ?>
 
         </div>
-</section>
+    </section>
     <br><br>
 
     <!-- [END] AUDIO GUIDE CONTENT-->
