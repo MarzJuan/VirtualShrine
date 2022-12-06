@@ -66,14 +66,26 @@ include('config/dbcon.php');
             <a href="#" language='english' class="active">English</a>
             <a href="#" language='filipino'>Filipino</a>
         </div>
+        <?php
+    if(isset($_GET['post_id']))
+    {
+       $post_id = $_GET['post_id'];
+       $posts = "SELECT * FROM posts WHERE status='0' AND post_id='$post_id' ";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
 
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
     <div class="container">
         <!-- START OF LEFT CLASS -->
 
         <div class="left">
             <div class="collection-title">
                 <h1 id="item-title" class="item-title">
-                    <span class="item-title-text title">Name of Display</span>
+                    <span class="item-title-text title"><?= $post['eng_name']?></span>
                 </h1>
                 <p>Speaker: </p>
             </div> <!--end of COLLECTION-TITLE class-->
@@ -81,7 +93,7 @@ include('config/dbcon.php');
         <!-- AUDIO PLAYER -->
         <div class="audio-style">
         <audio controls class="audio-style">
-          <source src="https://www.coothead.co.uk/audio/You-Cant-Always-Get-What-You-Want.mp3" type="audio/mpeg">
+          <source src="../Admin/uploads/audio/<?= $post['eng_audio']?>" type="audio/mpeg">
         </audio>
 
         <button class="accordion">Playlist</button>
@@ -93,58 +105,15 @@ include('config/dbcon.php');
         <li class="stops-nav__item">
           <a class="stops-nav__link" href="">
             <div class="stops-nav__info">
-              <h4 class="stops-nav__name">Name of Display</h4>          
+              <h4 class="stops-nav__name">Name of other Display</h4>          
             </div>
           </a>
         </li>
 
-        <li class="stops-nav__item">
-          <a class="stops-nav__link" href="">
-            <div class="stops-nav__info">
-              <h4 class="stops-nav__name">Name of Display</h4>          
-            </div>
-          </a>
-        </li>
-
-        <li class="stops-nav__item">
-          <a class="stops-nav__link" href="">
-            <div class="stops-nav__info">
-              <h4 class="stops-nav__name">Name of Display</h4>          
-            </div>
-          </a>
-        </li>
-
-        <li class="stops-nav__item">
-          <a class="stops-nav__link" href="">
-            <div class="stops-nav__info">
-              <h4 class="stops-nav__name">Name of Display</h4>          
-            </div>
-          </a>
-        </li>
-
-        <li class="stops-nav__item">
-          <a class="stops-nav__link" href="">
-            <div class="stops-nav__info">
-              <h4 class="stops-nav__name">Name of Display</h4>          
-            </div>
-          </a>
-        </li>
 </div>
 </div>
         </div>
         </div>
-        <!-- AUDIO PLAYER -->
-
-        <!-- ACCORDION -->
-
-      <!-- <div class="accordion-area">
-        <button class="accordion">Section 1</button>
-        <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div> -->
-        
-        <!-- ACCORDION -->
 
         </div> <!--end of LEFT class-->
 
@@ -155,7 +124,7 @@ include('config/dbcon.php');
 
             <figure itemtype="http://schema.org/ImageObject" class="item-figure">
                 <div class="image-wrapper">
-                    <img id="myImg" class="item-image" src="../Admin/uploads/posts/1664340535.jpg" alt="">
+                    <img id="myImg" class="item-image" src="../Admin/uploads/posts/<?= $post['image']?>" alt="">
                 </div>
 
                 <div class="controls">
@@ -189,6 +158,11 @@ include('config/dbcon.php');
         <img class="modal-content" id="img01">
         <div id="caption"></div>
     </div>
+    <?php
+            }
+        }
+    }
+?>
 <!-----------------------------------------[END] COLLECTION DESCRIPTION----------------------------------------->
 
 

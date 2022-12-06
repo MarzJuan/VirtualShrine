@@ -701,10 +701,11 @@ if(isset($_POST['reject_booking']))
             if($sql_run)
             {
                     
-                    $res  = mysqli_query($con,"SELECT email, fname, lname, date_visit, time_visit, no_visitors FROM bookings WHERE booking_id='$bookings_id'");
+                    $res  = mysqli_query($con,"SELECT bookingID, email, fname, lname, date_visit, time_visit, no_visitors FROM bookings WHERE booking_id='$bookings_id'");
 
                     $row = mysqli_fetch_assoc($res);
                     $to = $row["email"];
+                    $bookingID = $row["bookingID"];
                     $fname = $row["fname"];
                     $lname = $row["lname"];
                     $date_visit = $row["date_visit"];
@@ -738,7 +739,7 @@ if(isset($_POST['reject_booking']))
                     $mail->setFrom('virtualshrine.developers@gmail.com', 'MKPP Reservation');//Your application NAME and EMAIL
                     $mail->Subject = 'Casa Real Shrine Online Reservation';//Message subject
                     $mail->MsgHTML('<b>Your booking reservation is rejected!</b><br>
-                                    <p>Booking Number: '.$bookings_id.'<br>
+                                    <p>Booking Number: '.$bookingID.'<br>
                                     Name: '.$fname.' '.$lname.'<br>
                                     Date of Visit: '.$date_visit.'<br>
                                     No. of Visitors: '.$no_visitors.'<br>
@@ -796,7 +797,7 @@ if(isset($_POST['approve_booking']))
             if($sql_run)
             {
                     
-                    $res  = mysqli_query($con,"SELECT email, fname, lname, date_visit, time_visit, no_visitors FROM bookings WHERE booking_id='$bookings_id'");
+                    $res  = mysqli_query($con,"SELECT bookingID, email, fname, lname, date_visit, time_visit, no_visitors FROM bookings WHERE booking_id='$bookings_id'");
 
                     $row = mysqli_fetch_assoc($res);
                     $to = $row["email"];
@@ -854,7 +855,7 @@ if(isset($_POST['approve_booking']))
                                     <ul><li>Face mask must be worn at all times within the museum building.</li></ul>
                                     <ul><li>Visitors are allowed to bring their own sanitizing kits (small bottles of alcohol, small spray bottles, and tissue papers), but visitors must be mindful of their surroundings when using their sanitizing kits.</li></ul>
                                     <ul><li>Social distancing of at least <b>TWO (2)</b> meters between persons not belonging to the same household must be observed at all times.</li></ul><br><br>
-                                    If you wish to cancel or reschedule this booking, please <a href="https://virtualshrine.online/Website/ReschedCancel_details.php">click here</a></p>');// Message body
+                                    If you wish to cancel or reschedule this booking, please <a href="https://virtualshrine.online/website/ReschedCancel_details.php">click here</a></p>');// Message body
                     $mail->addAddress($to);// Target email
 
 
