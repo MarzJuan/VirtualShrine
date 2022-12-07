@@ -113,7 +113,7 @@ include('config/dbcon.php');
       <h2>Slogan for Exhibit</h2>
       <p><?= $post['meta_description'];?></p>
       <p class="read-more">
-        <a href="#">Read More</a>
+        <a href="exhibit-details.php">Read More</a>
       </p>
     </div>
   </div>
@@ -158,7 +158,7 @@ include('config/dbcon.php');
       <h2>Slogan for Exhibit</h2>
       <p><?= $post['meta_description'];?></p>
       <p class="read-more">
-        <a href="#">Read More</a>
+        <a href="exhibit-details.php">Read More</a>
       </p>
     </div>
   </div>
@@ -203,7 +203,7 @@ include('config/dbcon.php');
       <h2>Slogan for Exhibit</h2>
       <p><?= $post['meta_description'];?></p>
       <p class="read-more">
-        <a href="#">Read More</a>
+        <a href="exhibit-details.php">Read More</a>
       </p>
     </div>
   </div>
