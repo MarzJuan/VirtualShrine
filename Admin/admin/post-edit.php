@@ -80,7 +80,7 @@ include('includes/header.php');
                         <!-- Tab content -->
                         <!-- ENGLISH -->
                         <div id="English" class="tabcontent">
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Name (English)</label>
                                 <input type="text" name="eng_name" value="<?= $post_row['eng_name'];?>" required class="form-control">
                             </div>
@@ -100,7 +100,7 @@ include('includes/header.php');
 
                         <!-- FILIPINO -->
                         <div id="Filipino" class="tabcontent">
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Name (Filipino)</label>
                                 <input type="text" name="fil_name" value="<?= $post_row['fil_name'] ?>" required class="form-control">
                             </div>
@@ -140,7 +140,7 @@ include('includes/header.php');
                                 <input type="text" name="object_type" value="<?= $post_row['object_type'] ?>" required class="form-control">
                             </div>
 
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Meta Title</label>
                                 <input type="text" name="meta_title" value="<?= $post_row['meta_title'] ?>" max="200" class="form-control">
                             </div>

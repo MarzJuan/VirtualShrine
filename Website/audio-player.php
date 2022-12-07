@@ -284,7 +284,7 @@ span.onclick = function() {
 				const attr = el.getAttribute('language');
 
 				titleEl.textContent = data[attr].title;
-                audioEl.AudioNode = data[attr].audio;
+                audioEl.nodeValue = data[attr].audio;
 
         });
     });
