@@ -1062,7 +1062,7 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
     
     $eng_post_name = $_POST['eng_name'];
     $eng_final_postname = ucwords($eng_post_name);
-    $name = $eng_final_postname;
+    $eng_name = $eng_final_postname;
 
     $fil_post_name = $_POST['fil_name'];
     $fil_final_postname = ucwords($fil_post_name);

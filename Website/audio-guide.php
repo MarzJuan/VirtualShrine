@@ -64,7 +64,7 @@ include('config/dbcon.php');
 
             <div class="simple-acs-search">
                 <form name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
-                    <input placeholder="Enter Audio Stop Number" type="text" class="simple-acs-search__input js-simple-acs-search__input">
+                    <input placeholder="Enter Audio Stop Number" type="number" class="simple-acs-search__input js-simple-acs-search__input">
                     <input class="search-button" type="submit" value="Go">
                 </form>
             </div> 
