@@ -145,7 +145,7 @@
     <section class="gallery-rows">
     <h4>You may also be interested in</u></h4><br>
     <div class="row">
-        <a style="text-decoration: none;color: black;" href="">
+        <a style="text-decoration: none;color: black;" href="gallery.php">
             <div class="features-col">
                 <div id="container">
                 <img id="image" src="assets/css/image/gallery-collection.jpg" alt="">

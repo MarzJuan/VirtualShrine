@@ -80,15 +80,17 @@ include('config/dbcon.php');
         <div class="page-title">
         <h1>
             <span class="gallery-title"><?= $post['name']?></span>
-            <p><?= $post['description']?></p>
+        </h1>
+        <p><?= $post['description']?></p>
+    </div>
     <?php
 
         }
     }
 }
 ?>
-        </h1>
-        </div>
+        
+        
 
         <div class="exhibition-objects-grid__header-container">
 
