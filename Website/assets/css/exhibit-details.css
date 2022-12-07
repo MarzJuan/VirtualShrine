@@ -242,6 +242,7 @@ h2 {
     font-weight: 600;
 }
 
+
 p {
     font-family: inherit;
 }
@@ -890,6 +891,9 @@ nav .fa{
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+    }
+    .date{
+      font-size: 15px;
     }
 
 }
