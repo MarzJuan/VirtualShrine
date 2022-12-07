@@ -39,12 +39,12 @@ include('includes/header.php');
                             <p></p>
                             <div class="col-md-6 mb-3">
                                 <label for="">Start Date</label>
-                                <input type="date" id="start_date" name="start_date" value="<?= $exhibit_row['start_date'] ?>" required class="form-control" min="<?php echo date('Y-m-d'); ?>"/>
+                                <input type="date" id="start_date" name="start_date" value="<?= $exhibit_row['start_date'] ?>" required class="form-control"/>
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">End Date</label>
-                                <input type="date" id="end_date" name="end_date" value="<?= $exhibit_row['end_date'] ?>" required class="form-control" min="<?php echo date('Y-m-d'); ?>"/>
+                                <input type="date" id="end_date" name="end_date" value="<?= $exhibit_row['end_date'] ?>" required class="form-control" />
                             </div>
 
                             <div class="col-md-6 mb-3">

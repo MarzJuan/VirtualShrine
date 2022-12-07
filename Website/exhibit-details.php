@@ -2,13 +2,30 @@
 include('config/dbcon.php');
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <head>
-        <title>Exhibits - VirtualShrine</title>
-        <link rel="stylesheet" href="assets/css/exhibits.css">
+    <?php
+    if(isset($_GET['exhibit_id']))
+    {
+        $exhibit_id = $_GET['exhibit_id'];    
+       $posts = "SELECT * FROM exhibit WHERE status='0' AND exhibit_id='$exhibit_id'";
+       $posts_run = mysqli_query($con, $posts);
+       $check = mysqli_num_rows($posts_run) > 0;
+
+        if($check)
+        {
+            while($post = mysqli_fetch_assoc($posts_run))
+            {
+            ?>
+        <title><?= $post['name'];?> - VirtualShrine</title>
+        <?php
+            }
+        }
+    }
+            ?>
+        <link rel="stylesheet" href="assets/css/exhibit-details.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +38,7 @@ include('config/dbcon.php');
 <!-- push -->
     <section class="header">
         <nav>
-            <a href="homepage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
+            <a href="homepage.php"><image  class="logo" src="assets/img/crs-logo.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="mySidebar">
             <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
@@ -59,170 +76,119 @@ include('config/dbcon.php');
         <!-- [END] NAVIGATION -->
     </section>
 
+        <!-- [START] HEADER -->
+    <?php
+       if(isset($_GET['exhibit_id']))
+       {              
+              $exhibit_id = $_GET['exhibit_id'];
+              $posts = "SELECT * FROM exhibit WHERE status='0' AND exhibit_id = '$exhibit_id'";
+              $posts_run = mysqli_query($con, $posts);
+              $check = mysqli_num_rows($posts_run) > 0;
+                      
+              if($check)
+              {
+                     while($post = mysqli_fetch_assoc($posts_run))
+                     {
+                     ?>
+    <section class="content-split">
+    <div class="content-wrap">
+        <div class="content-split-main rich-text">
+            <div class="header-img">
+                <img src="../Admin/uploads/exhibit/<?= $post['image'];?>" alt="">
+            </div>
+        </div>
+        <div class="content-split-side rich-text">
+            <div class="head-img">
+                <img src="Images/Logo.png">
+            </div>
+            <h1 class="article-title">
+                <?= $post['name'];?>
+            </h1>
+            <p class="sub-title">
+            <?= $post['meta_description'];?>
+            </p>
 
-<!-- [START] EXHIBIT CONTENTS -->
-
-<section class="exhibit-body">
-
-<h1 class="exhibit-title">
-    Exhibitions
-</h1>
-<div class="tabset">
-  <!-- Tab 1 -->
-  <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
-  <label for="tab1">Current</label>
-  <!-- Tab 2 -->
-  <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-  <label for="tab2">Upcoming</label>
-  <!-- Tab 3 -->
-  <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
-  <label for="tab3">Past</label>
-  
-  <!-- CURRENT EXHIBITS -->
-  <div class="tab-panels">
-    <section id="marzen" class="tab-panel">
-    <!-- cards -->
-    <?php            
-      $startDate = 'start_date';
-      $endDate = 'end_date';            
-       $posts = "SELECT * FROM exhibit WHERE status='0' AND CURDATE() between start_date and end_date";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
-
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-    <div class="blog-card">
-    <div class="meta">
-      <div class="photo" style="background-image: url(../Admin/uploads/exhibit/<?= $post['image'];?>)"></div>
-      <ul class="details">
-        <?php $date = strtotime($post['start_date']);?>
-        <?php $enddate = strtotime($post['end_date']);?>
-        <li class="date"><?php echo date('M d', $date)." to ".date('M d', $enddate);?></li>
-        <li class="tags">
-          <ul>
-            <li><a href="#"><?= $post['name'];?></a></li>
-          </ul>
-        </li>
-      </ul>
+            <p class="longform-banner__byline">
+            <?php $startdate = strtotime($post['start_date']);?>
+            <?php $enddate = strtotime($post['end_date']);?>
+            <li class="date"><?php echo date('F d, Y', $startdate)." &#8212; ".date('F d, Y', $enddate);?></li>
+            </p>
+            
+        </div>
     </div>
-    <div class="description">
-      <h1><?= $post['name'];?></h1>
-      <h2>Slogan for Exhibit</h2>
-      <p><?= $post['meta_description'];?></p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
-  </div>
-  <?php
-            }
-        }
-  ?>
-  <!-- cards -->
     </section>
+    
+    <!-- [END] HEADER -->
 
-    <!-- UPCOMING EXHIBITS -->
-    <section id="rauchbier" class="tab-panel">
-    <!-- cards -->
-    <?php            
-      $startDate = 'start_date';
-      $endDate = 'end_date';            
-       $posts = "SELECT * FROM exhibit WHERE status='0' AND CURDATE() < start_date";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
+    <!-- [START] BODY BLOG -->
 
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
+    <section class="blog-body">
+    <div class="tabs">
+
+    <input type="radio" id="tab1" name="tab-control" checked>
+    <input type="radio" id="tab2" name="tab-control">
+    <input type="radio" id="tab3" name="tab-control">
+    <input type="radio" id="tab4" name="tab-control">
+    <ul>
+        <li title="Features"><label for="tab1" role="button">
+            <br><span>Overview</span></label></li>
+        <li title="Delivery Contents"><label for="tab2" role="button">
+            <br><span>Exhibition Objects</span></label></li>
+    </ul>
+
+    <div class="slider">
+        <div class="indicator"></div>
+    </div>
+    <div class="content">
+        <section>
+        <?= $post['description'];?>
+        </section>
+
+        <section>
+        <div class="band">
+        <?php
+        if(isset($_GET['exhibit_id']))
+        $exhibit_id = $_GET['exhibit_id'];  
+        $posts = "SELECT * FROM exhibit_display WHERE status='0' AND exhibit_id = '$exhibit_id' ";
+        $posts_run = mysqli_query($con, $posts);
+        $check = mysqli_num_rows($posts_run) > 0;
+
+            if($check)
             {
-            ?>
-    <div class="blog-card">
-    <div class="meta">
-      <div class="photo" style="background-image: url(../Admin/uploads/exhibit/<?= $post['image'];?>)"></div>
-      <ul class="details">
-      <?php $date = strtotime($post['start_date']);?>
-        <?php $enddate = strtotime($post['end_date']);?>
-        <li class="date"><?php echo date('M d ', $date)." to ".date('M d Y', $enddate);?></li>
-        <li class="tags">
-          <ul>
-            <li><a href="#"><?= $post['name'];?></a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="description">
-      <h1><?= $post['name'];?></h1>
-      <h2>Slogan for Exhibit</h2>
-      <p><?= $post['meta_description'];?></p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
-  </div>
-  <?php
+                while($post = mysqli_fetch_assoc($posts_run))
+                {
+                ?>
+            <div class="item-1">
+                <a href="exhibit-object.php?post_id=<?= $post['display_id']?>" class="card">
+                <div class="thumb" style="background-image: url(../Admin/uploads/exhibit/image/<?= $post['image'];?>);"></div>
+                <article>
+                    <h1><?= $post['name']?></h1>
+                    <span><?= $post['object_type']?></span>
+                </article>
+                </a>
+            </div>
+            <?php
+                }
             }
-        }
-  ?>
-    <!-- cards -->
-    </section>
+                ?>
 
-    <!-- PAST EXHIBITS -->
-    <section id="dunkles" class="tab-panel">
-      <!-- cards -->
-      <?php            
-      $startDate = 'start_date';
-      $endDate = 'end_date';            
-       $posts = "SELECT * FROM exhibit WHERE status='0' AND CURDATE() > end_date";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
-
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-    <div class="blog-card">
-    <div class="meta">
-      <div class="photo" style="background-image: url(../Admin/uploads/exhibit/<?= $post['image'];?>)"></div>
-      <ul class="details">
-        <?php $date = strtotime($post['start_date']);?>
-        <?php $enddate = strtotime($post['end_date']);?>
-        <li class="date"><?php echo date('M d ', $date)." to ".date('M d Y', $enddate);?></li>
-        <li class="tags">
-          <ul>
-            <li><a href="#"><?= $post['name'];?></a></li>
-          </ul>
-        </li>
-      </ul>
+        </div>
+        
+        </section>
     </div>
-    <div class="description">
-      <h1><?= $post['name'];?></h1>
-      <h2>Slogan for Exhibit</h2>
-      <p><?= $post['meta_description'];?></p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
     </div>
-  </div>
-  <?php
-            }
+    
+    <?php
+
         }
-  ?>
-    <!-- cards -->
-    </section>
+    }
+}
 
-  </div>
-  
-</div>
-
+?>
 </section>
-<!-- [END] EXHIBIT CONTENTS -->
 
 
-
+    <!-- [END] BODY BLOG -->
 
 
 <!-- [START] FOOTER -->
@@ -284,6 +250,20 @@ include('config/dbcon.php');
     function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     }
+</script>
+
+<script type="text/javascript">
+(function() {
+
+var img = document.getElementById('header-img').firstChild;
+img.onload = function() {
+    if(img.height > img.width) {
+        img.height = '50%';
+        img.width = 'auto';
+    }
+};
+
+}());
 </script>
 </body>
 </html>

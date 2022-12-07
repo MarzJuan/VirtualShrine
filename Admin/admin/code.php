@@ -745,8 +745,8 @@ if(isset($_POST['reject_booking']))
                                     No. of Visitors: '.$no_visitors.'<br>
                                     Museum: Museo ng Kasaysayang Pampulitika ng Pilipinas<br><br>
                                     Hi '.$fname.',<br>
-                                    Thank you for Booking!<br><br>
-                                    <b>IMPORTANT REMINDERS<br><br>
+                                    Your booking reservation for the museum visit has been rejeted!<br><br>
+                                    <b>Please make sure to follow the following booking instructions:<br><br>
                                     1. Visiting Hours for Museum</b><br>
                                     <ul><li><b>Tuesday to Sunday</b>, excluding religious holidays, with morning session from
                                     <b>8:00 AM to 12:00 NN</b>, and afternoon session from <b>1:00 PM to 4:00 PM</b></ul>
