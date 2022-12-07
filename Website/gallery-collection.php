@@ -91,14 +91,8 @@ include('config/dbcon.php');
 ?>
         
         
-
-        <div class="exhibition-objects-grid__header-container">
-
-            <div class="button-list-view">
-                <button onclick="listView()"><i class="fa fa-bars"></i></button>
-                <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
-            </div>
-        </div>
+<br>
+<br>
 
     <div class="band">
 
