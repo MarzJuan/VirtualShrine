@@ -183,7 +183,7 @@ nav .fa{
 }
 .page-title{
     font-family: "MetSerif","Georgia","Times New Roman",Times,serif;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-style: normal;
     text-align: center;
 }
