@@ -226,7 +226,7 @@
                 <h1>Quicklinks</h1>
                 <div class="quicklinks">
                 <span style="margin-right:50px;"><a href="homepage.php">Homepage</a></span><a href="crs-about.php">About Us</a><br>
-                <span style="margin-right:30px;"><a href="plan-visit.php">Plan Your Visit</a></span><a href="consent-form.php">Book a Visit</a><br>
+                <span style="margin-right:30px;"><a href="plan_visit.php">Plan Your Visit</a></span><a href="consent-form.php">Book a Visit</a><br>
                 <span style="margin-right:70px;"><a href="audio-guide.php">Audio Guide</a></span><a href="exhibits.php">Exhibit</a><br>
                 <span style="margin-right:30px;"><a href="gallery.php">Collection</a></span><a href="virtual-tour.php">Virtual Tour</a><br>
                 <span><a href="">About</a></span>
