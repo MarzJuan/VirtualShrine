@@ -148,8 +148,9 @@ include('config/dbcon.php');
         <div class="band">
         <?php
         if(isset($_GET['exhibit_id']))
+        $display_id = $_GET['display_id'];  
         $exhibit_id = $_GET['exhibit_id'];  
-        $posts = "SELECT * FROM exhibit_display WHERE status='0' AND exhibit_id = '$exhibit_id' ";
+        $posts = "SELECT * FROM exhibit_display WHERE status='0' AND exhibit_id = '$exhibit_id' AND display_id = '$display_id' ";
         $posts_run = mysqli_query($con, $posts);
         $check = mysqli_num_rows($posts_run) > 0;
 
