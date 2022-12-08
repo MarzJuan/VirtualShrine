@@ -1039,6 +1039,7 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
     		$new_english_audio_name = uniqid("audio-", true). '.'.$english_audio_ex_lc;
     		$english_audio_upload_path = '../uploads/audio/'.$new_english_audio_name;
     		move_uploaded_file($english_tmp_name, $english_audio_upload_path);
+        
 
     // TAGALOG AUDIO
     $filipino_audio_name = $_FILES['fil_audio']['name'];
@@ -1057,6 +1058,7 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
     		$new_filipino_audio_name = uniqid("audio-", true). '.'.$filipino_audio_ex_lc;
     		$filipino_audio_upload_path = '../uploads/audio/'.$new_filipino_audio_name;
     		move_uploaded_file($filipino_tmp_name, $filipino_audio_upload_path);
+        
 
     $category_id = $_POST['category_id'];
     
@@ -1081,17 +1083,15 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
     $meta_description = $_POST['meta_description'];
     $meta_keyword = $_POST['meta_keyword'];
 
-    $imageCount = count ($_FILES['image']['name']);
-    for ($i=0;$i<$imageCount;$i++){
-        $imageName = $_FILES['image']['name'][$i];
-        $imageTempName = $_FILES['image']['tmp_name'][$i];
-        $targetPath = '../uploads/posts/'.$imageName;
-        if(move_uploaded_file($imageTempName, $targetPath)){
+    $image = $_FILES['image']['name'];
+    //rename this image
+    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = time().'.'.$image_extension;
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, eng_name, fil_name, slug, eng_description, fil_description, year, object_type, image, eng_audio, fil_audio, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$eng_name', '$fil_name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$imageName', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts(category_id, eng_name, fil_name, slug, eng_description, fil_description, year, object_type, image, fil_audio, eng_audio, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$category_id','$eng_name', '$fil_name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$filename', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -1108,24 +1108,26 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
         $sql_run = mysqli_query($con, $sql);
             if($sql_run)
             {
+                move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/posts/'.$filename);
                 $_SESSION['message'] = "Post Created Successfully";
                 header('Location: post-add.php');
                 exit(0);
-    }
-    else
-    {
-        $_SESSION['message'] = "Something Went Wrong";
-        header('Location: post-add.php');
-        exit(0);
-    }
+            }
+            else
+            {
+                $_SESSION['message'] = "Something Went Wrong";
+                header('Location: post-add.php');
+                exit(0);
+            }
+        } else {
+            $_SESSION['message'] = "Failed to upload data to the database";
+            header('Location: post-add.php');
+            exit(0);
         }
     }
-
 }
 }
-    }
-    }
-    }
+}
 }
 
 
