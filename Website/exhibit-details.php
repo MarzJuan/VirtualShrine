@@ -159,7 +159,7 @@ include('config/dbcon.php');
                 {
                 ?>
             <div class="item-1">
-                <a href="exhibit-object.php?post_id=<?= $post['display_id']?>" class="card">
+                <a href="exhibit-object.php?display_id=<?= $post['display_id']?>" class="card">
                 <div class="thumb" style="background-image: url(../Admin/uploads/exhibit/image/<?= $post['image'];?>);"></div>
                 <article>
                     <h1><?= $post['name']?></h1>
