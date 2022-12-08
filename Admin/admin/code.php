@@ -1090,8 +1090,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO posts(category_id, eng_name, fil_name, slug, eng_description, fil_description, year, object_type, image, fil_audio, eng_audio, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$category_id','$eng_name', '$fil_name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$filename', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO posts (category_id, eng_name, fil_name, slug, eng_description, fil_description, year, object_type, image, fil_audio, eng_audio, meta_title, meta_description, meta_keyword, status) 
+    VALUES ('$category_id','$eng_name', '$fil_name', '$slug', '$eng_description', '$fil_description', '$year',  '$object_type', '$filename', '$new_filipino_audio_name', '$new_english_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
