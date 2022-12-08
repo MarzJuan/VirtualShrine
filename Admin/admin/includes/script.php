@@ -50,7 +50,7 @@
 
             $('.summernote').summernote({
         placeholder: 'Type your Description',
-        height: 300
+        height: 150
       });
             $('.dropdown-toggle').dropdown();
         });

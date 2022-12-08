@@ -69,62 +69,6 @@ include('includes/header.php');
                             ?>
                         </div>
 
-                        <div>
-                        <p>Language:</p>
-                        <div class="tab">
-                        <button type="button" class="tablinks" onclick="openLanguage(event, 'Filipino')">Filipino</button>
-                        <button type="button" class="tablinks" onclick="openLanguage(event, 'English')">English</button>
-                        </div>
-                        
-                        
-                        <!-- Tab content -->
-                        <!-- ENGLISH -->
-                        <div id="English" class="tabcontent">
-                            <div class="col-md-6 mb-3">
-                                <label for="">Name (English)</label>
-                                <input type="text" name="eng_name" value="<?= $post_row['eng_name'];?>" required class="form-control">
-                            </div>
-
-                            
-                            <div class="col-md-6 mb-3">
-                                <label for="">Audio File (English)</label>
-                                <input type="hidden" name="eng_old_audio" value="<?= $post_row['eng_audio'] ?>"/>
-                                <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
-                            </div>
-                            
-                            <div class="col-md-12 mb-3">
-                                <label for="">Description (English)</label>
-                                <textarea name="eng_description" required class="form-control summernote" rows="4"><?= $post_row['eng_description'] ?></textarea>
-                            </div>
-                        </div>
-
-                        <!-- FILIPINO -->
-                        <div id="Filipino" class="tabcontent">
-                            <div class="col-md-6 mb-3">
-                                <label for="">Name (Filipino)</label>
-                                <input type="text" name="fil_name" value="<?= $post_row['fil_name'] ?>" required class="form-control">
-                            </div>
-
-                            
-                            <div class="col-md-6 mb-3">
-                                <label for="">Audio File (Filipino)</label>
-                                <input type="hidden" name="fil_old_audio" value="<?= $post_row['fil_audio'] ?>"/>
-                                <input type="file" name="fil_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
-                            </div>
-
-                            <div class="col-md-12 mb-3">
-                                <label for="">Description (Filipino)</label>
-                                <textarea name="fil_description" required class="form-control summernote" rows="4"><?= $post_row['fil_description'] ?></textarea>
-                            </div>
-                        </div>
-
-                        </div>
-                        <br><br><br><br><br><br>
-                        <hr>
-
-                        <br><br><br>
-                        <!-- OUTSIDE FORM -->
-
                             <div class="col-md-6 mb-3">
                                 <label for="">Slug (URL)</label>
                                 <input type="text" name="slug" value="<?= $post_row['slug'] ?>" required class="form-control">
@@ -166,11 +110,55 @@ include('includes/header.php');
                                 <input type="checkbox" name="status" <?= $post_row['status'] == '0' ? 'checked':'' ?> width="70px" height="70px" />
                             </div>
 
+                        <br><br><br><br>
+                        <hr>
+                        <br>
+                        <p><i>Please provide the following information in <b>English</b>:</i></p>
+                            <div class="col-md-12 mb-3">
+                                <label for="">Name (English)</label>
+                                <input type="text" name="eng_name" value="<?= $post_row['eng_name'];?>" required class="form-control">
+                            </div>
+
+                            
+                            <div class="col-md-12 mb-3">
+                                <label for="">Audio File (English)</label>
+                                <input type="hidden" name="eng_old_audio" value="<?= $post_row['eng_audio'] ?>"/>
+                                <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            </div>
+                            
+                            <div class="col-md-12 mb-3">
+                                <label for="">Description (English)</label>
+                                <textarea name="eng_description" required class="form-control summernote" rows="4"><?= $post_row['eng_description'] ?></textarea>
+                            </div>
+                        
+
+                        <!-- FILIPINO -->
+                        
+                        <br><br><br><br>
+                        <hr>
+                        <br><br>
+                        <p><i>Please provide the following information in <b>Filipino</b>:</i></p>
+                            <div class="col-md-12 mb-3">
+                                <label for="">Name (Filipino)</label>
+                                <input type="text" name="fil_name" value="<?= $post_row['fil_name'] ?>" required class="form-control">
+                            </div>
+
+                            
+                            <div class="col-md-12 mb-3">
+                                <label for="">Audio File (Filipino)</label>
+                                <input type="hidden" name="fil_old_audio" value="<?= $post_row['fil_audio'] ?>"/>
+                                <input type="file" name="fil_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label for="">Description (Filipino)</label>
+                                <textarea name="fil_description" required class="form-control summernote" rows="4"><?= $post_row['fil_description'] ?></textarea>
+                            </div>
+
                             <div class="com-md-6 mb-3">
                                 <button type="submit" name="post_update" class="btn btn-primary">Update</button>
                             </div>
-
-
+                            
                         </div>
                 </form>
 
