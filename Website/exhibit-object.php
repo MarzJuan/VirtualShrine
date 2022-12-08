@@ -6,7 +6,7 @@ include('config/dbcon.php');
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
-        <title>Collection - VirtualShrine</title>
+        <title>Exhibit Object - VirtualShrine</title>
         <link rel="stylesheet" href="assets/css/exhibit-object.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" type="image/png" href="assets/img/crs-logo.png">
@@ -61,11 +61,11 @@ include('config/dbcon.php');
 
 <!-----------------------------------------[START] COLLECTION DESCRIPTION----------------------------------------->
 <div class="container-wrap">
-    <div class="langWrap">
+    <!-- <div class="langWrap">
             Select Language:
             <a href="#" language='english' class="active">English</a>
             <a href="#" language='filipino'>Filipino</a>
-        </div>
+        </div> -->
 <?php
     if(isset($_GET['display_id']))
     {
@@ -85,35 +85,18 @@ include('config/dbcon.php');
         <div class="left">
             <div class="collection-title">
                 <h1 id="item-title" class="item-title">
-                    <span class="item-title-text title"><?= $post['eng_name']?></span>
+                    <span class="item-title-text title"><?= $post['name']?></span>
                 </h1>
                     <p class="item-date year"><?= $post['year']?></p>
             </div> <!--end of COLLECTION-TITLE class-->
 
             <p class="item-location">
                 <span class="location-onview"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 12 18" class="icon"><path d="M11.267 9.184h.027L6.353 18h-.706L.706 9.184h.027A6.383 6.383 0 010 6.25C0 2.798 2.686 0 6 0s6 2.798 6 6.25a6.383 6.383 0 01-.733 2.934zM6 2.994a3.006 3.006 0 00-3.012 3.001A3.006 3.006 0 006 8.996a3.006 3.006 0 003.012-3.001A3.006 3.006 0 006 2.994z" class="cls-1"></path></svg>
-                    <span class="item-location-message">On view at Casa Real Shrine in</span> 
-                    <span class="item-location-gallery"><a href="">
-                    <?php 
-                    
-                    if($post['category_id'] == '1'){
-                        echo 'Kaginhawaan (Prosperity)';
-                    }
-                    if($post['category_id'] == '5'){
-                        echo 'Paniniil (Oppression)';
-                    }
-                    if($post['category_id'] == '6'){
-                        echo 'Pagbabagong-Puri (Revolution)';
-                    }
-                    if($post['category_id'] == '7'){
-                        echo 'Pagbubuo ng Bayan(Making the Nation)';
-                    }
-                    ?></a></span>
-                </span>
+                    <span class="item-location-message">On view at Casa Real Shrine Exhibit Room</span>
             </p>
 
             <div class="item-intro-desc description" itemprop="description">
-                <p><?= strip_tags($post['eng_description'])?></p>
+                <p><?= strip_tags($post['description'])?></p>
             </div>
 
         </div> <!--end of LEFT class-->
