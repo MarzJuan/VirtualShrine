@@ -542,6 +542,7 @@ li {
     .container {
         display: flex;
         flex-direction: column-reverse;
+        margin-bottom: 0;
         }
     .left {
         height: 100%;
@@ -967,6 +968,7 @@ li {
         width: 100%;
         overflow-y: visible;
         padding-left: 0;
+        margin-top: 22rem;
     }
     .player {
         width: 90vw;
@@ -996,6 +998,8 @@ li {
     }
     .collection-title {
         margin: 0;
+        margin-bottom: 21px;
+        margin-left: 20px;
     }
     .accordion, .sub-accordion {
         margin: auto;
@@ -1016,12 +1020,33 @@ li {
         padding: 12px 50px 12px 20px;
         width: 64vw;
     }
+    .audio-style {
+        background: #f1f1f1;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
     
   .accordion-area{
     display: none;
   }
   }
-
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0;
+    background-color: #f1f1f1;
+    display: none;
+    overflow: hidden;
+  }
+  .hidden{
+    display: none;
+  }
   .accordion {
     background: #f1f1f1;
     color: #444;
@@ -1036,16 +1061,36 @@ li {
     transition: 0.4s;
     border-bottom: 0.5px solid gray;
   }
+  @media(max-width: 700px){
+    .accordion {
+        width: 90.4%;
+        margin-left: 18px;
+    }
+    .panel {
+        padding: 0;
+        background-color: #f1f1f1;
+        display: none;
+        overflow: hidden;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .playlist-cell {
+        border: none;
+        padding: 10px;
+    }
+    .stops-nav__name, .stops-nav-cta__label {
+        margin-bottom: 0.5rem;
+        /* font-size: 1rem; */
+        line-height: 1.25;
+        text-decoration: underline;
+        font-size: 15px;
+    }
+    .langWrap {
+        margin: 24px 27px auto;
+        left: 0;
+        right: 0;
+    }
+}
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0;
-    background-color: #f1f1f1;
-    display: none;
-    overflow: hidden;
-  }

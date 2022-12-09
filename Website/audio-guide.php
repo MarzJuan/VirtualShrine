@@ -20,7 +20,7 @@ include('config/dbcon.php');
 <!-- push -->
     <section class="header">
         <nav>
-            <a href="homepage.php"><image  class="logo" src="Images/Logo.png" alt="Casa Real Shrine logo"></image></a>
+            <a href="homepage.php"><image  class="logo" src="assets/img/crs-logo.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="mySidebar">
             <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
@@ -56,60 +56,23 @@ include('config/dbcon.php');
             </div>
         </nav>
         <!-- [END] NAVIGATION -->
+    </section>
 
-        <!-- [START] HEADER -->
-        <div class="header-content">
+    <!-- [START] HEADER -->
+    <section class="audio-guide-main">
+    <div class="header-content">
         <h1 class="expressive">Audio Guide</h1>
         <h3 class="jumplink-banner-description"><p>Let Casa Real Shrine speak to you.</p>
 
             <div class="simple-acs-search">
-                <form name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
-                    <input placeholder="Enter Audio Stop Number" type="number" class="simple-acs-search__input js-simple-acs-search__input">
+                <form action="mypage.php?searching=true" name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
+                    <input placeholder="Enter Audio Stop Number" name="searchcategory" type="number" class="simple-acs-search__input js-simple-acs-search__input" value="">
                     <input class="search-button" type="submit" value="Go">
                 </form>
             </div> 
-       
     </div>
+    </section>
         <!-- [END] OF HEADER -->
-    </section>
-
-
-    <!-- [START] AUDIO GUIDE CONTENTS -->
-
-    <section class="audio-guide-row">
-        <h1 class="audio-row-title">Audio Guide Highlights</h1><br> 
-
-        <div class="row">
-
-        <?php                        
-       $posts = "SELECT * FROM categories WHERE status='0' ";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
-
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-            <div class="features-col">
-            <div id="container">
-                <img id="image" src="../Admin/uploads/category/<?= $post['image'];?>" alt="">
-            </div>
-            <div class="card-title">
-                <h3><?= $post['name']?></h3>
-            </div>
-            </div>
-            <?php
-            }
-        }
-            ?>
-
-        </div>
-    </section>
-    <br><br>
-
-    <!-- [END] AUDIO GUIDE CONTENT-->
-
 
 
 <!-- [START] FOOTER -->

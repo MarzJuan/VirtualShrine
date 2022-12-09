@@ -63,14 +63,14 @@ include('config/dbcon.php');
 <div class="container-wrap">
     <div class="langWrap">
             Select Language:
-            <a href="#" language='english' class="active" onClick="changeAudio();">English</a>
-            <a href="#" language='filipino' onClick="changeAudio();">Filipino</a>
+            <a href="#" id="eng_button" language='english' class="active" onClick="changeAudio();">English</a>
+            <a href="#" id="fil_button" language='filipino' onClick="changeAudio();">Filipino</a>
         </div>
         <?php
     if(isset($_GET['post_id']))
     {
        $post_id = $_GET['post_id'];
-       $posts = "SELECT * FROM posts WHERE status='0' AND post_id='$post_id' ";
+       $posts = "SELECT * FROM posts WHERE status='0' AND post_id='$post_id'";
        $posts_run = mysqli_query($con, $posts);
        $check = mysqli_num_rows($posts_run) > 0;
 
@@ -91,28 +91,36 @@ include('config/dbcon.php');
             </div> <!--end of COLLECTION-TITLE class-->
         
         <!-- AUDIO PLAYER -->
-        <div class="audio-style audio">
+        <div class="audio-style audio" id="eng_audio">
         <audio controls class="audio-style audio" id="audio_id">
           <source src="../Admin/uploads/audio/<?= $post['eng_audio']?>" type="audio/mpeg">
         </audio>
+        </div>
 
-        <button class="accordion">Playlist</button>
+        <div class="audio-style audio hidden" id="fil_audio">
+        <audio controls class="audio-style audio" id="audio_id">
+          <source src="../Admin/uploads/audio/<?= $post['fil_audio']?>" type="audio/mpeg">
+        </audio>
+        </div>
+
+        <button class="accordion">Transcript</button>
         <div class="panel">
 
         <div class="playlist-cell">
         <div class="playlist">
 
+
         <li class="stops-nav__item">
-          <a class="stops-nav__link" href="">
-            <div class="stops-nav__info">
-              <h4 class="stops-nav__name">Name of other Display</h4>          
+            <div class="stops-nav__info transcript">
+              <p class="stops-nav__name"><?= $post['eng_description']?></p>          
             </div>
           </a>
         </li>
 
+
 </div>
 </div>
-        </div>
+        
         </div>
 
         </div> <!--end of LEFT class-->
@@ -272,8 +280,7 @@ span.onclick = function() {
     const langEl = document.querySelector('.langWrap');
     const link = document.querySelectorAll('a');
     const titleEl = document.querySelector('.title');
-    const audioEl = document.querySelector('.audio');
-    const desEl = document.querySelector('.description');
+    const transcriptEl = document.querySelector('.transcript');
 
 
     link.forEach(el => {
@@ -284,8 +291,7 @@ span.onclick = function() {
 				const attr = el.getAttribute('language');
 
 				titleEl.textContent = data[attr].title;
-                audioEl.propertyName = data[attr].audio;
-
+                transcriptEl.textContent = data[attr].transcript;
         });
     });
     <?php
@@ -305,12 +311,12 @@ span.onclick = function() {
         "english":
         {
             "title": "<?= $post["eng_name"]?>",
-            "audio": "<?= $post["eng_audio"]?>"
+            "transcript": "<?= strip_tags($post['eng_description'])?>"
         },
         "filipino":
         {
             "title": "<?= $post['fil_name']?>",
-            "audio": "<?= $post["fil_audio"]?>"
+            "transcript": "<?= strip_tags($post['fil_description'])?>"
         }
     }
     <?php
@@ -363,5 +369,17 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 
+<script>
+    document.getElementById('fil_button').addEventListener('click', function(){
+    document.getElementById('eng_audio').classList.add('hidden');
+    document.getElementById('fil_audio').classList.remove('hidden');
+    });
+</script>
+<script>
+    document.getElementById('eng_button').addEventListener('click', function(){
+    document.getElementById('eng_audio').classList.remove('hidden');
+    document.getElementById('fil_audio').classList.add('hidden');
+    });
+</script>
 </body>
 </html>
