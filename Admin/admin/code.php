@@ -23,10 +23,10 @@ if(isset($_POST['exhibit_display_update']))
     $year = $_POST['year'];
     $object_type = $_POST['object_type'];
 
-    $meta_title = $_POST['meta_title'];
-    $meta_description = $_POST['meta_description'];
-    $meta_keyword = $_POST['meta_keyword'];
-
+    $meta_title =  mysqli_real_escape_string($con, $_POST['meta_title']);
+    $meta_description =  mysqli_real_escape_string($con, $_POST['meta_description']);
+    $meta_keyword =  mysqli_real_escape_string($con, $_POST['meta_keyword']);
+    
     $audio_old_filename = $_POST['old_audio'];
     $audio = $_FILES['audio']['name'];
 
@@ -120,9 +120,9 @@ if(isset($_POST['display_add']))
     $final_string = preg_replace('/-+/', '-', $string);
     $slug = $final_string;
 
-    $description = mysqli_real_escape_string($con,$_POST['description']);
-    $year = $_POST['year'];
-    $object_type = $_POST['object_type'];
+    $description = mysqli_real_escape_string($con, $_POST['description']);
+    $year = mysqli_real_escape_string($con, $_POST['year']);
+    $object_type = mysqli_real_escape_string($con, $_POST['object_type']);
     
     $meta_title =  mysqli_real_escape_string($con, $_POST['meta_title']);
     $meta_description =  mysqli_real_escape_string($con, $_POST['meta_description']);
