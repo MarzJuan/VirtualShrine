@@ -395,7 +395,7 @@ if(isset($_POST['blog_update']))
     $old_filename = $_POST['old_image'];
     $image = $_FILES['image']['name'];
 
-    $update_filename = ""; mysqli_real_escape_string($con, 
+    $update_filename = "";
     if($image != NULL)
     {
     //rename this image
