@@ -868,11 +868,11 @@ if(isset($_POST['post_update']))
 
     $category_id = $_POST['category_id'];
     
-    $eng_post_name =  mysqli_real_escape_string($con, $_POST['eng_name']);
+    $eng_post_name =  $_POST['eng_name'];
     $eng_final_postname = ucwords($eng_post_name);
     $eng_name = $eng_final_postname;
 
-    $fil_post_name =  mysqli_real_escape_string($con, $_POST['fil_name']);
+    $fil_post_name =  $_POST['fil_name'];
     $fil_final_postname = ucwords($fil_post_name);
     $fil_name = $fil_final_postname;
 
