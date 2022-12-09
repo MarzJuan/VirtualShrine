@@ -10,7 +10,7 @@ if(isset($_POST['exhibit_display_update']))
 
     $exhibit_id = $_POST['exhibit_id'];
     
-    $post_name = $_POST['name'];
+    $post_name = mysqli_real_escape_string($con,$_POST['name']);
     $final_postname = ucwords($post_name);
     $name = $final_postname;
 
@@ -112,7 +112,7 @@ if(isset($_POST['display_add']))
 
     $exhibit_id = $_POST['exhibit_id'];
     
-    $post_name = $_POST['name'];
+    $post_name = mysqli_real_escape_string($con, $_POST['name']);
     $final_postname = ucwords($post_name);
     $name = $final_postname;
    
