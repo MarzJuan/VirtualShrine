@@ -68,9 +68,9 @@ include('includes/header.php');
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
 
                                             <form action="code.php" method="POST">
-                                            <a href= "assistant-admin-edit.php?id=<?=$row['id'];?>" class="btn btn-success"><i class='bx bx-edit'></i></a>
+                                            <a href= "assistant-admin-edit.php?id=<?=$row['id'];?>" class="btn btn-success" title="Edit"><i class='bx bx-edit'></i></a>
                                             
-                                            <button type="submit" name="assistant-admin-archive" value="<?=$row['id'];?>" class="btn btn-danger"><i class='bx bx-archive-in' ></i></button>
+                                            <button type="submit" name="assistant-admin-archive" value="<?=$row['id'];?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></button>
                                             </form>
                                             
                                             <?php endif; ?>

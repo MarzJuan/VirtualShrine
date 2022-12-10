@@ -80,7 +80,7 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="post-edit.php?post_id=<?= $posts['post_id']?>" class="btn btn-success" data-tooltip="Edit"><i class='bx bx-edit'></i></a>
+                                                    <a href="post-edit.php?post_id=<?= $posts['post_id']?>" class="btn btn-success" title="Edit"><i class='bx bx-edit'></i></a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
                                                     <button type="submit" name="post_archive" value="<?=$posts['post_id'] ?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in'></i></a>

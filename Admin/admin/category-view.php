@@ -78,10 +78,10 @@ include('includes/header.php');
                                     <td><center>
                                     
                                         <form action="code-superAdmin.php" method = "POST">
-                                        <a href="category-edit.php?id=<?=$item['id']?>" class="btn btn-info"><i class='bx bx-edit'></i></a>
+                                        <a href="category-edit.php?id=<?=$item['id']?>" class="btn btn-info" title="Edit"><i class='bx bx-edit'></i></a>
                                     
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
-                                        <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger"><i class='bx bx-archive-in' ></i></a>
+                                        <button type="submit" name="category_archive" value="<?=$item['id'] ?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></a>
                                         </form>
                                         <?php endif; ?>
                                         </center>

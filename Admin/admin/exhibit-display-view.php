@@ -80,10 +80,10 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="exhibit-display-edit.php?display_id=<?= $posts['display_id']?>" class="btn btn-success"><i class='bx bx-edit'></i></a>
+                                                    <a href="exhibit-display-edit.php?display_id=<?= $posts['display_id']?>" class="btn btn-success" title="Edit"><i class='bx bx-edit'></i></a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
-                                                    <button type="submit" name="display_archive" value="<?=$posts['display_id'] ?>" class="btn btn-danger"><i class='bx bx-archive-in' ></i></a>
+                                                    <button type="submit" name="display_archive" value="<?=$posts['display_id'] ?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></a>
                                                     </form>
                                                     <?php endif; ?>
                                                 </center></td>
