@@ -112,7 +112,7 @@ include('config/dbcon.php');
 
         <li class="stops-nav__item">
             <div class="stops-nav__info transcript">
-              <p class="stops-nav__name"><?= $post['eng_description']?></p>          
+              <p class="stops-nav__name"><?= strip_tags($post['eng_description'])?></p>          
             </div>
           </a>
         </li>
