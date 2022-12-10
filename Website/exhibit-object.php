@@ -108,7 +108,7 @@ include('config/dbcon.php');
 
             <figure itemtype="http://schema.org/ImageObject" class="item-figure">
                 <div class="image-wrapper">
-                    <img id="myImg" class="item-image" src="../Admin/uploads/posts/<?= $post['image']?>" alt="">
+                    <img id="myImg" class="item-image" src="../Admin/uploads/exhibit/<?= $post['image']?>" alt="">
                 </div>
 
                 <div class="controls">
