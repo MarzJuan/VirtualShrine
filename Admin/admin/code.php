@@ -6,7 +6,7 @@ include('authentication.php');
 //EDIT DISPLAY EXHIBIT
 if(isset($_POST['exhibit_display_update']))
 {
-    $display_id = $_POST['exhibit_display_update'];
+    $display_id = $_POST['display_id'];
 
     $exhibit_id = $_POST['exhibit_id'];
     
