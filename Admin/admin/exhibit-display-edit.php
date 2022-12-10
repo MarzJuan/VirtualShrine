@@ -32,7 +32,7 @@ include('includes/header.php');
                             ?>
                         
 
-                <input type="hidden" name="exhibit_id" value="<?= $post_row['exhibit_id'] ?>">
+                <input type="hidden" name="exhibit_id" value="<?= $post_row['display_id'] ?>">
 
                     <div class="row">
                         <div class="col-md-12 mb-3">
