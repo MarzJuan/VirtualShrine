@@ -18,7 +18,7 @@ include('includes/header.php');
                     </h4>
                 </div>
                 <div class="card-body">
-
+                <form action="code.php" method="POST" enctype='multipart/form-data'>
                 <?php
                     if(isset($_GET['display_id']))
                     {
@@ -31,7 +31,6 @@ include('includes/header.php');
                             $post_row = mysqli_fetch_array($post_query_res);
                             ?>
                         
-                <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                 <input type="hidden" name="exhibit_id" value="<?= $post_row['exhibit_id'] ?>">
 
