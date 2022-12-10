@@ -107,11 +107,6 @@ include('includes/header.php');
                             </div>
 
                             <div class="col-md-6 mb-3">
-                            <label for="">Audio File<span style="color:red;">*</span></label>
-                            <input type="file" name="my_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
                                 <label for="">Status - <i>Check the box to set status as active</label> <br/>
                                 <input type="checkbox" name="status" width="70px" height="70px" />
                             </div>

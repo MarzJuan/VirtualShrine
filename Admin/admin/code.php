@@ -130,8 +130,8 @@ if(isset($_POST['display_add']))
 
     $status = $_POST['status'] == true ? '0':'1';
 
-    $query = "INSERT INTO exhibit_display(exhibit_id, name, slug, description, year, object_type, image, audio, meta_title, meta_description, meta_keyword, status) VALUES
-            ('$exhibit_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$new_audio_name', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
+    $query = "INSERT INTO exhibit_display(exhibit_id, name, slug, description, year, object_type, image, meta_title, meta_description, meta_keyword, status) VALUES
+            ('$exhibit_id','$name', '$slug', '$description', '$year', '$object_type', '$imageName', '$meta_title', '$meta_description', '$meta_keyword', '$status')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
