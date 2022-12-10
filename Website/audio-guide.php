@@ -65,11 +65,23 @@ include('config/dbcon.php');
         <h3 class="jumplink-banner-description"><p>Let Casa Real Shrine speak to you.</p>
 
             <div class="simple-acs-search">
-                <form action="mypage.php?searching=true" name="simple-acs-search__form" class="simple-acs-search__form js-simple-acs-search__form" method="post">
+                <form action="audio-guide.php" name="id" class="simple-acs-search__form js-simple-acs-search__form" method="GET">
                     <input placeholder="Enter Audio Stop Number" name="searchcategory" type="number" class="simple-acs-search__input js-simple-acs-search__input" value="">
                     <input class="search-button" type="submit" value="Go">
                 </form>
             </div> 
+
+            <?php
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                // check if the id is a valid one
+                if (isValidId($id)) {
+                header('Location: page_with_id.php?id=' . $id);
+                } else {
+                echo 'Invalid id!';
+                }
+            }
+            ?>
     </div>
     </section>
         <!-- [END] OF HEADER -->
