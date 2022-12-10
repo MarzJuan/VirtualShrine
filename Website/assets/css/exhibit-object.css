@@ -250,6 +250,9 @@ nav .fa{
     margin-left: 3%;
     position: absolute;
 }
+.credits p{
+    color: gray;
+}
 
 /* RIGHT SIDE */
 
