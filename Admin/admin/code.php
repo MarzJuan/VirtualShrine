@@ -1043,11 +1043,11 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     $category_id = $_POST['category_id'];
     
-    $eng_post_name = mysqli_real_escape_string($con, $_POST['eng_name']);
+    $eng_post_name = $_POST['eng_name'];
     $eng_final_postname = ucwords($eng_post_name);
     $eng_name = $eng_final_postname;
 
-    $fil_post_name = mysqli_real_escape_string($con, $_POST['fil_name']);
+    $fil_post_name = $_POST['fil_name'];
     $fil_final_postname = ucwords($fil_post_name);
     $fil_name = $fil_final_postname;
    
@@ -1057,8 +1057,8 @@ if(isset($_POST['post_add']) && isset($_FILES['eng_audio']) && isset($_FILES['fi
 
     $eng_description = mysqli_real_escape_string($con, $_POST['eng_description']);
     $fil_description = mysqli_real_escape_string($con,$_POST['fil_description']);
-    $year = $_POST['year'];
-    $object_type = $_POST['object_type'];
+    $year = mysqli_real_escape_string($con, $_POST['year']);
+    $object_type = mysqli_real_escape_string($con, $_POST['object_type']);
     
     $meta_title = mysqli_real_escape_string($con, $_POST['meta_title']);
     $meta_description = mysqli_real_escape_string($con, $_POST['meta_description']);
