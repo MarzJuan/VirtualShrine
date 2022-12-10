@@ -22,7 +22,7 @@ include('includes/header.php');
                 <?php
                     if(isset($_GET['display_id']))
                     {
-                        $exhibit_id = $_GET['display_id'];
+                        $display_id = $_GET['display_id'];
                         $post_query = "SELECT * FROM exhibit_display WHERE display_id='$display_id' LIMIT 1";
                         $post_query_res = mysqli_query($con, $post_query);
 
@@ -32,7 +32,7 @@ include('includes/header.php');
                             ?>
                         
 
-                <input type="hidden" name="exhibit_id" value="<?= $post_row['display_id'] ?>">
+                <input type="hidden" name="display_id" value="<?= $post_row['display_id'] ?>">
 
                     <div class="row">
                         <div class="col-md-12 mb-3">
