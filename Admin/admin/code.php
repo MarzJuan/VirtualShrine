@@ -27,22 +27,22 @@ if(isset($_POST['exhibit_display_update']))
     $meta_description =  mysqli_real_escape_string($con, $_POST['meta_description']);
     $meta_keyword =  mysqli_real_escape_string($con, $_POST['meta_keyword']);
     
-    $audio_old_filename = $_POST['old_audio'];
-    $audio = $_FILES['audio']['name'];
+    // $audio_old_filename = $_POST['old_audio'];
+    // $audio = $_FILES['audio']['name'];
 
-    $update_filename = "";
-    if($audio != NULL)
-    {
-    //rename this image
-        $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
-        $filename = time().'.'.$audio_extension;
+    // $update_filename = "";
+    // if($audio != NULL)
+    // {
+    // //rename this image
+    //     $audio_extension = pathinfo($audio, PATHINFO_EXTENSION);
+    //     $filename = time().'.'.$audio_extension;
 
-        $update_filename = $filename;
-    }
-    else
-    {
-        $update_filename = $audio_old_filename;
-    }
+    //     $update_filename = $filename;
+    // }
+    // else
+    // {
+    //     $update_filename = $audio_old_filename;
+    // }
    
 
     $old_filename = $_POST['old_image'];
@@ -67,7 +67,7 @@ if(isset($_POST['exhibit_display_update']))
 
 
     $query = "UPDATE exhibit_display SET exhibit_id='$exhibit_id', name='$name', slug='$slug', description='$description', year='$year', object_type='$object_type', 
-            image='$update_filename', audio='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
+            image='$update_filename', meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', 
                     status='$status' WHERE display_id='$display_id' ";
     
     $query_run = mysqli_query($con, $query);
