@@ -62,52 +62,52 @@ include('includes/header.php');
                             
                         </div>
                             <div class="col-md-6 mb-3">
-                                <label for="">Name</label>
+                                <label for="">Name<span style="color:red;">*</span></label>
                                 <input type="text" name="name" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Slug (URL)</label>
+                                <label for="">Slug (URL)<span style="color:red;">*</span></label>
                                 <input type="text" name="slug" required class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Description</label>
+                                <label for="">Description<span style="color:red;">*</span></label>
                                 <textarea name="description" id="summernote" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Year</label>
+                                <label for="">Year<span style="color:red;">*</span></label>
                                 <input type="text" name="year" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Type of Object</label>
+                                <label for="">Type of Object<span style="color:red;">*</span></label>
                                 <input type="text" name="object_type" required class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
+                                <label for="">Meta Title<span style="color:red;">*</span></label>
                                 <input type="text" name="meta_title" max="200" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
+                                <label for="">Meta Description<span style="color:red;">*</span></label>
                                 <textarea name="meta_description" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
+                                <label for="">Meta Keyword<span style="color:red;">*</span></label>
                                 <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label for="">Image</label>
+                                <label for="">Image<span style="color:red;">*</span></label>
                                 <input type="file" name="image[]" class="form-control" multiple required accept="image/*">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                            <label for="">Audio File</label>
+                            <label for="">Audio File<span style="color:red;">*</span></label>
                             <input type="file" name="my_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 

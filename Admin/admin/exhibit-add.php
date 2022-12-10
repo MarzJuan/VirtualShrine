@@ -23,47 +23,47 @@ include('includes/header.php');
                     <div class="row">
                         
                             <div class="col-md-6 mb-3">
-                                <label for="">Start Date</label>
-                                <input type="date" id="start_date" name="start_date" class="form-control" />
+                                <label for="">Start Date<span style="color:red;">*</span></label>
+                                <input type="date" id="start_date" name="start_date" required class="form-control" />
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">End Date</label>
-                                <input type="date" id="end_date" name="end_date" class="form-control" />
+                                <label for="">End Date<span style="color:red;">*</span></label>
+                                <input type="date" id="end_date" name="end_date" required class="form-control" />
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Name</label>
+                                <label for="">Name<span style="color:red;">*</span></label>
                                 <input type="text" name="name" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Slug (URL)</label>
+                                <label for="">Slug (URL)<span style="color:red;">*</span></label>
                                 <input type="text" name="slug" required class="form-control">
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Description</label>
+                                <label for="">Description<span style="color:red;">*</span></label>
                                 <textarea name="description" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
+                                <label for="">Meta Title<span style="color:red;">*</span></label>
                                 <input type="text" name="meta_title" max="200" class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
+                                <label for="">Meta Description<span style="color:red;">*</span></label>
                                 <textarea name="meta_description" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
+                                <label for="">Meta Keyword<span style="color:red;">*</span></label>
                                 <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Image</label>
+                                <label for="">Image<span style="color:red;">*</span></label>
                                 <input type="file" name="image" class="form-control">
                             </div>
 
