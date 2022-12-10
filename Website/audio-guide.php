@@ -65,7 +65,7 @@ include('config/dbcon.php');
         <h3 class="jumplink-banner-description"><p>Let Casa Real Shrine speak to you.</p>
 
             <div class="simple-acs-search">
-                <form action="audio-guide.php" name="id" class="simple-acs-search__form js-simple-acs-search__form" method="GET">
+                <form action="audio-player.php" name="id" class="simple-acs-search__form js-simple-acs-search__form" method="GET">
                     <input placeholder="Enter Audio Stop Number" name="id" type="number" class="simple-acs-search__input js-simple-acs-search__input" value="">
                     <input class="search-button" type="submit" value="Go">
                 </form>
