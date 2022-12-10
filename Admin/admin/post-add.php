@@ -62,18 +62,18 @@ include('includes/header.php');
                         <!-- OUTSIDE FORM -->
 
                         <div class="col-md-12 mb-3">
-                                <label for="">Slug (URL)</label>
-                                <input type="text" name="slug" required class="form-control">
+                                <label for="">Slug (URL)<span style="color:red;">*</span></label>
+                                <input type="text" name="slug" class="form-control" aria-required="true" aria-invalid="false" autocomplete="off" data-parsley-required="" data-parsley-required-message="Slug (URL) is required">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Year</label>
-                                <input type="text" name="year" required class="form-control">
+                                <input type="text" name="year" class="form-control" aria-required="true" aria-invalid="false" autocomplete="off" data-parsley-required="" data-parsley-required-message="Year is required">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="">Type of Object</label>
-                                <input type="text" name="object_type" required class="form-control">
+                                <input type="text" name="object_type" required class="form-control" aria-required="true" aria-invalid="false" autocomplete="off" data-parsley-required="" data-parsley-required-message="Type of Object is required">
                             </div>
 
                             <div class="col-md-12 mb-3">
