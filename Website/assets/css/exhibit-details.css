@@ -335,6 +335,10 @@ nav .fa{
     width: 100%;
 }
 
+.box-title{
+  height: 100%;
+}
+
 /* [START] TABS */
 
 .tabs {

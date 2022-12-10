@@ -98,6 +98,7 @@ include('config/dbcon.php');
             </div>
         </div>
         <div class="content-split-side rich-text">
+        <div class="box-title">
             <div class="head-img">
                 <img src="Images/Logo.png">
             </div>
@@ -113,6 +114,7 @@ include('config/dbcon.php');
             <?php $enddate = strtotime($post['end_date']);?>
             <li class="date"><?php echo date('F d, Y', $startdate)." &#8212; ".date('F d, Y', $enddate);?></li>
             </p>
+        </div>
             
         </div>
     </div>
