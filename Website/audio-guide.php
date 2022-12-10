@@ -65,27 +65,21 @@ include('config/dbcon.php');
         <h3 class="jumplink-banner-description"><p>Let Casa Real Shrine speak to you.</p>
 
             <div class="simple-acs-search">
-                <form action="audio-player.php" method="POST">
-                    <input placeholder="Enter Audio Stop Number" name="searchTerm" type="text" class="simple-acs-search__input js-simple-acs-search__input" value="">
+                <form action="audio-player.php" name="stop_number" class="simple-acs-search__form js-simple-acs-search__form" method="GET">
+                    <input placeholder="Enter Audio Stop Number" name="stop_number" type="text" class="simple-acs-search__input js-simple-acs-search__input" value="">
                     <input class="search-button" type="submit" value="Go">
                 </form>
             </div> 
 
             <?php
-            // Get search term
-            $searchTerm = $_POST['searchTerm'];
-
-            // Retrieve data from table
-            $result = mysqli_query($con, "SELECT * FROM posts WHERE stop_number = '$searchTerm'");
-
-            if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $id = $row['post_id'];
-            
-            // Redirect to page with ID
-            header("Location: audio-player.php?post_id=$id");
-            } else {
-            echo "No results found";
+            if (isset($_GET['stop_number'])) {
+                $id = $_GET['stop_number'];
+                // check if the id is a valid one
+                if (isValidId($id)) {
+                header('Location: audio-player.php?id=' . $id);
+                } else {
+                echo 'Invalid id!';
+                }
             }
             ?>
     </div>
