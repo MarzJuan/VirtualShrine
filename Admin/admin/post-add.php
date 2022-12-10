@@ -67,32 +67,32 @@ include('includes/header.php');
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Year</label>
+                                <label for="">Year<span style="color:red;">*</span></label>
                                 <input type="text" name="year" class="form-control" aria-required="true" aria-invalid="false" autocomplete="off" data-parsley-required="" data-parsley-required-message="Year is required">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Type of Object</label>
+                                <label for="">Type of Object<span style="color:red;">*</span></label>
                                 <input type="text" name="object_type" required class="form-control" aria-required="true" aria-invalid="false" autocomplete="off" data-parsley-required="" data-parsley-required-message="Type of Object is required">
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
+                                <label for="">Meta Title<span style="color:red;">*</span></label>
                                 <input type="text" name="meta_title" max="200" required class="form-control">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
+                                <label for="">Meta Description<span style="color:red;">*</span></label>
                                 <textarea name="meta_description" required class="form-control" rows="4"></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
+                                <label for="">Meta Keyword<span style="color:red;">*</span></label>
                                 <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label for="">Image</label>
+                                <label for="">Image<span style="color:red;">*</span></label>
                                 <input type="file" name="image" required class="form-control" accept="image/*">
                             </div>
 
@@ -108,18 +108,18 @@ include('includes/header.php');
                         <!-- ENGLISH -->
                         <p><i>Please provide the following information in <b>English</b>:</i></p>
                             <div class="col-md-12 mb-3">
-                                <label for="">Name (English)</label>
+                                <label for="">Name (English)<span style="color:red;">*</span></label>
                                 <input type="text" name="eng_name" required class="form-control">
                             </div>
 
                             
                             <div class="col-md-12 mb-3">
-                            <label for="">Audio File (English)</label>
+                            <label for="">Audio File (English)<span style="color:red;">*</span></label>
                             <input type="file" name="eng_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
                             
                             <div class="col-md-12 mb-3">
-                                <label for="">Description (English)</label>
+                                <label for="">Description (English)<span style="color:red;">*</span></label>
                                 <textarea name="eng_description" required class="form-control summernote" rows="4"></textarea>
                             </div>
                         
@@ -130,18 +130,18 @@ include('includes/header.php');
                         <br><br>
                         <p><i>Please provide the following information in <b>Filipino</b>:</i></p>
                             <div class="col-md-12 mb-3">
-                                <label for="">Name (Filipino)</label>
+                                <label for="">Name (Filipino)<span style="color:red;">*</span></label>
                                 <input type="text" name="fil_name" required class="form-control">
                             </div>
 
                             
                             <div class="col-md-12 mb-3">
-                                <label for="">Audio File (Filipino)</label>
+                                <label for="">Audio File (Filipino)<span style="color:red;">*</span></label>
                                 <input type="file" name="fil_audio" class="form-control" accept="audio/mp3,audio/*;capture=microphone">
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Description (Filipino)</label>
+                                <label for="">Description (Filipino)<span style="color:red;">*</span></label>
                                 <textarea name="fil_description" required class="form-control summernote" rows="4"></textarea>
                             </div>
 
