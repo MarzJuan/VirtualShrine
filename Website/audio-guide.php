@@ -83,7 +83,7 @@ include('config/dbcon.php');
             $id = $row['post_id'];
             
             // Redirect to page with ID
-            header("Location: audio-player.php?post_id=.$id");
+            header("Location: audio-player.php?post_id=$id");
             } else {
             echo "No results found";
             }
