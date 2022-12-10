@@ -65,15 +65,15 @@ include('config/dbcon.php');
         <h3 class="jumplink-banner-description"><p>Let Casa Real Shrine speak to you.</p>
 
             <div class="simple-acs-search">
-                <form action="audio-player.php" name="stop_number" class="simple-acs-search__form js-simple-acs-search__form" method="GET">
-                    <input placeholder="Enter Audio Stop Number" name="stop_number" type="text" class="simple-acs-search__input js-simple-acs-search__input" value="">
+                <form action="audio-player.php" name="id" class="simple-acs-search__form js-simple-acs-search__form" method="GET">
+                    <input placeholder="Enter Audio Stop Number" name="post_id" type="number" class="simple-acs-search__input js-simple-acs-search__input" value="">
                     <input class="search-button" type="submit" value="Go">
                 </form>
             </div> 
 
             <?php
-            if (isset($_GET['stop_number'])) {
-                $id = $_GET['stop_number'];
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
                 // check if the id is a valid one
                 if (isValidId($id)) {
                 header('Location: audio-player.php?id=' . $id);
