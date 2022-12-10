@@ -20,7 +20,7 @@ include('includes/header.php');
                 <div class="card-body">
 
                 <?php
-                    if(isset($_GET['exhibit_id']))
+                    if(isset($_GET['display_id']))
                     {
                         $exhibit_id = $_GET['exhibit_id'];
                         $post_query = "SELECT * FROM exhibit_display WHERE exhibit_id='$exhibit_id' LIMIT 1";
