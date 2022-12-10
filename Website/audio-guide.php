@@ -76,14 +76,14 @@ include('config/dbcon.php');
             $searchTerm = $_POST['searchTerm'];
 
             // Retrieve data from table
-            $result = mysqli_query($conn, "SELECT * FROM posts WHERE stop_number = '$searchTerm'");
+            $result = mysqli_query($con, "SELECT * FROM posts WHERE stop_number = '$searchTerm'");
 
             if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
             $id = $row['post_id'];
             
             // Redirect to page with ID
-            header("Location: audio-player.php?post_id=$id");
+            header("Location: audio-player.php?post_id=.$id");
             } else {
             echo "No results found";
             }
