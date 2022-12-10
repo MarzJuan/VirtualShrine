@@ -75,10 +75,10 @@ include('includes/header.php');
 
                                                 <td><center>
                                                     <form action="code-superAdmin.php" method = "POST">
-                                                    <a href="blog-edit.php?blog_id=<?= $blogs['blog_id']?>" class="btn btn-success">Edit</a>
+                                                    <a href="blog-edit.php?blog_id=<?= $blogs['blog_id']?>" class="btn btn-success"><i class='bx bx-edit'></i></a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
-                                                    <button type="submit" name="post_archive" value="<?=$blogs['blog_id'] ?>" class="btn btn-danger">Archive</a>
+                                                    <button type="submit" name="post_archive" value="<?=$blogs['blog_id'] ?>" class="btn btn-danger"><i class='bx bx-archive-in' ></i></a>
                                                     </form>
                                                     <?php endif; ?>
                                                 </center></td>
