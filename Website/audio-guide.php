@@ -76,7 +76,7 @@ include('config/dbcon.php');
                 $id = $_GET['id'];
                 // check if the id is a valid one
                 if (isValidId($id)) {
-                header('Location: page_with_id.php?id=' . $id);
+                header('Location: audio-player.php?id=' . $id);
                 } else {
                 echo 'Invalid id!';
                 }
