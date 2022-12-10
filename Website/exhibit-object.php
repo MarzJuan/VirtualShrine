@@ -112,9 +112,9 @@ include('config/dbcon.php');
                 </div>
 
                 <div class="controls">
-                    <div class="credits">
+                    <!-- <div class="credits">
                         <p>hello</p>
-                    </div>
+                    </div> -->
                     <ul class="item-interactions">
                         <li class="item-interaction item-interactions-download">
                             <a href="../Admin/uploads/posts/<?= $post['image']?>" class="gtm__download__image" title="Download" download="">
