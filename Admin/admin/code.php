@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\Exception;
 include('authentication.php');
 
 //EDIT DISPLAY EXHIBIT
-if(isset($_POST['exhibit_display_update']))
+if(isset($_POST['exdis_update']))
 {
     $display_id = $_POST['display_id'];
 
