@@ -22,8 +22,8 @@ include('includes/header.php');
                 <?php
                     if(isset($_GET['display_id']))
                     {
-                        $exhibit_id = $_GET['exhibit_id'];
-                        $post_query = "SELECT * FROM exhibit_display WHERE exhibit_id='$exhibit_id' LIMIT 1";
+                        $exhibit_id = $_GET['display_id'];
+                        $post_query = "SELECT * FROM exhibit_display WHERE display_id='$display_id' LIMIT 1";
                         $post_query_res = mysqli_query($con, $post_query);
 
                         if(mysqli_num_rows($post_query_res) > 0)
