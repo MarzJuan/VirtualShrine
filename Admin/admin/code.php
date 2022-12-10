@@ -6,7 +6,7 @@ include('authentication.php');
 //EDIT DISPLAY EXHIBIT
 if(isset($_POST['exhibit_display_update']))
 {
-    $display_id = $_POST['display_id'];
+    $display_id = $_POST['exhibit_display_update'];
 
     $exhibit_id = $_POST['exhibit_id'];
     
@@ -83,13 +83,6 @@ if(isset($_POST['exhibit_display_update']))
                     unlink("../uploads/exhibit/image/'.$old_filename");
                 }
                 move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/exhibit/image/'.$update_filename);
-            }
-            if($audio != NULL)
-            {
-                if(file_exists('../uploads/exhibit/audio/'.$audio_old_filename)){
-                    unlink("../uploads/exhibit/audio/'.$audio_old_filename");
-                }
-                move_uploaded_file($_FILES['audio']['tmp_name'], '../uploads/exhibit/audio/'.$update_filename);
             }
             
                 $_SESSION['message'] = "Post Updated Successfully";
