@@ -791,9 +791,9 @@ li {
     padding: 0;
     text-align: left;
   }
-  .stops-nav__item {
+  /* .stops-nav__item {
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.07);
-  }
+  } */
   .stops-nav__item, .stops-nav-cta {
     list-style-type: none;
   }
