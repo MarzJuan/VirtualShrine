@@ -216,9 +216,10 @@ h2 {
 }
 
 .content-wrap {
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 40vw;
 }
 
 .rich-text {
@@ -859,9 +860,10 @@ nav .fa{
         margin-bottom: 30px;
     }
     .content-wrap {
-        flex-direction: column;
-        display: flex;
-        flex-wrap: nowrap;
+      flex-direction: column-reverse;
+      display: flex;
+      flex-wrap: nowrap;
+      height: 30%;
     }
     .header-img img {
         width: 100%;
@@ -889,7 +891,8 @@ nav .fa{
         max-width: min(calc(85vw - (100vw - 100%)),1600px);
     }
     .blog-body {
-        padding: 40px;
+      padding: 40px;
+      text-align: justify;
     }
     nav .fa{
         display: block;
