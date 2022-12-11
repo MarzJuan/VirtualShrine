@@ -139,4 +139,26 @@ if(isset($_POST['audio_archive']))
     }
 }
 
+// ARCHIVE USER
+if(isset($_POST['user_archive']))
+{
+    $user_id = $_POST['user_archive'];
+    // 2 = Archived
+    $query = "UPDATE users SET status='2', updated_at = CURRENT_TIMESTAMP() WHERE id='$user_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Assistant Admin Archived Successfully";
+        header('Location: admin-list.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: admin-list.php');
+        exit(0);
+    }
+}
+
 ?>

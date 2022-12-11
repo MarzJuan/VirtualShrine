@@ -67,10 +67,10 @@ include('includes/header.php');
                                         <td><center>
                                         <?php if($_SESSION['auth_role'] == '0') : ?>
 
-                                            <form action="code.php" method="POST">
+                                            <form action="code-superAdmin.php" method="POST">
                                             <a href= "assistant-admin-edit.php?id=<?=$row['id'];?>" class="btn btn-success" title="Edit"><i class='bx bx-edit'></i></a>
                                             
-                                            <button type="submit" name="assistant-admin-archive" value="<?=$row['id'];?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></button>
+                                            <button type="submit" name="user_archive" value="<?=$row['id'];?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></button>
                                             </form>
                                             
                                             <?php endif; ?>
