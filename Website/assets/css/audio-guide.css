@@ -112,8 +112,8 @@ nav img{
 nav .fa{
     display: none;
 }
-.audio-guide-main{
-    padding: 10rem;
+.audio-guide-main {
+    padding: 1rem;
 }
 .header-content{
     /* max-width: 85%; */
