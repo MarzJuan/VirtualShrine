@@ -16,10 +16,10 @@
 }
 
 .sub-header h1{
-    margin-top: -20px;
     font-family: "MetSerif",Georgia,Times New Roman,Times,serif;
     font-size: calc(3rem + 6*(100vw - 375px)/1065);
     line-height: 1;
+    margin-top: 3rem;
 }
 
 nav{
