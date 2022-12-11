@@ -231,7 +231,7 @@ include('includes/header.php');
                       if (empty($image))
                       $image = "../../uploads/user/Default_pfp.jpeg";
                       
-                      echo '<img src="../uploads/user/'.$image.'" alt="Profile" class="rounded-circle"> style="width:50px;height:50px;border-radius:50px;"'
+                      echo '<img src="../uploads/user/'.$image.'" alt="Profile" class="rounded-circle" style="width:50px;height:50px;border-radius:50px;">'
                     ?>
                     </center></th></td>
                     <td><center><div style="margin-top:1.5rem;"><?= $act['fname'].' '.$act['lname'] ?></div></center></td>
