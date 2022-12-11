@@ -958,9 +958,9 @@ li {
       display: block;
       height: 100%;
   }
-  .transcript{
+  /* .transcript{
     margin-bottom: 145px;
-  }
+  } */
   
   /* ACCORDION */
 
@@ -1092,7 +1092,6 @@ li {
         margin-bottom: 0.5rem;
         /* font-size: 1rem; */
         line-height: 1.25;
-        text-decoration: underline;
         font-size: 15px;
     }
     .langWrap {
