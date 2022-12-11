@@ -60,12 +60,14 @@ include('config/dbcon.php');
         </nav>
 
 <!-----------------------------------------[START] COLLECTION DESCRIPTION----------------------------------------->
-<div class="container-wrap">
-    <div class="langWrap">
+
+        <div class="langWrap">
             Select Language:
             <a href="#" id="eng_button" language='english' class="active" onClick="changeAudio();">English</a>
             <a href="#" id="fil_button" language='filipino' onClick="changeAudio();">Filipino</a>
         </div>
+        
+    <div class="container-wrap">
         <?php
     if(isset($_GET['post_id']))
     {

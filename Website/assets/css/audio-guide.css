@@ -152,7 +152,7 @@ h1 {
 /* Search Bar */
 .simple-acs-search {
     margin: 30px auto;
-    width: 70%;
+    /* width: 70%; */
 }
 .simple-acs-search__form {
     display: flex;
