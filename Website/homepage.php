@@ -167,7 +167,7 @@
         <div class="row">
             
             <div class="features-col">
-            <a href="">
+            <a href="audio-guide.php">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image1.jpg" alt="">
             </div>
@@ -179,9 +179,11 @@
             </div>
 
             <div class="features-col">
+            <a href="virtual-tour.php">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image2.JPG" alt="">
             </div>
+            </a>
                 <div class="card-title">
                 <h3>Virtual 360</h3>
                 <p>Check out the virtual 360 tour of the Casa Real Shrine</p>
@@ -189,9 +191,11 @@
             </div>
 
             <div class="features-col">
+            <a href="gallery.php">
             <div id="container">
                 <img id="image" src="Images/homepage-features/image3.jpg" alt="">
-            </div>   
+            </div>
+            </a>
             <div class="card-title">
                 <h3>Collections</h3>
                 <p>Learn the political history of the Phillipines by visiting the collections of Casa Real Shrine</p>
