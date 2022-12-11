@@ -115,40 +115,6 @@ include('config/dbcon.php');
 
 <hr>
 
-<!-- [START] OTHER BLOGS -->
-
-
-<section class="gallery-rows" id="galleries">
-<?php                        
-       $posts = "SELECT * FROM blog WHERE status='0' AND MONTH(created_at) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH) ORDER BY created_at DESC ";
-       $posts_run = mysqli_query($con, $posts);
-       $check = mysqli_num_rows($posts_run) > 0;
-
-        if($check)
-        {
-            while($post = mysqli_fetch_assoc($posts_run))
-            {
-            ?>
-    <div class="row">
-    <a style="text-decoration: none;color: black;" href="">
-        <div class="features-col">
-            <div id="container">
-                <img id="image" src="../Admin/uploads/blog/<?= $post['image'];?>" alt="">
-            </div>
-            <h3><?= $post['name'];?></h3>
-            <p class="meta-description"><?= $post['meta_description'];?></p>
-            <p class="author-name"><?= $post['author'];?></p>
-        </div>
-    </a>
-    </div>
-    <?php
-            }
-        }
-            ?>
-</section>
-
-<!-- [END] OTHER BLOGS -->
-
 <!-- [START] BLOG CARD -->
 
 <!-- [END] BLOG CONTENT -->
