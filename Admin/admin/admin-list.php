@@ -38,7 +38,7 @@ include('includes/header.php');
                     </thead>
                         <tbody>
                             <?php
-                            $query = "SELECT * FROM users WHERE role_as='1'"; //role_as 1 is to retrieve assistant admin data from the database
+                            $query = "SELECT * FROM users WHERE role_as='1' AND status!='2'"; //role_as 1 is to retrieve assistant admin data from the database
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)

@@ -169,7 +169,7 @@ if(isset($_POST['user_archive']))
 {
     $user_id = $_POST['user_archive'];
     // 2 = Archived
-    $query = "UPDATE users SET status='1', updated_at = CURRENT_TIMESTAMP() WHERE id='$user_id' LIMIT 1";
+    $query = "UPDATE users SET status='2', updated_at = CURRENT_TIMESTAMP() WHERE id='$user_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
