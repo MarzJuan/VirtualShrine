@@ -779,8 +779,8 @@ li {
     padding: 10px;
 }
 .playlist{
-    max-height: 300px;
-    overflow-y: scroll;
+    max-height: 100%;
+    /* overflow-y: scroll; */
 }
 .audio-style{
     background: #f1f1f1;
@@ -967,7 +967,7 @@ li {
   @media(max-width: 700px){
     .left {
         height: 100vw;
-        display: block;
+        display: inline-table;
         width: 100%;
         overflow-y: visible;
         padding-left: 0;
@@ -1083,6 +1083,7 @@ li {
         left: 0;
         right: 0;
         margin: auto;
+        margin-bottom: 7rem;
     }
     .playlist-cell {
         border: none;
