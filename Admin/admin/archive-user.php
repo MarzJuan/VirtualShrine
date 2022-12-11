@@ -55,8 +55,8 @@ include('includes/header.php');
                                             ?>
                                         </td>
                                         <td>
-                                            <form action="code.php" method="POST">
-                                            <center><button type="submit" name="assistant-admin-recover" value="<?=$row['id'];?>" class="btn btn-success">Recover</button></center>
+                                            <form action="code-superAdmin.php" method="POST">
+                                            <center><button type="submit" name="user-recover" value="<?=$row['id'];?>" class="btn btn-success">Recover</button></center>
                                             </form>
                                         </td>
                                     </tr>

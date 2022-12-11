@@ -73,6 +73,31 @@ if(isset($_POST['post_recover']))
 
 }
 
+// RECOVER ASSISTANT ADMIN
+
+if(isset($_POST['user-recover']))
+{
+    $posts_id = $_POST['user-recover'];
+    // 0 = Visible
+    $query = "UPDATE users SET status='0', updated_at = CURRENT_TIMESTAMP() WHERE id='$posts_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Assistant Admin Recovered Successfully";
+        header('Location: archive-user.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: archive-user.php');
+        exit(0);
+    }
+
+}
+
+
 //ARCHIVE CATEGORY
 if(isset($_POST['category_archive']))
 {
