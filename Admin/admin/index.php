@@ -327,7 +327,7 @@ include('includes/header.php');
       <!-- End Recent Activity -->
 
       <!-- News & Updates Traffic -->
-
+      <div class="card">
         <div class="card-body pb-0">
           <h5 class="card-title">Blogs <a href="blog-view.php"><span> | See More<span></a></h5>
 
