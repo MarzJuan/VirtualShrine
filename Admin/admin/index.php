@@ -72,7 +72,7 @@ include('includes/header.php');
                 </div>
                 <div class="ps-3" class="count" id="result-visits">
                 <?php
-                    $dash_blog_query = "SELECT * FROM blog";
+                    $dash_blog_query = "SELECT * FROM blog WHERE status='0'";
                     $dash_blog_query_run = mysqli_query($con, $dash_blog_query);
 
                     if($blog_total = mysqli_num_rows($dash_blog_query_run))
@@ -97,13 +97,26 @@ include('includes/header.php');
           <div class="card info-card customers-card">
 
             <div class="card-body">
-              <h5 class="card-title">Visitors</h5>
+              <h5 class="card-title">Admins</h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3" class="count" id="active-visitor">
+                <?php
+                    $dash_user_query = "SELECT * FROM users WHERE status='0'";
+                    $dash_user_query_run = mysqli_query($con, $dash_user_query);
+
+                    if($user_total = mysqli_num_rows($dash_user_query_run))
+                    {
+                    echo '<h6>'.$user_total.'</h6>';
+                    }
+                    else
+                    {
+                      echo '<h6>'."0".'</h6>';
+                    }
+                  ?>
                   <h6>
                   </h6>
 
@@ -201,7 +214,7 @@ include('includes/header.php');
       <tbody>
 
         <?php
-          $users = "SELECT * FROM users WHERE role_as='1'";
+          $users = "SELECT * FROM users WHERE status='0' AND role_as='1'";
           $users_run = mysqli_query($con, $users);
           $check = mysqli_num_rows($users_run) > 0;
 
@@ -212,7 +225,15 @@ include('includes/header.php');
                 ?>
 
                   <tr>
-                    <th><center><div style="margin-top:1rem;margin-left:1rem;"><img src="../uploads/user/<?= $act['profileImage'] ?>" style="width:50px;height:50px;border-radius:50px;"></center></th></td>
+                    <td><center><div style="margin-top:1rem;margin-left:1rem;">
+                    <?php
+                      $image = $act['profileImage'];
+                      if (empty($image))
+                      $image = "../../uploads/user/Default_pfp.jpeg";
+                      
+                      echo '<img src="../uploads/user/'.$image.'" alt="Profile" class="rounded-circle"> style="width:50px;height:50px;border-radius:50px;"'
+                    ?>
+                    </center></th></td>
                     <td><center><div style="margin-top:1.5rem;"><?= $act['fname'].' '.$act['lname'] ?></div></center></td>
                     <td><center><div style="margin-top:1.5rem;"><?= $act['username']?></div></center></td>
                     <td><center><div style="margin-top:1.5rem;">
@@ -306,25 +327,12 @@ include('includes/header.php');
       <!-- End Recent Activity -->
 
       <!-- News & Updates Traffic -->
-      <div class="card">
-        <div class="filter">
-          <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-            <li class="dropdown-header text-start">
-              <h6>Filter</h6>
-            </li>
-
-            <li><a class="dropdown-item" href="#">Today</a></li>
-            <li><a class="dropdown-item" href="#">This Month</a></li>
-            <li><a class="dropdown-item" href="#">This Year</a></li>
-          </ul>
-        </div>
 
         <div class="card-body pb-0">
           <h5 class="card-title">Blogs <a href="blog-view.php"><span> | See More<span></a></h5>
 
         <?php
-          $activity_query = "SELECT * FROM blog ORDER BY created_at DESC LIMIT 5 ";
+          $activity_query = "SELECT * FROM blog WHERE status='0' ORDER BY created_at DESC LIMIT 5 ";
           $activity_run = mysqli_query($con, $activity_query);
           $check = mysqli_num_rows($activity_run) > 0;
 
