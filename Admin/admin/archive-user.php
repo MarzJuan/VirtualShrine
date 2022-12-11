@@ -31,7 +31,7 @@ include('includes/header.php');
                     </thead>
                         <tbody>
                             <?php
-                            $query = "SELECT * FROM users WHERE status='1'";
+                            $query = "SELECT * FROM users WHERE status='2'";
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)
