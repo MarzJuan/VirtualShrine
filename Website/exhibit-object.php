@@ -152,138 +152,6 @@ include('config/dbcon.php');
 ?>
 <!-----------------------------------------[END] COLLECTION DESCRIPTION----------------------------------------->
 
-<!-------------------------------------------[START] OTHER COLLECTION ------------------------------------------>
-<!-- 
-<section class="other-items">
-    <div class="section-inset section-carousel">
-        <h2 class="other-items-title">Other Display from <span><i>Gallery Name</i></span></h2>
-    </div>
-
-    <div class="carousel-wrapper">
-        <div class="carousel-display carousel-display-offset carousel-display-no-scrollbar"></div>
-            <button class="carousel-display-left"></button>
-            <button class="carousel-display-right"></button>
-    </div>
-
-        <div class="carousel-wrapper carousel-has-right-button">
-            <div class="carousel-display carousel-display-offset carousel-display-no-scrollbar rurated-related-work">
-                
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-
-                <div class="related-display">
-                    <figure class="related-display-image-wrapper card-standard-image">
-                        <a class="related-display-image-link gtm-relateddisplay gtm-relateddisplay-has-image" href="" tabindex="-1">
-                            <img src="assets/Images/Img2.jpg" alt="Face jug" class="related-display-image" loading="lazy">
-                        </a>
-                    </figure>
-                    <h3 class="related-display-title card-title">
-                        <a class="gtm-relateddisplay gtm-relateddisplay-has-image" href="">Face jug</a>
-                    </h3>
-                    <div class="related-display-meta">
-                            <div class="related-display-gallery">Unrecorded  Edgefield District potter (American)</div>
-                            <div class="related-display-date">ca. 1867-85</div>
-                    </div>
-                </div>
-            </div>
-                <button class="carousel-display-left"></button>
-                <button class="carousel-display-right"></button>
-            </div>
-        </div>
-</section> -->
-
-
-<!--------------------------------------------[END] OTHER COLLECTION ------------------------------------------->
-
-
-
 <!-- [START] FOOTER -->
 
 <section id="footer">
@@ -324,10 +192,10 @@ include('config/dbcon.php');
 
         <div class="social-links">
         <img src="Images/Logo.png" class="footer-img">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-youtube-play"></i>
+            <a href="https://www.facebook.com/CasaRealMalolos"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/nhcpofficial/"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/NHCPOfficial"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@NHCPOfficial"><i class="fa fa-youtube-play"></i></a>
             <p>2022 <i class="fa-regular fa-copyright"></i> VirtualShrine</p>
         </div>
     </section>

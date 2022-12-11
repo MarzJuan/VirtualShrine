@@ -207,10 +207,10 @@ include('config/dbcon.php');
 
         <div class="social-links">
         <img src="Images/Logo.png" class="footer-img">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-youtube-play"></i>
+            <a href="https://www.facebook.com/CasaRealMalolos"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/nhcpofficial/"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/NHCPOfficial"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@NHCPOfficial"><i class="fa fa-youtube-play"></i></a>
             <p>2022 <i class="fa-regular fa-copyright"></i> VirtualShrine</p>
         </div>
     </section>
