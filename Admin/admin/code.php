@@ -441,7 +441,7 @@ if(isset($_POST['blog_update']))
 if(isset($_POST['blog_add']))
 {
     
-    $blog_title = $_POST['blog_title'];
+    $blog_title = mysqli_real_escape_string($con, $_POST['blog_title']);
     $final_blogname = ucwords($blog_title);
     $title = $final_blogname;
    
