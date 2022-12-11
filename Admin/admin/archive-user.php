@@ -48,7 +48,7 @@ include('includes/header.php');
                                             if($row['status'] == 0){
                                                 echo '<span style="color:GREEN;text-align:center;">Active</span>';
                                             }
-                                            else if($row['status'] == 1){
+                                            else if($row['status'] == 2){
                                                 echo '<span style="color:RED;text-align:center;">Archived</span>';
                                             }
 
