@@ -40,7 +40,7 @@ include('includes/header.php');
                             <tbody>
                                 <?php
                                     
-                                    $blogs = "SELECT * FROM blog WHERE status ='0'"; // 0 = ACTIVE
+                                    $blogs = "SELECT * FROM blog WHERE status !='2'"; // 0 = ACTIVE
                                     $blogs_run = mysqli_query($con, $blogs);
 
 
