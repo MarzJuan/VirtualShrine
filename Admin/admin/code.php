@@ -1243,7 +1243,7 @@ if(isset($_POST['assistant-admin-recover']))
     $query = " DELETE FROM user_archive WHERE id='$user_id'";
     $query_run = mysqli_query($con, $query);
 
-    $query = " UPDATE user_archive SET status=0 WHERE id='$user_id' LIMIT 1";
+    $query = " UPDATE users SET status=0 WHERE id='$user_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
