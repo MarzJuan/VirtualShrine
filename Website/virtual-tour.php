@@ -157,14 +157,14 @@
             </div>
         </a>
 
-        <a style="text-decoration: none;color: black;" href="">
+        <a style="text-decoration: none;color: black;" href="exhibits.php">
             <div class="features-col">
                 <div id="container">
-                <img id="image" src="Images/VirtualTour/philippine_president.jpg" alt="">
+                <img id="image" src="Images/HomePage1.jpg" alt="">
                 </div>
                 <div class="featured-text-title">
-                    <h3 class="featured-title">Philippine Presidents</h3>
-                    <p>This Collection displays all the Presidents in the Philippines.</p>
+                    <h3 class="featured-title">Exhibits</h3>
+                    <p>Explore the current exhibits</p>
                 </div>
             </div>
         </a>
