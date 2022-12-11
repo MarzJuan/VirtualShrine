@@ -250,10 +250,10 @@
             <p>Can't visit The Casa Real Shrine in person? Be sure to explore our website for groundbreaking resources that connect 
                 you with current exhibitions, VirtualShrine collection, and more. Resources include:</p><br>
                 <ul>
-                    <a href=""><li style="list-style: disc outside none;display: list-item;margin-left: 1em;">
+                    <a href="gallery.php"><li style="list-style: disc outside none;display: list-item;margin-left: 1em;">
                     VirtualShrine Collection
                     </li></a>
-                    <a href=""><li style="list-style: disc outside none;display: list-item;margin-left: 1em;">
+                    <a href="virtual-tour.php"><li style="list-style: disc outside none;display: list-item;margin-left: 1em;">
                     VirtualShrine 360
                     </li></a>
                 </ul>
