@@ -79,7 +79,7 @@ include('includes/header.php');
                                                     <a href="blog-edit.php?blog_id=<?= $blogs['blog_id']?>" class="btn btn-success" title="Edit"><i class='bx bx-edit'></i></a>
                                                 
                                                     <?php if($_SESSION['auth_role'] == '0') : ?>
-                                                    <button type="submit" name="post_archive" value="<?=$blogs['blog_id'] ?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></a>
+                                                    <button type="submit" name="blog_archive" value="<?=$blogs['blog_id'] ?>" class="btn btn-danger" title="Archive"><i class='bx bx-archive-in' ></i></a>
                                                     </form>
                                                     <?php endif; ?>
                                                 </center></td>
