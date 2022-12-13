@@ -98,11 +98,11 @@ if(isset($_POST['user-recover']))
 }
 
 //ARCHIVE BLOG
-if(isset($_POST['post_archive']))
+if(isset($_POST['blog_archive']))
 {
-    $display_id = $_POST['post_archive'];
+    $blog_id = $_POST['blog_archive'];
     // 2 = Archived
-    $query = "UPDATE exhibit_display SET status='2' WHERE display_id='$display_id' LIMIT 1";
+    $query = "UPDATE blog SET status='2' WHERE blog_id='$blog_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -122,9 +122,9 @@ if(isset($_POST['post_archive']))
 //ARCHIVE EXHIBIT DISPLAY
 if(isset($_POST['display_archive']))
 {
-    $blog_id = $_POST['display_archive'];
+    $display_id = $_POST['display_archive'];
     // 2 = Archived
-    $query = "UPDATE blog SET status='2' WHERE blog_id='$blog_id' LIMIT 1";
+    $query = "UPDATE exhibit_display SET status='2' WHERE display_id='$display_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
