@@ -34,7 +34,6 @@
                                    <li class="sub-item"><a href="consent-form.php">Book a Visit</a></li>
                                    <li class="sub-item"><a href="audio-guide.php">Audio Guide</a></li>
                                    <li class="sub-item"><a href="exhibits.php">Exhibits</a></li>
-                                   <li class="sub-item"><a href="map.php">Museum Map</a></li>
 
                         </ul>
                     </li>
