@@ -97,6 +97,28 @@ if(isset($_POST['user-recover']))
 
 }
 
+//ARCHIVE BLOG
+if(isset($_POST['post_archive']))
+{
+    $display_id = $_POST['post_archive'];
+    // 2 = Archived
+    $query = "UPDATE exhibit_display SET status='2' WHERE display_id='$display_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Blog Content was Archived Successfully";
+        header('Location: blog-view.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location:  blog-view.php');
+        exit(0);
+    }
+}
+
 //ARCHIVE EXHIBIT DISPLAY
 if(isset($_POST['display_archive']))
 {
