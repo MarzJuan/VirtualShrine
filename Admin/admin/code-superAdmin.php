@@ -217,7 +217,7 @@ if(isset($_POST['post_archive']))
 {
     $posts_id = $_POST['post_archive'];
     // 2 = Archived
-    $query = "UPDATE posts SET status='2' WHERE id='$posts_id' LIMIT 1";
+    $query = "UPDATE posts SET status='2' WHERE post_id='$posts_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
