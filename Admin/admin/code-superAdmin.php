@@ -79,7 +79,7 @@ if(isset($_POST['post_recover']))
 {
     $posts_id = $_POST['post_recover'];
     // 0 = Visible
-    $query = "UPDATE posts SET status='0' WHERE id='$posts_id' LIMIT 1";
+    $query = "UPDATE posts SET status='0' WHERE post_id='$posts_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
