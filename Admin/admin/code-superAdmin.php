@@ -49,6 +49,30 @@ if(isset($_POST['archive_recover']))
 
 }
 
+// RECOVER ARCHIVED EXHIBIT DISPLAY
+
+if(isset($_POST['exdis-recover']))
+{
+    $display_id = $_POST['exdis-recover'];
+    // 0 = Visible
+    $query = "UPDATE exhibit_display SET status='0' WHERE display_id='$display_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Exhibit Display Recovered Successfully";
+        header('Location: post-archive.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: post-archive.php');
+        exit(0);
+    }
+
+}
+
 // RECOVER ARCHIVED POST
 
 if(isset($_POST['post_recover']))
@@ -92,6 +116,30 @@ if(isset($_POST['user-recover']))
     {
         $_SESSION['message'] = "Something Went Wrong";
         header('Location: archive-user.php');
+        exit(0);
+    }
+
+}
+
+// RECOVER ARCHIVED POST
+
+if(isset($_POST['blog_recover']))
+{
+    $posts_id = $_POST['blog_recover'];
+    // 0 = Visible
+    $query = "UPDATE blog SET status='0' WHERE blog_id='$posts_id' LIMIT 1";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Blog Recovered Successfully";
+        header('Location: post-archive.php');
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Something Went Wrong";
+        header('Location: post-archive.php');
         exit(0);
     }
 
