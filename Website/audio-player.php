@@ -334,11 +334,11 @@ var a = 1;
 function changeAudio() {
   var audio = document.getElementById('audio');
   if (a==1) {
-    audio.src = <?= $post["eng_audio"]?>;
+    audio.src = '<?= $post["eng_audio"]?>';
     a = 2;
   }
   else {
-    audio.src = <?= $post["fil_audio"]?>;
+    audio.src = '<?= $post["fil_audio"]?>';
     a = 1;
   }
   document.getElementById('audio_id').load();
