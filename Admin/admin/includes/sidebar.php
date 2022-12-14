@@ -148,12 +148,27 @@
       </li>
       <li>
         <a href="post-archive.php" class="nav-link <?= $page == 'post-archive.php' ? 'active':'' ?>">
-          <i class="bi bi-circle"></i><span>Gallery Content</span>
+          <i class="bi bi-circle"></i><span>Collection</span>
+        </a>
+      </li>
+      <li>
+        <a href="archive-exhibit-display.php" class="nav-link <?= $page == 'archive-exhibit-display.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Exhibit Display</span>
+        </a>
+      </li>
+      <li>
+        <a href="archive-blog.php" class="nav-link <?= $page == 'archive-blog.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Blog</span>
         </a>
       </li>
       <li>
         <a href="archive-category.php" class="nav-link <?= $page == 'archive-category.php' ? 'active':'' ?>">
           <i class="bi bi-circle"></i><span>Gallery Category</span>
+        </a>
+      </li>
+      <li>
+        <a href="archive-exhibits.php" class="nav-link <?= $page == 'archive-category.php' ? 'active':'' ?>">
+          <i class="bi bi-circle"></i><span>Exhibits</span>
         </a>
       </li>
     </ul>
