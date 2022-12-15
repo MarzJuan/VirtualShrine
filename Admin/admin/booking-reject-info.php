@@ -35,7 +35,7 @@ include('includes/header.php');
                     <div class="row">
 
                             <div style="margin-left:50px;" class="form-group mb-3">
-                                <label for=""><b>Booking ID:</b></label><a style="margin-left:57px;">
+                                <label for=""><b>Booking ID:</b></label>
                                     <?php echo $booking_row['bookingID']; ?></a>
                             </div>
 
