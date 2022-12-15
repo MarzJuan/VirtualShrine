@@ -82,8 +82,7 @@ include('includes/header.php');
                                     <form action="code.php" method="POST">
                                         <button style="margin-left:50px;" type="submit" name="approve_booking" value="<?=$row['booking_id'];?>" class="btn btn-success">Approve</button>
                                             
-                                        <button type="submit" name="reject_booking" value="<?=$row['booking_id'];?>" class="btn btn-danger">Reject</button>
-                                    </form>
+                                        <a href="booking-reject-info.php?booking_id=<?= $bookings['booking_id'];?>" class="btn btn-danger">Reject</a>                                    </form>
                                     <?php
                                 }
                                                 if($row['status'] ==1)
