@@ -166,6 +166,7 @@ nav .fa{
 .container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 10rem;
 }
 .left {
     /* height: 700px; */
