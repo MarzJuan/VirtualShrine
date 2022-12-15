@@ -153,7 +153,7 @@ section {
                   <div class="col-md-4 col-12">
                     <div class="form-group">
                       <label>No. of Visitor<span style="color:red;">*</span></label>
-                      <input class="form-control" name="no_visitors" data-parsley-required="" data-parsley-required-message="Please select number of pax">
+                      <input type="number" class="form-control" name="no_visitors" data-parsley-required="" data-parsley-required-message="Please select number of pax">
                       </input>
                     </div>   
                   </div>  
@@ -195,7 +195,7 @@ section {
                     <div class="form-group">
                       <label for="email">Mobile Number<span style="color:red;">*</span>
                       </label>
-                      <input type="text" name="phone_no" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Mobile Number" autocomplete="off" data-parsley-required="" data-parsley-type="digits" data-parsley-required-message="Mobile Number is required" data-parsley-type="digits">
+                      <input type="number" name="phone_no" value="" class="form-control input-md" aria-required="true" aria-invalid="false" placeholder="Mobile Number" autocomplete="off" data-parsley-required="" data-parsley-type="digits" data-parsley-required-message="Mobile Number is required" data-parsley-type="digits">
                     </div> 
                   </div>
                 </div>
