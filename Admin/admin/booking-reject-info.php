@@ -57,7 +57,9 @@ include('includes/header.php');
 
                             <br>
                             <div class="com-md-6 mb-3">
-                                <button type="submit" name="add_category" class="btn btn-primary">Save Gallery</button>
+                                <form action="code.php" method="POST">
+                                <button type="submit" name="reject_booking" value="<?=$booking_row['booking_id'];?>" id="rejectBooking<?php $booking_row['booking_id'];?>" class="btn btn-danger">Reject</button>
+                                </form>
                             </div>
                             <?php
                         }

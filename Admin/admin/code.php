@@ -662,6 +662,7 @@ if (isset($_POST['audio_add']) && isset($_FILES['my_audio']))
 
 if(isset($_POST['reject_booking']))
 {
+    $reason = $_POST['reason'];
     $bookings_id = $_POST['reject_booking'];
     // 2 = Reject
     $query = "UPDATE bookings SET status='2' WHERE booking_id='$bookings_id' LIMIT 1";
@@ -719,21 +720,9 @@ if(isset($_POST['reject_booking']))
                                     No. of Visitors: '.$no_visitors.'<br>
                                     Museum: Museo ng Kasaysayang Pampulitika ng Pilipinas<br><br>
                                     Hi '.$fname.',<br>
-                                    Your booking reservation for the museum visit has been rejeted!<br><br>
-                                    <b>Please make sure to follow the following booking instructions:<br><br>
-                                    1. Visiting Hours for Museum</b><br>
-                                    <ul><li><b>Tuesday to Sunday</b>, excluding religious holidays, with morning session from
-                                    <b>8:00 AM to 12:00 NN</b>, and afternoon session from <b>1:00 PM to 4:00 PM</b></ul>
-                                    <ul><li>Please bring a photo ID with you.</li></ul>
-                                    <ul><li>To help you plan for your visit, here is a <a href="http://localhost/VirtualShrine/Website/Plan.php">link </a>
-                                        to the museum list of current exhibits.</li></ul><br><br>
-                                    <b>2. Staying safe inside the Museum</b><br>
-                                    <ul><li>A temperature scan will be taken of every visitor upon entry. Persons with a temperature of 37.5 degrees Celsius and above will not be allowed to enter. Likewise, any person with fever and flu-like symptoms will not be allowed to enter.</li></ul>
-                                    <ul><li>Every individual must complete a health declaration form prior to entry to museum building. This will be facilitated as part of the online reservation process.</li></ul>
-                                    <ul><li>Face mask must be worn at all times within the museum building.</li></ul>
-                                    <ul><li>Visitors are allowed to bring their own sanitizing kits (small bottles of alcohol, small spray bottles, and tissue papers), but visitors must be mindful of their surroundings when using their sanitizing kits.</li></ul>
-                                    <ul><li>Social distancing of at least <b>TWO (2)</b> meters between persons not belonging to the same household must be observed at all times.</li></ul><br><br>
-                                    If you wish to cancel or reschedule this booking, please <a href="http://localhost/VirtualShrine/website/ReschedCancel_details.php">click here</a></p>');// Message body
+                                    Your booking reservation for the museum visit has been rejeted!<br><br>'
+                                    .$reason.'
+                                    If you wish to book for a visit, please <a href="https://virtualshrine.online/Website/consent-form.php">click here</a></p>');// Message body
                     $mail->addAddress($to);// Target email
 
 
