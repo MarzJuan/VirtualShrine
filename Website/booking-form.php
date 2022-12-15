@@ -153,7 +153,7 @@ section {
                   <div class="col-md-4 col-12">
                     <div class="form-group">
                       <label>No. of Visitor<span style="color:red;">*</span></label>
-                      <input type="number" class="form-control" name="no_visitors" data-parsley-required="" data-parsley-required-message="Please select number of pax">
+                      <input type="number" min="1" max="50" class="form-control" name="no_visitors" data-parsley-required="" data-parsley-required-message="Please select number of pax">
                       </input>
                     </div>   
                   </div>  
