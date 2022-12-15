@@ -33,9 +33,10 @@ include('includes/header.php');
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                     <div class="row">
+                        <br>
 
-                            <div style="margin-left:50px;" class="form-group mb-3">
-                                <label for=""><b>Booking ID:</b></label>
+                            <div class="form-group mb-3">
+                                <label for=""><b>Booking ID:</b></label><a style="margin-left:57px;">
                                     <?php echo $booking_row['bookingID']; ?></a>
                             </div>
 
