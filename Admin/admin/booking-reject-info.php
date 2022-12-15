@@ -21,9 +21,9 @@ include('includes/header.php');
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                     <div class="row">
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-12">
                                 <label for="">Why do you want to reject this booking?</label>
-                                <input type="text" name="reason" required class="form-control">
+                                <textarea type="text" name="reason" required class="form-control"></textarea>
                             </div>
 
                             <div class="com-md-6 mb-3">
