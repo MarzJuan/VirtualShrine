@@ -720,8 +720,8 @@ if(isset($_POST['reject_booking']))
                                     No. of Visitors: '.$no_visitors.'<br>
                                     Museum: Museo ng Kasaysayang Pampulitika ng Pilipinas<br><br>
                                     Hi '.$fname.',<br>
-                                    Your booking reservation for the museum visit has been rejeted!<br>''<br>'
-                                    .$reason.'
+                                    Your booking reservation for the museum visit has been rejeted!<br>'
+                                    .$reason.'<br><br>
                                     If you wish to book for a visit, please <a href="https://virtualshrine.online/Website/consent-form.php">click here</a></p>');// Message body
                     $mail->addAddress($to);// Target email
 
