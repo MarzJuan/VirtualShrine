@@ -221,7 +221,7 @@ section {
                     <div class="form-group">
                       <label for="email">Name of Company/Agency (If applicable)</label>
                       <input type="text" name="org_name" value="" class="form-control input-md" aria-invalid="false" placeholder="Name of Company/Agency">
-                    </div> 
+                    </div>
                   </div>                
                       <!-- <div class="col-md-6 col-12">   
                         <div class="form-group">
