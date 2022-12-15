@@ -21,11 +21,12 @@ include('includes/header.php');
                 <form action="code.php" method="POST" enctype='multipart/form-data'>
 
                     <div class="row">
-                            <div class="col-md-6 mb-12">
+                            <div class="col-md-12 mb-3">
                                 <label for="">Why do you want to reject this booking?</label>
                                 <textarea type="text" name="reason" required class="form-control"></textarea>
                             </div>
 
+                            <br>
                             <div class="com-md-6 mb-3">
                                 <button type="submit" name="add_category" class="btn btn-primary">Save Gallery</button>
                             </div>
