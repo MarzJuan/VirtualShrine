@@ -40,16 +40,16 @@ include('includes/header.php');
                                     <?php echo $booking_row['bookingID']; ?></a>
                             </div>
 
-                            <div style="margin-left:50px;" class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for=""><b>Name:</b></label><a style="margin-left:95px;">
-                                    <?php echo $row['fname'].' '.$row['lname']; ?></a>
+                                    <?php echo $booking_row['fname'].' '.$booking_row['lname']; ?></a>
                             </div>
 
-                            <div style="margin-left:50px;" class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for=""><b>Email:</b></label><a style="margin-left:99px;">
-                                    <?php echo $row['email']; ?></a>
+                                    <?php echo $booking_row['email']; ?></a>
                             </div>
-                            
+
                             <div class="col-md-12 mb-3">
                                 <label for="">Why do you want to reject this booking?</label>
                                 <textarea type="text" name="reason" required class="form-control"></textarea>
