@@ -16,7 +16,7 @@
 <!-- push -->
     <section class="header">
         <nav>
-            <a href="homepage.php"><image  class="logo" src="assets/img/crs-logo.png" alt="Casa Real Shrine logo"></image></a>
+            <a href="homepage.php"><image  class="logo" src="assets/img/crs-logo-white.png" alt="Casa Real Shrine logo"></image></a>
             <div class="nav-links" id="mySidebar">
             <i class="fa fa-times" onclick="closeNav()"></i>
                 <ul>
