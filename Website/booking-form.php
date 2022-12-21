@@ -214,7 +214,7 @@ section {
 
                   <div class="col-md-12 mb-3">
                     <label for="">Attach ID<span style="color:red;">*</span></label>
-                    <input type="file" name="id_image" class="form-control" accept=".jpg,.png,.gif,.webp" aria-required="true" aria-invalid="false" data-parsley-required-message="Attach ID is required"/>
+                    <input type="file" name="id_image" class="form-control" accept=".jpg,.png,.gif,.webp" required data-parsley-required-message="Attach ID is required"/>
                   </div>
 
                   <div class="col-md-12 col-12">
