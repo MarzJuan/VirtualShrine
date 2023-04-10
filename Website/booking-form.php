@@ -1,6 +1,6 @@
 <?php
 include('config/dbcon.php');
-include('Admin/admin/booking.php')
+// include('Admin/admin/booking.php')
 ?>
 
 

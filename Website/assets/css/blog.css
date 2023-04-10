@@ -591,6 +591,7 @@ a, a:hover {
 .footer-row h1{
     font-size: 25px;
     font-weight: 600;
+    text-align: center;
 }
 .title-text p{
     margin: auto;
@@ -606,17 +607,18 @@ a, a:hover {
     color: maroon;
 }
 .footer-row{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
-.footer-left, .footer-right{
-    flex-basis: 45%;
+.footer-details{
+    margin-top: 60px;
+    flex-basis: 30%;
     padding: 10px;
-    margin-bottom: -60px;
-    margin-top: -7px;
+    margin-bottom: 60px;
+    /* margin-top: -7px; */
     color: maroon;
 }
 .footer-right{
@@ -629,12 +631,12 @@ a, a:hover {
     line-height: 25px;
 }
 
-.footer-left .fa, .footer-right .fa{
+.footer-details .fa{
     font-size: 20px;
     color: maroon;
     margin: 10px;
 }
-.footer-left p, .footer-right p{
+.footer-details p{
     color: maroon;
 }
 .footer-img{
@@ -643,7 +645,7 @@ a, a:hover {
     left: 0;
     right: 0;
     margin: auto;
-    top: 65%;
+    top: 70%;
 }
 
 .social-links{
@@ -678,7 +680,19 @@ a, a:hover {
     margin-top: 20px;
     color: black;
 }
+.quicklinks_col{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.quicklinks{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 .quicklinks a{
+    text-align: center;
     text-decoration: none;
     color: maroon;
     transition: .3s;
@@ -687,17 +701,19 @@ a, a:hover {
     color: #FFF;
     text-decoration: underline;
 }
-@media (max-width:770px){
-    .footer-left, .footer-right{
+
+@media (max-width:700px){
+    .footer-details {
         flex-basis: 100%;
         font-size: 14px;
         margin-bottom: 15px;
+        margin-top: 0;
     }
     .footer-img {
         max-width: 142px;
         position: absolute;
         left: 0;
-        top: 75%;    
+        top: 80%;
     }
     .title-text p {
         font-size: 13px;
@@ -707,6 +723,7 @@ a, a:hover {
     }
     .footer-row p {
         line-height: 10px;
+        text-align: center;
     }
     .footer-row h1 {
         margin: 10px 0;
@@ -715,6 +732,9 @@ a, a:hover {
     .social-links{
         width: 100%;
         margin-bottom: 30px;
+    }
+    .quicklinks {
+        text-align: center;
     }
     .content-wrap {
         flex-direction: column;

@@ -169,38 +169,47 @@ include('config/dbcon.php');
 <!-- [START] FOOTER -->
 
 <section id="footer">
-    <div class="title-text">
-        <!-- <h1>Visit Casa Real Today</h1> -->
+    
+
+    <div class="footer-row">
         
-    </div>
-        <div class="footer-row">
-            <div class="footer-left">
-            <div>
+        <div class="footer-details">
+            <div class="col">
                 <h1>Opening Hours</h1>
-                <p><i class="fa fa-clock-o"></i>  Tuesday to Sunday - 8:00 AM to 4:00 PM</p>
+                
+                <p><span style="margin-left:25%;"><i class="fa fa-clock-o"></i>  Tuesday to Sunday</span></p>
+                <p>&emsp;<span style="margin-left:25%;"><i class="fa-regular fa-calendar"></i>&emsp;8:00 AM to 4:00 PM</span></p>
+                
             </div>
-            <br>
-            <div>
+        </div>
+
+        <div class="footer-details">
+            <div class="col">
             <h1>Contact Us</h1>
-                <p><i class="fa fa-map-marker"></i>   Paseo Del Congreso, Liang, City of Malolos, Bulacan</p>
+                <p>&nbsp;<i class="fa fa-map-marker"></i>   Paseo Del Congreso, Liang, City of Malolos, Bulacan</p>
                 <p><i class="fa fa-paper-plane"></i>  mpph@nhcp.gov.ph</p>
                 <p><i class="fa fa-phone"></i>  (044) 931-2508</p>
             </div>
-            </div>
+        </div>
 
-            <div class="footer-right">
-            <div>
+        <div class="footer-details">
+            <div class="col">
                 <h1>Quicklinks</h1>
-                <div class="quicklinks">
-                <span style="margin-right:50px;"><a href="homepage.php">Homepage</a></span><a href="crs-about.php">About Us</a><br>
-                <span style="margin-right:30px;"><a href="plan-visit.php">Plan Your Visit</a></span><a href="consent-form.php">Book a Visit</a><br>
-                <span style="margin-right:70px;"><a href="audio-guide.php">Audio Guide</a></span><a href="exhibits.php">Exhibit</a><br>
-                <span style="margin-right:30px;"><a href="gallery.php">Collection</a></span><a href="virtual-tour.php">Virtual Tour</a><br>
-                <span><a href="">About</a></span>
+                <div class="quicklinks_col">
+                    <div class="quicklinks">
+                    <p></p><a href="homepage.php">Homepage</a></p>
+                    <p></p><a href="plan_visit.php">Plan Your Visit</a></p>
+                    <p></p><a href="crs-about.php">About Us</a></p>
+                    <p></p><a href="consent-form.php">Book a Visit</a></p>
+                    <p></p><a href="">About</a></p>
+                    </div>
+                    <div class="quicklinks">
+                    <p></p><a href="audio-guide.php">Audio Guide</a></p>
+                    <p></p><a href="exhibits.php">Exhibit</a></p>
+                    <p></p><a href="gallery.php">Collection</a></p>
+                    <p></p><a href="virtual-tour.php">Virtual Tour</a></p>
+                    </div>
                 </div>
-
-
-            </div>
             </div>
         </div>
 
@@ -212,6 +221,7 @@ include('config/dbcon.php');
             <a href="https://www.youtube.com/@NHCPOfficial"><i class="fa fa-youtube-play"></i></a>
             <p>2022 <i class="fa-regular fa-copyright"></i> VirtualShrine</p>
         </div>
+        
     </section>
 
     <!-- [END] FOOTER -->

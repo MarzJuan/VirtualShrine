@@ -60,19 +60,13 @@ include('config/dbcon.php');
 
 <!-----------------------------------------[START] COLLECTION DESCRIPTION----------------------------------------->
 
-        <div class="langWrap">
-            Select Language:
-            <a href="#" id="eng_button" language='english' class="active" onClick="changeAudio();">English</a>
-            <a href="#" id="fil_button" language='filipino' onClick="changeAudio();">Filipino</a>
-        </div>
-
-    <div class="container-wrap">
         <?php
-    if(isset($_GET['post_id']))
+    if(isset($_POST['search']))
     {
-       $post_id = $_GET['post_id'];
-       $posts = "SELECT * FROM posts WHERE status='0' AND post_id='$post_id'";
+       $post_id = $_POST['search'];
+       $posts = "SELECT * FROM posts WHERE status='0' AND stop_number='$post_id'";
        $posts_run = mysqli_query($con, $posts);
+       
        $check = mysqli_num_rows($posts_run) > 0;
 
         if($check)
@@ -80,6 +74,14 @@ include('config/dbcon.php');
             while($post = mysqli_fetch_assoc($posts_run))
             {
             ?>
+    <div class="langWrap">
+            Select Language:
+            <a href="#" id="eng_button" language='english' class="active" onClick="changeAudio();">English</a>
+            <a href="#" id="fil_button" language='filipino' onClick="changeAudio();">Filipino</a>
+        </div>
+
+    <div class="container-wrap">
+
     <div class="container">
         <!-- START OF LEFT CLASS -->
 
@@ -169,6 +171,10 @@ include('config/dbcon.php');
     </div>
     <?php
             }
+        }
+        else{
+            header('Location: audio-guide.php');
+
         }
     }
 ?>
